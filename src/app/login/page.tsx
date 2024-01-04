@@ -66,7 +66,7 @@ export default function LoginPage() {
             >
                 Login here
             </button>
-            <p className="mt-8">Don't Have an account? <Link href='/signup'><span className="text-blue-600 hover:text-blue-800 cursor-pointer ml-1">Sign Up</span></Link></p>
+            <p className="mt-8">Don&apos;t Have an account? <Link href='/signup'><span className="text-blue-600 hover:text-blue-800 cursor-pointer ml-1">Sign Up</span></Link></p>
         </div>
     );
 }
