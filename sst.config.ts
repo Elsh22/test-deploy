@@ -14,8 +14,6 @@ export default {
         environment: {
         MONGODB_URI: process.env.MONGODB_URI || "your_default_mongodb_uri",
         MONGODB_Signin_URI: process.env.MONGODB_SIGNIN_URI || "your_default_signin_uri",
-        TOKEN_SECRET: process.env.TOKEN_SECRET || "your_default_token_secret",
-        DOMAIN: process.env.DOMAIN || "your_default_domain",
         },
       });
       stack.addOutputs({
