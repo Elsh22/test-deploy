@@ -9,7 +9,7 @@
     "lint": "next lint"
   },
   "engines": {
-  "node": ">=20"
+  "node": ">=18"
 },
   "dependencies": {
     "@fullcalendar/daygrid": "^6.1.10",
