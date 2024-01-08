@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import { AiFillInstagram, AiFillLinkedin } from 'react-icons/ai';
+import { AiFillInstagram, AiFillLinkedin, AiFillYoutube } from 'react-icons/ai';
 
 const Footer = () => {
   return (
@@ -39,6 +39,9 @@ const Footer = () => {
               </a>
               <a href="https://www.linkedin.com/company/developing-men-of-color/mycompany/" target="_blank" rel="noopener noreferrer" className="hover:text-gray-300">
                 <AiFillLinkedin size={48} />
+              </a>
+              <a href="https://www.youtube.com/@vcudevelopingmenofcolor3402" target="_blank" rel="noopener noreferrer" className="hover:text-gray-300">
+                <AiFillYoutube size={48} />
               </a>
             </div>
           </div>
