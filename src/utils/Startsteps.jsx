@@ -7,7 +7,7 @@ const StartSteps = ({ number, text }) => (
         {number}
       </p>
     </div>
-    <p className={`${styles.flexStart} flex-1 ml-[40px] font-normal text-[18px] text-black leading-[32.4px]`}>
+    <p className={`${styles.flexStart} flex-1 ml-[40px] font-normal text-[18px] text-black leading-[32.4px] theme-text`}>
       {text}
     </p>
   </div>

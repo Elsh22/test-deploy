@@ -22,8 +22,8 @@ const Mission = () => {
     return (
       <div className="flex flex-row items-center m-5">
         <div className="flex-1 p-4">
-          <h2 className="font-bold text-black mb-2.5">Our Mission</h2>
-          <p className="text-black text-left">
+          <h2 className="font-bold theme-text mb-2.5">Our Mission</h2>
+          <p className="theme-text text-left">
             To create an organization in which men of color can interact and grow as a community, our goal is to equip these individuals with the means and resources needed in order to thrive in the college setting. We plan to do so by providing academic advice from other successful members and faculty, insight into how to navigate the undergraduate years, means to professional development and most importantly, provide a brotherhood of students striving together. By providing a close community of minority men working towards the same goal, this will allow us to connect with incoming college students in order to enlarge our community and bond. A critical aspect of our organization is our commitment to community service, this is shown by our consistent mentoring at nearby underserved public schools, our volunteering in the local Richmond community, and our participation in service events held by other organizations.
           </p>
         </div>
@@ -59,12 +59,12 @@ const AboutTeam = () => {
               <div className="inline-block w-36 h-36 rounded-full border-2 border-black overflow-hidden">
                 <img src={member.image} alt={member.name} className="w-full h-full object-cover" />
               </div>
-              <h3 className="text-black mt-5">
-                <a href={member.linkedin} target="_blank" rel="noreferrer" className="no-underline text-black">
+              <h3 className="theme-text mt-5 text-decoration-line: underline">
+                <a href={member.linkedin} target="_blank" rel="noreferrer" className="theme-text">
                   {member.name}
                 </a>
               </h3>
-              <p className="text-black">{member.role}</p>
+              <p className="theme-text">{member.role}</p>
             </div>
           ))}
         </div>

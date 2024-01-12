@@ -21,6 +21,7 @@
     "dotenv": "^16.3.1",
     "formidable": "^3.5.1",
     "framer-motion": "^10.16.12",
+    "instafeed.js": "^2.0.0",
     "jsonwebtoken": "^9.0.2",
     "jwt-decode": "^4.0.0",
     "mongoose": "^8.0.2",

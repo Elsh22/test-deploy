@@ -21,7 +21,7 @@ const CommitteeAbout = ({ id }) => (
       variants={fadeIn('up', 'tween', 0.2, 1)}
       className="mt-[8px] font-normal sm:text-[32px] text-[20px] text-center text-secondary-black overflow-x-hidden"
       >
-      <span className="font-extrabold text-black">Our Committees: </span>
+      <span className="font-extrabold theme-text">Our Committees: </span>
       At the heart of Developing Men of Color are our diverse committees, each with a unique focus but united in empowering and supporting our members. From academic assistance to professional development, community service, and technological innovation, our committees are dedicated to providing resources, opportunities, and a supportive environment. They play a crucial role in helping members succeed academically, professionally, and socially, while actively contributing to the betterment of our community and embracing cutting-edge technologies.
       </motion.p>
     </motion.div>

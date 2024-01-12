@@ -32,10 +32,10 @@ const Mentorship = ({ id }) => (
         className="flex-[0.75] flex justify-center flex-col text-center lg:text-left" // Center text on smaller devices
       >
         <TypingText title="How To Join Mentoring" />
-        <TitleText title={<p>Get started with just a few Steps</p>} />
-        <div className="mt-[31px] flex flex-col max-w-[370px] gap-[24px] mx-auto lg:mx-0"> {/* Center content on smaller screens */}
+        <TitleText title={<p className='theme-text'>Get started with just a few Steps</p>} />
+        <div className="mt-[31px] flex flex-col max-w-[370px] gap-[24px] mx-auto lg:mx-0  "> {/* Center content on smaller screens */}
           {startingFeatures.map((feature, index) => (
-            <StartSteps key={feature} number={`${index < 10 ? '0' : ''} ${index + 1}`} text={feature}/>
+            <StartSteps key={feature} number={`${index < 10 ? '0' : ''} ${index + 1}`} text={feature} />
           ))}
         </div>
       </motion.div>

@@ -37,3 +37,10 @@ html {
   background-color: #111;
   color: #bbb;
 }
+.theme.light .theme-text {
+  color: black; /* Color for light mode */
+}
+
+.theme.dark .theme-text {
+  color: white; /* Color for dark mode */
+}
