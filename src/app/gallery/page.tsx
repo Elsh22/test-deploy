@@ -7,8 +7,8 @@ const GalleryPage = () => {
     return (
       <div>
         <h1 className="text-center font-bold text-2xl mt-20">Gallery</h1>
-        <GalleryPhoto />
         <Instagram />
+        <GalleryPhoto />
       </div>
     );
   };
