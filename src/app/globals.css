@@ -8,7 +8,7 @@ html {
 }
 
 .custom-img {
-  background-image: url('../newassest/Benford2.jpg');
+  background-image: url('../assets/background.jpg');
 }
 form > div {
   @apply flex flex-col gap-2;
