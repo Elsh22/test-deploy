@@ -1,9 +1,9 @@
 'use client';
-
 import { motion } from 'framer-motion';
 import IMG from '../../../public/headset.svg'
 import styles from '../../styles';
 import { fadeIn } from '../../utils/motion';
+
 
 const ExploreCard = ({ id, imgUrl, title, text, Chairman, Buttonlink, index, active, handleClick }) => (
   <motion.div
@@ -39,7 +39,7 @@ const ExploreCard = ({ id, imgUrl, title, text, Chairman, Buttonlink, index, act
         <p className="font-semibold text-[16px] leading-[20.16px] text-white uppercase">
           {Chairman}
         </p>
-        <a href={Buttonlink} target="_blank" rel="noopener noreferrer" className="mt-4  hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" > Join GroupMe </a>
+        <a href={Buttonlink}  className="mt-4  hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" > Learn More </a>
         <h2 className="mt-[24px] font-semibold sm:text-[32px] text-[24px] text-white">
           {title}
         </h2>

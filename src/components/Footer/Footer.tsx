@@ -1,6 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { AiFillInstagram, AiFillLinkedin, AiFillYoutube } from 'react-icons/ai';
+// come back to and add the full url to reaplce routes it goes to
 
 const Footer = () => {
   return (
@@ -10,25 +11,25 @@ const Footer = () => {
           <div>
             <h4 className="text-lg font-bold mb-4">Developing Men of Color</h4>
             <ul>
-              <li><Link href="#about" className="hover:text-gray-300">About Us</Link></li>
+              <li><Link href="/#about" className="hover:text-gray-300">About Us</Link></li>
             </ul>
           </div>
           <div>
             <h4 className="text-lg font-bold mb-4">Get Help</h4>
             <ul>
-              <li><Link href="#contact" className="hover:text-gray-300">Contact Us</Link></li>
-              <li><Link href="#calendar" className="hover:text-gray-300">Calendar</Link></li>
-              <li><Link href="#sports" className="hover:text-gray-300">Sports</Link></li>
+              <li><Link href="/#contact" className="hover:text-gray-300">Contact Us</Link></li>
+              <li><Link href="/#calendar" className="hover:text-gray-300">Calendar</Link></li>
+              <li><Link href="/#sports" className="hover:text-gray-300">Sports</Link></li>
             </ul>
           </div>
           <div>
             <h4 className="text-lg font-bold mb-4">Programs</h4>
             <ul>
               <li><Link href="#mentorship" className="hover:text-gray-300">Mentorship</Link></li>
-              <li><Link href="#committee" className="hover:text-gray-300">Professional Development</Link></li>
-              <li><Link href="#committee" className="hover:text-gray-300">Social Committee</Link></li>
-              <li><Link href="#committee" className="hover:text-gray-300">Community Service Committee</Link></li>
-              <li><Link href="#committee" className="hover:text-gray-300">Academic Committee</Link></li>
+              <li><Link href="/ProfCommittee" className="hover:text-gray-300">Professional Development</Link></li>
+              <li><Link href="/SocCommittee" className="hover:text-gray-300">Social Committee</Link></li>
+              <li><Link href="/CommCommittee" className="hover:text-gray-300">Community Service Committee</Link></li>
+              <li><Link href="/ACACommittee" className="hover:text-gray-300">Academic Committee</Link></li>
             </ul>
           </div>
           <div>

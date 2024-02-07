@@ -6,9 +6,9 @@ import timeGridPlugin from "@fullcalendar/timegrid";
 import interactionPlugin from "@fullcalendar/interaction";
 import events from './Events';
 
-const Calendar = () => {
+const Calendar = ({ id }) => {
   return (
-    <div  className="flex justify-center px-4 sm:px-6 lg:px-8 mt-20">
+    <div  className="flex justify-center px-4 sm:px-6 lg:px-8 mt-20" id={id}>
       <div className="w-full max-w-6xl">
         <FullCalendar
           plugins={[dayGridPlugin, timeGridPlugin, interactionPlugin]}

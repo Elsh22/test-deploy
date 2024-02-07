@@ -12,7 +12,7 @@ import socailImage from '../newassest/home5.jpg';
       title: 'Academic Committee',
       text: 'The Academic committee serves as a gateway between the general body and themselves that helps connect the members of Developing Men of Color with the various resources the campuses and club itself has to offer to help the succeed in the classroom.',
       Chairman: 'Rayvean Graves, Tyrus Somuah',
-      Buttonlink:'https://groupme.com/join_group/90176811/E5gNlYKq',
+      Buttonlink:'/ACACommittee',
     },
     {
       id: 'world-2',
@@ -20,7 +20,7 @@ import socailImage from '../newassest/home5.jpg';
       title: 'Community Service Committee',
       text: 'The community service committe is a group of young men who happen to focus on ways in which Developing Men of Color can help the local community of richmond and also make other members aware of the various opportunities there are to help make the community better',
       Chairman: 'Naeem Ahmad',
-      Buttonlink:'https://groupme.com/join_group/89916463/uBQYKr0c',
+      Buttonlink:'/CommCommittee',
     },
     {
       id: 'world-3',
@@ -28,7 +28,7 @@ import socailImage from '../newassest/home5.jpg';
       title: 'Information Technology Committee',
       text: 'Information Technology Committee: DMC has a brand new committee called the “Information Technology Committee” (IT). This committee will consist of new innovative ideas and technologies being added to the organization. The committee will be actively open to join.',
       Chairman: 'Stephen Kouevi',
-      Buttonlink:'https://web.groupme.com/join_group/96138862/KuAOiW33',
+      Buttonlink:'/ITCommittee',
     },
     {
       id: 'world-4',
@@ -42,7 +42,7 @@ import socailImage from '../newassest/home5.jpg';
       title: 'Professional Development',
       text: 'The professional development committe is a group of members who pride themselves on ensuring the general body is presented with opportunities to help them excel in the professional settings we hope to provide our members with.',
       Chairman: 'Miguel Siles, Joshua Kankam',
-      Buttonlink:'https://web.groupme.com/join_group/89916400/H3d6zVwp',
+      Buttonlink:'/ProfCommittee',
     },
     {
       id: 'world-6',
@@ -50,7 +50,7 @@ import socailImage from '../newassest/home5.jpg';
       title: 'Social Committee',
       text: 'The social committee consists of members who help to host and set up events that will help our members flourish socially.',
       Chairman: 'Mamoudou Diallo',
-      Buttonlink:'https://groupme.com/join_group/89916344/ZkE6p97c',
+      Buttonlink:'/SocCommittee',
     },
   ];
 

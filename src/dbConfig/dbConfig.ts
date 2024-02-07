@@ -1,24 +1,24 @@
 import mongoose from 'mongoose';
 
+let isConnectedBefore = false;
+
 export async function connect() {
-    try {
-        mongoose.connect(process.env.MONGODB_Signin_URI!);
-        const connection = mongoose.connection;
-
-        connection.on('connected', () => {
-            console.log('MongoDB connected successfully');
-        })
-
-        connection.on('error', (err) => {
-            console.log('MongoDB connection error. Please make sure MongoDB is running. ' + err);
-            process.exit();
-        })
-
-    } catch (error) {
-        console.log('Something goes wrong!');
-        console.log(error);
-        
+    if (mongoose.connection.readyState === 1) {
+        return;
     }
 
-
+    if (!isConnectedBefore) {
+        try {
+            await mongoose.connect(process.env.MONGODB_Signin_URI!);
+            isConnectedBefore = true;
+            console.log('MongoDB connected successfully');
+        } catch (error) {
+            if (error instanceof Error) {
+                console.error('Failed to connect to MongoDB:', error.message);
+            } else {
+                console.error('Failed to connect to MongoDB due to an unexpected error');
+            }
+            process.exit(1);
+        }
+    }
 }

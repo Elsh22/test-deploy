@@ -7,17 +7,19 @@ import Mentorship from '../components/Mentorship/Mentorship';
 import Sports from '../components/Sports/Sports';
 import Contact from '../components/Contact/Contact';
 import About from '../components/About/About';
-import Directory from '../components/Directory/Directory';
-
+import Mission from '../components/Mission/Mission';
+//import Directory from '../components/Directory/Directory';
+//  <Directory />
 
 const HomePage = () => {
   return (
     <div className='overflow-x-hidden'>
       <Home id="home" />
+      <Mission />
       <CommitteeAbout id="committee" />
       <Commitee  />
       <Mentorship id="mentorship" />
-      <Calendar />
+      <Calendar id="calendar"/>
       <Sports id="sports" />
       <Contact id="contact" />
       <About id="about" />
