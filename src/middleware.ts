@@ -24,7 +24,7 @@ export async function middleware(request: NextRequest) {
   // if (publicPaths.includes(path) && token) {
   //   return NextResponse.redirect(new URL('/dashboard', request.url));
   // }
-
+  // comment: if (token) {
   // Allow the request to continue as is if none of the above conditions are met
   return NextResponse.next();
 }
