@@ -41,7 +41,7 @@ const SocialCommitteeEvents = () => {
           <div className="px-6 py-4">
             <div className="font-bold text-xl mb-2">Committee vs Committee Games</div>
             <p className="text-base">
-              A fun competition where teams tackle challenges and games to win. It's all about teamwork, strategy, and having a great time together.
+              A fun competition where teams tackle challenges and games to win. Its all about teamwork, strategy, and having a great time together.
             </p>
           </div>
         </div>
