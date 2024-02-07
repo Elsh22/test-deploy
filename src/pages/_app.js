@@ -1,11 +1,11 @@
 // pages/_app.js
-import { SessionProvider } from 'next-auth/react';
+import { ThemeProvider } from "../context/ThemeContext";
 
 function MyApp({ Component, pageProps }) {
   return (
-    <SessionProvider session={pageProps.session}>
+    <ThemeProvider>
       <Component {...pageProps} />
-    </SessionProvider>
+    </ThemeProvider>
   );
 }
 

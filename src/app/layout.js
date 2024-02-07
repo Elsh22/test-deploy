@@ -3,8 +3,6 @@ import './globals.css'
 import Navbar from '../components/Navbar/Navbar';
 import Footer from '../components/Footer/Footer';
 import { ThemeProvider } from "../context/ThemeContext";
-import ToasterContext from "../components/Form/ToasterContext";
-import Provider from '@/components/Form/Provider';
 
 
 const inter = Inter({ subsets: ['latin'] })
@@ -18,10 +16,9 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
         <body >
-          <ToasterContext />
           <ThemeProvider>
             <Navbar />
-            <Provider>{children}</Provider>
+            <main>{children}</main>
             <Footer />
           </ThemeProvider>
         </body>
