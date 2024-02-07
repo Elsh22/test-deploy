@@ -1,3 +1,4 @@
+"use client";
 import React from 'react';
 import Hassan from '../../assets/Hassan.jpg';
 import Hussein from '../../assets/Hussein.jpg';
@@ -5,7 +6,7 @@ import Goode from '../../assets/Goode.jpg';
 import Thomas from '../../assets/Thomas.jpg';
 import Ron from '../../assets/Ron.jpg';
 import Stephen from '../../assets/Stephen.jpg';
-import Josh from '../../assets/Josh.JPEG';
+import Josh from '../../assets/Josh.png';
 import Omar from '../../assets/Omar.jpg';
 import Zion from '../../assets/Zion.jpg';
 import Xavier from '../../assets/Xavier.jpg';
