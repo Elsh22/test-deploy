@@ -227,7 +227,8 @@ const events = [
     {
       "title": "1st General Body Meeting",
       "start": "2024-02-07T19:00:00",
-      "end": "2024-02-07T21:00:00"
+      "end": "2024-02-07T21:00:00",
+      backgroundColor: '#ff0000'
     },
     {
       "title": "Omsa Rap session",
@@ -282,7 +283,8 @@ const events = [
     {
       "title": "2nd General Body Meeting",
       "start": "2024-03-20T19:00:00",
-      "end": "2024-03-20T21:00:00"
+      "end": "2024-03-20T21:00:00",
+      backgroundColor: '#ff0000'
     },
     {
       "title": "Committee Chair Meeting",
@@ -312,7 +314,8 @@ const events = [
     {
       "title": "3rd General Body Meeting",
       "start": "2024-04-17T19:00:00",
-      "end": "2024-04-17T21:00:00"
+      "end": "2024-04-17T21:00:00",
+      backgroundColor: '#ff0000'
     },
     {
       "title": "Committee Chair Meeting",
@@ -1017,7 +1020,12 @@ const events = [
       "start": "2024-04-30T14:00:00",
       "end": "2024-04-30T16:00:00",
       "location": "Hibbs hall"
-    },        
+    }, 
+    {
+      "title": "Suit Day",
+      "start": "2024-03-16T12:30:00",
+      "end": "2024-03-16T16:00:00",
+    },       
 
   ];
   
