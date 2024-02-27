@@ -38,7 +38,7 @@ const Footer = () => {
             <a href="https://www.instagram.com/vcu.dmc/" target="_blank" rel="noopener noreferrer" className="mr-4 hover:text-gray-300">
                 <AiFillInstagram size={48} />
               </a>
-              <a href="https://www.linkedin.com/company/developing-men-of-color/mycompany/" target="_blank" rel="noopener noreferrer" className="hover:text-gray-300">
+              <a href="https://www.linkedin.com/in/d-m-c-007824230/" target="_blank" rel="noopener noreferrer" className="hover:text-gray-300">
                 <AiFillLinkedin size={48} />
               </a>
               <a href="https://www.youtube.com/@vcudevelopingmenofcolor3402" target="_blank" rel="noopener noreferrer" className="hover:text-gray-300">
