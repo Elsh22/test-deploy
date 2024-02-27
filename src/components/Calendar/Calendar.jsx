@@ -30,7 +30,7 @@ const Calendar = ({ id }) => {
 };
 
 function renderEventContent(eventInfo) {
-  let bgColor = 'bg-blue-500'; // default color
+  let bgColor = 'bg-blue-500'; 
   if (eventInfo.event.title.includes('General Body Meeting')) {
     bgColor = 'bg-red-500';
   } else if (eventInfo.event.title.includes('Committee')) {
