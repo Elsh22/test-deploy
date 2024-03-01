@@ -17,7 +17,7 @@ interface AboutProps {
   id: string;
 }
 
-
+// { name: 'David Foster', role: 'Membership Chair', image: David.src, linkedin:'https://www.linkedin.com/in/david-foster-b063b0226/'},
 const AboutTeam = () => {
     const team = [
         { name: 'DaRon Stuvaints', role: 'President', image: Ron.src, linkedin:'https://www.linkedin.com/in/daron-stuvaints/'},
@@ -27,7 +27,6 @@ const AboutTeam = () => {
         { name: 'Josh Hines', role: 'Mentorship Director', image: Josh.src, linkedin:'https://www.linkedin.com/in/joshhines4/'},
         { name: 'DeAngelo Bailey', role: 'Public Relations Coordinator', image: DeAngelo.src, linkedin:'https://www.linkedin.com/in/deangelo-bailey-5686ba253/'},
         { name: 'Zion Segears', role: 'Wellness Director', image: Zion.src, linkedin:'https://www.linkedin.com/in/zion-segears-767bb7242/'},
-        { name: 'David Foster', role: 'Membership Chair', image: David.src, linkedin:'https://www.linkedin.com/in/david-foster-b063b0226/'},
         { name: 'Xavier Lewis', role: 'Event Coordinator', image: Xavier.src, linkedin:'https://www.linkedin.com/in/xavier-lewis-9916bb253/'},
         { name: 'Stephen Kouevi', role: 'Director of IT', image: Stephen.src, linkedin:'https://www.linkedin.com/in/stephenkouevi/'},
         { name: 'Dr. Carlton Goode', role: 'Faculty Advisor', image: Goode.src, linkedin:'https://www.linkedin.com/in/carlton-goode-ed-d-69172815/'},

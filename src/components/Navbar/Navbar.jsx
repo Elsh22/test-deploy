@@ -104,6 +104,9 @@ const Navbar = () => {
             <li onClick={handleNav} className='p-4 text-4xl hover:text-gray-500 select-none'>
               <Link href='/gallery'>Gallery</Link>
             </li>
+            <li onClick={handleNav} className='p-4 text-4xl hover:text-gray-500 select-none'>
+              <Link href='/scholarship'>Scholarship</Link>
+            </li>
           </ul>
         </div>
       </div>

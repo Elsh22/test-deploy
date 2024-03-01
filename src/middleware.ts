@@ -1,6 +1,8 @@
 import { NextResponse } from 'next/server';
 import type { NextRequest } from 'next/server';
 
+// '/scholarship'
+
 const publicPaths = ['/', '/gallery', '/ITCommittee', '/ACACommittee', '/CommCommittee', '/ProfCommittee', '/SocCommittee', '/Denied'];
 // This function can be marked `async` if using `await` inside
 export async function middleware(request: NextRequest) {

@@ -1,11 +1,13 @@
 "use client"
 import React from 'react';
 import ButtonClientComponent from './ButtonClientComponent'; 
+import Button from './Button';
 
 const Home  = ({ 
   id, 
   heading = 'Developing <br/> Men of <br/> Color', 
-  message = 'At Virginia Commonwealth University' 
+  message = 'At Virginia Commonwealth University',
+  message2 = 'DMC is offering a scholarships for ....'
 }) => {
 
   return (
@@ -21,3 +23,5 @@ const Home  = ({
 };
 
 export default Home;
+// <Button />
+// <p className='py-5 text-xl'>{message2}</p>
