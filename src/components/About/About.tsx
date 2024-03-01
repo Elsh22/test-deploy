@@ -32,7 +32,6 @@ const AboutTeam = () => {
         { name: 'Dr. Carlton Goode', role: 'Faculty Advisor', image: Goode.src, linkedin:'https://www.linkedin.com/in/carlton-goode-ed-d-69172815/'},
         { name: 'Thomas Chatman', role: 'Second Advisor', image: Thomas.src, linkedin:'https://www.linkedin.com/in/thomas--chatman/'},
       ];
-
       return (
         <div className="flex flex-wrap justify-center mt-5">
           <h1 className='text-center text-2xl font-bold w-full'>Meet the Eboard</h1>
