@@ -1,6 +1,7 @@
 import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link';
+import  Img from '../../../../public/header-image.png';
 import { LightbulbOutlined, AttachMoney, School, Wc, FactCheck, Diversity3, AttachMoneySharp, DateRange } from '@mui/icons-material';
 
 
@@ -11,7 +12,7 @@ const page = () => {
       <div className="flex flex-col md:flex-row items-center justify-between p-8">
       <div className="md:w-1/2 w-full mb-4 md:mb-0">
         <Image
-          src="/header-image.png" 
+          src={Img.src}
           alt="Abstract art representing technology"
           width={500} 
           height={300} 
@@ -23,7 +24,6 @@ const page = () => {
         <h1 className="text-4xl font-bold mb-4">DMC Scholarship</h1>
         <p className="mb-6">Empower your tech journey with the DMC scholarship. Apply for a chance to win a $5,000 scholarship and mentorship from industry professionals.</p>
         <Link href="/scholarship/apply" passHref><button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mr-4 transition duration-300 ease-in-out">Apply</button></Link>
-        <Link href="/scholarship/learn-more" passHref><button className="bg-gray-300 hover:bg-gray-400 text-black font-bold py-2 px-4 rounded transition duration-300 ease-in-out">Learn More</button></Link>
       </div>
     </div>
       
@@ -79,28 +79,21 @@ const page = () => {
         <DateRange className="h-6 w-6 text-gray-500"/>
       </div>
       <h3 className="text-lg text-gray-900 font-semibold">Applications Open</h3>
-      <p className="text-gray-600">August 1, 2022</p>
+      <p className="text-gray-600">March 11, 2024</p>
     </div>
     <div className="mb-4 pl-8">
       <div className="absolute -left-3 mt-1 bg-white border-2 border-gray-200 rounded-full">
         <DateRange className="h-6 w-6 text-gray-500"/>
       </div>
       <h3 className="text-lg text-gray-900 font-semibold">Applications Close</h3>
-      <p className="text-gray-600">September 5, 2022</p>
+      <p className="text-gray-600">April 1, 2024</p>
     </div>
     <div className="mb-4 pl-8">
       <div className="absolute -left-3 mt-1 bg-white border-2 border-gray-200 rounded-full">
         <DateRange className="h-6 w-6 text-gray-500"/>
       </div>
       <h3 className="text-lg text-gray-900 font-semibold">Finalists Notified</h3>
-      <p className="text-gray-600">September 20, 2022</p>
-    </div>
-    <div className="pl-8">
-      <div className="absolute -left-3 mt-1 bg-white border-2 border-gray-200 rounded-full">
-        <DateRange className="h-6 w-6 text-gray-500"/>
-      </div>
-      <h3 className="text-lg text-gray-900 font-semibold">Winners Announced</h3>
-      <p className="text-gray-600">October 10, 2022</p>
+      <p className="text-gray-600">April 1, 2024</p>
     </div>
   </div>
 </div>  

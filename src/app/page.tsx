@@ -15,14 +15,14 @@ const HomePage = () => {
   return (
     <div className='overflow-x-hidden'>
       <Home id="home" />
-      <Mission />
+      <Mission id="about"/>
       <CommitteeAbout id="committee" />
       <Commitee  />
       <Mentorship id="mentorship" />
       <Calendar id="calendar"/>
       <Sports id="sports" />
       <Contact id="contact" />
-      <About id="about" />
+      <About />
     </div>
   );
 }

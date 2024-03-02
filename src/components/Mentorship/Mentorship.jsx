@@ -19,21 +19,21 @@ const Mentorship = ({ id }) => (
     >
       <motion.div
         variants={planetVariants('left')}
-        className={`flex-1 ${styles.flexCenter} mt-0 lg:mt-0`} // Adjust top margin for smaller screens
+        className={`flex-1 ${styles.flexCenter} mt-0 lg:mt-0`} 
       >
         <img
           src={IMG.src}
           alt="get-started"
-          className="w-[90%] lg:w-[90%] h-[90%] lg:h-[90%] object-contain" // Adjust width and height for different screen sizes
+          className="w-[90%] lg:w-[90%] h-[90%] lg:h-[90%] object-contain" 
         />
       </motion.div>
       <motion.div
         variants={fadeIn('left', 'tween', 0.2, 1)}
-        className="flex-[0.75] flex justify-center flex-col text-center lg:text-left" // Center text on smaller devices
+        className="flex-[0.75] flex justify-center flex-col text-center lg:text-left" 
       >
         <TypingText title="How To Join Mentoring" />
         <TitleText title={<p className='theme-text'>Get started with just a few Steps</p>} />
-        <div className="mt-[31px] flex flex-col max-w-[370px] gap-[24px] mx-auto lg:mx-0  "> {/* Center content on smaller screens */}
+        <div className="mt-[31px] flex flex-col max-w-[370px] gap-[24px] mx-auto lg:mx-0  "> 
           {startingFeatures.map((feature, index) => (
             <StartSteps key={feature} number={`${index < 10 ? '0' : ''} ${index + 1}`} text={feature} />
           ))}

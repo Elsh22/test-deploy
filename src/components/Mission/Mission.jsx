@@ -6,11 +6,12 @@ import IMG1 from '../../newassest/DevelopingMenofColor.png'; // Ensure this impo
 import styles from '../../styles/index';
 import { fadeIn, staggerContainer, planetVariants } from '../../utils/motion';
 
-const Mission = () => {
+const Mission = ({ id }) => {
     return (
       // Adjusted for responsiveness: stacks vertically on small screens, horizontally on larger screens
-      <div className="flex flex-col md:flex-row items-center m-5 gap-4 md:gap-8">
+      <div className="flex flex-col md:flex-row items-center m-5 gap-4 md:gap-8" id={id}>
         <section className="w-full md:flex-1">
+          <TypingText title="DMC Leadership" textStyles="text-center" />
           <motion.div
             variants={planetVariants('left')} // Ensure you have defined or adjusted the planetVariants function
             className={`${styles.flexCenter} mb-4 md:mb-0`} // Added marginBottom for non-md screens

@@ -5,8 +5,8 @@ import Instagram from "../../components/Gallery/Instagram";
 
 const GalleryPage = () => {
     return (
-      <div>
-        <h1 className="text-center font-bold text-2xl mt-20">Gallery</h1>
+      <div className='mt-20'>
+        <h1 className="text-center font-bold text-2xl">Gallery</h1>
         <Instagram />
         <GalleryPhoto />
       </div>

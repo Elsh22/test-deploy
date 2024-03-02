@@ -19,7 +19,7 @@ import socailImage from '../newassest/home5.jpg';
       imgUrl: communityImage.src,
       title: 'Community Service Committee',
       text: 'The community service committe is a group of young men who happen to focus on ways in which Developing Men of Color can help the local community of richmond and also make other members aware of the various opportunities there are to help make the community better',
-      Chairman: 'Naeem Ahmad',
+      Chairman: 'Naeem Ahmad, Jah Johnson',
       Buttonlink:'/CommCommittee',
     },
     {
@@ -27,7 +27,7 @@ import socailImage from '../newassest/home5.jpg';
       imgUrl: infoImage.src,
       title: 'Information Technology Committee',
       text: 'Information Technology Committee: DMC has a brand new committee called the “Information Technology Committee” (IT). This committee will consist of new innovative ideas and technologies being added to the organization. The committee will be actively open to join.',
-      Chairman: 'Stephen Kouevi',
+      Chairman: 'Stephen Kouevi, Mohamed Elnafe',
       Buttonlink:'/ITCommittee',
     },
     {
@@ -41,7 +41,7 @@ import socailImage from '../newassest/home5.jpg';
       imgUrl: profImage.src,
       title: 'Professional Development',
       text: 'The professional development committe is a group of members who pride themselves on ensuring the general body is presented with opportunities to help them excel in the professional settings we hope to provide our members with.',
-      Chairman: 'Miguel Siles, Joshua Kankam',
+      Chairman: 'Derrick Bangura, Miguel Siles, and Nehemiah Kibler',
       Buttonlink:'/ProfCommittee',
     },
     {
@@ -49,7 +49,7 @@ import socailImage from '../newassest/home5.jpg';
       imgUrl: socailImage.src,
       title: 'Social Committee',
       text: 'The social committee consists of members who help to host and set up events that will help our members flourish socially.',
-      Chairman: 'Mamoudou Diallo',
+      Chairman: 'Mamoudou Diallo, Marcus Wilson',
       Buttonlink:'/SocCommittee',
     },
   ];
