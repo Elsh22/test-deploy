@@ -16,6 +16,6 @@ export async function middleware(request: NextRequest) {
 
 export const config = {
   matcher: [
-    ...publicPaths, // Spread in the public paths
+    ...publicPaths, 
   ],
 };
