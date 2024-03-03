@@ -2,7 +2,7 @@
 import { motion } from 'framer-motion';
 import { fadeIn, staggerContainer, planetVariants} from "../../utils/motion";
 import { StartStepsSports } from '@/constants/index';
-import IMG from '../../newassest/soccerball.jpg';
+import IMG from '../../newassest/Soccerball.JPG';
 import styles from '../../styles'
 import { TypingText, TitleText } from '../../utils/CustomText'
 import StartSteps  from '../../utils/Startsteps';
