@@ -1,5 +1,4 @@
 'use client';
-
 import { motion } from 'framer-motion';
 import IMG from '../../newassest/MentorA.jpg';
 import styles from '../../styles';
