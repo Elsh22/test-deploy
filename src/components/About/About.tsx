@@ -4,12 +4,12 @@ import Hassan from '../../assets/Hassan.jpg';
 import Hussein from '../../assets/Hussein.jpg';
 import Goode from '../../assets/Goode.jpg';
 import Thomas from '../../assets/Thomas.jpg';
-import Ron from '../../assets/Ron.jpg';
+import Ron from '../../assets/Ron.jpeg';
 import Stephen from '../../assets/Stephen.jpeg';
 import Josh from '../../assets/Josh.png';
-import Omar from '../../assets/Omar.jpg';
+import Omar from '../../assets/Omar.jpeg';
 import Zion from '../../assets/Zion.jpg';
-import Xavier from '../../assets/Xavier.jpg';
+import Xavier from '../../assets/Xavier.jpeg';
 import David from '../../assets/David.jpg';
 import DeAngelo from '../../assets/DeAngelo.jpg';
 
