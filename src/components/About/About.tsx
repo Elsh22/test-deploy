@@ -9,7 +9,7 @@ import Stephen from '../../assets/Stephen.jpeg';
 import Josh from '../../assets/Josh.png';
 import Omar from '../../assets/Omar.jpeg';
 import Zion from '../../assets/Zion.jpg';
-import Xavier from '../../assets/Xavier.jpg';
+import Xavier from '../../assets/Xavier.png';
 import David from '../../assets/David.jpg';
 import DeAngelo from '../../assets/DeAngelo.jpg';
 

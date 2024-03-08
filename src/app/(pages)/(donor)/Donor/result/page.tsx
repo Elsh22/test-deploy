@@ -2,7 +2,7 @@ import type { Stripe } from "stripe";
 import Link from 'next/link'
 import PrintObject from "../../../../../components/Donor/PrintObject";
 import { stripe } from "../../../../models/lib/stripe";
-import img from './Prof.jpg'
+import img from '../../../../../assets/Prof.jpg'
 
 export default async function ResultPage({
   searchParams,
