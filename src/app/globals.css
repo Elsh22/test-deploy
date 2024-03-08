@@ -7,8 +7,25 @@ html {
   font-family: 'Raleway', sans-serif;
 }
 
+.elements-style {
+  color: var(--elements-color);
+  border: 1px solid var(--elements-color);
+}
+.elements-style-background {
+  background: var(--elements-color);
+  transition: box-shadow var(--transition-duration);
+}
+.card.elements-style-background:hover {
+  box-shadow: 20px 20px 60px #464e9c, -20px -20px 60px #8896ff;
+}
+
 .custom-img {
   background-image: url('../assets/background.jpg');
+}
+
+
+.donor-img {
+  background-image: url('../newassest/social2.png');
 }
 form > div {
   @apply flex flex-col gap-2;

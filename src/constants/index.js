@@ -1,7 +1,7 @@
 import academImage from '../newassest/academ.jpeg';
-import communityImage from '../newassest/community.PNG';
+import communityImage from '../newassest/Com.jpg';
 import infoImage from '../newassest/academic.jpeg';
-import dmcImage from '../newassest/home45.jpg';
+import dmcImage from '../newassest/Mixer-2023.png';
 import profImage from '../newassest/Prof.JPG';
 import socailImage from '../newassest/home5.jpg';
 

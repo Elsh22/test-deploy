@@ -18,6 +18,8 @@
     "@mui/icons-material": "^5.15.5",
     "@react-three/drei": "^9.96.1",
     "@react-three/fiber": "^8.15.14",
+    "@stripe/react-stripe-js": "^2.5.1",
+    "@stripe/stripe-js": "^3.0.7",
     "@studio-freight/lenis": "^1.0.34",
     "@types/bcryptjs": "^2.4.6",
     "@types/styled-components": "^5.1.34",
@@ -53,6 +55,7 @@
     "sharp": "^0.33.1",
     "stream-chat": "^8.14.4",
     "stream-chat-react": "^11.2.1",
+    "stripe": "^14.19.0",
     "styled-components": "^6.1.2",
     "universal-cookie": "^6.1.1",
     "uploadthing": "^6.1.0"

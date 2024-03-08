@@ -8,6 +8,7 @@ import Sports from '../components/Sports/Sports';
 import Contact from '../components/Contact/Contact';
 import About from '../components/About/About';
 import Mission from '../components/Mission/Mission';
+import Donor from '../components/Donor/Donor';
 //import Directory from '../components/Directory/Directory';
 //  <Directory />
 
@@ -16,6 +17,7 @@ const HomePage = () => {
     <div className='overflow-x-hidden'>
       <Home id="home" />
       <Mission id="about"/>
+      <Donor />
       <CommitteeAbout id="committee" />
       <Commitee  />
       <Mentorship id="mentorship" />
