@@ -53,7 +53,6 @@ const AboutTeam = () => {
     };
     
 
-
 const About = () => {
   return (
     <div>
