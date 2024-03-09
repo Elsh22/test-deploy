@@ -16,6 +16,15 @@ export async function middleware(request: NextRequest) {
 
 export const config = {
   matcher: [
-    ...publicPaths, 
+    '/',
+    '/api/:path*',
+    '/ITCommittee',
+    '/ACACommittee',
+    '/CommCommittee',
+    '/ProfCommittee',
+    '/SocCommittee',
+    '/gallery',
+    '/Denied',
+    '/scholarship'
   ],
 };
