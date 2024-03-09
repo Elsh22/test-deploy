@@ -1,7 +1,7 @@
 "use client";
 import React from 'react';
-import GalleryPhoto from "../../components/Gallery/GalleryPhoto";
-import Instagram from "../../components/Gallery/Instagram";
+import GalleryPhoto from "../../../components/Gallery/GalleryPhoto";
+import Instagram from "../../../components/Gallery/Instagram";
 
 const GalleryPage = () => {
     return (
