@@ -2,7 +2,7 @@ import academImage from '../newassest/academ.jpeg';
 import communityImage from '../newassest/Com.jpg';
 import infoImage from '../newassest/academic.jpeg';
 import dmcImage from '../newassest/Mixer-2023.png';
-import profImage from '../newassest/Prof.JPG';
+import profImage from '../newassest/Pro.png';
 import socailImage from '../newassest/home5.jpg';
 
   export const exploreWorlds = [
