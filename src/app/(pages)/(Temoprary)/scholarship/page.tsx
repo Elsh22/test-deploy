@@ -63,21 +63,21 @@ const page = () => {
         <DateRange className="h-6 w-6 text-gray-500"/>
       </div>
       <h3 className="text-lg text-gray-900 font-semibold">Applications Open</h3>
-      <p className="text-gray-600">March 11, 2024</p>
+      <p className="text-gray-600">March 18, 2024</p>
     </div>
     <div className="mb-4 pl-8">
       <div className="absolute -left-3 mt-1 bg-white border-2 border-gray-200 rounded-full">
         <DateRange className="h-6 w-6 text-gray-500"/>
       </div>
       <h3 className="text-lg text-gray-900 font-semibold">Applications Close</h3>
-      <p className="text-gray-600">April 1, 2024</p>
+      <p className="text-gray-600">April 11, 2024</p>
     </div>
     <div className="mb-4 pl-8">
       <div className="absolute -left-3 mt-1 bg-white border-2 border-gray-200 rounded-full">
         <DateRange className="h-6 w-6 text-gray-500"/>
       </div>
       <h3 className="text-lg text-gray-900 font-semibold">Finalists Notified</h3>
-      <p className="text-gray-600">April 1, 2024</p>
+      <p className="text-gray-600">April 18, 2024</p>
     </div>
   </div>
 </div>  
