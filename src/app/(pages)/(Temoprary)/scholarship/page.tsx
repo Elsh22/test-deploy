@@ -22,7 +22,7 @@ const page = () => {
       </div>
       <div className="md:w-1/2 w-full text-center md:text-left pl-0 md:pl-8">
         <h1 className="text-4xl font-bold mb-4">DMC Scholarship</h1>
-        <p className="mb-6">Apply for a chance to win a scholarship from Developing Men of Color</p>
+        <p className="mb-6">This scholarship opportunity provides a $1,000 award to individuals who are current members of the DMC. Applicants must demonstrate a financial need for the scholarship.</p>
         <Link href="/scholarship/apply" passHref><button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mr-4 transition duration-300 ease-in-out">Apply</button></Link>
       </div>
     </div>
@@ -46,7 +46,7 @@ const page = () => {
   <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-10">
     <div className="flex flex-col p-8 border border-gray-200 rounded-lg shadow-md min-h-[10rem]">
       <AttachMoneySharp className="h-6 w-6"/>
-      <h3 className="font-bold mt-2">Financial Need <br/><span className="font-normal">Demonstrate financial need through a personal statement and optional reference letter.</span></h3>
+      <h3 className="font-bold mt-2">Application Process<br/><span className="font-normal">The application process for the scholarship begins on March 18, with the deadline for submissions set for April 11. Following the closure of the application window, our review and interview phase will take place from April 12 to April 17. This critical phase allows us to thoroughly evaluate each candidates application and conduct interviews to better understand their needs and qualifications. The process concludes with the announcement of the scholarship winners on April 18. Applicants are advised to ensure their applications are comprehensive and submitted within the specified timeframe to be considered for the scholarship award.</span></h3>
     </div>
     <div className="flex flex-col p-8 border border-gray-200 rounded-lg shadow-md min-h-[10rem]">
       <Diversity3 className="h-6 w-6"/>
