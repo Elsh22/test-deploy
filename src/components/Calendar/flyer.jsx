@@ -30,14 +30,15 @@ const FlyerPost = () => {
   ];
 
   return (
-    <div style={{ display: 'flex', flexWrap: 'wrap', gap: '20px' }}>
+    <div style={{ display: 'flex', justifyContent: 'center', gap: '40px', margin: '40px 0' }}>
       {flyers.map((flyer, index) => (
-        <div key={index} style={{ width: '200px' }}>
-          <Image src={flyer.image} alt={flyer.title} width={200} height={200} />
-          <h3>{flyer.title}</h3>
-          <p>{flyer.description}</p>
-          <p>{flyer.date}</p>
-        </div>
+        <div key={index} style={{ width: '250px', textAlign: 'center' }}>
+          <div style={{ height: '250px', position: 'relative', overflow: 'hidden', borderRadius: '10px', boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)' }}>
+            <Image src={flyer.image} alt={flyer.title} layout="fill" objectFit="cover" />
+          </div>
+          <h3 style={{ marginTop: '20px', fontSize: '1.5rem' }}>{flyer.title}</h3>
+          <p style={{ color: '#666', fontSize: '1.1rem' }}>{flyer.description}</p>
+          <p style={{ color: '#999', fontSize: '1rem', marginTop: '10px' }}>{flyer.date}</p>        </div>
       ))}
     </div>
   );
