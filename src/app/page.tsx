@@ -21,6 +21,7 @@ const HomePage = () => {
       <CommitteeAbout id="committee" />
       <Commitee  />
       <Mentorship id="mentorship" />
+      <>Random shit</>
       <Calendar id="calendar"/>
       <Sports id="sports" />
       <Contact id="contact" />
