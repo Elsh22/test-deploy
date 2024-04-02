@@ -9,6 +9,7 @@ import Contact from '../components/Contact/Contact';
 import About from '../components/About/About';
 import Mission from '../components/Mission/Mission';
 import Donor from '../components/Donor/Donor';
+import FlyerPost from '../components/Calendar/flyer';
 //import Directory from '../components/Directory/Directory';
 //  <Directory />
 
@@ -21,7 +22,7 @@ const HomePage = () => {
       <CommitteeAbout id="committee" />
       <Commitee  />
       <Mentorship id="mentorship" />
-      <>Random shit</>
+      <FlyerPost />
       <Calendar id="calendar"/>
       <Sports id="sports" />
       <Contact id="contact" />
