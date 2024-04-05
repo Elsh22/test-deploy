@@ -25,7 +25,8 @@ html {
 
 
 .donor-img {
-  background-image: url('../newassest/social2.png');
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../newassest/social2.png');
+
 }
 form > div {
   @apply flex flex-col gap-2;
