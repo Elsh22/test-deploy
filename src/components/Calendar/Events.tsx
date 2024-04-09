@@ -328,11 +328,6 @@ const events = [
       "end": "2024-04-24T20:00:00"
     },
     {
-      "title": "Committees Soccer/Field Day",
-      "start": "2024-04-28T00:00:00",
-      "end": "2024-04-28T23:59:59"
-    },
-    {
       "title": "Spring Retreat",
       "start": "2024-05-01T00:00:00",
       "end": "2024-05-01T23:59:59"
@@ -1025,7 +1020,27 @@ const events = [
       "title": "Suit Day",
       "start": "2024-03-16T12:30:00",
       "end": "2024-03-16T16:00:00",
-    },       
+    },  
+    {
+      "title": "Get fitted",
+      "start": "2024-04-30T12:30:00",
+      "end": "2024-04-30T16:00:00",
+    },     
+    {
+      "title": "Shadow Day",
+      "start": "2024-04-15T12:30:00",
+      "end": "2024-04-15T16:00:00",
+    },  
+    {
+      "title": "Not On Your Resume",
+      "start": "2024-04-16T17:00:00",
+      "end": "2024-04-16T18:00:00",
+    }, 
+    {
+      "title": "Committee vs. Committee Soccer Game",
+      "start": "2024-04-28T13:00:00",
+      "end": "2024-04-28T16:00:00",
+    },  
 
   ];
   

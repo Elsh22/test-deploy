@@ -40,7 +40,12 @@ function renderEventContent(eventInfo) {
     bgColor = 'bg-orange-500';
   }else if (eventInfo.event.title.includes('Suit Day')) {
     bgColor = 'bg-red-500';
-  }
+  }else if (eventInfo.event.title.includes('Shadow Day')) {
+    bgColor = 'bg-red-500';
+  }else if (eventInfo.event.title.includes('Not On Your Resume')) {
+    bgColor = 'bg-green-500';
+  } 
+
 
   return (
     <div className={`${bgColor} text-white text-xs sm:text-sm p-1 sm:p-2 rounded-lg`}>
