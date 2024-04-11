@@ -8,7 +8,6 @@ const Home  = ({
   id, 
   heading = 'Developing <br/> Men of <br/> Color', 
   message = 'At Virginia Commonwealth University',
-  message2 = 'DMC is Offering a Scholarships Click here to learn more'
 }) => {
   return (
     <div id={id} className='flex items-center justify-center h-screen mb-12 bg-fixed bg-center bg-cover custom-img'>
@@ -17,8 +16,6 @@ const Home  = ({
         <h2 className='text-5xl font-bold' dangerouslySetInnerHTML={{ __html: heading }}></h2>
         <p className='py-5 text-xl'>{message}</p>
         <ButtonClientComponent />
-        <p className='py-5 text-xl'>{message2}</p>
-        <Button />
       </div>
     </div>
   );
