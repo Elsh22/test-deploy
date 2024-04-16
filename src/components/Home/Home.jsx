@@ -17,8 +17,6 @@ const Home  = ({
         <h2 className='text-5xl font-bold' dangerouslySetInnerHTML={{ __html: heading }}></h2>
         <p className='py-5 text-xl'>{message}</p>
         <ButtonClientComponent />
-       <p className='py-5 text-xl'>{message2}</p>
-       <Button />
       </div>
     </div>
   );
