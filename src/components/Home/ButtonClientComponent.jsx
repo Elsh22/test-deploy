@@ -6,9 +6,11 @@ const ButtonClientComponent = () => {
   };
 
   return (
-    <button className='px-8 py-2 border' onClick={handleButtonClick}>
-      Join RamsConnect
-    </button>
+    <div style={{ display: 'flex', justifyContent: 'center' }}>
+      <button className='px-8 py-2 border' onClick={handleButtonClick}>
+        Join RamsConnect
+      </button>
+    </div>
   );
 };
 
