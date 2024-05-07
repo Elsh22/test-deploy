@@ -1017,14 +1017,14 @@ const events = [
       "location": "Hibbs hall"
     }, 
     {
-      "title": "Suit Day",
+      "title": "Get Fitted",
       "start": "2024-03-16T12:30:00",
       "end": "2024-03-16T16:00:00",
     },  
     {
-      "title": "Get fitted",
-      "start": "2024-04-30T12:30:00",
-      "end": "2024-04-30T16:00:00",
+      "title": "Suit Day",
+      "start": "2024-05-03T19:00:00",
+      "end": "2024-05-03T20:00:00",
     },     
     {
       "title": "Shadow Day",
@@ -1040,6 +1040,11 @@ const events = [
       "title": "Committee vs. Committee Soccer Game",
       "start": "2024-04-28T13:00:00",
       "end": "2024-04-28T16:00:00",
+    },  
+    {
+      "title": "Soccer championship game",
+      "start": "2024-04-29T13:00:00",
+      "end": "2024-04-29T16:00:00",
     },  
 
   ];

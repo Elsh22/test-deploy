@@ -16,7 +16,7 @@ const FlyerPost = () => {
   },
   {
 image: image2,
-title: 'Jacab Chance',
+title: 'Jacob Chance',
 description: 'come and join us for a chance to play kickball with us at Jacab Chance event.',
 date: 'March 23, 2024',
   },
