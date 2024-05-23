@@ -10,7 +10,7 @@ import About from '../components/About/About';
 import Mission from '../components/Mission/Mission';
 import Donor from '../components/Donor/Donor';
 import FlyerPost from '../components/Calendar/flyer';
-import Youtube from '../components/Youtube/Youtube';
+import Youtube from '../components/Youtube/youtube';
 //  <Directory />
 
 const HomePage = () => {
