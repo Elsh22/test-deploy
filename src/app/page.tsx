@@ -10,7 +10,7 @@ import About from '../components/About/About';
 import Mission from '../components/Mission/Mission';
 import Donor from '../components/Donor/Donor';
 import FlyerPost from '../components/Calendar/flyer';
-//import Directory from '../components/Directory/Directory';
+import Youtube from '../components/Youtube/Youtube';
 //  <Directory />
 
 const HomePage = () => {
@@ -19,6 +19,7 @@ const HomePage = () => {
       <Home id="home" />
       <Mission id="about"/>
       <Donor />
+      <Youtube />
       <CommitteeAbout id="committee" />
       <Commitee  />
       <Mentorship id="mentorship" />
