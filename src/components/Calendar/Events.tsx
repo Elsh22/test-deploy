@@ -1046,7 +1046,46 @@ const events = [
       "start": "2024-04-29T13:00:00",
       "end": "2024-04-29T16:00:00",
     },  
-
+    {
+      "title": "DMC Basketball",
+      "start": "2024-03-13T18:00:00",
+      "end": "2024-03-13T19:00:00"
+    },
+    {
+      "title": "DMC Basketball Championship Game",
+      "start": "2024-03-20T19:30:00",
+      "end": "2024-03-20T20:30:00"
+    },
+    {
+      "title": "DMC Spring Soccer Games",
+      "start": "2024-03-27T19:30:00",
+      "end": "2024-03-27T20:30:00"
+    },
+    {
+      "title": "IT Meeting",
+      "start": "2024-02-26T18:00:00",
+      "end": "2024-02-26T19:00:00"
+    },
+    {
+      "title": "IT Meeting",
+      "start": "2024-03-18T18:00:00",
+      "end": "2024-03-18T19:00:00"
+    },
+    {
+      "title": "IT Panel",
+      "start": "2024-04-01T19:00:00",
+      "end": "2024-04-01T21:00:00"
+    },
+    {
+      "title": "PD Committee",
+      "start": "2024-03-12T17:00:00",
+      "end": "2024-03-12T18:00:00"
+    },
+    {
+      "title": "PD Committee",
+      "start": "2024-03-26T17:00:00",
+      "end": "2024-03-26T18:00:00"
+    },
   ];
   
   export default events;
