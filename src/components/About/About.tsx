@@ -1,17 +1,18 @@
 "use client";
 import React from 'react';
-import Hassan from '../../assets/Hassan.jpg';
-import Hussein from '../../assets/Hussein.jpg';
 import Goode from '../../assets/Goode.jpg';
 import Thomas from '../../assets/Thomas.jpg';
-import Ron from '../../assets/Ron.jpeg';
 import Stephen from '../../assets/Stephen.jpeg';
 import Josh from '../../assets/Josh.png';
-import Omar from '../../assets/Omar.jpeg';
 import Zion from '../../assets/Zion.jpg';
-import Xavier from '../../assets/Xavier.png';
+import Xavier from '../../assets/Lewis_XavierHeadshot.jpg';
 import David from '../../assets/David.jpg';
 import DeAngelo from '../../assets/DeAngelo.jpg';
+import Mohamed from '../../assets/MohamedElnafeHeadshot.jpg';
+import Neho from '../../assets/NehoHeadshot.jpg';
+import Kaleb from '../../assets/KalebHeadshot.jpg';
+import Kabir from '../../assets/KabirHeadshot.jpeg';
+import Jason from '../../assets/JasonHeadshot.jpeg';
 
 interface AboutProps {
   id: string;
@@ -19,16 +20,17 @@ interface AboutProps {
 
 const AboutTeam = () => {
     const team = [
-        { name: 'DaRon Stuvaints', role: 'President', image: Ron.src, linkedin:'https://www.linkedin.com/in/daron-stuvaints/'},
-        { name: 'Omar Aly', role: 'Vice-President', image: Omar.src, linkedin:'https://www.linkedin.com/in/alyomarm/'},
-        { name: 'Alhussein Elshowaya', role: 'Secretary', image: Hussein.src, linkedin:'https://www.linkedin.com/in/alhussein-elshowaya-5431a322a/'},
-        { name: 'Alhassan Elshowaya', role: 'Treasurer', image: Hassan.src, linkedin:'https://www.linkedin.com/in/alhassan-elshowaya-214bb820a/'},
+        { name: 'Xavier Lewis', role: 'President', image: Xavier.src, linkedin:'https://www.linkedin.com/in/xavier-lewis-9916bb253/'},
+        { name: 'Zion Segears', role: 'Wellness Director', image: Zion.src, linkedin:'https://www.linkedin.com/in/zion-segears-767bb7242/'},
+        { name: 'Kabir Munjwani', role: 'Secretary', image: Kabir.src, linkedin:'https://www.linkedin.com/in/kabir-munjwani-2389bb319/'},       
+        { name: 'David Foster', role: 'Treasurer ', image: David.src, linkedin:'https://www.linkedin.com/in/david-foster-b063b0226/'},       
         { name: 'Josh Hines', role: 'Mentorship Director', image: Josh.src, linkedin:'https://www.linkedin.com/in/joshhines4/'},
         { name: 'DeAngelo Bailey', role: 'Public Relations Coordinator', image: DeAngelo.src, linkedin:'https://www.linkedin.com/in/deangelo-bailey-5686ba253/'},
-        { name: 'David Foster', role: 'Membership Chair', image: David.src, linkedin:'https://www.linkedin.com/in/david-foster-b063b0226/'},
-        { name: 'Zion Segears', role: 'Wellness Director', image: Zion.src, linkedin:'https://www.linkedin.com/in/zion-segears-767bb7242/'},
-        { name: 'Xavier Lewis', role: 'Event Coordinator', image: Xavier.src, linkedin:'https://www.linkedin.com/in/xavier-lewis-9916bb253/'},
-        { name: 'Stephen Kouevi', role: 'Director of IT', image: Stephen.src, linkedin:'https://www.linkedin.com/in/stephenkouevi/'},
+        { name: 'Jason Gallardo Gonzalez', role: 'Soical Media Chair', image: Jason.src, linkedin:'https://www.linkedin.com/in/jason-gallardo-gonzalez/'},
+        { name: 'Stephen Kouevi', role: 'Membership Chair', image: Stephen.src, linkedin:'https://www.linkedin.com/in/stephenkouevi/'},
+        { name: 'Kaleb Brown', role: 'Wellness Director', image: Kaleb.src, linkedin:'https://www.linkedin.com/in/kaleb--brown/'},
+        { name: 'Nehemiah Kibler', role: 'Event Coordinator', image: Neho.src, linkedin:'https://www.linkedin.com/in/nehemiah-kibler-ba8764253/'},
+        { name: 'Mohamed Elnafe', role: 'Director of IT', image: Mohamed.src, linkedin:'https://www.linkedin.com/in/mohamed-elnafe-364892215/'},
         { name: 'Dr. Carlton Goode', role: 'Faculty Advisor', image: Goode.src, linkedin:'https://www.linkedin.com/in/carlton-goode-ed-d-69172815/'},
         { name: 'Thomas Chatman', role: 'Second Advisor', image: Thomas.src, linkedin:'https://www.linkedin.com/in/thomas--chatman/'},
       ];
