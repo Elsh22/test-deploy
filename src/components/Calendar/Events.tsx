@@ -1,5 +1,107 @@
 // events.js
 const events = [
+  {
+    title: "DMC General Team Flag Football Game",
+    start: "2024-09-08T19:30:00",
+    end: "2024-09-08T20:30:00"
+  },
+  
+  {
+    title: "DMC Mentoring Orientation",
+    start: "2024-09-09T19:00:00",
+    end: "2024-09-09T20:00:00"
+  },
+
+  {
+    title: "DMC Ringers Team Flag Football Game",
+    start: "2024-09-09T19:30:00",
+    end: "2024-09-09T20:30:00"
+  },
+
+  {
+    title: "DMC Mentoring Orientation",
+    start: "2024-09-12T19:00:00",
+    end: "2024-09-12T20:00:00"
+  },
+
+  {
+    title: "DMC Mixer",
+    start: "2024-09-15T13:00:00",
+    end: "2024-09-15T21:00:00"
+  },
+
+  {
+    title: "DMC General Team Flag Football Game (Conflicting)",
+    start: "2024-09-15T19:30:00",
+    end: "2024-09-15T20:30:00"
+  },
+
+  {
+    title: "DMC Ringers Team Flag Football Game",
+    start: "2024-09-16T19:30:00",
+    end: "2024-09-16T20:30:00"
+  },
+
+  {
+    title: "DMC GBM",
+    start: "2024-09-18T18:00:00",
+    end: "2024-09-18T21:30:00"
+  },
+
+  {
+    title: "DMC General Team Flag Football Game",
+    start: "2024-09-22T19:30:00",
+    end: "2024-09-22T20:30:00"
+  },
+
+  {
+    title: "DMC Ringers Team Flag Football Game",
+    start: "2024-09-23T19:30:00",
+    end: "2024-09-23T20:30:00"
+  },
+
+  {
+    title: "DMC Internship Workshop",
+    start: "2024-10-01T19:00:00",
+    end: "2024-10-01T21:00:00"
+  },
+
+  {
+    title: "DMC Resume and Linkedin Workshop",
+    start: "2024-10-10T18:30:00",
+    end: "2024-10-10T21:30:00"
+  },
+
+  {
+    title: "DMC GBM",
+    start: "2024-10-16T18:00:00",
+    end: "2024-10-16T21:30:00"
+  },
+
+  {
+    title: "DMC Resource Fair",
+    start: "2024-10-24T10:00:00",
+    end: "2024-10-24T15:00:00"
+  },
+
+  {
+    title: "DMC GBM",
+    start: "2024-11-20T18:00:00",
+    end: "2024-11-20T21:30:00"
+  },
+
+  {
+    title: "DMC General Team Flag Football Game",
+    start: "2024-09-08T19:30:00",
+    end: "2024-09-08T20:30:00"
+  },
+
+  {
+    title: "DMC Mentoring Orientation at Room TBD",
+    start: "2024-09-05T19:00:00",
+    end: "2024-09-05T20:00:00"
+  },
+
     {
       title: "Men of color mixer in the commons",
       start: "2023-09-17T16:00:00",
