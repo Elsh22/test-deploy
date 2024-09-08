@@ -1,36 +1,30 @@
 import React from 'react'; 
 import Image from 'next/image';
-import image1 from '../../newassest/flyers/fyer320.jpg';
-import image2 from '../../newassest/flyers/fyler-323.jpg'
-import image3 from '../../newassest/flyers/fyler401.jpg'
-import image4 from '../../newassest/flyers/fylermarch.jpg'
+import image1 from '../../newassest/GBM-Flyer.jpg';
+import image2 from '../../newassest/MixerFlyerV2.jpg';
+import image4 from '../../newassest/SovoFairPost.jpg';
 
 const FlyerPost = () => {
 
   const flyers = [
-  {
-  image: image3,
-  title: 'IT Panel',
-  description: 'Join us for a learnning about the IT sector and networking with professionals.',
-  date: 'April 1, 2024',
-  },
+ 
   {
 image: image2,
-title: 'Jacob Chance',
-description: 'come and join us for a chance to play kickball with us at Jacab Chance event.',
-date: 'March 23, 2024',
+title: 'DMC Mixer',
+description: 'Join us for our annual DMC Mixer to meet other members and learn more about our organization.',
+date: 'September 15, 2024',
   },
   {
 image: image1,
-title: 'Gernal Body Meeting',
+title: 'General Body Meeting',
 description: 'Join us for our monthly meeting to discuss the upcoming events and updates.',
-date: 'March 20, 2024',
+date: 'September 18, 2024',
   },
   {
 image: image4,
-title: 'March Event fliers',
-description: 'This is the fliers for the events that will be happening in the end of March.',
-date: 'week of 16-24',
+title: 'Sovo Fair',
+description: 'Come and join us at the Sovo Fair to learn more about our organization and how to get involved.',
+date: 'August 23, 2024',
   },
 ];
 
