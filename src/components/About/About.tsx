@@ -2,17 +2,18 @@
 import React from 'react';
 import Goode from '../../assets/Goode.jpg';
 import Thomas from '../../assets/Thomas.jpg';
-import Stephen from '../../assets/Stephen.jpeg';
-import Josh from '../../assets/Josh.png';
+import Stephen from '../../assets/StephHeadshotUpdated.jpg';
+import Josh from '../../assets/JoshHeadshotUpdated.jpeg';
 import Zion from '../../assets/Zion.jpg';
-import Xavier from '../../assets/Lewis_XavierHeadshot.jpg';
-import David from '../../assets/David.jpg';
-import DeAngelo from '../../assets/DeAngelo.jpg';
-import Mohamed from '../../assets/MohamedElnafeHeadshot.jpg';
-import Neho from '../../assets/NehoHeadshot.jpg';
-import Kaleb from '../../assets/KalebHeadshot.jpg';
-import Kabir from '../../assets/KabirHeadshot.jpeg';
-import Jason from '../../assets/JasonHeadshot.jpeg';
+import Xavier from '../../assets/XaiverHeadshotUpdated.jpg';
+import David from '../../assets/DavidHeadshotUpdated.jpg';
+import DeAngelo from '../../assets/DeangleoHeadshotUpdated.jpg';
+import Mohamed from '../../assets/MohamedHeadshotUpdated.jpg';
+import Neho from '../../assets/NehoHeadshotUpdated.jpg';
+import Kaleb from '../../assets/KalebHeadshotUpdated.jpg';
+import Kabir from '../../assets/KabirHeadshotUpdated.jpg';
+import Jason from '../../assets/JasonHeadshotUpdated.jpg';
+
 
 interface AboutProps {
   id: string;
