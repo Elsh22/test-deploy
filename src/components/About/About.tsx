@@ -22,7 +22,7 @@ interface AboutProps {
 const AboutTeam = () => {
     const team = [
         { name: 'Xavier Lewis', role: 'President', image: Xavier.src, linkedin:'https://www.linkedin.com/in/xavier-lewis-9916bb253/'},
-        { name: 'Zion Segears', role: 'Wellness Director', image: Zion.src, linkedin:'https://www.linkedin.com/in/zion-segears-767bb7242/'},
+        { name: 'Zion Segears', role: 'Vice President', image: Zion.src, linkedin:'https://www.linkedin.com/in/zion-segears-767bb7242/'},
         { name: 'Kabir Munjwani', role: 'Secretary', image: Kabir.src, linkedin:'https://www.linkedin.com/in/kabir-munjwani-2389bb319/'},       
         { name: 'David Foster', role: 'Treasurer ', image: David.src, linkedin:'https://www.linkedin.com/in/david-foster-b063b0226/'},       
         { name: 'Josh Hines', role: 'Mentorship Director', image: Josh.src, linkedin:'https://www.linkedin.com/in/joshhines4/'},
