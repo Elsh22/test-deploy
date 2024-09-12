@@ -7,16 +7,17 @@ import { FaPlay } from 'react-icons/fa';
 
 const Youtube = () => {
   const videos = [
-    { videoId: '0M6I3KH3x28', title: 'Video 1' },
-    { videoId: '6novGvOabco', title: 'Video 2' },
-    { videoId: 'H1qklEi04lc', title: 'Video 3' },
-    { videoId: 'L9VGDJ4tuN0', title: 'Video 4' },
-    { videoId: '1BoLVFluhak', title: 'Video 5' },
-    { videoId: '3C5SlNyqfvo', title: 'Video 6' },
-    { videoId: '0P37B_g8lfQ', title: 'Video 7' },
-    { videoId: 'S-9xvaDMl7k', title: 'Video 8' },
-    { videoId: 'M4TUCKbL4Bk', title: 'Video 9' },
-    { videoId: 'fZVZHmwDTeo', title: 'Video 10' },
+    { videoId: 'tf0tBafdo0k', title: 'Video 1' },
+    { videoId: '0M6I3KH3x28', title: 'Video 2' },
+    { videoId: '6novGvOabco', title: 'Video 3' },
+    { videoId: 'H1qklEi04lc', title: 'Video 4' },
+    { videoId: 'L9VGDJ4tuN0', title: 'Video 5' },
+    { videoId: '1BoLVFluhak', title: 'Video 6' },
+    { videoId: '3C5SlNyqfvo', title: 'Video 7' },
+    { videoId: '0P37B_g8lfQ', title: 'Video 8' },
+    { videoId: 'S-9xvaDMl7k', title: 'Video 9' },
+    { videoId: 'M4TUCKbL4Bk', title: 'Video 10' },
+    { videoId: 'fZVZHmwDTeo', title: 'Video 11' },
   ];
 
   const settings = {
