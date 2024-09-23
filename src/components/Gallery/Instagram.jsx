@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+nimport React, { Component } from 'react';
 import Instafeed from 'instafeed.js';
 
 class InstagramFeed extends Component {
