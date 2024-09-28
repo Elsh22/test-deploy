@@ -56,10 +56,10 @@ html {
   color: #bbb;
 }
 .theme.light .theme-text {
-  color: black; /* Color for light mode */
+  color: black; 
 }
 
 .theme.dark .theme-text {
-  color: white; /* Color for dark mode */
+  color: white; 
 }
 
