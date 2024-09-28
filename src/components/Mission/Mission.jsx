@@ -16,11 +16,7 @@ const Mission = ({ id }) => {
             variants={planetVariants('left')} // Ensure you have defined or adjusted the planetVariants function
             className={`${styles.flexCenter} mb-4 md:mb-0`} // Added marginBottom for non-md screens
           >
-            <img
-              src={IMG1.src}
-              alt="Developing Men of Color"
-              className="w-[80%] md:w-[90%] h-auto object-contain" // Adjusted for responsiveness
-            />
+            
           </motion.div>
         </section>
         <section className="w-full md:flex-1">
@@ -46,3 +42,8 @@ const Mission = ({ id }) => {
 };
 
 export default Mission;
+/*<img
+              /*src={IMG1.src}
+              alt="Developing Men of Color"
+              className="w-[80%] md:w-[90%] h-auto object-contain" // Adjusted for responsiveness
+            >*/
