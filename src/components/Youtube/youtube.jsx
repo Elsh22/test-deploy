@@ -18,7 +18,7 @@ const Youtube = () => {
     { videoId: 'S-9xvaDMl7k', title: 'Video 9' },
     { videoId: 'M4TUCKbL4Bk', title: 'Video 10' },
     { videoId: 'fZVZHmwDTeo', title: 'Video 11' },
-    { videoId: 'kNX907_j3_g', title: 'Video 12' }
+    { videoId: 'kNX907_j3_g', title: 'Video 12' },
 
   ];
 
@@ -73,9 +73,4 @@ const Youtube = () => {
             </div>
           </div>
         ))}
-      </Slider>
-    </section>
-  );
-};
-
-export default Youtube;
+      </Sli
