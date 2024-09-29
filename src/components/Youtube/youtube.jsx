@@ -7,6 +7,7 @@ import { FaPlay } from 'react-icons/fa';
 
 const Youtube = () => {
   const videos = [
+    { videoId: 'kNX907_j3_g', title: 'Video 12' },
     { videoId: 'tf0tBafdo0k', title: 'Video 1' },
     { videoId: '0M6I3KH3x28', title: 'Video 2' },
     { videoId: '6novGvOabco', title: 'Video 3' },
@@ -18,7 +19,6 @@ const Youtube = () => {
     { videoId: 'S-9xvaDMl7k', title: 'Video 9' },
     { videoId: 'M4TUCKbL4Bk', title: 'Video 10' },
     { videoId: 'fZVZHmwDTeo', title: 'Video 11' },
-    { videoId: 'kNX907_j3_g', title: 'Video 12' },
 
   ];
 
@@ -73,4 +73,9 @@ const Youtube = () => {
             </div>
           </div>
         ))}
-      </Sli
+      </Slider>
+    </section>
+  );
+};
+
+export default Youtube;
