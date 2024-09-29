@@ -27,7 +27,7 @@ import socailImage from '../newassest/home5.jpg';
       imgUrl: infoImage.src,
       title: 'Information Technology Committee',
       text: 'Information Technology Committee: DMC has a brand new committee called the “Information Technology Committee” (IT). This committee will consist of new innovative ideas and technologies being added to the organization. The committee will be actively open to join.',
-      Chairman: 'Stephen Kouevi, Mohamed Elnafe',
+      Chairman: 'Mohamed Elnafe, Jason Arias',
       Buttonlink:'/ITCommittee',
     },
     {

@@ -11,7 +11,7 @@ const Mission = ({ id }) => {
       // Adjusted for responsiveness: stacks vertically on small screens, horizontally on larger screens
       <div className="flex flex-col md:flex-row items-center m-5 gap-4 md:gap-8" id={id}>
         <section className="w-full md:flex-1">
-         <TypingText title="DMC Leadership" textStyles="text-center"  /> 
+         <TypingText title="DMC Leadership"  textStyles="text-center font-normal text-[30px]"   /> 
           <motion.div
             variants={planetVariants('left')} // Ensure you have defined or adjusted the planetVariants function
             className={`${styles.flexCenter} mb-4 md:mb-0`} // Added marginBottom for non-md screens
