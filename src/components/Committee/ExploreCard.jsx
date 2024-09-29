@@ -5,7 +5,7 @@ import styles from '../../styles';
 import { fadeIn } from '../../utils/motion';
 
 
-const ExploreCard = ({ id, eimgUrl, title, text, Chairman, Buttonlink, index, active, handleClick }) => (
+const ExploreCard = ({ id, imgUrl, title, text, Chairman, Buttonlink, index, active, handleClick }) => (
   <motion.div
     variants={fadeIn('right', 'spring', index * 0.5, 0.75)}
     className={`relative ${
