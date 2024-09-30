@@ -2,11 +2,18 @@ import React from 'react';
 import Image from 'next/image';
 import image1 from '../../newassest/GBM-Flyer.jpg';
 import image2 from '../../newassest/MixerFlyerV2.jpg';
+import image3 from '../../newassest/InternshipWorkshopFlyer.png';
 import image4 from '../../newassest/SovoFairPost.jpg';
 
 const FlyerPost = () => {
 
   const flyers = [
+{
+    image: image3,
+    title: 'Internship Workshop',
+    description: 'Join us for Internship Workshop to learn more about how to secure an internship and what to expect.',
+    date: 'October 1, 2024',
+      },
  
   {
 image: image2,
