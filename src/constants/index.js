@@ -1,9 +1,9 @@
-import academImage from '../newassest/academ.jpeg';
+import academImage from '../newassest/AcademicPicImproved.png';
 import communityImage from '../newassest/Com.jpg';
-import infoImage from '../newassest/academic.jpeg';
-import dmcImage from '../newassest/Mixer-2023.png';
-import profImage from '../newassest/Pro.png';
-import socailImage from '../newassest/home5.jpg';
+import infoImage from '../newassest/ITPicImproved.png';
+import dmcImage from '../assets/background1.jpg';
+import profImage from '../newassest/PDPic.png';
+import socailImage from '../newassest/SoicalPic2.jpg';
 
   export const exploreWorlds = [
     {
