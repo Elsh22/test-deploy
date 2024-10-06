@@ -1,37 +1,37 @@
 import React from 'react'; 
 import Image from 'next/image';
-import image1 from '../../newassest/GBM-Flyer.jpg';
-import image2 from '../../newassest/MixerFlyerV2.jpg';
-import image3 from '../../newassest/InternshipWorkshopFlyer.png';
-import image4 from '../../newassest/SovoFairPost.jpg';
+import image1 from '../../newassest/weeklyFlyers/Black Yellow Bold We are Hiring Instagram Post (1).png';
+import image2 from '../../newassest/weeklyFlyers/Red Modern Meeting Invitation Instagram Post.png.png';
+import image3 from '../../newassest/weeklyFlyers/Grey Black Bold Minimalist Pottery Workshop Flyer (1080 x 1350 px) (1).png';
+import image4 from '../../newassest/weeklyFlyers/Green Red Volunter Need Flyer (1080 x 1350 px).png';
 
 const FlyerPost = () => {
 
   const flyers = [
 {
-    image: image3,
-    title: 'Internship Workshop',
-    description: 'Join us for Internship Workshop to learn more about how to secure an internship and what to expect.',
-    date: 'October 1, 2024',
+    image: image1,
+    title: 'DMC Hoodie Day',
+    description: 'Join us for in representing DMC through VCU campus by wearing your DMC Hoodie.',
+    date: 'October 16, 2024',
       },
  
   {
 image: image2,
-title: 'DMC Mixer',
-description: 'Join us for our annual DMC Mixer to meet other members and learn more about our organization.',
-date: 'September 15, 2024',
-  },
-  {
-image: image1,
 title: 'General Body Meeting',
 description: 'Join us for our monthly meeting to discuss the upcoming events and updates.',
-date: 'September 18, 2024',
+date: 'October 16, 2024',
+  },
+  {
+image: image3,
+title: 'LinkedIn/Resume Workshop',
+description: 'Join us for a workshop to learn how to create a professional LinkedIn profile and resume.',
+date: 'October 10, 2024',
   },
   {
 image: image4,
-title: 'Sovo Fair',
-description: 'Come and join us at the Sovo Fair to learn more about our organization and how to get involved.',
-date: 'August 23, 2024',
+title: 'Community Serivce',
+description: 'Join us for a community service event to give back to the Richmond community.',
+date: 'October 3, 2024',
   },
 ];
 
