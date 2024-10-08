@@ -7,7 +7,7 @@ class InstagramFeed extends Component {
       get: 'user',
       target: 'instafeed-container',
       resolution: 'standard_resolution',
-      accessToken: 'IGQWRNb1VFYU8ydUswbnRWajM2d2xlbkQtQi1ockswTlk5cTdBV19fUkF2MmdMSHl6TEU2THAxWmtUd2pydHhmQkt0LUVoZA3RfdU8wazJtNnhxQmFLSkV2VmVNSjdOUlhmOGpWVzdMTEVJLXlnR1NhR1dueTVZAVEEZD', // Updated line
+      accessToken: 'IGQWRPLV8tOFhHTzQtTWhJdWxaS2I0bk1UZAkRrOUxYSTh2TVhseTR3MWxoT1Rid3hRQzNzX3Y5Y1hEYmN6Y2h1RU9falhDSzJjalR6cVNNX1djN09jNXYya2hoeDJ6LUQySDJQRDA4NXpJcWVfd0xscDlvR3NKdk0ZD', // Updated line
       template: `<a href="{{link}}" class="block overflow-hidden mb-3">
                       <div class="relative" style="padding-bottom: 100%;"> <!-- Aspect ratio box -->
                         <img src="{{image}}" class="absolute top-0 left-0 w-full h-full object-cover" />
