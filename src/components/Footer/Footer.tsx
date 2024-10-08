@@ -30,7 +30,7 @@ const Footer = () => {
               <li><Link href="/SocCommittee" className="hover:text-gray-300">Social Committee</Link></li>
               <li><Link href="/CommCommittee" className="hover:text-gray-300">Community Service Committee</Link></li>
               <li><Link href="/ACACommittee" className="hover:text-gray-300">Academic Committee</Link></li>
-              <li><Link href="/ACACommittee" className="hover:text-gray-300">IT Committee</Link></li>
+              <li><Link href="/ITCommittee" className="hover:text-gray-300">IT Committee</Link></li>
 
             </ul>
           </div>
