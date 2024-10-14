@@ -2,8 +2,8 @@
 import { motion } from 'framer-motion';
 import { fadeIn, staggerContainer, planetVariants} from "../../utils/motion";
 import { StartStepsSports } from '@/constants/index';
-import styles from '../../styles'
-import { TypingText, TitleText } from '../../utils/CustomText'
+import styles from '../../styles';
+import { TypingText, TitleText } from '../../utils/CustomText';
 import StartSteps  from '../../utils/Startsteps';
 
 const SportsSteps = () => (
@@ -22,7 +22,7 @@ const SportsSteps = () => (
         > 
   
         <video
-          src="src/newassest/DMC FLAG.mp4" // Replace IMG.src with the correct video file path if necessary
+          src="src\newassest\DMC_FLAG.mp4" // Replace IMG.src with the correct video file path if necessary
           className="w-[90%] h-[90%] object-contain"
           controls // Adds play/pause controls
           autoPlay // Automatically plays the video when it loads
