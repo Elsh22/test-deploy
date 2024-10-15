@@ -15,22 +15,21 @@ const SportsSteps = () => (
         viewport={{ once: false, amount: 0.25 }}
         className={`${styles.innerWidth} mx-auto flex lg:flex-row flex-col gap-8`}
       >
-  {/* Video element instead of an image */}
-      <motion.div
-        variants={planetVariants('left')}
-        className={`flex-1 ${styles.flexCenter}`}
+        <motion.div
+          variants={planetVariants('left')}
+          className={`flex-1 ${styles.flexCenter}`}
         > 
-  
-        <video
-          src="src\newassest\DMC_FLAG.mp4" // Replace IMG.src with the correct video file path if necessary
-          className="w-[90%] h-[90%] object-contain"
-          controls // Adds play/pause controls
-          autoPlay // Automatically plays the video when it loads
-          loop // Makes the video loop continuously
-          muted // Mutes the video by default
-        />
-      </motion.div>
-  {/* Video element instead of an image */}
+          <div className="relative w-full pt-[56.25%]">
+            <iframe
+              className="absolute top-0 left-0 w-full h-full"
+              src="https://www.youtube.com/embed/H1qklEi04lc"
+              title="YouTube video player"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            />
+          </div>
+        </motion.div>
         <motion.div   
           variants={fadeIn('left', 'tween', 0.2, 1)}
           className="flex-[0.75] flex justify-center flex-col text-center lg:text-left"
@@ -47,7 +46,7 @@ const SportsSteps = () => (
     </section>
   );
   
-  export default SportsSteps;
+export default SportsSteps;
 
 
 
