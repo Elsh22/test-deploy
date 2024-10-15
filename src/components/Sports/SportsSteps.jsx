@@ -22,7 +22,7 @@ const SportsSteps = () => (
           <div className="relative w-full pt-[56.25%]">
             <iframe
               className="absolute top-0 left-0 w-full h-full"
-              src="https://www.youtube.com/embed/H1qklEi04lc"
+              src="https://www.youtube.com/embed/Awud3NiZkV4?si=Kkn2twKuj8N5r0m1" 
               title="YouTube video player"
               frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
