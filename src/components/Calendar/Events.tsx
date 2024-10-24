@@ -1,5 +1,15 @@
 const events = [
   {
+  title: "Jacob's Chance",
+  start: "2024-11-02T12:30:00",
+  end: "2024-11-02T14:00:00"
+  },
+  {
+  title: "Library Study Session",
+  start: "2024-11-02T12:30:00",
+  end: "2024-11-02T14:00:00"
+  },
+  {
     title: "DMC General Team Flag Football Game",
     start: "2024-09-01T19:30:00",
     end: "2024-09-01T20:30:00"

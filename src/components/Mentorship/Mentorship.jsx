@@ -1,6 +1,6 @@
 'use client';
 import { motion } from 'framer-motion';
-import IMG from '../../newassest/MentorA.jpg';
+import IMG from '../../newassest/updatedcollegeday.jpg';
 import styles from '../../styles';
 import { startingFeatures } from '../../constants/index';
 import StartSteps  from '../../utils/Startsteps';

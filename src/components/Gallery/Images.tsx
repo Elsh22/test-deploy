@@ -57,8 +57,112 @@ import img68 from "../../newassest/DSC01636-Enhanced-NR.jpg";
 import img69 from "../../newassest/DSC01614-Enhanced-NR.jpg";
 import img70 from "../../newassest/DSC01604-Enhanced-NR.jpg";
 import img71 from "../../newassest/DSC01590-Enhanced-NR.jpg";
+import PanelShotVACU from "../../newassest/PanelShotVACU.jpg";
+import FoodGBMVACU from "../../newassest/FoodGBMVACU.jpg";
+import FoodPresentedGBMVACU from "../../newassest/FoodPresentedGBMVACU.jpg";
+import PanelVACU from "../../newassest/PanelVACU.jpg";
+import ZiadbeinglightskinVACU from "../../newassest/ZiadbeinglightskinVACU.jpg";
+import ShotofRobert from "../../newassest/ShotofRobert.jpg";
+import NehoandXWholsomeVACU from "../../newassest/NehoandXWholsomeVACU.jpg";
+import MoeNHusseinVACU from "../../newassest/MoeNHusseinVACU.jpg";
+import FolksatVACU from "../../newassest/FolksatVACU.jpg";
+import BigShotatGBMVACU from "../../newassest/BigShotatGBMVACU.jpg";
+import RobertTalkingAtPanel from "../../newassest/RobertTalkingatPanelVACU.jpg";
+import ShotOfAudienceWhilePanelTalking from "../../newassest/ShotofAudiencewhilePanelTalking.jpg";
+import AnotherShotOfRobertTalking from "../../newassest/AnotherShotofRobertTalking.jpg";
+import DMCGettingCheckFromVACU from "../../newassest/DMCGettingCheckfromVACU.jpg";
+import DeloTalkingToPhotoguyAtVACU from "../../newassest/DeloTalkingtoPhotoguyatVACU.jpg";
+import KabirTalkingToVPofOps from "../../newassest/KabirTalkingtoVPofOps.jpg";
+import VACUWithFood from "../../newassest/VACUwfood.jpg";
+import VACUInteractionWithStudents from "../../newassest/VACUInteractionwithstudents.jpg";
+import WholesomePictureVACU from "../../newassest/WholesomepictureVACU.jpg";
+import ChrisShocklyMightBeBlushing from "../../newassest/ChrisShocklymightbeblushing.jpg";
+
+
 
 const imageData = [
+  {
+    id: 91,
+    imgSrc: ChrisShocklyMightBeBlushing,
+  },
+  {
+    id: 90,
+    imgSrc: WholesomePictureVACU,
+  },
+  {
+    id: 89,
+    imgSrc: VACUInteractionWithStudents,
+  },
+  {
+    id: 88,
+    imgSrc: VACUWithFood,
+  },
+  {
+    id: 87,
+    imgSrc: KabirTalkingToVPofOps,
+  },
+  {
+    id: 86,
+    imgSrc: DeloTalkingToPhotoguyAtVACU,
+  },
+  {
+    id: 85,
+    imgSrc: DMCGettingCheckFromVACU,
+  },
+  {
+    id: 84,
+    imgSrc: AnotherShotOfRobertTalking,
+  },
+  {
+    id: 83,
+    imgSrc: ShotOfAudienceWhilePanelTalking,
+  },
+  {
+    id: 82,
+    imgSrc: RobertTalkingAtPanel,
+  },
+  
+  {
+    id: 72,
+    imgSrc: PanelShotVACU,
+  },
+  {
+    id: 73,
+    imgSrc: FoodGBMVACU,
+  },
+  {
+    id: 74,
+    imgSrc: FoodPresentedGBMVACU,
+  },
+  {
+    id: 75,
+    imgSrc: PanelVACU,
+  },
+  {
+    id: 76,
+    imgSrc: ZiadbeinglightskinVACU,
+  },
+  {
+    id: 77,
+    imgSrc: ShotofRobert,
+  },
+  {
+    id: 78,
+    imgSrc: NehoandXWholsomeVACU,
+  },
+  {
+    id: 79,
+    imgSrc: MoeNHusseinVACU,
+  },
+  {
+    id: 80,
+    imgSrc: FolksatVACU,
+  },
+  {
+    id: 81,
+    imgSrc: BigShotatGBMVACU,
+  },
+  
   {
     id: 71,
     imgSrc: img71,
