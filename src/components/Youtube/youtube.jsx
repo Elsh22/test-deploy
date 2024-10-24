@@ -7,6 +7,7 @@ import { FaPlay } from 'react-icons/fa';
 
 const Youtube = () => {
   const videos = [
+    { videoId: 'BidFVxIBaHo', title: 'Video 13' },
     { videoId: 'kNX907_j3_g', title: 'Video 12' },
     { videoId: 'tf0tBafdo0k', title: 'Video 1' },
     { videoId: '0M6I3KH3x28', title: 'Video 2' },
