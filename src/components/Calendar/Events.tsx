@@ -226,7 +226,7 @@ const events = [
   },
   {
     title: "IT Committee Meeting",
-    start: "2024-11-14T18:30:00",
+    start: "2024-11-21T18:30:00",
     end: "2024-11-14T20:00:00"
   },
   {
