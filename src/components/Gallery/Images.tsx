@@ -77,10 +77,81 @@ import VACUWithFood from "../../newassest/VACUwfood.jpg";
 import VACUInteractionWithStudents from "../../newassest/VACUInteractionwithstudents.jpg";
 import WholesomePictureVACU from "../../newassest/WholesomepictureVACU.jpg";
 import ChrisShocklyMightBeBlushing from "../../newassest/ChrisShocklymightbeblushing.jpg";
+import kidsAtGymOnBench from '../../newassest/kidsatgymonbench.jpg';
+import kidsDoingPushups from '../../newassest/kidsdoingpushups.jpg';
+import moreKidsDoingPushups from '../../newassest/morekidsdoingpushups.jpg';
+import moreResourceFairSauce from '../../newassest/moreresourcefairsauce.jpg';
+import resourceFairSauce from '../../newassest/resourcefairsauce.jpg';
+import resourceFairCoffee from '../../newassest/resourcefaircoffee.jpg';
+import ziadAtResourceFair from '../../newassest/ziadatresourcefair.jpg';
+import nehoAtResourceFair from '../../newassest/nehoatresourcefair.jpg';
+import resourceFairFun from '../../newassest/resourcefairfun.jpg';
+import nehoHelpingAtResourceFair from '../../newassest/nehohelpingatresourcefair.jpg';
+import DrBrown from '../../newassest/Drbrown.jpg';
+import kidsPostedUp from '../../newassest/kidsPostedup.jpg';
+import kidsNextToUnderground from '../../newassest/kidsNexttounderground.jpg';
+import kidsNextToRamsHorns from '../../newassest/kidsnexttoramshorns.jpg';
 
 
 
 const imageData = [
+  {
+    id: 102,
+    imgSrc: kidsNextToRamsHorns,
+  },
+  {
+    id: 103,
+    imgSrc: kidsNextToUnderground,
+  },
+  {
+    id: 104,
+    imgSrc: kidsPostedUp,
+  },
+  {
+    id: 105,
+    imgSrc: DrBrown,
+  },
+
+  {
+    id: 101,
+    imgSrc: nehoHelpingAtResourceFair,
+  },
+  {
+    id: 100,
+    imgSrc: resourceFairFun,
+  },
+  {
+    id: 99,
+    imgSrc: nehoAtResourceFair,
+  },
+  {
+    id: 98,
+    imgSrc: ziadAtResourceFair,
+  },
+  {
+    id: 97,
+    imgSrc: resourceFairCoffee,
+  },
+  {
+    id: 96,
+    imgSrc: resourceFairSauce,
+  },
+  {
+    id: 95,
+    imgSrc: moreResourceFairSauce,
+  },
+  {
+    id: 94,
+    imgSrc: moreKidsDoingPushups,
+  },
+  {
+    id: 93,
+    imgSrc: kidsDoingPushups,
+  },
+  {
+    id: 92,
+    imgSrc: kidsAtGymOnBench,
+  },
   {
     id: 91,
     imgSrc: ChrisShocklyMightBeBlushing,
