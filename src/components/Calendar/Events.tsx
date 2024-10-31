@@ -6,8 +6,8 @@ const events = [
   },
   {
     title: "DMC Diabetes Awareness Walk",
-    start: "2024-11-17T18:00:00",
-    end: "2024-11-17T22:00:00"
+    start: "2024-11-17T09:00:00",
+    end: "2024-11-17T11:00:00"
   },
   {
     title: "DMC CGI Panel Event",
