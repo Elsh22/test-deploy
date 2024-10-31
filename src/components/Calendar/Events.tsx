@@ -1,5 +1,20 @@
 const events = [
   {
+    title: "DMC Wellness Event",
+    start: "2024-12-17T18:00:00",
+    end: "2024-12-17T20:00:00"
+  },
+  {
+    title: "DMC Diabetes Awareness Walk",
+    start: "2024-11-17T18:00:00",
+    end: "2024-11-17T22:00:00"
+  },
+  {
+    title: "DMC CGI Panel Event",
+    start: "2025-02-11T18:30:00",
+    end: "2025-02-11T20:30:00"
+  },
+  {
   title: "Jacob's Chance",
   start: "2024-11-02T12:30:00",
   end: "2024-11-02T14:00:00"
