@@ -91,10 +91,55 @@ import DrBrown from '../../newassest/Drbrown.jpg';
 import kidsPostedUp from '../../newassest/kidsPostedup.jpg';
 import kidsNextToUnderground from '../../newassest/kidsNexttounderground.jpg';
 import kidsNextToRamsHorns from '../../newassest/kidsnexttoramshorns.jpg';
+import groupPhoto1 from "../../newassest/Wingroupphoto.jpg";
+import postedWin from "../../newassest/postedwin.jpg";
+import jasonWinning from "../../newassest/jasonwinning.jpg";
+import shakeHands from "../../newassest/shakehands.jpg";
+import pitchingKid from "../../newassest/pitchingkid.jpg";
+import pitchingKid2 from "../../newassest/pitchingkid2.jpg";
+import groupPic2 from "../../newassest/grouppic2.jpg";
+import groupPic from "../../newassest/grouppic.jpg";
+import kidFistPump from "../../newassest/kidfistpump.jpg";
 
 
 
 const imageData = [
+  {
+    id: 114,
+    imgSrc: kidFistPump,
+},
+{
+    id: 113,
+    imgSrc: groupPic,
+},
+{
+    id: 112,
+    imgSrc: groupPic2,
+},
+{
+    id: 111,
+    imgSrc: pitchingKid2,
+},
+{
+    id: 110,
+    imgSrc: pitchingKid,
+},
+{
+    id: 109,
+    imgSrc: shakeHands,
+},
+{
+    id: 108,
+    imgSrc: jasonWinning,
+},
+{
+    id: 107,
+    imgSrc: postedWin,
+},
+{
+    id: 106,
+    imgSrc: groupPhoto1,
+},
   {
     id: 102,
     imgSrc: kidsNextToRamsHorns,
