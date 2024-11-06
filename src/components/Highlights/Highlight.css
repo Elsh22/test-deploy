@@ -1,0 +1,56 @@
+.highlights-container {
+    padding: 30px;
+    background-color: #f9f9f9;
+    border-radius: 12px;
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
+    margin: 30px 0;
+}
+
+.highlights-title {
+    font-size: 3rem; /* Larger title font size */
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.highlights-description {
+    font-size: 1.5rem; /* Larger description font size */
+    font-weight: 600;  /* Bolder text */
+    color: #666;
+    margin-bottom: 35px;
+    text-align: center;
+}
+
+.highlights-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Increase min width for larger images */
+    gap: 35px;
+}
+
+.highlight-box {
+    text-align: center;
+    background-color: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2); /* Larger shadow for more emphasis */
+    padding: 20px;
+}
+
+.image-container {
+    position: relative;
+    width: 100%;
+    height: 300px; /* Larger height for bigger images */
+}
+
+.image-container img {
+    object-fit: cover;
+    border-radius: 12px 12px 0 0;
+}
+
+.highlight-title {
+    font-size: 1.5rem; /* Larger text under image */
+    font-weight: bold; /* Bold the event title */
+    color: #333;
+    margin-top: 15px;
+}

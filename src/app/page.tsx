@@ -11,6 +11,7 @@ import Mission from '../components/Mission/Mission';
 import Donor from '../components/Donor/Donor';
 import FlyerPost from '../components/Calendar/flyer';
 import Youtube from '../components/Youtube/youtube';
+import Highlight from '../components/Highlights/Highlight';
 //  <Directory />
 
 const HomePage = () => {
@@ -18,6 +19,7 @@ const HomePage = () => {
     <div className='overflow-x-hidden'>
       <Home id="home" />
       <Mission id="about"/>
+      <Highlight />
       <Donor />
       <Youtube />
       <CommitteeAbout id="committee" />
