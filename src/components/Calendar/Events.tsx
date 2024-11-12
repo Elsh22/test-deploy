@@ -266,8 +266,8 @@ const events = [
   },
   {
     title: "DMC GBM",
-    start: "2024-11-20T18:00:00",
-    end: "2024-11-20T21:30:00"
+    start: "2024-11-13T18:00:00",
+    end: "2024-11-13T21:30:00"
   },
   {
     title: "Academic Committee Meeting",
