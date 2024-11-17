@@ -1,5 +1,17 @@
 const events = [
   {
+    title: "CGI Event",
+    start: "2025-02-11T18:00:00",
+    end: "2025-02-11T20:00:00"
+  },
+
+  {
+    title: "DMC Wellness Event",
+    start: "2024-12-05T18:00:00",
+    end: "2024-12-05T20:00:00"
+  },
+
+  {
     title: "DMC Wellness Event",
     start: "2024-12-17T18:00:00",
     end: "2024-12-17T20:00:00"
