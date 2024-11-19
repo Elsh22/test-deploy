@@ -1,4 +1,4 @@
-import academImage from '../newassest/AcademicPicImproved.png';
+import academImage from '../assets/AcademicCommiteePicture.jpg';
 import communityImage from '../newassest/Com.jpg';
 import infoImage from '../newassest/ITPicImproved.png';
 import dmcImage from '../assets/background1.jpg';
