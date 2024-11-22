@@ -1,9 +1,8 @@
 'use client';
 import { motion } from 'framer-motion';
-import IMG from '../../../public/headset.svg'
+import IMG from '../../../public/headset.svg';
 import styles from '../../styles';
 import { fadeIn } from '../../utils/motion';
-
 
 const ExploreCard = ({ id, imgUrl, title, text, Chairman, Buttonlink, index, active, handleClick }) => (
   <motion.div
@@ -19,7 +18,7 @@ const ExploreCard = ({ id, imgUrl, title, text, Chairman, Buttonlink, index, act
       className="absolute w-full h-full object-cover rounded-[24px]"
     />
     {active !== id ? (
-      <h3 className="font-semibold sm:text-[26px] text-[18px] text-white absolute z-0 lg:bottom-20 lg:rotate-[-90deg] lg:origin-[0,0]">
+      <h3 className={`font-semibold sm:text-[26px] text-[18px] text-white absolute z-0 ${'2xl:bottom-20 2xl:rotate-[-90deg] 2xl:origin-[0,0] rotate-0'}`}>
         {title}
       </h3>
     ) : (
@@ -39,7 +38,7 @@ const ExploreCard = ({ id, imgUrl, title, text, Chairman, Buttonlink, index, act
         <p className="font-semibold text-[16px] leading-[20.16px] text-white uppercase">
           {Chairman}
         </p>
-        <a href={Buttonlink}  className="mt-4  hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" > Learn More </a>
+        <a href={Buttonlink} className="mt-4 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"> Learn More </a>
         <h2 className="mt-[24px] font-semibold sm:text-[32px] text-[24px] text-white">
           {title}
         </h2>
