@@ -1,40 +1,38 @@
 const events = [
   {
-    title: "CGI Event",
-    start: "2025-02-11T18:00:00",
-    end: "2025-02-11T20:00:00"
-  },
-
-  {
-    title: "DMC Wellness Event",
-    start: "2024-12-05T18:00:00",
-    end: "2024-12-05T20:00:00"
-  },
-
-  {
-    title: "DMC Wellness Event",
-    start: "2024-12-17T18:00:00",
-    end: "2024-12-17T20:00:00"
+    title: ": Fox and Carver Mentoring (Varies)",
+    start: "2024-12-02T08:30:00",
+    end: "2024-12-02T13:00:00"
   },
   {
-    title: "DMC Diabetes Awareness Walk",
-    start: "2024-11-17T09:00:00",
-    end: "2024-11-17T11:00:00"
+    title: ": Fox and Carver Mentoring (Varies)",
+    start: "2024-12-03T08:30:00",
+    end: "2024-12-03T13:00:00"
   },
   {
-    title: "DMC CGI Panel Event",
-    start: "2025-02-11T18:30:00",
-    end: "2025-02-11T20:30:00"
+    title: ": Fox and Carver Mentoring (Varies)",
+    start: "2024-12-04T08:30:00",
+    end: "2024-12-04T13:00:00"
+  },
+  {
+    title: ": Fox and Carver Mentoring (Varies)",
+    start: "2024-12-05T08:30:00",
+    end: "2024-12-05T13:00:00"
+  },
+  {
+    title: ": Fox and Carver Mentoring (Varies)",
+    start: "2024-12-06T08:30:00",
+    end: "2024-12-06T13:00:00"
+  },
+  {
+    title: ": Dogwood Mentoring",
+    start: "2024-12-06T14:15:00",
+    end: "2024-12-06T15:15:00"
   },
   {
   title: "Jacob's Chance",
   start: "2024-11-02T12:30:00",
-  end: "2024-11-02T14:00:00"
-  },
-  {
-  title: "Library Study Session",
-  start: "2024-11-02T12:30:00",
-  end: "2024-11-02T14:00:00"
+  end: "2024-11-01T14:00:00"
   },
   {
     title: "DMC General Team Flag Football Game",
@@ -253,7 +251,7 @@ const events = [
   },
   {
     title: "IT Committee Meeting",
-    start: "2024-11-21T18:30:00",
+    start: "2024-11-14T18:30:00",
     end: "2024-11-14T20:00:00"
   },
   {
@@ -278,8 +276,8 @@ const events = [
   },
   {
     title: "DMC GBM",
-    start: "2024-11-13T18:00:00",
-    end: "2024-11-13T21:30:00"
+    start: "2024-11-20T18:00:00",
+    end: "2024-11-20T21:30:00"
   },
   {
     title: "Academic Committee Meeting",
