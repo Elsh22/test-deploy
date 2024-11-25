@@ -3,7 +3,7 @@ import React from 'react';
 import Goode from '../../assets/Goode.jpg';
 import Thomas from '../../assets/Thomas.jpg';
 import Stephen from '../../assets/StephHeadshotUpdated.jpg';
-import Josh from '../../assets/JoshHeadshotUpdated.jpeg';
+import Josh from '../../assets/Josh.png';
 import Zion from '../../assets/Zion.jpg';
 import Xavier from '../../assets/XaiverHeadshotUpdated.jpg';
 import David from '../../assets/DavidHeadshotUpdated.jpg';
