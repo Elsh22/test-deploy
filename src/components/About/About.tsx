@@ -13,7 +13,7 @@ import Neho from '../../assets/NehoHeadshotUpdated.jpg';
 import Kaleb from '../../assets/KalebHeadshotUpdated.jpg';
 import Kabir from '../../assets/KabirHeadshotUpdated.jpg';
 import Jason from '../../assets/JasonHeadshotUpdated.jpg';
-
+import Eboard from '../../assets/eboardpic.jpg';
 
 interface AboutProps {
   id: string;
@@ -36,22 +36,32 @@ const AboutTeam = () => {
         { name: 'Thomas Chatman', role: 'Second Advisor', image: Thomas.src, linkedin:'https://www.linkedin.com/in/thomas--chatman/'},
       ];
       return (
-        <div className="flex flex-wrap justify-center mt-5">
-          <h1 className='text-center text-2xl font-bold w-full'>Meet the Eboard</h1>
-          {team.map((member, index) => (
-            <div className="text-center w-72 m-5" key={index}>
-              <div className="inline-block w-36 h-36 rounded-full border-2 border-black overflow-hidden">
-                <img src={member.image} alt={member.name} className="w-full h-full object-cover" />
-              </div>
-              <h3 className="theme-text mt-5 text-decoration-line: underline">
-                <a href={member.linkedin} target="_blank" rel="noreferrer" className="theme-text">
-                  {member.name}
-                </a>
-              </h3>
-              <p className="theme-text">{member.role}</p>
-            </div>
-          ))}
+        <div className="flex flex-col items-center mt-5">
+  <h1 className='text-center text-2xl font-bold w-full'>Meet the Eboard</h1>
+  {/* Larger Eboard Photo */}
+  <img
+    src={Eboard.src} // Adjust as needed based on whether Eboard is an object or a direct path
+    alt="Eboard Team" 
+    style={{ width: "1000px", height: "auto" }} // Adjust width to desired size
+    className="my-5 rounded-lg shadow-md"
+  />
+  {/* Smaller individual team member photos */}
+  <div className="flex flex-wrap justify-center mt-5">
+    {team.map((member, index) => (
+      <div className="text-center w-72 m-5" key={index}>
+        <div className="inline-block w-36 h-36 rounded-full border-2 border-black overflow-hidden">
+          <img src={member.image} alt={member.name} className="w-full h-full object-cover" />
         </div>
+        <h3 className="theme-text mt-5 text-decoration-line: underline">
+          <a href={member.linkedin} target="_blank" rel="noreferrer" className="theme-text">
+            {member.name}
+          </a>
+        </h3>
+        <p className="theme-text">{member.role}</p>
+      </div>
+    ))}
+  </div>
+</div>
       );
     };
     
