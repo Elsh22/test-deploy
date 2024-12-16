@@ -8,31 +8,62 @@ on:
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
-    
+
     steps:
+    # 1. Check out the repository
     - uses: actions/checkout@v2
-    
+
+    # 2. Set up Node.js
     - name: Set up Node.js
       uses: actions/setup-node@v2
       with:
-        node-version: '20' # Specify your Node.js version, adjust as needed
-    
-    - name: Install dependencies
-      run: npm ci
+        node-version: '20'
 
-    - name: Install dependencies (backend)
+    # 3. Debug Backend Directory (Optional)
+    - name: Debug Backend Folder
+      run: |
+        echo "Checking backend folder contents..."
+        cd backend
+        ls -la
+
+    # 4. Install Backend Dependencies (Strapi)
+    - name: Install Backend Dependencies
       run: |
         cd backend
-        npm ci
+        if [ -f package-lock.json ]; then
+          npm ci
+        else
+          npm install
+        fi
 
-    # 3. Build Backend (Strapi)
+    # 5. Build Backend (Strapi)
     - name: Build Backend
       run: |
         cd backend
         npm run build
-      
+
+    # 6. Debug Frontend Directory (Optional)
+    - name: Debug Frontend Folder
+      run: |
+        echo "Checking frontend folder contents..."
+        cd frontend
+        ls -la
+
+    # 7. Install Frontend Dependencies (Next.js)
+    - name: Install Frontend Dependencies
+      run: |
+        cd frontend
+        if [ -f package-lock.json ]; then
+          npm ci
+        else
+          npm install
+        fi
+
+    # 8. Build Frontend (Next.js)
     - name: Build Frontend
-      run: npm run build
+      run: |
+        cd frontend
+        npm run build
       env:
         MONGODB_URI: ${{ secrets.MONGODB_URI }}
         MONGODB_Signin_URI: ${{ secrets.MONGODB_Signin_URI }}
@@ -41,6 +72,3 @@ jobs:
         STRIPE_SECRET_KEY: ${{ secrets.STRIPE_SECRET_KEY }}
         STRIPE_PAYMENT_DESCRIPTION: ${{ secrets.STRIPE_PAYMENT_DESCRIPTION }}
         STRIPE_WEBHOOK_SECRET: ${{ secrets.STRIPE_WEBHOOK_SECRET }}
-    
-    # Add your deployment step here
-    # This step varies depending on your hosting provider (e.g., AWS, Vercel, Netlify)
