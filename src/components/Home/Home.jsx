@@ -7,8 +7,8 @@ import img1 from '../../assets/mixer_background.jpg';
 const Home = ({
   id,
   heading = 'Developing Men of Color',
-  message = 'At Virginia Commonwealth University',
-  message2 = 'DMC is Offering Scholarships Click here to learn more'
+  message = ' 501(c)(3) Non-Profit',
+ // message2 = 'DMC is Offering Scholarships Click here to learn more'
 }) => {
   return (
     <div id={id} className="relative w-full h-screen overflow-hidden">
