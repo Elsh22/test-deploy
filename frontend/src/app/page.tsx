@@ -12,12 +12,43 @@ import Donor from '../components/Donor/Donor';
 import FlyerPost from '../components/Calendar/flyer';
 import Youtube from '../components/Youtube/youtube';
 import Highlight from '../components/Highlights/Highlight';
+import Structure from '../components/Structure/Structure';
+import Partnerships from '../components/Partnerships/Partnerships';
+import Events from '../components/Events/Events';
+import Blog from '../components/Blog/Blog';
+import Newsletter from '../components/Newsletter/Newsletter';
+import EventCalendar from '../components/Calendar/CalendarEvent';
 //  <Directory />
 
 const HomePage = () => {
   return (
     <div className='overflow-x-hidden'>
       <Home id="home" />
+      <Mission id="about"/>
+      <Structure />
+      <Partnerships />
+      <Events />  
+      <Blog />
+      <Newsletter />
+      <EventCalendar />
+    </div>
+  );
+}
+export default HomePage;
+
+/*
+new layout 
+Title and Header
+Mission and Goals
+Structure of DMC
+University Chapters & Partnerships
+Upcoming Events
+Recent News and Blogs
+Newsletter Signup
+Calendar
+
+old layout
+<Home id="home" />
       <Mission id="about"/>
       <Highlight />
       <Donor />
@@ -30,8 +61,5 @@ const HomePage = () => {
       <Sports id="sports" />
       <Contact id="contact" />
       <About />
-    </div>
-  );
-}
-export default HomePage;
 
+*/
