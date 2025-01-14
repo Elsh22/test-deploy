@@ -1,5 +1,30 @@
 const events = [
   {
+   title: "Dodgeball (DMC Olympics Committee Event)",
+   start: "2025-01-23T15:00:00",
+   end: "2025-01-23T16:00:00"
+},
+{
+   title: "CGI Collaboration Event",
+   start: "2025-02-11T18:00:00",
+   end: "2025-02-11T20:00:00"
+},
+{
+   title: "1st GBM",
+   start: "2025-02-19T19:00:00",
+   end: "2025-02-19T21:00:00"
+},
+{
+   title: "2nd GBM (Virginia Credit Union Collaboration)",
+   start: "2025-03-19T19:00:00",
+   end: "2025-03-19T21:00:00"
+},
+{
+   title: "3rd GBM (DMC Graduation)",
+   start: "2025-04-16T19:00:00",
+   end: "2025-04-16T21:00:00"
+},
+  {
     title: ": Fox and Carver Mentoring (Varies)",
     start: "2024-12-02T08:30:00",
     end: "2024-12-02T13:00:00"
