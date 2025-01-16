@@ -100,10 +100,166 @@ import pitchingKid2 from "../../newassest/pitchingkid2.jpg";
 import groupPic2 from "../../newassest/grouppic2.jpg";
 import groupPic from "../../newassest/grouppic.jpg";
 import kidFistPump from "../../newassest/kidfistpump.jpg";
-
+import finalExam01 from "../../newassest/dmc final exam-01.jpg";
+import finalExam02 from "../../newassest/dmc final exam-02.jpg";
+import finalExam03 from "../../newassest/dmc final exam-03.jpg";
+import finalExam04 from "../../newassest/dmc final exam-04.jpg";
+import finalExam05 from "../../newassest/dmc final exam-05.jpg";
+import finalExam06 from "../../newassest/dmc final exam-06.jpg";
+import finalExam09 from "../../newassest/dmc final exam-09.jpg";
+import finalExam10 from "../../newassest/dmc final exam-10.jpg";
+import finalExam11 from "../../newassest/dmc final exam-11.jpg";
+import finalExam16 from "../../newassest/dmc final exam-16.jpg";
+import finalExam07 from "../../newassest/dmc final exam-07.jpg";
+import finalExam08 from "../../newassest/dmc final exam-08.jpg";
+import finalExam12 from "../../newassest/dmc final exam-12.jpg";
+import finalExam13 from "../../newassest/dmc final exam-13.jpg";
+import finalExam14 from "../../newassest/dmc final exam-14.jpg";
+import finalExam15 from "../../newassest/dmc final exam-15.jpg";
+import finalExam17 from "../../newassest/dmc final exam-17.jpg";
+import DSC09850 from "../../newassest/DSC09850.jpg";
+import DSC09862 from "../../newassest/DSC09862.jpg";
+import DSC09864 from "../../newassest/DSC09864.jpg";
+import DSC09875 from "../../newassest/DSC09875.jpg";
+import DSC09901 from "../../newassest/DSC09901.jpg";
+import DSC09945 from "../../newassest/DSC09945.jpg";
+import DSC09964 from "../../newassest/DSC09964.jpg";
+import DSC09983 from "../../newassest/DSC09983.jpg";
+import DSC00124 from "../../newassest/DSC00124.jpg";
+import DSC00127 from "../../newassest/DSC00127.jpg";
+import DSC00057 from "../../newassest/DSC00057.jpg";
+import DSC00104 from "../../newassest/DSC00104.jpg";
+import DSC00027 from "../../newassest/DSC00027.jpg";
+import DSC00019 from "../../newassest/DSC00019.jpg";
 
 
 const imageData = [
+
+  {
+    id: 230,
+    imgSrc: DSC00057,
+  },
+  {
+    id: 231,
+    imgSrc: DSC00104,
+  },
+  {
+    id: 232,
+    imgSrc: DSC00027,
+  },
+  {
+    id: 233,
+    imgSrc: DSC00019,
+  },
+  {
+    id: 218,
+    imgSrc: DSC09850,
+},
+{
+    id: 219,
+    imgSrc: DSC09862,
+},
+{
+    id: 220,
+    imgSrc: DSC09864,
+},
+{
+    id: 221,
+    imgSrc: DSC09875,
+},
+{
+    id: 222,
+    imgSrc: DSC09901,
+},
+{
+    id: 223,
+    imgSrc: DSC09945,
+},
+{
+    id: 224,
+    imgSrc: DSC09964,
+},
+{
+    id: 225,
+    imgSrc: DSC09983,
+},
+{
+    id: 226,
+    imgSrc: DSC00124,
+},
+{
+    id: 227,
+    imgSrc: DSC00127,
+},
+
+  {
+    id: 211,
+    imgSrc: finalExam07,
+},
+{
+    id: 212,
+    imgSrc: finalExam08,
+},
+{
+    id: 213,
+    imgSrc: finalExam12,
+},
+{
+    id: 214,
+    imgSrc: finalExam13,
+},
+{
+    id: 215,
+    imgSrc: finalExam14,
+},
+{
+    id: 216,
+    imgSrc: finalExam15,
+},
+{
+    id: 217,
+    imgSrc: finalExam17,
+},
+  {
+    id: 201,
+    imgSrc: finalExam01,
+},
+{
+    id: 202,
+    imgSrc: finalExam02,
+},
+{
+    id: 203,
+    imgSrc: finalExam03,
+},
+{
+    id: 204,
+    imgSrc: finalExam04,
+},
+{
+    id: 205,
+    imgSrc: finalExam05,
+},
+{
+    id: 206,
+    imgSrc: finalExam06,
+},
+{
+    id: 207,
+    imgSrc: finalExam09,
+},
+{
+    id: 208,
+    imgSrc: finalExam10,
+},
+{
+    id: 209,
+    imgSrc: finalExam11,
+},
+{
+    id: 210,
+    imgSrc: finalExam16,
+},
   {
     id: 114,
     imgSrc: kidFistPump,
