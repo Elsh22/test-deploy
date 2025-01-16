@@ -38,7 +38,7 @@ function renderEventContent(eventInfo) {
     bgColor = `bg-[${eventInfo.event.extendedProps.backgroundColor}]`; 
   }else if (eventInfo.event.title.includes('Mentoring')) {
     bgColor = 'bg-orange-500';
-  }else if (eventInfo.event.title.includes('Suit Day')) {
+  }else if (eventInfo.event.title.includes('CGI')) {
     bgColor = 'bg-red-500';
   }else if (eventInfo.event.title.includes('Shadow Day')) {
     bgColor = 'bg-red-500';

@@ -1,4 +1,647 @@
 const events = [
+
+  {
+    title: "Library Study Session",
+    start: "2024-10-06T16:00:00",
+    end: "2024-10-06T22:00:00"
+  },
+  {
+    title: "Library Study Session",
+    start: "2024-10-13T16:00:00",
+    end: "2024-10-13T22:00:00"
+  },
+  {
+    title: "Library Study Session",
+    start: "2024-10-20T16:00:00",
+    end: "2024-10-20T22:00:00"
+  },
+  {
+    title: "Library Study Session",
+    start: "2024-10-27T16:00:00",
+    end: "2024-10-27T22:00:00"
+  },
+  {
+    title: "Library Study Session",
+    start: "2024-11-03T16:00:00",
+    end: "2024-11-03T22:00:00"
+  },
+  {
+    title: "Library Study Session",
+    start: "2024-11-10T16:00:00",
+    end: "2024-11-10T22:00:00"
+  },
+  {
+    title: "Library Study Session",
+    start: "2024-11-17T16:00:00",
+    end: "2024-11-17T22:00:00"
+  },
+  {
+    title: "Library Study Session",
+    start: "2024-11-24T16:00:00",
+    end: "2024-11-24T22:00:00"
+  },
+  {
+    title: "Library Study Session",
+    start: "2024-12-01T16:00:00",
+    end: "2024-12-01T22:00:00"
+  },
+  {
+    title: "Library Study Session",
+    start: "2024-12-08T16:00:00",
+    end: "2024-12-08T22:00:00"
+  },
+  {
+    title: "Library Study Session",
+    start: "2024-12-15T16:00:00",
+    end: "2024-12-15T22:00:00"
+  },
+  {
+    title: "Library Study Session",
+    start: "2024-12-22T16:00:00",
+    end: "2024-12-22T22:00:00"
+  },
+  {
+    title: "Library Study Session",
+    start: "2024-12-29T16:00:00",
+    end: "2024-12-29T22:00:00"
+  },
+  {
+    title: "Library Study Session",
+    start: "2025-01-05T16:00:00",
+    end: "2025-01-05T22:00:00"
+  },
+  {
+    title: "Library Study Session",
+    start: "2025-01-12T16:00:00",
+    end: "2025-01-12T22:00:00"
+  },
+  {
+    title: "Library Study Session",
+    start: "2025-01-19T16:00:00",
+    end: "2025-01-19T22:00:00"
+  },
+  {
+    title: "Library Study Session",
+    start: "2025-01-26T16:00:00",
+    end: "2025-01-26T22:00:00"
+  },
+  {
+    title: "Library Study Session",
+    start: "2025-02-02T16:00:00",
+    end: "2025-02-02T22:00:00"
+  },
+  {
+    title: "Library Study Session",
+    start: "2025-02-09T16:00:00",
+    end: "2025-02-09T22:00:00"
+  },
+  {
+    title: "Library Study Session",
+    start: "2025-02-16T16:00:00",
+    end: "2025-02-16T22:00:00"
+  },
+  {
+    title: "Library Study Session",
+    start: "2025-02-23T16:00:00",
+    end: "2025-02-23T22:00:00"
+  },
+  {
+    title: "Library Study Session",
+    start: "2025-03-02T16:00:00",
+    end: "2025-03-02T22:00:00"
+  },
+  {
+    title: "Library Study Session",
+    start: "2025-03-09T16:00:00",
+    end: "2025-03-09T22:00:00"
+  },
+  {
+    title: "Library Study Session",
+    start: "2025-03-16T16:00:00",
+    end: "2025-03-16T22:00:00"
+  },
+  {
+    title: "Library Study Session",
+    start: "2025-03-23T16:00:00",
+    end: "2025-03-23T22:00:00"
+  },
+  {
+    title: "Library Study Session",
+    start: "2025-03-30T16:00:00",
+    end: "2025-03-30T22:00:00"
+  },
+
+  {
+    "title": ": Fox and Carver Mentoring (Varies)",
+    "start": "2024-12-02T08:30:00",
+    "end": "2024-12-02T13:00:00"
+  },
+  {
+    "title": ": Fox and Carver Mentoring (Varies)",
+    "start": "2024-12-03T08:30:00",
+    "end": "2024-12-03T13:00:00"
+  },
+  {
+    "title": ": Fox and Carver Mentoring (Varies)",
+    "start": "2024-12-04T08:30:00",
+    "end": "2024-12-04T13:00:00"
+  },
+  {
+    "title": ": Fox and Carver Mentoring (Varies)",
+    "start": "2024-12-05T08:30:00",
+    "end": "2024-12-05T13:00:00"
+  },
+  {
+    "title": ": Fox and Carver Mentoring (Varies)",
+    "start": "2024-12-06T08:30:00",
+    "end": "2024-12-06T13:00:00"
+  },
+  {
+    "title": ": Fox and Carver Mentoring (Varies)",
+    "start": "2024-12-09T08:30:00",
+    "end": "2024-12-09T13:00:00"
+  },
+  {
+    "title": ": Fox and Carver Mentoring (Varies)",
+    "start": "2024-12-10T08:30:00",
+    "end": "2024-12-10T13:00:00"
+  },
+  {
+    "title": ": Fox and Carver Mentoring (Varies)",
+    "start": "2024-12-11T08:30:00",
+    "end": "2024-12-11T13:00:00"
+  },
+  {
+    "title": ": Fox and Carver Mentoring (Varies)",
+    "start": "2024-12-12T08:30:00",
+    "end": "2024-12-12T13:00:00"
+  },
+  {
+    "title": ": Fox and Carver Mentoring (Varies)",
+    "start": "2024-12-13T08:30:00",
+    "end": "2024-12-13T13:00:00"
+  },
+  {
+    "title": ": Fox and Carver Mentoring (Varies)",
+    "start": "2024-12-16T08:30:00",
+    "end": "2024-12-16T13:00:00"
+  },
+  {
+    "title": ": Fox and Carver Mentoring (Varies)",
+    "start": "2024-12-17T08:30:00",
+    "end": "2024-12-17T13:00:00"
+  },
+  {
+    "title": ": Fox and Carver Mentoring (Varies)",
+    "start": "2024-12-18T08:30:00",
+    "end": "2024-12-18T13:00:00"
+  },
+  {
+    "title": ": Fox and Carver Mentoring (Varies)",
+    "start": "2024-12-19T08:30:00",
+    "end": "2024-12-19T13:00:00"
+  },
+  {
+    "title": ": Fox and Carver Mentoring (Varies)",
+    "start": "2024-12-20T08:30:00",
+    "end": "2024-12-20T13:00:00"
+  },
+  {
+    "title": ": Fox and Carver Mentoring (Varies)",
+    "start": "2024-12-23T08:30:00",
+    "end": "2024-12-23T13:00:00"
+  },
+  {
+    "title": ": Fox and Carver Mentoring (Varies)",
+    "start": "2024-12-24T08:30:00",
+    "end": "2024-12-24T13:00:00"
+  },
+  {
+    "title": ": Fox and Carver Mentoring (Varies)",
+    "start": "2024-12-25T08:30:00",
+    "end": "2024-12-25T13:00:00"
+  },
+  {
+    "title": ": Fox and Carver Mentoring (Varies)",
+    "start": "2024-12-26T08:30:00",
+    "end": "2024-12-26T13:00:00"
+  },
+  {
+    "title": ": Fox and Carver Mentoring (Varies)",
+    "start": "2024-12-27T08:30:00",
+    "end": "2024-12-27T13:00:00"
+  },
+  {
+    "title": ": Fox and Carver Mentoring (Varies)",
+    "start": "2024-12-30T08:30:00",
+    "end": "2024-12-30T13:00:00"
+  },
+  {
+    "title": ": Fox and Carver Mentoring (Varies)",
+    "start": "2024-12-31T08:30:00",
+    "end": "2024-12-31T13:00:00"
+  },
+  {
+    "title": ": Fox and Carver Mentoring (Varies)",
+    "start": "2025-01-01T08:30:00",
+    "end": "2025-01-01T13:00:00"
+  },
+  {
+    "title": ": Fox and Carver Mentoring (Varies)",
+    "start": "2025-01-02T08:30:00",
+    "end": "2025-01-02T13:00:00"
+  },
+  {
+    "title": ": Fox and Carver Mentoring (Varies)",
+    "start": "2025-01-03T08:30:00",
+    "end": "2025-01-03T13:00:00"
+  },
+  {
+    "title": ": Fox and Carver Mentoring (Varies)",
+    "start": "2025-01-06T08:30:00",
+    "end": "2025-01-06T13:00:00"
+  },
+  {
+    "title": ": Fox and Carver Mentoring (Varies)",
+    "start": "2025-01-07T08:30:00",
+    "end": "2025-01-07T13:00:00"
+  },
+  {
+    "title": ": Fox and Carver Mentoring (Varies)",
+    "start": "2025-01-08T08:30:00",
+    "end": "2025-01-08T13:00:00"
+  },
+  {
+    "title": ": Fox and Carver Mentoring (Varies)",
+    "start": "2025-01-09T08:30:00",
+    "end": "2025-01-09T13:00:00"
+  },
+  {
+    "title": ": Fox and Carver Mentoring (Varies)",
+    "start": "2025-01-10T08:30:00",
+    "end": "2025-01-10T13:00:00"
+  },
+  {
+    "title": ": Fox and Carver Mentoring (Varies)",
+    "start": "2025-01-13T08:30:00",
+    "end": "2025-01-13T13:00:00"
+  },
+  {
+    "title": ": Fox and Carver Mentoring (Varies)",
+    "start": "2025-01-14T08:30:00",
+    "end": "2025-01-14T13:00:00"
+  },
+  {
+    "title": ": Fox and Carver Mentoring (Varies)",
+    "start": "2025-01-15T08:30:00",
+    "end": "2025-01-15T13:00:00"
+  },
+  {
+    "title": ": Fox and Carver Mentoring (Varies)",
+    "start": "2025-01-16T08:30:00",
+    "end": "2025-01-16T13:00:00"
+  },
+  {
+    "title": ": Fox and Carver Mentoring (Varies)",
+    "start": "2025-01-17T08:30:00",
+    "end": "2025-01-17T13:00:00"
+  },
+  {
+    "title": ": Fox and Carver Mentoring (Varies)",
+    "start": "2025-01-20T08:30:00",
+    "end": "2025-01-20T13:00:00"
+  },
+  {
+    "title": ": Fox and Carver Mentoring (Varies)",
+    "start": "2025-01-21T08:30:00",
+    "end": "2025-01-21T13:00:00"
+  },
+  {
+    "title": ": Fox and Carver Mentoring (Varies)",
+    "start": "2025-01-22T08:30:00",
+    "end": "2025-01-22T13:00:00"
+  },
+  {
+    "title": ": Fox and Carver Mentoring (Varies)",
+    "start": "2025-01-23T08:30:00",
+    "end": "2025-01-23T13:00:00"
+  },
+  {
+    "title": ": Fox and Carver Mentoring (Varies)",
+    "start": "2025-01-24T08:30:00",
+    "end": "2025-01-24T13:00:00"
+  },
+  {
+    "title": ": Fox and Carver Mentoring (Varies)",
+    "start": "2025-01-27T08:30:00",
+    "end": "2025-01-27T13:00:00"
+  },
+  {
+    "title": ": Fox and Carver Mentoring (Varies)",
+    "start": "2025-01-28T08:30:00",
+    "end": "2025-01-28T13:00:00"
+  },
+  {
+    "title": ": Fox and Carver Mentoring (Varies)",
+    "start": "2025-01-29T08:30:00",
+    "end": "2025-01-29T13:00:00"
+  },
+  {
+    "title": ": Fox and Carver Mentoring (Varies)",
+    "start": "2025-01-30T08:30:00",
+    "end": "2025-01-30T13:00:00"
+  },
+  {
+    "title": ": Fox and Carver Mentoring (Varies)",
+    "start": "2025-01-31T08:30:00",
+    "end": "2025-01-31T13:00:00"
+  },
+  {
+    "title": ": Fox and Carver Mentoring (Varies)",
+    "start": "2025-02-03T08:30:00",
+    "end": "2025-02-03T13:00:00"
+  },
+  {
+    "title": ": Fox and Carver Mentoring (Varies)",
+    "start": "2025-02-04T08:30:00",
+    "end": "2025-02-04T13:00:00"
+  },
+  {
+    "title": ": Fox and Carver Mentoring (Varies)",
+    "start": "2025-02-05T08:30:00",
+    "end": "2025-02-05T13:00:00"
+  },
+  {
+    "title": ": Fox and Carver Mentoring (Varies)",
+    "start": "2025-02-06T08:30:00",
+    "end": "2025-02-06T13:00:00"
+  },
+  {
+    "title": ": Fox and Carver Mentoring (Varies)",
+    "start": "2025-02-07T08:30:00",
+    "end": "2025-02-07T13:00:00"
+  },
+  {
+    "title": ": Fox and Carver Mentoring (Varies)",
+    "start": "2025-02-10T08:30:00",
+    "end": "2025-02-10T13:00:00"
+  },
+  {
+    "title": ": Fox and Carver Mentoring (Varies)",
+    "start": "2025-02-11T08:30:00",
+    "end": "2025-02-11T13:00:00"
+  },
+  {
+    "title": ": Fox and Carver Mentoring (Varies)",
+    "start": "2025-02-12T08:30:00",
+    "end": "2025-02-12T13:00:00"
+  },
+  {
+    "title": ": Fox and Carver Mentoring (Varies)",
+    "start": "2025-02-13T08:30:00",
+    "end": "2025-02-13T13:00:00"
+  },
+  {
+    "title": ": Fox and Carver Mentoring (Varies)",
+    "start": "2025-02-14T08:30:00",
+    "end": "2025-02-14T13:00:00"
+  },
+  {
+    "title": ": Fox and Carver Mentoring (Varies)",
+    "start": "2025-02-17T08:30:00",
+    "end": "2025-02-17T13:00:00"
+  },
+  {
+    "title": ": Fox and Carver Mentoring (Varies)",
+    "start": "2025-02-18T08:30:00",
+    "end": "2025-02-18T13:00:00"
+  },
+  {
+    "title": ": Fox and Carver Mentoring (Varies)",
+    "start": "2025-02-19T08:30:00",
+    "end": "2025-02-19T13:00:00"
+  },
+  {
+    "title": ": Fox and Carver Mentoring (Varies)",
+    "start": "2025-02-20T08:30:00",
+    "end": "2025-02-20T13:00:00"
+  },
+  {
+    "title": ": Fox and Carver Mentoring (Varies)",
+    "start": "2025-02-21T08:30:00",
+    "end": "2025-02-21T13:00:00"
+  },
+  {
+    "title": ": Fox and Carver Mentoring (Varies)",
+    "start": "2025-02-24T08:30:00",
+    "end": "2025-02-24T13:00:00"
+  },
+  {
+    "title": ": Fox and Carver Mentoring (Varies)",
+    "start": "2025-02-25T08:30:00",
+    "end": "2025-02-25T13:00:00"
+  },
+  {
+    "title": ": Fox and Carver Mentoring (Varies)",
+    "start": "2025-02-26T08:30:00",
+    "end": "2025-02-26T13:00:00"
+  },
+  {
+    "title": ": Fox and Carver Mentoring (Varies)",
+    "start": "2025-02-27T08:30:00",
+    "end": "2025-02-27T13:00:00"
+  },
+  {
+    "title": ": Fox and Carver Mentoring (Varies)",
+    "start": "2025-02-28T08:30:00",
+    "end": "2025-02-28T13:00:00"
+  },
+  {
+    "title": ": Fox and Carver Mentoring (Varies)",
+    "start": "2025-03-03T08:30:00",
+    "end": "2025-03-03T13:00:00"
+  },
+  {
+    "title": ": Fox and Carver Mentoring (Varies)",
+    "start": "2025-03-04T08:30:00",
+    "end": "2025-03-04T13:00:00"
+  },
+  {
+    "title": ": Fox and Carver Mentoring (Varies)",
+    "start": "2025-03-05T08:30:00",
+    "end": "2025-03-05T13:00:00"
+  },
+  {
+    "title": ": Fox and Carver Mentoring (Varies)",
+    "start": "2025-03-06T08:30:00",
+    "end": "2025-03-06T13:00:00"
+  },
+  {
+    "title": ": Fox and Carver Mentoring (Varies)",
+    "start": "2025-03-07T08:30:00",
+    "end": "2025-03-07T13:00:00"
+  },
+  {
+    "title": ": Fox and Carver Mentoring (Varies)",
+    "start": "2025-03-10T08:30:00",
+    "end": "2025-03-10T13:00:00"
+  },
+  {
+    "title": ": Fox and Carver Mentoring (Varies)",
+    "start": "2025-03-11T08:30:00",
+    "end": "2025-03-11T13:00:00"
+  },
+  {
+    "title": ": Fox and Carver Mentoring (Varies)",
+    "start": "2025-03-12T08:30:00",
+    "end": "2025-03-12T13:00:00"
+  },
+  {
+    "title": ": Fox and Carver Mentoring (Varies)",
+    "start": "2025-03-13T08:30:00",
+    "end": "2025-03-13T13:00:00"
+  },
+  {
+    "title": ": Fox and Carver Mentoring (Varies)",
+    "start": "2025-03-14T08:30:00",
+    "end": "2025-03-14T13:00:00"
+  },
+  {
+    "title": ": Fox and Carver Mentoring (Varies)",
+    "start": "2025-03-17T08:30:00",
+    "end": "2025-03-17T13:00:00"
+  },
+  {
+    "title": ": Fox and Carver Mentoring (Varies)",
+    "start": "2025-03-18T08:30:00",
+    "end": "2025-03-18T13:00:00"
+  },
+  {
+    "title": ": Fox and Carver Mentoring (Varies)",
+    "start": "2025-03-19T08:30:00",
+    "end": "2025-03-19T13:00:00"
+  },
+  {
+    "title": ": Fox and Carver Mentoring (Varies)",
+    "start": "2025-03-20T08:30:00",
+    "end": "2025-03-20T13:00:00"
+  },
+  {
+    "title": ": Fox and Carver Mentoring (Varies)",
+    "start": "2025-03-21T08:30:00",
+    "end": "2025-03-21T13:00:00"
+  },
+  {
+    "title": ": Fox and Carver Mentoring (Varies)",
+    "start": "2025-03-24T08:30:00",
+    "end": "2025-03-24T13:00:00"
+  },
+  {
+    "title": ": Fox and Carver Mentoring (Varies)",
+    "start": "2025-03-25T08:30:00",
+    "end": "2025-03-25T13:00:00"
+  },
+  {
+    "title": ": Fox and Carver Mentoring (Varies)",
+    "start": "2025-03-26T08:30:00",
+    "end": "2025-03-26T13:00:00"
+  },
+  {
+    "title": ": Fox and Carver Mentoring (Varies)",
+    "start": "2025-03-27T08:30:00",
+    "end": "2025-03-27T13:00:00"
+  },
+  {
+    "title": ": Fox and Carver Mentoring (Varies)",
+    "start": "2025-03-28T08:30:00",
+    "end": "2025-03-28T13:00:00"
+  },
+  {
+    "title": ": Dogwood Mentoring",
+    "start": "2024-12-06T14:15:00",
+    "end": "2024-12-06T15:15:00"
+  },
+  {
+    "title": ": Dogwood Mentoring",
+    "start": "2024-12-13T14:15:00",
+    "end": "2024-12-13T15:15:00"
+  },
+  {
+    "title": ": Dogwood Mentoring",
+    "start": "2024-12-20T14:15:00",
+    "end": "2024-12-20T15:15:00"
+  },
+  {
+    "title": ": Dogwood Mentoring",
+    "start": "2024-12-27T14:15:00",
+    "end": "2024-12-27T15:15:00"
+  },
+  {
+    "title": ": Dogwood Mentoring",
+    "start": "2025-01-03T14:15:00",
+    "end": "2025-01-03T15:15:00"
+  },
+  {
+    "title": ": Dogwood Mentoring",
+    "start": "2025-01-10T14:15:00",
+    "end": "2025-01-10T15:15:00"
+  },
+  {
+    "title": ": Dogwood Mentoring",
+    "start": "2025-01-17T14:15:00",
+    "end": "2025-01-17T15:15:00"
+  },
+  {
+    "title": ": Dogwood Mentoring",
+    "start": "2025-01-24T14:15:00",
+    "end": "2025-01-24T15:15:00"
+  },
+  {
+    "title": ": Dogwood Mentoring",
+    "start": "2025-01-31T14:15:00",
+    "end": "2025-01-31T15:15:00"
+  },
+  {
+    "title": ": Dogwood Mentoring",
+    "start": "2025-02-07T14:15:00",
+    "end": "2025-02-07T15:15:00"
+  },
+  {
+    "title": ": Dogwood Mentoring",
+    "start": "2025-02-14T14:15:00",
+    "end": "2025-02-14T15:15:00"
+  },
+  {
+    "title": ": Dogwood Mentoring",
+    "start": "2025-02-21T14:15:00",
+    "end": "2025-02-21T15:15:00"
+  },
+  {
+    "title": ": Dogwood Mentoring",
+    "start": "2025-02-28T14:15:00",
+    "end": "2025-02-28T15:15:00"
+  },
+  {
+    "title": ": Dogwood Mentoring",
+    "start": "2025-03-07T14:15:00",
+    "end": "2025-03-07T15:15:00"
+  },
+  {
+    "title": ": Dogwood Mentoring",
+    "start": "2025-03-14T14:15:00",
+    "end": "2025-03-14T15:15:00"
+  },
+  {
+    "title": ": Dogwood Mentoring",
+    "start": "2025-03-21T14:15:00",
+    "end": "2025-03-21T15:15:00"
+  },
+  {
+    "title": ": Dogwood Mentoring",
+    "start": "2025-03-28T14:15:00",
+    "end": "2025-03-28T15:15:00"
+  },
+//changes made here
   {
    title: "Dodgeball (DMC Olympics Committee Event)",
    start: "2025-01-23T15:00:00",
