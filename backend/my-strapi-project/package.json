@@ -28,7 +28,7 @@
     "typescript": "^5"
   },
   "engines": {
-    "node": "^20.17.0",
+    "node": "20.11.0",
     "npm": ">=6.0.0"
   },
   "strapi": {
