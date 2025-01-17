@@ -26,10 +26,14 @@ const BlogPage = () => {
         const data = await response.json();
         setBlogs(data.data || []);
         
-        const uniqueCategories = ['all', ...new Set(data.data?.map(blog => 
-          blog.TypeofArticle
-        ).filter(Boolean))];
-        setCategories(uniqueCategories);
+        // Modified this part to avoid using Set spread
+        const categorySet = new Set(['all']);
+        data.data?.forEach((blog: { TypeofArticle: string; }) => {
+          if (blog.TypeofArticle) {
+            categorySet.add(blog.TypeofArticle);
+          }
+        });
+        setCategories(Array.from(categorySet));
       } catch (error) {
         console.error('Error fetching blogs:', error);
       } finally {
@@ -40,7 +44,7 @@ const BlogPage = () => {
     fetchBlogs();
   }, []);
 
-  // Filter and search functionality
+  // Rest of your code remains the same
   const filteredBlogs = blogs.filter(blog => {
     const matchesCategory = selectedCategory === 'all' || blog.TypeofArticle === selectedCategory;
     const matchesSearch = blog.Title?.toLowerCase().includes(searchQuery.toLowerCase()) ||
@@ -61,10 +65,8 @@ const BlogPage = () => {
 
   return (
     <div className="bg-white min-h-screen">
-      {/* Featured Post Section */}
       {featuredPost && <FeaturedPost post={featuredPost} />}
 
-      {/* Search and Filter Section */}
       <SearchAndFilter
         categories={categories}
         selectedCategory={selectedCategory}
@@ -73,7 +75,6 @@ const BlogPage = () => {
         setSearchQuery={setSearchQuery}
       />
 
-      {/* Blog Grid Section */}
       <BlogGrid
         blogs={filteredBlogs}
         currentPage={currentPage}
@@ -81,10 +82,8 @@ const BlogPage = () => {
         POSTS_PER_PAGE={POSTS_PER_PAGE}
       />
 
-      {/* Get Featured Section */}
       <GetFeatured setShowSubmissionModal={setShowSubmissionModal} />
 
-      {/* Submission Modal */}
       <SubmissionModal
         showModal={showSubmissionModal}
         setShowModal={setShowSubmissionModal}
