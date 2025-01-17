@@ -96,11 +96,17 @@ const BlogPost = async ({ params }: BlogPostParams) => {
 export async function generateStaticParams(): Promise<{ slug: string }[]> {
   const STRAPI_URL = process.env.NEXT_PUBLIC_STRAPI_URL;
   const res = await fetch(`${STRAPI_URL}/api/blogs`);
-  const blogs: BlogResponse = await res.json();
+  const blogs: BlogResponse | null = await res.json();
+
+  // Safeguard in case blogs or blogs.data is null/undefined
+  if (!blogs || !blogs.data) {
+    return [];
+  }
 
   return blogs.data.map((blog: Blog) => ({
     slug: blog.Slug,
   }));
 }
+
 
 export default BlogPost;
