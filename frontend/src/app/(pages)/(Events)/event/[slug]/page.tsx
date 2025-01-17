@@ -15,19 +15,44 @@ import { format, parseISO } from 'date-fns';
 import ReactMarkdown from 'react-markdown';
 import Link from 'next/link';
 
+// Define the Event interface
+interface EventImage {
+  url: string;
+  formats?: {
+    large?: { url: string };
+    medium?: { url: string };
+    small?: { url: string };
+  };
+}
+
+interface Event {
+  Title: string;
+  Description: string;
+  School?: string;
+  DateStart: string;
+  DateEnd: string;
+  Location: string;
+  RvspLink?: string;
+  Image?: EventImage[];
+  Slug: string;
+}
+
+interface Params {
+  slug: string;
+}
+
 const EventPage = () => {
-  const params = useParams();
-  const [event, setEvent] = useState(null);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
+  const params = useParams() as unknown as Params;
+  const [event, setEvent] = useState<Event | null>(null);
+  const [loading, setLoading] = useState<boolean>(true);
+  const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
     const fetchEvent = async () => {
       try {
         const STRAPI_URL = process.env.NEXT_PUBLIC_STRAPI_URL;
-        // Fetch event by slug
         const response = await fetch(
-          `${STRAPI_URL}/api/events?filters[Slug]=${params.slug}&populate=*`
+          `${STRAPI_URL}/api/events?filters[Slug]=${params?.slug}&populate=*`
         );
         const data = await response.json();
 
@@ -44,18 +69,17 @@ const EventPage = () => {
       }
     };
 
-    if (params.slug) {
+    if (params?.slug) {
       fetchEvent();
     }
-  }, [params.slug]);
+  }, [params?.slug]);
 
-  const getImageUrl = (event) => {
+  const getImageUrl = (event: Event | null): string => {
     try {
       if (!event?.Image?.[0]?.url) {
         return '/api/placeholder/1200/600';
       }
       const STRAPI_URL = process.env.NEXT_PUBLIC_STRAPI_URL;
-      // Try to get the largest format available
       const imageUrl = 
         event.Image[0].formats?.large?.url || 
         event.Image[0].formats?.medium?.url || 
@@ -68,7 +92,7 @@ const EventPage = () => {
     }
   };
 
-  const formatDate = (dateStr) => {
+  const formatDate = (dateStr: string): string => {
     try {
       return format(parseISO(dateStr), 'MMMM d, yyyy');
     } catch (error) {
@@ -76,7 +100,7 @@ const EventPage = () => {
     }
   };
 
-  const formatTime = (dateStr) => {
+  const formatTime = (dateStr: string): string => {
     try {
       return format(parseISO(dateStr), 'h:mm a');
     } catch (error) {
@@ -110,7 +134,7 @@ const EventPage = () => {
   if (!event) {
     return null;
   }
-
+  
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Image */}
