@@ -3,11 +3,35 @@ import { ArrowLeft } from 'lucide-react';
 import Link from 'next/link';
 import { Key } from 'react';
 
-const BlogPost = async ({ params }) => {
+// Interface for the blog data structure
+interface Blog {
+  Title: string;
+  Date: string;
+  TypeofArticle: string;
+  ArticleContent: string;
+  Tags?: string;
+  ThumbnailImage?: {
+    url: string;
+  };
+  Slug: string;
+}
+
+// Interface for the API response
+interface BlogResponse {
+  data: Blog[]; // Changed this to be an array of Blog
+}
+
+interface BlogPostParams {
+  params: {
+    slug: string;
+  };
+}
+
+const BlogPost = async ({ params }: BlogPostParams) => {
   const { slug } = params;
   const STRAPI_URL = process.env.NEXT_PUBLIC_STRAPI_URL;
   const res = await fetch(`${STRAPI_URL}/api/blogs?filters[Slug][$eq]=${slug}&populate=*`);
-  const data = await res.json();
+  const data: BlogResponse = await res.json();
 
   if (!data.data || data.data.length === 0) {
     return <div>Blog post not found.</div>;
@@ -53,7 +77,7 @@ const BlogPost = async ({ params }) => {
           <div className="mt-8">
             <h3 className="text-xl font-semibold mb-2">Tags:</h3>
             <div className="flex flex-wrap">
-              {blog.Tags.split(',').map((tag: string, index: Key | null | undefined) => (
+              {blog.Tags.split(',').map((tag: string, index: Key) => (
                 <span
                   key={index}
                   className="bg-blue-100 text-blue-800 text-sm font-medium px-2.5 py-0.5 rounded mr-2 mb-2"
@@ -69,12 +93,12 @@ const BlogPost = async ({ params }) => {
   );
 };
 
-export async function generateStaticParams() {
+export async function generateStaticParams(): Promise<{ slug: string }[]> {
   const STRAPI_URL = process.env.NEXT_PUBLIC_STRAPI_URL;
   const res = await fetch(`${STRAPI_URL}/api/blogs`);
-  const blogs = await res.json();
+  const blogs: BlogResponse = await res.json();
 
-  return blogs.data.map((blog: { Slug: any; }) => ({
+  return blogs.data.map((blog: Blog) => ({
     slug: blog.Slug,
   }));
 }
