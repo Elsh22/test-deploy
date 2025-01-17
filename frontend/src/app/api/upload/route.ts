@@ -10,7 +10,7 @@ export async function POST(req: Request) {
   try {
     const formData = await req.formData();
     const file = formData.get('file') as File;
-    
+
     if (!file) {
       return NextResponse.json(
         { error: "No file uploaded" },
@@ -19,7 +19,11 @@ export async function POST(req: Request) {
     }
 
     // Validate file type
-    const allowedTypes = ['application/pdf', 'application/msword', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document'];
+    const allowedTypes = [
+      'application/pdf',
+      'application/msword',
+      'application/vnd.openxmlformats-officedocument.wordprocessingml.document'
+    ];
     if (!allowedTypes.includes(file.type)) {
       return NextResponse.json(
         { error: "Invalid file type. Only PDF, DOC, and DOCX files are allowed." },
@@ -36,9 +40,16 @@ export async function POST(req: Request) {
     }
 
     await connectDB();
-    
+
+    // Safely get the db
+    const db = mongoose.connection.db;
+    if (!db) {
+      throw new Error('No DB instance found. Check your database connection.');
+    }
+
+    // Create GridFSBucket if it doesn't already exist
     if (!gfs) {
-      gfs = new mongoose.mongo.GridFSBucket(mongoose.connection.db, {
+      gfs = new mongoose.mongo.GridFSBucket(db, {
         bucketName: 'resumes'
       });
     }
@@ -50,6 +61,7 @@ export async function POST(req: Request) {
     const uniqueSuffix = Date.now() + '-' + Math.round(Math.random() * 1E9);
     const filename = file.name.replace(/\.[^/.]+$/, "") + '-' + uniqueSuffix;
 
+    // Prepare upload stream
     const uploadStream = gfs.openUploadStream(filename, {
       contentType: file.type,
       metadata: {
@@ -58,7 +70,7 @@ export async function POST(req: Request) {
       }
     });
 
-    // Convert buffer to stream and pipe to GridFS
+    // Convert buffer to stream
     const readable = new Readable();
     readable.push(buffer);
     readable.push(null);
@@ -70,16 +82,19 @@ export async function POST(req: Request) {
         .on('finish', resolve);
     });
 
-    return NextResponse.json({ 
+    return NextResponse.json({
       fileId: uploadStream.id.toString(),
       msg: ["File uploaded successfully"],
-      success: true 
+      success: true
     });
 
   } catch (error) {
     console.error('Error handling file upload:', error);
     return NextResponse.json(
-      { error: "Error uploading file", details: error instanceof Error ? error.message : 'Unknown error' },
+      {
+        error: "Error uploading file",
+        details: error instanceof Error ? error.message : 'Unknown error'
+      },
       { status: 500 }
     );
   }
@@ -99,13 +114,19 @@ export async function GET(req: Request) {
 
     await connectDB();
 
+    // Safely get the db
+    const db = mongoose.connection.db;
+    if (!db) {
+      throw new Error('No DB instance found. Check your database connection.');
+    }
+
     if (!gfs) {
-      gfs = new mongoose.mongo.GridFSBucket(mongoose.connection.db, {
+      gfs = new mongoose.mongo.GridFSBucket(db, {
         bucketName: 'resumes'
       });
     }
 
-    // Find file metadata and validate
+    // Find file metadata
     const files = await gfs.find({ _id: new mongoose.Types.ObjectId(fileId) }).toArray();
     if (!files.length) {
       return NextResponse.json(
@@ -115,19 +136,19 @@ export async function GET(req: Request) {
     }
 
     const file = files[0];
-    const downloadStream = gfs.openDownloadStream(new mongoose.Types.ObjectId(fileId));
 
-    // Convert stream to buffer
-    const chunks: any[] = [];
+    // Download the file into a buffer
+    const downloadStream = gfs.openDownloadStream(new mongoose.Types.ObjectId(fileId));
+    const chunks: Buffer[] = [];
     for await (const chunk of downloadStream) {
       chunks.push(chunk);
     }
     const buffer = Buffer.concat(chunks);
 
-    // Return file with appropriate headers
+    // Return file with appropriate headers, ensuring Content-Type is defined
     return new NextResponse(buffer, {
       headers: {
-        'Content-Type': file.contentType,
+        'Content-Type': file.contentType || 'application/octet-stream',
         'Content-Disposition': `attachment; filename="${file.filename}"`,
       },
     });

@@ -22,6 +22,6 @@
       "@/*": ["./src/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/app/api/auth/[...nextauth]/route.js", "src/app/(auth)/layout.js", "src/app/(root)/profilepage/Page.jsx", "src/app/api/contact/[chatId]/route.js", "src/app/api/auth/[...next]/route.js", "src/app/layout.js", "src/components/Navbar/Navbar.jsx", "src/app/(Temoprary)/scholarship/(Next-Steps)/(application-page)/apply/page.jsx", "src/app/(pages)/(Events)/event/sections/PastEvents.jsx", "src/app/(pages)/(Events)/event/sections/UpcomingEvents.jsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/app/api/auth/[...nextauth]/route.js", "src/app/(auth)/layout.js", "src/app/(root)/profilepage/Page.jsx", "src/app/api/contact/[chatId]/route.js", "src/app/api/auth/[...next]/route.js", "src/app/layout.js", "src/components/Navbar/Navbar.jsx", "src/app/(Temoprary)/scholarship/(Next-Steps)/(application-page)/apply/page.jsx", "src/app/(pages)/(Events)/event/sections/PastEvents.jsx", "src/app/(pages)/(Events)/event/sections/UpcomingEvents.jsx", "src/app/(pages)/(Membership)/non_profitsignup/utils/types.jsx"],
   "exclude": ["node_modules"]
 }

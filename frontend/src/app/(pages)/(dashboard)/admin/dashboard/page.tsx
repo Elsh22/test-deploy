@@ -62,7 +62,7 @@ export default function DashboardPage() {
   const router = useRouter();
   const searchParams = useSearchParams();
   
-  const initialTab = (searchParams.get('tab') as SubmissionType) || 'contacts';
+  const initialTab = (searchParams?.get('tab') as SubmissionType) || 'contacts';
   
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [stats, setStats] = useState<DashboardStats | null>(null);
@@ -133,9 +133,9 @@ export default function DashboardPage() {
       type: tab
     });
     
-    const params = new URLSearchParams(searchParams);
-    params.set('tab', tab);
-    router.push(`?${params.toString()}`);
+    const newParams = new URLSearchParams(searchParams?.toString() || '');
+    newParams.set('tab', tab);
+    router.push(`?${newParams.toString()}`);
   };
 
   const handleFilterChange = (newFilters: Partial<FilterState>) => {

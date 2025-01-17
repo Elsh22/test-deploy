@@ -1,13 +1,13 @@
 // utils/imageHelpers.ts
-import { Event } from '../types/event';
+import { EventItem } from '../types/event';
 
-export const getImageUrl = (event: Event) => {
+export const getImageUrl = (event: EventItem) => {
   try {
-    if (!event?.Image?.[0]?.url) {
+    if (!event?.attributes?.Image?.[0]?.url) {
       console.log('No image found for event:', event);
       return '/api/placeholder/800/400';
     }
-    const imageUrl = event.Image[0].formats?.medium?.url || event.Image[0].url;
+    const imageUrl = event.attributes.Image[0].formats?.medium?.url || event.attributes.Image[0].url;
     return `http://localhost:1337${imageUrl}`;
   } catch (error) {
     console.error('Error getting image URL:', error);
@@ -15,10 +15,10 @@ export const getImageUrl = (event: Event) => {
   }
 };
 
-export const getHeroImages = (events: Event[]) => {
-  const images = [];
+export const getHeroImages = (events: EventItem[]) => {
+  const images: string[] = [];
   const availableEvents = [...events].sort((a, b) => 
-    new Date(b.DateStart) - new Date(a.DateStart)
+    new Date(b.attributes.DateStart).getTime() - new Date(a.attributes.DateStart).getTime()
   );
 
   for (let i = 0; i < 6; i++) {

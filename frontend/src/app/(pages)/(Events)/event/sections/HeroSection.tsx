@@ -1,8 +1,13 @@
 "use client";
 import { motion } from 'framer-motion';
 import { getHeroImages } from '../utils/imageHelpers';
+import { EventItem } from '../types/event';
 
-const HeroSection = ({ events }) => {
+interface HeroSectionProps {
+  events: EventItem[];
+}
+
+const HeroSection = ({ events }: HeroSectionProps) => {
   const heroImages = getHeroImages(events);
 
   return (

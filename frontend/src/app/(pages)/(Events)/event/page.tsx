@@ -7,18 +7,28 @@ import PastEvents from './sections/PastEvents';
 import SuggestionForm from './sections/SuggestionForm';
 import FilterSection from './components/FilterSection';
 import ShowMoreButton from './components/ShowMoreButton';
+import { EventItem } from './types/event';  // Import EventItem
+
+// Remove the Event interface since we're using EventItem
+
+// Define filter state interface
+interface FilterState {
+  school: string;
+  search: string;
+  showMore: boolean;
+}
 
 const EventsPage = () => {
-  const [events, setEvents] = useState([]);
+  const [events, setEvents] = useState<EventItem[]>([]);  // Use EventItem instead of Event
   const [loading, setLoading] = useState(true);
   
-  const [upcomingFilters, setUpcomingFilters] = useState({
+  const [upcomingFilters, setUpcomingFilters] = useState<FilterState>({
     school: 'all',
     search: '',
     showMore: false
   });
   
-  const [pastFilters, setPastFilters] = useState({
+  const [pastFilters, setPastFilters] = useState<FilterState>({
     school: 'all',
     search: '',
     showMore: false
@@ -30,8 +40,8 @@ const EventsPage = () => {
         const STRAPI_URL = process.env.NEXT_PUBLIC_STRAPI_URL;
         const response = await fetch(`${STRAPI_URL}/api/events?populate=*`);
         const data = await response.json();
-        setEvents(data.data.sort((a, b) => 
-          new Date(a.DateStart) - new Date(b.DateStart)
+        setEvents(data.data.sort((a: EventItem, b: EventItem) =>  // Use EventItem here
+          new Date(a.attributes.DateStart).getTime() - new Date(b.attributes.DateStart).getTime()
         ));
       } catch (error) {
         console.error('Error fetching events:', error);
@@ -54,8 +64,13 @@ const EventsPage = () => {
     );
   }
 
-  const upcomingEvents = events.filter(event => isFuture(parseISO(event.DateStart)));
-  const pastEvents = events.filter(event => isPast(parseISO(event.DateStart)));
+  const upcomingEvents = events.filter(event => 
+    isFuture(parseISO(event.attributes.DateStart))
+  );
+  
+  const pastEvents = events.filter(event => 
+    isPast(parseISO(event.attributes.DateStart))
+  );
 
   return (
     <div className="bg-white min-h-screen">

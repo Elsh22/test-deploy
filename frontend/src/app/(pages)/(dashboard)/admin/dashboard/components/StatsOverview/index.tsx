@@ -15,12 +15,11 @@ export default function StatsOverview({ stats, className = '' }: StatsOverviewPr
   
   // Calculate weekly trend (comparing to previous week)
   const calculateTrend = () => {
-    // You would typically get this from your API
-    // For now, we'll calculate a simple percentage based on recent submissions
-    const weeklyAverage = stats.totalSubmissions / 52; // Rough weekly average
+    const weeklyAverage = stats.totalSubmissions / 52;
     const trend = ((stats.recentSubmissions - weeklyAverage) / weeklyAverage) * 100;
     return {
-      value: Math.abs(trend).toFixed(1),
+      // Convert the string back to a number using parseFloat
+      value: parseFloat(Math.abs(trend).toFixed(1)),
       isPositive: trend > 0
     };
   };

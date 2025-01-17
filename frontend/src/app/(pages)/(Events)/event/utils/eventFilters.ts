@@ -1,12 +1,12 @@
 // utils/eventFilters.ts
-import { Event, FilterState } from '../types/event';
+import { EventItem, FilterState } from '../types/event';
 
-export const filterEvents = (events: Event[], filters: FilterState) => {
+export const filterEvents = (events: EventItem[], filters: FilterState) => {
   return events.filter(event => {
-    const matchesSchool = filters.school === 'all' || event.Schools?.trim() === filters.school;
+    const matchesSchool = filters.school === 'all' || event.attributes.Schools?.trim() === filters.school;
     const matchesSearch = !filters.search || 
-      event.Title.toLowerCase().includes(filters.search.toLowerCase()) ||
-      event.Description.toLowerCase().includes(filters.search.toLowerCase());
+      event.attributes.Title.toLowerCase().includes(filters.search.toLowerCase()) ||
+      event.attributes.Description.toLowerCase().includes(filters.search.toLowerCase());
     return matchesSchool && matchesSearch;
   });
 };

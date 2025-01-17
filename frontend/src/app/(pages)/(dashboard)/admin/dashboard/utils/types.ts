@@ -16,13 +16,19 @@ export interface BaseSubmission {
   }
   
   export interface ChapterApplication extends BaseSubmission {
+    message: any;
     email: any;
     chapterName: string;
     institution: string;
     primaryContact: string;
   }
   
+  
   export interface EventSuggestion extends BaseSubmission {
+    proposedDate: string | number | Date;
+    location: any;
+    expectedAttendance: string;
+    contactEmail: any;
     eventTitle: string;
     description: string;
     yourRole: string;
@@ -72,13 +78,7 @@ export interface BaseSubmission {
       events: number;
       partnerships: number;
       nonprofits: number;
-    };
-    recentByType: {
-      contacts: number;
-      chapters: number;
-      events: number;
-      partnerships: number;
-      nonprofits: number;
+      newsletter: number;
     };
     unseenByType: {
       contacts: number;
@@ -86,11 +86,20 @@ export interface BaseSubmission {
       events: number;
       partnerships: number;
       nonprofits: number;
+      newsletter: number;
+    };
+    recentByType: {
+      contacts: number;
+      chapters: number;
+      events: number;
+      partnerships: number;
+      nonprofits: number;
+      newsletter: number;
     };
   }
   
   // Filter and Sort Types
-  export type SubmissionType = 'contacts' | 'chapters' | 'events' | 'partnerships' | 'nonprofits';
+  export type SubmissionType = 'contacts' | 'chapters' | 'events' | 'partnerships' | 'nonprofits' | 'newsletter';
   
   export interface FilterState {
     type: SubmissionType;

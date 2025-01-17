@@ -2,48 +2,60 @@
 import { SubmissionType } from './types';
 
 // Date Formatting
-export function formatDate(date: string | Date): string {
-  return new Date(date).toLocaleDateString('en-US', {
+export function formatDate(date: string | number | Date): string {
+  if (!date) return '';
+  
+  const dateObj = typeof date === 'string' ? new Date(date) :
+                 typeof date === 'number' ? new Date(date) :
+                 date;
+  
+  if (!(dateObj instanceof Date) || isNaN(dateObj.getTime())) {
+    throw new Error('Invalid date');
+  }
+                 
+  return dateObj.toLocaleDateString('en-US', {
     year: 'numeric',
     month: 'long',
-    day: 'numeric',
-    hour: '2-digit',
-    minute: '2-digit'
+    day: 'numeric'
   });
 }
 
 // Get Tab Information
-export const tabInfo = {
+const tabInfo = {
   contacts: {
-    label: 'Contacts',
-    description: 'Contact form submissions',
-    searchFields: ['fullname', 'email', 'subject']
+    label: "Contacts",
+    description: "Contact form submissions",
+    searchFields: ["fullname", "email", "subject"] as const
   },
   chapters: {
-    label: 'Chapters',
-    description: 'Chapter applications',
-    searchFields: ['chapterName', 'institution', 'primaryContact']
+    label: "Chapters",
+    description: "Chapter applications",
+    searchFields: ["chapterName", "institution", "primaryContact", "email"] as const
   },
   events: {
-    label: 'Events',
-    description: 'Event suggestions',
-    searchFields: ['eventTitle', 'description', 'yourRole']
+    label: "Events",
+    description: "Event suggestions",
+    searchFields: ["eventTitle", "location", "description"] as const
   },
   partnerships: {
-    label: 'Partnerships',
-    description: 'Partnership requests',
-    searchFields: ['organizationName', 'contactPerson', 'email']
+    label: "Partnerships",
+    description: "Partnership inquiries",
+    searchFields: ["organizationName", "partnershipInterest", "contactName"] as const
   },
   nonprofits: {
-    label: 'Non-Profits',
-    description: 'DMC Non-profit applications',
-    searchFields: ['firstName', 'lastName', 'email', 'company']
+    label: "Non-Profits",
+    description: "Non-profit applications",
+    searchFields: ["company", "lastName", "email"] as const
+  },
+  newsletter: {
+    label: "Newsletter",
+    description: "Newsletter subscribers",
+    searchFields: ["email", "subscriptionDate"] as const
   }
 } as const;
 
-// Get Search Fields for each type
 export function getSearchFields(type: SubmissionType): string[] {
-  return tabInfo[type].searchFields;
+  return [...tabInfo[type].searchFields];
 }
 
 // File Handling
@@ -82,10 +94,14 @@ export function getSortOptions(type: SubmissionType): Array<{ value: string; lab
     nonprofits: [
       { value: 'lastName', label: 'Last Name' },
       { value: 'company', label: 'Company' }
+    ],
+    newsletter: [  // Add newsletter type
+      { value: 'email', label: 'Email' },
+      { value: 'subscriptionDate', label: 'Subscription Date' }
     ]
   };
 
-  return [...commonOptions, ...typeSpecificOptions[type]];
+  return [...commonOptions, ...(typeSpecificOptions[type] || [])];
 }
 
 // Error Handling

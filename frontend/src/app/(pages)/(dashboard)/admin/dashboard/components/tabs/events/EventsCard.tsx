@@ -11,7 +11,23 @@ interface EventCardProps {
 }
 
 export default function EventCard({ event, onMarkSeen }: EventCardProps) {
-  const isUpcoming = new Date(event.proposedDate) > new Date();
+  // Convert proposedDate to Date object for comparison
+  const proposedDateObj = typeof event.proposedDate === 'number' 
+    ? new Date(event.proposedDate)
+    : new Date(event.proposedDate);
+    
+  const isUpcoming = proposedDateObj > new Date();
+
+  // Helper function to safely format dates
+  const safeFormatDate = (date: string | number | Date) => {
+    if (!date) return 'Not specified';
+    try {
+      return formatDate(date);
+    } catch (error) {
+      console.error('Error formatting date:', error);
+      return 'Invalid date';
+    }
+  };
 
   return (
     <div className="bg-white rounded-lg shadow-sm p-6">
@@ -47,7 +63,7 @@ export default function EventCard({ event, onMarkSeen }: EventCardProps) {
           <div className="flex items-center gap-2 text-gray-600">
             <Clock className="h-4 w-4" />
             <span>Proposed Date:</span>
-            <span className="font-medium">{formatDate(event.proposedDate)}</span>
+            <span className="font-medium">{safeFormatDate(event.proposedDate)}</span>
           </div>
           <div className="flex items-center gap-2 text-gray-600">
             <Users className="h-4 w-4" />
@@ -83,7 +99,7 @@ export default function EventCard({ event, onMarkSeen }: EventCardProps) {
       {/* Footer */}
       <div className="mt-4 pt-4 border-t">
         <div className="flex justify-between items-center text-sm text-gray-400">
-          <span>Submitted on {formatDate(event.date)}</span>
+          <span>Submitted on {safeFormatDate(event.date)}</span>
           <span>Event ID: {event._id}</span>
         </div>
       </div>

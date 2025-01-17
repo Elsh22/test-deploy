@@ -1,6 +1,7 @@
 // types/event.ts
-export interface Event {
-    id: string;
+export interface EventItem {
+  id: number;  // Changed from string to number since Strapi uses numeric IDs
+  attributes: {  // Added attributes wrapper to match Strapi structure
     Title: string;
     Description: string;
     DateStart: string;
@@ -18,8 +19,10 @@ export interface Event {
         };
       };
     }>;
-  }
-  
+  };
+}
+
+
   export interface FilterState {
     school: string;
     search: string;

@@ -13,8 +13,8 @@ import {
 
 const UniversityMembershipPage = () => {
   const router = useRouter();
-  const chaptersRef = useRef(null);
-  const containerRef = useRef(null);
+  const chaptersRef = useRef<HTMLDivElement>(null);
+  const containerRef = useRef<HTMLDivElement>(null);
   const [searchQuery, setSearchQuery] = useState('');
   
   const { scrollYProgress } = useScroll({

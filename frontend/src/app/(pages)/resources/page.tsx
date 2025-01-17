@@ -88,7 +88,7 @@ const ResourcesPage = () => {
     }
   ];
 
-  const toggleFaq = (id) => {
+  const toggleFaq = (id: any) => {
     setOpenFaqId(openFaqId === id ? null : id);
   };
 
