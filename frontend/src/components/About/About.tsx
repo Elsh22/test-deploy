@@ -14,6 +14,7 @@ import Kaleb from '../../assets/KalebHeadshotUpdated.jpg';
 import Kabir from '../../assets/KabirHeadshotUpdated.jpg';
 import Jason from '../../assets/JasonHeadshotUpdated.jpg';
 import Eboard from '../../assets/eboardpic.jpg';
+import Image from 'next/image'
 
 interface AboutProps {
   id: string;
@@ -39,7 +40,7 @@ const AboutTeam = () => {
         <div className="flex flex-col items-center mt-5">
   <h1 className='text-center text-2xl font-bold w-full'>Meet the Eboard</h1>
   {/* Larger Eboard Photo */}
-  <img
+  <Image
     src={Eboard.src} // Adjust as needed based on whether Eboard is an object or a direct path
     alt="Eboard Team" 
     style={{ width: "1000px", height: "auto" }} // Adjust width to desired size
@@ -50,7 +51,7 @@ const AboutTeam = () => {
     {team.map((member, index) => (
       <div className="text-center w-72 m-5" key={index}>
         <div className="inline-block w-36 h-36 rounded-full border-2 border-black overflow-hidden">
-          <img src={member.image} alt={member.name} className="w-full h-full object-cover" />
+          <Image src={member.image} alt={member.name} className="w-full h-full object-cover" />
         </div>
         <h3 className="theme-text mt-5 text-decoration-line: underline">
           <a href={member.linkedin} target="_blank" rel="noreferrer" className="theme-text">

@@ -10,7 +10,7 @@ export default function DonationPage(): JSX.Element {
         <h2 className="mb-4 text-2xl">
          <strong>For over five years</strong>, our student organization has been dedicated to the holistic development of men of color,
           fostering growth in professional, social, academic, and community engagement spheres. Since our foundation
-          in September 2018, we've grown to over 550 active members and supported 200 alumni.
+          in September 2018, we&apos;ve grown to over 550 active members and supported 200 alumni.
         </h2>
         <h2 className="mb-4 text-2xl">
           <strong>With your support</strong>, we can continue our mission to empower and uplift our members, providing invaluable opportunities
@@ -36,7 +36,7 @@ export default function DonationPage(): JSX.Element {
         <p className="mb-2">Supporting networking events, mentorship programs, scholarship opportunities, and community service projects.</p>
         
         <p className="mt-4 text-xl">
-          By donating to our organization, you're directly contributing to the success and empowerment of men of color in our community.
+          By donating to our organization, you&apos;re directly contributing to the success and empowerment of men of color in our community.
           Your support enables us to continue providing valuable resources and opportunities that help our members thrive personally and professionally.
           Together, we can make a meaningful difference in the lives of aspiring leaders and change-makers.
         </p>

@@ -14,6 +14,7 @@ import {
 import { format, parseISO } from 'date-fns';
 import ReactMarkdown from 'react-markdown';
 import Link from 'next/link';
+import Image from 'next/image'
 
 // Define the Event interface
 interface EventImage {
@@ -139,7 +140,7 @@ const EventPage = () => {
     <div className="min-h-screen bg-white">
       {/* Hero Image */}
       <div className="relative h-[60vh] overflow-hidden">
-        <img
+        <Image
           src={getImageUrl(event)}
           alt={event.Title}
           className="w-full h-full object-cover"

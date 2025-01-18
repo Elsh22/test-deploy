@@ -6,6 +6,7 @@ import ReactMarkdown from 'react-markdown';
 import { formatDate, formatTime } from '../utils/dateFormatters';
 import { truncateDescription } from '../utils/eventFilters';
 import { getImageUrl } from '../utils/imageHelpers';
+import Image from 'next/image'
 
 const cardReveal = {
   hidden: { opacity: 0, y: 20 },
@@ -49,7 +50,7 @@ const UpcomingEvents = ({ events, filters, setFilters, FilterSection, ShowMoreBu
               >
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                   <div className="relative h-48 rounded-lg overflow-hidden">
-                    <img
+                    <Image
                       src={getImageUrl(event)}
                       alt={event.Title}
                       className="w-full h-full object-cover"

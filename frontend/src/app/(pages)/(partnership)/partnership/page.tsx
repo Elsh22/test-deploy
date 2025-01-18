@@ -8,6 +8,7 @@ import {
   CreditCard,
   Send
 } from 'lucide-react';
+import Image from 'next/image'
 
 const PartnershipPage = () => {
   const [showContactForm, setShowContactForm] = useState(false);
@@ -167,7 +168,7 @@ const PartnershipPage = () => {
                 whileHover={{ scale: 1.02 }}
                 className="bg-white rounded-xl shadow-lg p-8"
               >
-                <img
+                <Image
                   src={partner.logo}
                   alt={partner.name}
                   className="w-full h-32 object-contain mb-6"

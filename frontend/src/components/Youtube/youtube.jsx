@@ -4,6 +4,7 @@ import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import { FaPlay } from 'react-icons/fa';
+import Image from 'next/image'
 
 const Youtube = () => {
   const videos = [
@@ -63,7 +64,7 @@ const Youtube = () => {
               className="relative cursor-pointer"
               onClick={() => handleVideoClick(video.videoId)}
             >
-              <img
+              <Image
                 src={`https://img.youtube.com/vi/${video.videoId}/0.jpg`}
                 alt={video.title}
                 className="w-full h-auto rounded"

@@ -57,7 +57,7 @@ const MenteeSignup = () => {
         {submitted ? (
           <div className="bg-green-50 border border-green-200 rounded-lg p-4 mb-8">
             <p className="text-green-800">
-              Thank you for your application! We'll review your information and get back to you soon.
+              Thank you for your application! We&apos;ll review your information and get back to you soon.
             </p>
           </div>
         ) : (

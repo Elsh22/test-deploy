@@ -31,6 +31,12 @@ const PROTECTED_PATHS = [
 
 export async function middleware(request: NextRequest) {
   const path = request.nextUrl.pathname;
+  const response = NextResponse.next();
+
+  // Add CORS headers
+  response.headers.set('Access-Control-Allow-Origin', '*');
+  response.headers.set('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
+  response.headers.set('Access-Control-Allow-Headers', 'Content-Type, Authorization');
   
   // Handle dynamic routes
   const isDynamicPublicRoute = 
@@ -69,9 +75,10 @@ export async function middleware(request: NextRequest) {
       return NextResponse.redirect(new URL('/admin/login', request.url));
     }
   }
-
+  
   // For any other paths, redirect to homepage
-  return NextResponse.redirect(new URL('/', request.url));
+  return NextResponse.redirect(new URL('/', request.url)) && response;;
+  
 }
 
 export const config = {

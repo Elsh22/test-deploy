@@ -6,6 +6,7 @@ import ReactMarkdown from 'react-markdown';
 import { formatDate } from '../utils/dateFormatters';
 import { truncateDescription } from '../utils/eventFilters';
 import { getImageUrl } from '../utils/imageHelpers';
+import Image from 'next/image'
 
 const cardReveal = {
   hidden: { opacity: 0, y: 20 },
@@ -48,7 +49,7 @@ const PastEvents = ({ events, filters, setFilters, FilterSection, ShowMoreButton
                 className="bg-white rounded-lg shadow-lg overflow-hidden"
               >
                 <div className="relative">
-                  <img
+                  <Image
                     src={getImageUrl(event)}
                     alt={event.Title}
                     className="w-full h-48 object-cover"

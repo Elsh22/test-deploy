@@ -387,7 +387,7 @@ const UniversityMembershipPage = () => {
             <Plus className="w-16 h-16 mx-auto mb-8 text-white" />
             <h2 className="text-4xl font-bold mb-6 text-white">Start a New Chapter</h2>
             <p className="text-xl mb-8 text-white/90">
-              Don't see your university? Lead the change by starting a new chapter at your institution.
+              Don&apos;t see your university? Lead the change by starting a new chapter at your institution.
             </p>
             <button 
               onClick={() => router.push('/newchapter')}

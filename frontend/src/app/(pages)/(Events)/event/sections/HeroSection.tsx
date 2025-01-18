@@ -2,6 +2,7 @@
 import { motion } from 'framer-motion';
 import { getHeroImages } from '../utils/imageHelpers';
 import { EventItem } from '../types/event';
+import Image from 'next/image'
 
 interface HeroSectionProps {
   events: EventItem[];
@@ -26,7 +27,7 @@ const HeroSection = ({ events }: HeroSectionProps) => {
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: i * 0.2, duration: 1 }}
           >
-            <img
+            <Image
               src={imageUrl}
               alt={`Event ${i + 1}`}
               className="w-full h-full object-cover"

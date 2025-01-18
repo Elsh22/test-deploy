@@ -6,6 +6,8 @@ import { startingFeatures } from '../../constants/index';
 import StartSteps  from '../../utils/Startsteps';
 import {  TitleText, TypingText } from '../../utils/CustomText';
 import { staggerContainer, fadeIn, planetVariants } from '../../utils/motion';
+import Image from 'next/image'
+
 
 const Mentorship = ({ id }) => (
   <section id={id} className={`${styles.paddings} mt-10`}>
@@ -20,7 +22,7 @@ const Mentorship = ({ id }) => (
         variants={planetVariants('left')}
         className={`flex-1 ${styles.flexCenter} mt-0 lg:mt-0`} 
       >
-        <img
+        <Image
           src={IMG.src}
           alt="get-started"
           className="w-[90%] lg:w-[90%] h-[90%] lg:h-[90%] object-contain" 

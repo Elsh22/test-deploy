@@ -8,6 +8,10 @@ import { Partnership } from "../../../models/partnership";
 import { DMCNonProfit } from "../../../models/dmcNonProfit";
 import { Newsletter } from "../../../models/newsletter";
 
+// Explicitly set Node.js runtime
+export const dynamic = 'force-dynamic';
+export const runtime = 'nodejs';
+
 const ITEMS_PER_PAGE = 10;
 
 const getModel = (type: string) => {
@@ -185,7 +189,8 @@ export async function PATCH(
     console.error('Update Error:', error);
     return NextResponse.json({ 
       success: false, 
-      error: "Failed to update document"
+      error: "Failed to update document",
+      details: error instanceof Error ? error.message : 'Unknown error'
     }, { status: 500 });
   }
 }

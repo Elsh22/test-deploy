@@ -7,6 +7,13 @@ import { EventSuggestion } from "../../models/eventSuggestion";
 import { Partnership } from "../../models/partnership";
 import { DMCNonProfit } from "../../models/dmcNonProfit";
 
+// Remove the edge runtime declaration
+// export const runtime = 'edge';
+
+// Explicitly set Node.js runtime
+export const dynamic = 'force-dynamic';
+export const runtime = 'nodejs';
+
 export async function GET(request: NextRequest) {
   try {
     // Check for auth token
@@ -15,6 +22,7 @@ export async function GET(request: NextRequest) {
       return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
     }
 
+    // Connect to database
     await connectDB();
     
     // Get counts in parallel
@@ -65,6 +73,7 @@ export async function GET(request: NextRequest) {
       DMCNonProfit.countDocuments({ seen: false })
     ]);
 
+    // Prepare and return response
     return NextResponse.json({
       success: true,
       stats: {
@@ -77,7 +86,7 @@ export async function GET(request: NextRequest) {
           events: totalEvents,
           partnerships: totalPartnerships,
           nonprofits: totalNonprofits,
-          newsletter: 0 // Added to match expected type
+          newsletter: 0
         },
         recentByType: {
           contacts: recentContacts,
@@ -101,7 +110,8 @@ export async function GET(request: NextRequest) {
     console.error('Stats Error:', error);
     return NextResponse.json({ 
       success: false, 
-      error: "Failed to fetch statistics" 
+      error: "Failed to fetch statistics",
+      details: error instanceof Error ? error.message : 'Unknown error'
     }, { status: 500 });
   }
 }

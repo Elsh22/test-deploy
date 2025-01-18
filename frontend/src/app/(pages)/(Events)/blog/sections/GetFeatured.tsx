@@ -21,7 +21,7 @@ const GetFeatured = ({ setShowSubmissionModal }: GetFeaturedProps) => {
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold mb-6">Get Featured on DMC Blog</h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Share your DMC experience with our community. We're always looking for inspiring stories
+            Share your DMC experience with our community. We&apos;re always looking for inspiring stories
             and valuable insights from our partners and supporters.
           </p>
         </div>

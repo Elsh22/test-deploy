@@ -3,12 +3,14 @@ import React, { useEffect, useRef } from "react";
 import { ArrowRight, ChevronDown } from "lucide-react";
 import { useRouter } from "next/navigation";
 
+
 const AnimatedCard = ({ tier, index, isLast }) => {
   const router = useRouter();
   const cardRef = useRef(null);
   const [isVisible, setIsVisible] = React.useState(false);
 
   useEffect(() => {
+    const observerTarget = cardRef.current; // Store ref value in a variable
     const observer = new IntersectionObserver(
       ([entry]) => {
         setIsVisible(entry.isIntersecting);
@@ -19,17 +21,18 @@ const AnimatedCard = ({ tier, index, isLast }) => {
       }
     );
 
-    if (cardRef.current) {
-      observer.observe(cardRef.current);
+    if (observerTarget) {
+      observer.observe(observerTarget);
     }
 
     return () => {
-      if (cardRef.current) {
-        observer.unobserve(cardRef.current);
+      if (observerTarget) { // Use stored variable in cleanup
+        observer.unobserve(observerTarget);
       }
     };
-  }, []);
+  }, []); // Dependencies array remains empty
 
+  // Rest of your component remains the same
   const handleLearnMore = () => {
     router.push(tier.learnMoreRoute);
   };

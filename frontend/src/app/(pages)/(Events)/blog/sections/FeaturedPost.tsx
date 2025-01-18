@@ -3,6 +3,8 @@ import Link from 'next/link';
 import { Clock, User } from 'lucide-react';
 import { Blog } from '../utils/types';
 import { formatDate, getImageUrl } from '../utils/formatters';
+import Image from 'next/image'
+
 
 interface FeaturedPostProps {
   post: Blog;
@@ -14,7 +16,7 @@ const FeaturedPost = ({ post }: FeaturedPostProps) => {
   return (
     <section className="relative h-[70vh]">
       <div className="absolute inset-0">
-        <img
+        <Image
           src={getImageUrl(post)}
           alt={post.Title || 'Featured post'}
           className="w-full h-full object-cover"

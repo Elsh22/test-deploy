@@ -130,7 +130,7 @@ const SuggestionForm = () => {
         >
           <h2 className="text-4xl font-bold mb-4">Suggest an Event</h2>
           <p className="text-gray-600">
-            Have an idea for an event? We'd love to hear from you!
+            Have an idea for an event? We&apos;d love to hear from you!
           </p>
         </motion.div>
         

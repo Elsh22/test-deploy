@@ -98,7 +98,7 @@ const SubmissionModal = ({ showModal, setShowModal }: SubmissionModalProps) => {
           <div>
             <h4 className="font-semibold mb-2">Review Process</h4>
             <p className="text-gray-600 mb-4">
-              Our team will review your submission within 5-7 business days. If selected, we'll work
+              Our team will review your submission within 5-7 business days. If selected, we&apos;ll work
               with you to prepare your content for publication on our blog.
             </p>
           </div>

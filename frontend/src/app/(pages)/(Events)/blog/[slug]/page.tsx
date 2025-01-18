@@ -2,6 +2,7 @@ import { format } from 'date-fns';
 import { ArrowLeft } from 'lucide-react';
 import Link from 'next/link';
 import { Key } from 'react';
+import Image from 'next/image'
 
 // Interface for the blog data structure
 interface Blog {
@@ -61,7 +62,7 @@ const BlogPost = async ({ params }: BlogPostParams) => {
         </header>
 
         {blog.ThumbnailImage && (
-          <img
+          <Image
             src={`${STRAPI_URL}${blog.ThumbnailImage.url}`}
             alt={blog.Title}
             className="w-full h-auto mb-8 rounded-lg shadow-md"

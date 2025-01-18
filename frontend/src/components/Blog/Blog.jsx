@@ -3,6 +3,8 @@ import React, { useState, useRef, useEffect } from 'react';
 import { format } from 'date-fns';
 import { ArrowLeft, ArrowRight, Clock } from 'lucide-react';
 import Link from 'next/link';
+import Image from 'next/image'
+
 
 const Blog = () => {
   const scrollContainerRef = useRef(null);
@@ -100,7 +102,7 @@ const Blog = () => {
             <div key={blog.id} className="bg-white rounded-lg shadow-lg overflow-hidden group">
               <div className="p-0">
                 <div className="relative w-full h-[200px]">
-                  <img
+                  <Image
                     src={getImageUrl(blog)}
                     alt={blog.Title || 'Blog post'}
                     className="w-full h-full object-cover"

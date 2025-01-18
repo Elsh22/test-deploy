@@ -10,6 +10,8 @@ import {
   Clock,
   CheckCircle
 } from 'lucide-react';
+import Image from 'next/image'
+
 
 const ContactPage = () => {
   const [isSubmitted, setIsSubmitted] = useState(false);
@@ -127,7 +129,7 @@ const ContactPage = () => {
         >
           <h1 className="text-5xl font-bold mb-6">Get in Touch</h1>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Have questions or want to collaborate? We'd love to hear from you.
+            Have questions or want to collaborate? We&apos;d love to hear from you.
           </p>
         </motion.div>
 
@@ -171,7 +173,7 @@ const ContactPage = () => {
                     name="subject"
                     value={formData.subject}
                     onChange={handleChange}
-                    placeholder="What's this about?"
+                    placeholder="What&apos;s this about?"
                     className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                   />
                 </motion.div>
@@ -230,7 +232,7 @@ const ContactPage = () => {
                     <div className="text-center">
                       <CheckCircle className="w-16 h-16 text-green-500 mx-auto mb-4" />
                       <h3 className="text-xl font-bold mb-2">Message Sent!</h3>
-                      <p className="text-gray-600">We'll get back to you soon.</p>
+                      <p className="text-gray-600">We&apos;ll get back to you soon.</p>
                     </div>
                   </motion.div>
                 )}
@@ -282,7 +284,7 @@ const ContactPage = () => {
             >
               <div className="bg-white rounded-lg shadow-lg p-2 overflow-hidden">
                 <div className="w-full h-48 bg-gray-200 rounded relative">
-                  <img 
+                  <Image
                     src="/api/placeholder/800/400"
                     alt="Location map"
                     className="w-full h-full object-cover"

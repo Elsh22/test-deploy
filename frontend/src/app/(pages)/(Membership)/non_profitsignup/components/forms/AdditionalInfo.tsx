@@ -31,7 +31,7 @@ const AdditionalInfo: React.FC<AdditionalInfoProps> = ({ formData, handleChange 
           required
           minLength={20}
           rows={3}
-          placeholder="Tell us why you'd like to join our organization..."
+          placeholder="Tell us why you&apos;d like to join our organization..."
         />
 
         <div className="space-y-4">
@@ -45,7 +45,7 @@ const AdditionalInfo: React.FC<AdditionalInfoProps> = ({ formData, handleChange 
               className="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded"
             />
             <label htmlFor="mentorshipInterest" className="ml-2 block text-sm text-gray-700">
-              I'm interested in mentoring DMC members
+              I&apos;m interested in mentoring DMC members
             </label>
           </div>
 
@@ -59,7 +59,7 @@ const AdditionalInfo: React.FC<AdditionalInfoProps> = ({ formData, handleChange 
               className="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded"
             />
             <label htmlFor="boardInterest" className="ml-2 block text-sm text-gray-700">
-              I'm interested in board membership opportunities
+              I&apos;m interested in board membership opportunities
             </label>
           </div>
 
@@ -73,7 +73,7 @@ const AdditionalInfo: React.FC<AdditionalInfoProps> = ({ formData, handleChange 
               className="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded"
             />
             <label htmlFor="volunteerInterest" className="ml-2 block text-sm text-gray-700">
-              I'm interested in volunteer opportunities
+              I&apos;m interested in volunteer opportunities
             </label>
           </div>
         </div>

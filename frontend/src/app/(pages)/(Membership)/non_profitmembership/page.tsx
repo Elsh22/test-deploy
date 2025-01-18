@@ -13,6 +13,7 @@ import {
   Briefcase,
   BookOpen
 } from 'lucide-react';
+import Image from 'next/image'
 
 const NonProfitMembershipPage = () => {
   const router = useRouter();
@@ -213,7 +214,7 @@ const NonProfitMembershipPage = () => {
                 }}
               >
                 <div className="bg-white rounded-lg shadow-lg overflow-hidden">
-                  <img
+                  <Image
                     src={initiative.image}
                     alt={initiative.title}
                     className="w-full h-48 object-cover"

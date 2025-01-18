@@ -3,6 +3,7 @@ import { Clock } from 'lucide-react';
 import Link from 'next/link';
 import { Blog } from '../utils/types';
 import { formatDate, getImageUrl } from '../utils/formatters';
+import Image from 'next/image'
 
 interface BlogCardProps {
   blog: Blog;
@@ -15,7 +16,7 @@ const BlogCard = ({ blog }: BlogCardProps) => {
       className="bg-white rounded-lg shadow-lg overflow-hidden transform hover:translate-y-[-4px] transition-transform duration-200"
     >
       <div className="relative h-48">
-        <img
+        <Image
           src={getImageUrl(blog)}
           alt={blog.Title || 'Blog post'}
           className="w-full h-full object-cover"

@@ -3,6 +3,7 @@ import Link from 'next/link'
 import PrintObject from "../../../../../components/Donor/PrintObject";
 import { stripe } from "../../../../models/lib/stripe";
 import img from '../../../../../assets/Prof.jpg'
+import Image from 'next/image'
 
 export default async function ResultPage({
   searchParams,
@@ -31,7 +32,7 @@ export default async function ResultPage({
           </Link>
         </div>
         <div className="md:flex-1 mt-10">
-          <img src={img.src} alt="Group of people" className="w-full h-auto max-w-md mx-auto" />
+          <Image src={img.src} alt="Group of people" className="w-full h-auto max-w-md mx-auto" />
         </div>
       </div>
   );
