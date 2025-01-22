@@ -1,37 +1,37 @@
 import React from 'react'; 
 import Image from 'next/image';
-import image1 from '../../newassest/weeklyFlyers/Black Yellow Bold We are Hiring Instagram Post (1).png';
-import image2 from '../../newassest/weeklyFlyers/Red Modern Meeting Invitation Instagram Post.png.png';
-import image3 from '../../newassest/weeklyFlyers/Grey Black Bold Minimalist Pottery Workshop Flyer (1080 x 1350 px) (1).png';
-import image4 from '../../newassest/weeklyFlyers/Green Red Volunter Need Flyer (1080 x 1350 px).png';
+import image1 from '../../newassest/weeklyFlyers/DMC Dodgeball - Jan 23 (1).png';
+import image2 from '../../newassest/weeklyFlyers/Black Yellow Bold We are Hiring Instagram Post (1).png';
+import image3 from '../../newassest/weeklyFlyers/Red Modern Meeting Invitation Instagram Post.png.png';
+import image4 from '../../newassest/weeklyFlyers/Grey Black Bold Minimalist Pottery Workshop Flyer (1080 x 1350 px) (1).png';
 
 const FlyerPost = () => {
 
   const flyers = [
 {
     image: image1,
-    title: 'DMC Hoodie Day',
-    description: 'Join us for in representing DMC through VCU campus by wearing your DMC Hoodie.',
-    date: 'October 16, 2024',
+    title: 'DMC Dodge Ball',
+    description: 'Join us for in a friendly game of dodgeball at the Cary Street Gym.',
+    date: 'January 23, 2025',
       },
  
   {
 image: image2,
-title: 'General Body Meeting',
-description: 'Join us for our monthly meeting to discuss the upcoming events and updates.',
-date: 'October 16, 2024',
+title: 'DMC Hoodie Day',
+description: 'Join us for in representing DMC through VCU campus by wearing your DMC Hoodie.',
+date: 'Passed',
   },
   {
 image: image3,
-title: 'LinkedIn/Resume Workshop',
-description: 'Join us for a workshop to learn how to create a professional LinkedIn profile and resume.',
-date: 'October 10, 2024',
+title: 'General Body Meeting',
+description: 'Join us for our first general body meeting of the semester to learn more about DMC.',
+date: 'Passed',
   },
   {
 image: image4,
-title: 'Community Serivce',
-description: 'Join us for a community service event to give back to the Richmond community.',
-date: 'October 3, 2024',
+title: 'Linkedin Workshop',
+description: 'Join us for a workshop on how to create a professional Linkedin profile.',
+date: 'Passed',
   },
 ];
 
