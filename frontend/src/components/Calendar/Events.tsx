@@ -1,5 +1,44 @@
 const events = [
-
+  {
+    title: "Team DMC Intramural Soccer Game",
+    start: "2025-01-27T19:30:00",
+    end: "2025-01-27T20:30:00"
+},
+{
+    title: "Team DMC Intramural Indoor Soccer Game",
+    start: "2025-02-03T19:30:00",
+    end: "2025-02-03T20:30:00"
+},
+{
+    title: "Team DMC Intramural Soccer Game",
+    start: "2025-02-10T19:30:00",
+    end: "2025-02-10T20:30:00"
+},
+{
+    title: "DMC Ringer Intramural Indoor Soccer Game",
+    start: "2025-01-26T21:30:00",
+    end: "2025-01-26T22:30:00"
+},
+{
+    title: "DMC Ringer's Intramural Indoor Soccer Game",
+    start: "2025-02-02T21:30:00",
+    end: "2025-02-02T22:30:00"
+},
+{
+    title: "DMC Ringer's Intramural Indoor Soccer Game",
+    start: "2025-02-10T21:30:00",
+    end: "2025-02-10T22:30:00"
+},
+{
+    title: "Library Study Session",
+    start: "2024-10-06T16:00:00",
+    end: "2024-10-06T22:00:00"
+},
+{
+    title: "Library Study Session",
+    start: "2024-10-13T16:00:00",
+    end: "2024-10-13T22:00:00"
+},
   {
     title: "Library Study Session",
     start: "2024-10-06T16:00:00",
