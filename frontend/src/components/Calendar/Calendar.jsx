@@ -29,8 +29,8 @@ const Calendar = ({ id }) => {
 };
 
 function renderEventContent(eventInfo) {
-  let bgColor = 'bg-blue-500'; 
-  if (eventInfo.event.title.includes('General Body Meeting')) {
+  let bgColor = 'bg-purple-500'; 
+  if (eventInfo.event.title.includes('GBM')) {
     bgColor = 'bg-red-500';
   } else if (eventInfo.event.title.includes('Committee')) {
     bgColor = 'bg-green-500';
@@ -40,10 +40,12 @@ function renderEventContent(eventInfo) {
     bgColor = 'bg-orange-500';
   }else if (eventInfo.event.title.includes('CGI')) {
     bgColor = 'bg-red-500';
-  }else if (eventInfo.event.title.includes('Shadow Day')) {
-    bgColor = 'bg-red-500';
+  }else if (eventInfo.event.title.includes('Game')) {
+    bgColor = 'bg-yellow-500';
   }else if (eventInfo.event.title.includes('Not On Your Resume')) {
     bgColor = 'bg-green-500';
+  } else if (eventInfo.event.title.includes('Study Session')) {
+    bgColor = 'bg-blue-500';
   } 
 
 
