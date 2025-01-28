@@ -12,7 +12,7 @@ const FlyerPost = () => {
     image: image1,
     title: 'DMC Dodge Ball',
     description: 'Join us for in a friendly game of dodgeball at the Cary Street Gym.',
-    date: 'January 23, 2025',
+    date: 'Passed',
       },
  
   {
