@@ -4,53 +4,173 @@
     border-radius: 12px;
     box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
     margin: 30px 0;
-}
-
-.highlights-title {
-    font-size: 3rem; /* Larger title font size */
+  }
+  
+  .highlights-title {
+    font-size: 3rem;
     font-weight: bold;
     color: #333;
     margin-bottom: 25px;
     text-align: center;
-}
-
-.highlights-description {
-    font-size: 1.5rem; /* Larger description font size */
-    font-weight: 600;  /* Bolder text */
+  }
+  
+  .highlights-description {
+    font-size: 1.5rem;
+    font-weight: 600;
     color: #666;
     margin-bottom: 35px;
     text-align: center;
-}
-
-.highlights-grid {
+  }
+  
+  .highlights-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Increase min width for larger images */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive grid */
     gap: 35px;
-}
-
-.highlight-box {
-    text-align: center;
+    cursor: pointer;
+  }
+  
+  .highlight-box {
     background-color: #fff;
     border-radius: 12px;
     overflow: hidden;
-    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2); /* Larger shadow for more emphasis */
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2); /* Slight shadow for depth */
+    display: flex;
+    flex-direction: column; /* Stack image and text */
+    align-items: center;
     padding: 20px;
-}
+  }
+  .highlight-box:hover {
+    transform: scale(1.05); /* Slightly enlarge the box on hover */
+    box-shadow: 0px 12px 24px rgba(0, 0, 0, 0.3); /* Add a deeper shadow on hover */
+  }
 
-.image-container {
+  .highlight-box:hover .highlight-title {
+    color: #daa520
+    ; /* Change title color on hover */
+  }
+
+  .highlight-box:hover .highlight-description {
+    color: #daa520;    /* Make description text darker on hover */
+  }
+  
+  .image-container {
     position: relative;
     width: 100%;
-    height: 250px; /* Larger height for bigger images */
-}
-
-.image-container img {
-    object-fit: cover;
-    border-radius: 12px 12px 0 0;
-}
-
-.highlight-title {
-    font-size: 1.5rem; /* Larger text under image */
-    font-weight: bold; /* Bold the event title */
+    padding-top: 100%; /* Maintain a square aspect ratio */
+    overflow: hidden; /* Crop overflow */
+    border-radius: 12px;
+  }
+  
+  .image-container img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure the image fills the container proportionally */
+  }
+  
+  .highlight-title {
+    font-size: 1.5rem;
+    font-weight: bold;
     color: #333;
     margin-top: 15px;
-}
+    text-align: center;
+  }
+  
+  .highlight-description {
+    font-size: 1rem;
+    color: #666;
+    margin-top: 10px;
+    text-align: center;
+  }
+  
+  /* Modal Styles */
+  .modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7); /* Faded background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .modal-content {
+    background: #fff;
+    width: 80%;
+    max-width: 800px;
+    border-radius: 12px;
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
+    overflow-y: auto; /* Allow scrolling for long content */
+    padding: 20px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .close-button {
+    background: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
+  
+  .modal-title {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .modal-image {
+    width: 400px; /* Set a fixed width for the rectangle */
+    height: 250px; /* Set a fixed height for the rectangle */
+    margin: 20px auto; /* Center the image horizontally */
+    border-radius: 12px; /* Optional: Add rounded corners */
+    overflow: hidden; /* Crop any overflow content */
+    display: flex; /* Align image content inside container */
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .modal-image img {
+    width: 100%; /* Ensure the image fills the container width */
+    height: 100%; /* Ensure the image fills the container height */
+    object-fit: cover; /* Crop the image proportionally */
+  }
+  
+  
+  .modal-blog {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin: 10px 0;
+    text-align: left;
+    color: #555;
+    width: 90%;
+    max-width: 900px;
+  }
+  
+  .extra-images {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .extra-image-container img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+  
