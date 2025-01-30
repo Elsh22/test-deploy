@@ -3,11 +3,17 @@ import Image from 'next/image';
 import image1 from '../../newassest/weeklyFlyers/DMC Dodgeball - Jan 23 (1).png';
 import image2 from '../../newassest/weeklyFlyers/Black Yellow Bold We are Hiring Instagram Post (1).png';
 import image3 from '../../newassest/weeklyFlyers/Red Modern Meeting Invitation Instagram Post.png.png';
-import image4 from '../../newassest/weeklyFlyers/Grey Black Bold Minimalist Pottery Workshop Flyer (1080 x 1350 px) (1).png';
+import image4 from '../../newassest/weeklyFlyers/CGI.png';
 
 const FlyerPost = () => {
 
   const flyers = [
+    {
+      image: image4,
+      title: 'CGI Colloboration Event',
+      description: 'Join us for a CGI Colloboration Event at the Senate Chambers!',
+      date: 'Feb 11, 2025 at 6:00 PM',
+        },
 {
     image: image1,
     title: 'DMC Dodge Ball',
@@ -25,12 +31,6 @@ date: 'Passed',
 image: image3,
 title: 'General Body Meeting',
 description: 'Join us for our first general body meeting of the semester to learn more about DMC.',
-date: 'Passed',
-  },
-  {
-image: image4,
-title: 'Linkedin Workshop',
-description: 'Join us for a workshop on how to create a professional Linkedin profile.',
 date: 'Passed',
   },
 ];
