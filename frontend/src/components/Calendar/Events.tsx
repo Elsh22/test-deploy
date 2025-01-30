@@ -1,5 +1,17 @@
 const events = [
   {
+    title:"DMC IT Workshop",
+    start: "2025-03-21T18:00:00",
+    end: "2025-03-21T20:00:00"
+
+  },
+  {
+    title:"DMC Spring Mixer",
+    start: "2025-03-05T16:00:00",
+    end: "2025-03-05T20:00:00"
+
+  },
+  {
     title: "Team DMC Intramural Soccer Game",
     start: "2025-01-27T19:30:00",
     end: "2025-01-27T20:30:00"
