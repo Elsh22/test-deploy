@@ -7,8 +7,8 @@ const events = [
   },
   {
     title:"DMC Spring Mixer",
-    start: "2025-03-05T16:00:00",
-    end: "2025-03-05T20:00:00"
+    start: "2025-04-05T16:00:00",
+    end: "2025-04-05T20:00:00"
 
   },
   {
