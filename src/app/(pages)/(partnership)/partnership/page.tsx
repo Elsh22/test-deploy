@@ -9,6 +9,7 @@ import {
   Send
 } from 'lucide-react';
 import Image from 'next/image'
+import image from '@/assets/1.png'
 
 const PartnershipPage = () => {
   const [showContactForm, setShowContactForm] = useState(false);
@@ -29,14 +30,14 @@ const PartnershipPage = () => {
     {
       id: 1,
       name: "Virginia Credit Union",
-      logo: "/api/placeholder/300/150",
+      logo: image,
       description: "Financial education partner providing literacy certifications and event sponsorship",
       type: "Financial Partner"
     },
     {
       id: 2,
       name: "CIS Richmond",
-      logo: "/api/placeholder/300/150",
+      logo: image,
       description: "Mentoring initiative partner at Carver, Dogwood, and Fox schools in Richmond, VA",
       type: "Education Partner"
     }
@@ -168,11 +169,15 @@ const PartnershipPage = () => {
                 whileHover={{ scale: 1.02 }}
                 className="bg-white rounded-xl shadow-lg p-8"
               >
+                <div className="relative w-full h-32 mb-6">
                 <Image
                   src={partner.logo}
                   alt={partner.name}
-                  className="w-full h-32 object-contain mb-6"
+                  className="object-contain"
+                  priority
+                  fill
                 />
+                </div>
                 <div className="space-y-3">
                   <h3 className="text-xl font-bold">{partner.name}</h3>
                   <div className="text-sm text-blue-600 font-medium">{partner.type}</div>

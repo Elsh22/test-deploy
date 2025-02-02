@@ -3,6 +3,15 @@ const nextConfig = {
   experimental: {
     serverActions: false
   },
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: '*.ondigitalocean.app',
+        pathname: '/uploads/**',
+      },
+    ],
+  },
   async headers() {
     return [
       {

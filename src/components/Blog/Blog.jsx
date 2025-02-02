@@ -5,7 +5,6 @@ import { ArrowLeft, ArrowRight, Clock } from 'lucide-react';
 import Link from 'next/link';
 import Image from 'next/image'
 
-
 const Blog = () => {
   const scrollContainerRef = useRef(null);
   const [showLeftButton, setShowLeftButton] = useState(false);
@@ -62,11 +61,10 @@ const Blog = () => {
 
   const getImageUrl = (blog) => {
     try {
-      
       if (!blog?.ThumbnailImage?.url) {
         return '/api/placeholder/400/200';
       }
-      return `${STRAPI_URL}/${blog.ThumbnailImage.url}`;
+      return `${STRAPI_URL}${blog.ThumbnailImage.url}`;
     } catch (error) {
       console.error('Error getting image URL:', error);
       return '/api/placeholder/400/200';
@@ -103,10 +101,13 @@ const Blog = () => {
             <div key={blog.id} className="bg-white rounded-lg shadow-lg overflow-hidden group">
               <div className="p-0">
                 <div className="relative w-full h-[200px]">
-                  <Image
+                <Image
                     src={getImageUrl(blog)}
                     alt={blog.Title || 'Blog post'}
-                    className="w-full h-full object-cover"
+                    fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                    className="object-cover"
+                    priority={false}
                   />
                 </div>
                 <div className="p-6">

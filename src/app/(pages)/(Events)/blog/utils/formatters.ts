@@ -16,7 +16,7 @@ export const getImageUrl = (blog: Blog) => {
     if (!blog?.ThumbnailImage?.url) {
       return '/api/placeholder/1200/600';
     }
-    return `${STRAPI_URL}/${blog.ThumbnailImage.url}`;
+    return `${STRAPI_URL}${blog.ThumbnailImage.url}`;
   } catch (error) {
     return '/api/placeholder/1200/600';
   }

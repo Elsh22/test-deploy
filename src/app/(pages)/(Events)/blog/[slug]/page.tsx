@@ -63,9 +63,11 @@ const BlogPost = async ({ params }: BlogPostParams) => {
 
         {blog.ThumbnailImage && (
           <Image
-            src={`${STRAPI_URL}/${blog.ThumbnailImage.url}`}
+            src={`${STRAPI_URL}${blog.ThumbnailImage.url}`}
             alt={blog.Title}
             className="w-full h-auto mb-8 rounded-lg shadow-md"
+            width={500}
+            height={100}
           />
         )}
 

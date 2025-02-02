@@ -288,6 +288,7 @@ const ContactPage = () => {
                     src="/api/placeholder/800/400"
                     alt="Location map"
                     className="w-full h-full object-cover"
+                    fill
                   />
                   <div className="absolute inset-0 flex items-center justify-center">
                     <button 

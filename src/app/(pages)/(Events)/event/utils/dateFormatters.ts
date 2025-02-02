@@ -1,20 +1,23 @@
-// utils/dateFormatters.ts
 import { format, parseISO } from 'date-fns';
 
-export const formatDate = (dateStr: string) => {
+export const formatDate = (dateString: string): string => {
   try {
-    return format(parseISO(dateStr), 'MMMM d, yyyy');
+    if (!dateString) return 'Date TBD';
+    const date = parseISO(dateString);
+    return format(date, 'MMMM d, yyyy');
   } catch (error) {
     console.error('Error formatting date:', error);
-    return 'Date not available';
+    return 'Date TBD';
   }
 };
 
-export const formatTime = (dateStr: string) => {
+export const formatTime = (dateString: string): string => {
   try {
-    return format(parseISO(dateStr), 'h:mm a');
+    if (!dateString) return 'Time TBD';
+    const date = parseISO(dateString);
+    return format(date, 'h:mm a');
   } catch (error) {
     console.error('Error formatting time:', error);
-    return 'Time not available';
+    return 'Time TBD';
   }
 };

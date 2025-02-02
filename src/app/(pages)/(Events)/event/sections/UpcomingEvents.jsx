@@ -52,47 +52,49 @@ const UpcomingEvents = ({ events, filters, setFilters, FilterSection, ShowMoreBu
                   <div className="relative h-48 rounded-lg overflow-hidden">
                     <Image
                       src={getImageUrl(event)}
-                      alt={event.Title}
+                      alt={`${event.attributes.Title} event featured image`}
                       className="w-full h-full object-cover"
+                      fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 33vw, 400px"
                     />
-                    {event.Schools && (
+                    {event.attributes.Schools && (
                       <div className="absolute top-2 right-2 bg-blue-600 text-white px-3 py-1 rounded-full text-sm">
-                        {event.Schools}
+                        {event.attributes.Schools}
                       </div>
                     )}
                   </div>
                   <div className="md:col-span-2">
-                    <h3 className="text-2xl font-bold mb-3">{event.Title}</h3>
+                    <h3 className="text-2xl font-bold mb-3">{event.attributes.Title}</h3>
                     <div className="space-y-2 mb-4">
                       <div className="flex items-center text-gray-600">
                         <Calendar className="w-4 h-4 mr-2" />
-                        {formatDate(event.DateStart)}
+                        {formatDate(event.attributes.DateStart)}
                       </div>
                       <div className="flex items-center text-gray-600">
                         <Clock className="w-4 h-4 mr-2" />
-                        {formatTime(event.DateStart)} - {formatTime(event.DateEnd)}
+                        {formatTime(event.attributes.DateStart)} - {formatTime(event.attributes.DateEnd)}
                       </div>
                       <div className="flex items-center text-gray-600">
                         <MapPin className="w-4 h-4 mr-2" />
-                        {event.Location}
+                        {event.attributes.Location}
                       </div>
                     </div>
                     <div className="prose prose-sm mb-4">
                       <ReactMarkdown>
-                        {truncateDescription(event.Description)}
+                        {truncateDescription(event.attributes.Description)}
                       </ReactMarkdown>
                     </div>
                     <div className="flex flex-wrap gap-4">
                       <Link 
-                        href={`/event/${event.Slug}`}
+                        href={`/event/${event.attributes.Slug}`}
                         className="px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-colors duration-200 inline-flex items-center"
                       >
                         Learn More
                         <ChevronRight className="w-4 h-4 ml-2" />
                       </Link>
-                      {event.RsvpLink && (
+                      {event.attributes.RsvpLink && (
                         <a 
-                          href={event.RsvpLink}
+                          href={event.attributes.RsvpLink}
                           target="_blank"
                           rel="noopener noreferrer"
                           className="px-4 py-2 bg-green-600 hover:bg-green-700 text-white rounded-lg transition-colors duration-200 inline-flex items-center"

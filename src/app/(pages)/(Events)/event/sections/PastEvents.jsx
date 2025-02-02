@@ -48,15 +48,17 @@ const PastEvents = ({ events, filters, setFilters, FilterSection, ShowMoreButton
                 transition={{ delay: index * 0.1 }}
                 className="bg-white rounded-lg shadow-lg overflow-hidden"
               >
-                <div className="relative">
+                <div className="relative h-48">
                   <Image
                     src={getImageUrl(event)}
-                    alt={event.Title}
-                    className="w-full h-48 object-cover"
+                    alt={`${event.attributes.Title} - Past event showcase`}
+                    className="object-cover"
+                    fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 600px"
                   />
-                  {event.Schools && (
+                  {event.attributes.Schools && (
                     <div className="absolute top-2 right-2 bg-blue-600 text-white px-3 py-1 rounded-full text-sm">
-                      {event.Schools}
+                      {event.attributes.Schools}
                     </div>
                   )}
                   <motion.div
@@ -64,7 +66,7 @@ const PastEvents = ({ events, filters, setFilters, FilterSection, ShowMoreButton
                     whileHover={{ opacity: 1 }}
                   >
                     <Link 
-                      href={`/event/${event.Slug}`}
+                      href={`/event/${event.attributes.Slug}`}
                       className="text-white flex items-center"
                     >
                       View Details
@@ -73,21 +75,21 @@ const PastEvents = ({ events, filters, setFilters, FilterSection, ShowMoreButton
                   </motion.div>
                 </div>
                 <div className="p-6">
-                  <h3 className="text-xl font-bold mb-2">{event.Title}</h3>
+                  <h3 className="text-xl font-bold mb-2">{event.attributes.Title}</h3>
                   <div className="flex items-center text-gray-600 mb-3">
                     <Calendar className="w-4 h-4 mr-2" />
-                    {formatDate(event.DateStart)}
+                    {formatDate(event.attributes.DateStart)}
                   </div>
-                  {event.TypeofEvent && (
-                    <p className="text-gray-600 mb-4">{event.TypeofEvent}</p>
+                  {event.attributes.TypeofEvent && (
+                    <p className="text-gray-600 mb-4">{event.attributes.TypeofEvent}</p>
                   )}
                   <div className="prose prose-sm text-gray-600 mb-4">
                     <ReactMarkdown>
-                      {truncateDescription(event.Description)}
+                      {truncateDescription(event.attributes.Description)}
                     </ReactMarkdown>
                   </div>
                   <Link 
-                    href={`/event/${event.Slug}`}
+                    href={`/event/${event.attributes.Slug}`}
                     className="text-blue-600 hover:text-blue-800 inline-flex items-center transition-colors duration-200"
                   >
                     Read More
@@ -99,12 +101,14 @@ const PastEvents = ({ events, filters, setFilters, FilterSection, ShowMoreButton
           </div>
         )}
         
-        <ShowMoreButton
-          filters={filters}
-          setFilters={setFilters}
-          totalCount={events.length}
-          shownCount={events.length}
-        />
+        <div className="mt-8">
+          <ShowMoreButton
+            filters={filters}
+            setFilters={setFilters}
+            totalCount={events.length}
+            shownCount={events.length}
+          />
+        </div>
       </div>
     </section>
   );

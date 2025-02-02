@@ -39,6 +39,7 @@ const BlogGrid = ({
                   src={getImageUrl(blog)}
                   alt={blog.Title || 'Blog post'}
                   className="w-full h-full object-cover"
+                  fill
                 />
               </div>
               <div className="p-6">

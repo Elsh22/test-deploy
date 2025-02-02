@@ -86,7 +86,7 @@ const EventPage = () => {
         event.Image[0].formats?.medium?.url || 
         event.Image[0].formats?.small?.url || 
         event.Image[0].url;
-      return `${STRAPI_URL}/${imageUrl}`;
+      return `${STRAPI_URL}${imageUrl}`;
     } catch (error) {
       console.error('Error getting image URL:', error);
       return '/api/placeholder/1200/600';
@@ -144,6 +144,7 @@ const EventPage = () => {
           src={getImageUrl(event)}
           alt={event.Title}
           className="w-full h-full object-cover"
+          fill
         />
         <div className="absolute inset-0 bg-black/50" />
         <div className="absolute inset-0 flex items-center justify-center">

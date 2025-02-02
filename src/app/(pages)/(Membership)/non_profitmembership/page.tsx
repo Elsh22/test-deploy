@@ -218,6 +218,7 @@ const NonProfitMembershipPage = () => {
                     src={initiative.image}
                     alt={initiative.title}
                     className="w-full h-48 object-cover"
+                    fill
                   />
                   <div className="p-6">
                     <h3 className="text-xl font-bold mb-2">{initiative.title}</h3>
