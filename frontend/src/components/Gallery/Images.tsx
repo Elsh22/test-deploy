@@ -129,20 +129,59 @@ import DSC00124 from "../../newassest/DSC00124.jpg";
 import DSC00127 from "../../newassest/DSC00127.jpg";
 import DSC00057 from "../../newassest/DSC00057.jpg";
 import DSC00104 from "../../newassest/DSC00104.jpg";
-import DSC00027 from "../../newassest/DSC00027.jpg";
 import DSC00019 from "../../newassest/DSC00019.jpg";
+import DSC00027 from "../../newassest/DSC00027.jpg";
+import IMG_2696_1 from "../../newassest/IMG_2696 (1).jpg";
+import IMG_2680 from "../../newassest/IMG_2680.jpg";
+import IMG_2676 from "../../newassest/IMG_2676.jpg";
+import dmcclass_6 from "../../newassest/dmcclass-6.jpeg";
+import dmcclass_9 from "../../newassest/dmcclass-9.jpeg";
+import dmcclass_5 from "../../newassest/dmcclass-5.jpeg";
+import dmcclass_3 from "../../newassest/dmcclass-3.jpeg";
+import IMG_2696 from "../../newassest/IMG_2696.jpg";
+import IMG_2708 from "../../newassest/IMG_2708.jpg";
+
 
 
 const imageData = [
 
   {
-    id: 230,
-    imgSrc: DSC00057,
+    id: 233,
+    imgSrc: IMG_2696_1,
   },
   {
-    id: 231,
-    imgSrc: DSC00104,
+    id: 234,
+    imgSrc: IMG_2680,
   },
+  {
+    id: 235,
+    imgSrc: IMG_2676,
+  },
+  {
+    id: 236,
+    imgSrc: dmcclass_6,
+  },
+  {
+    id: 237,
+    imgSrc: dmcclass_9,
+  },
+  {
+    id: 238,
+    imgSrc: dmcclass_5,
+  },
+  {
+    id: 239,
+    imgSrc: dmcclass_3,
+  },
+  {
+    id: 240,
+    imgSrc: IMG_2696,
+  },
+  {
+    id: 241,
+    imgSrc: IMG_2708,
+  },
+
   {
     id: 232,
     imgSrc: DSC00027,
@@ -151,18 +190,7 @@ const imageData = [
     id: 233,
     imgSrc: DSC00019,
   },
-  {
-    id: 218,
-    imgSrc: DSC09850,
-},
-{
-    id: 219,
-    imgSrc: DSC09862,
-},
-{
-    id: 220,
-    imgSrc: DSC09864,
-},
+
 {
     id: 221,
     imgSrc: DSC09875,
@@ -174,10 +202,6 @@ const imageData = [
 {
     id: 223,
     imgSrc: DSC09945,
-},
-{
-    id: 224,
-    imgSrc: DSC09964,
 },
 {
     id: 225,
@@ -192,10 +216,6 @@ const imageData = [
     imgSrc: DSC00127,
 },
 
-  {
-    id: 211,
-    imgSrc: finalExam07,
-},
 {
     id: 212,
     imgSrc: finalExam08,
@@ -203,14 +223,6 @@ const imageData = [
 {
     id: 213,
     imgSrc: finalExam12,
-},
-{
-    id: 214,
-    imgSrc: finalExam13,
-},
-{
-    id: 215,
-    imgSrc: finalExam14,
 },
 {
     id: 216,
