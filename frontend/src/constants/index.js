@@ -11,7 +11,7 @@ import socailImage from '../newassest/SoicalPic2.jpg';
       imgUrl: academImage.src,
       title: 'Academic Committee',
       text: 'The Academic committee serves as a gateway between the general body and themselves that helps connect the members of Developing Men of Color with the various resources the campuses and club itself has to offer to help the succeed in the classroom.',
-      Chairman: 'Rayvean Graves, Tyrus Somuah',
+      Chairman: 'Josh Asare, Noad Daniel',
       Buttonlink:'/ACACommittee',
     },
     {
@@ -19,7 +19,7 @@ import socailImage from '../newassest/SoicalPic2.jpg';
       imgUrl: communityImage.src,
       title: 'Community Service Committee',
       text: 'The community service committe is a group of young men who happen to focus on ways in which Developing Men of Color can help the local community of richmond and also make other members aware of the various opportunities there are to help make the community better',
-      Chairman: 'Naeem Ahmad, Jah Johnson',
+      Chairman: 'Clyrde Clark',
       Buttonlink:'/CommCommittee',
     },
     {
@@ -41,7 +41,7 @@ import socailImage from '../newassest/SoicalPic2.jpg';
       imgUrl: profImage.src,
       title: 'Professional Development',
       text: 'The professional development committe is a group of members who pride themselves on ensuring the general body is presented with opportunities to help them excel in the professional settings we hope to provide our members with.',
-      Chairman: 'Derrick Bangura, Miguel Siles, and Nehemiah Kibler',
+      Chairman: 'Timi Ojo, Brycen Harris, Derrick Pittrell',
       Buttonlink:'/ProfCommittee',
     },
     {
@@ -49,7 +49,7 @@ import socailImage from '../newassest/SoicalPic2.jpg';
       imgUrl: socailImage.src,
       title: 'Social Committee',
       text: 'The social committee consists of members who help to host and set up events that will help our members flourish socially.',
-      Chairman: 'Mamoudou Diallo, Marcus Wilson',
+      Chairman: 'Pathe Diallo, Kojo Mbir',
       Buttonlink:'/SocCommittee',
     },
   ];
