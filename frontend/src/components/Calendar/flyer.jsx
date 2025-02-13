@@ -2,12 +2,18 @@ import React from 'react';
 import Image from 'next/image';
 import image1 from '../../newassest/weeklyFlyers/DMC Dodgeball - Jan 23 (1).png';
 import image2 from '../../newassest/weeklyFlyers/Black Yellow Bold We are Hiring Instagram Post (1).png';
-import image3 from '../../newassest/weeklyFlyers/Red Modern Meeting Invitation Instagram Post.png.png';
+import image3 from '../../newassest/weeklyFlyers/White and Blue Illustrative Back To School Instagram Post (Instagram Post).png';
 import image4 from '../../newassest/weeklyFlyers/CGI.png';
 
 const FlyerPost = () => {
 
   const flyers = [
+    {
+      image: image3,
+      title: 'General Body Meeting',
+      description: 'Join us for our first general body meeting of the semester to learn more about DMC.',
+      date: 'Feburary 19, 2025',
+        },
     {
       image: image4,
       title: 'CGI Collaboration Event',
@@ -27,12 +33,7 @@ title: 'DMC Hoodie Day',
 description: 'Join us for in representing DMC through VCU campus by wearing your DMC Hoodie.',
 date: 'Passed',
   },
-  {
-image: image3,
-title: 'General Body Meeting',
-description: 'Join us for our first general body meeting of the semester to learn more about DMC.',
-date: 'Passed',
-  },
+  
 ];
 
 return (
