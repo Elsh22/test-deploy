@@ -717,8 +717,8 @@ const events = [
 },
 {
    title: "2nd GBM (Virginia Credit Union Collaboration)",
-   start: "2025-03-19T19:00:00",
-   end: "2025-03-19T21:00:00"
+   start: "2025-03-26T19:00:00",
+   end: "2025-03-26T21:00:00"
 },
 {
    title: "3rd GBM (DMC Graduation)",
