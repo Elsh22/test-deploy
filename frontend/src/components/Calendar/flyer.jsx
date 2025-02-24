@@ -12,7 +12,7 @@ const FlyerPost = () => {
       image: image3,
       title: 'General Body Meeting',
       description: 'Join us for our first general body meeting of the semester to learn more about DMC.',
-      date: 'Feburary 19, 2025',
+      date: 'Feburary 26, 2025',
         },
     {
       image: image4,
