@@ -9,16 +9,16 @@ const FlyerPost = () => {
 
   const flyers = [
     {
-      image: image3,
-      title: 'General Body Meeting',
-      description: 'Join us for our first general body meeting of the semester to learn more about DMC.',
-      date: 'Feburary 26, 2025',
-        },
-    {
       image: image4,
       title: 'CGI Collaboration Event',
       description: 'Join us for a CGI Collaboration Event at the Senate Chambers!',
       date: 'Rescheduled to April 1, 2025',
+        },
+    {
+      image: image3,
+      title: 'General Body Meeting',
+      description: 'Join us for our first general body meeting of the semester to learn more about DMC.',
+      date: 'Passed',
         },
 
     {
