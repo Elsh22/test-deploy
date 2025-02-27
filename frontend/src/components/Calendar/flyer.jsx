@@ -20,13 +20,6 @@ const FlyerPost = () => {
       description: 'Join us for our first general body meeting of the semester to learn more about DMC.',
       date: 'Passed',
         },
-
-    {
-      image: image3,
-      title: 'General Body Meeting',
-      description: 'Join us for our first general body meeting of the semester to learn more about DMC.',
-      date: 'Passed',
-        },
 {
     image: image1,
     title: 'DMC Dodge Ball',
