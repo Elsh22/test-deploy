@@ -84,7 +84,7 @@ const Highlight = () => {
     <div className="highlights-container">
       <h1 className="highlights-title">Highlights</h1>
       <p className="highlights-description">
-        Here are some key highlights from our recent events.
+        Here are some key highlights from our most memorable events.
       </p>
 
       <div className="highlights-grid">
