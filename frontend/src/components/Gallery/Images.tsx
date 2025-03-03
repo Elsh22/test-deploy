@@ -149,10 +149,16 @@ import IMG_247 from "../../newassest/1st_gbm_02_26-21.jpg";
 import IMG_248 from "../../newassest/1st_gbm_02_26-25.jpg";
 import IMG_249 from "../../newassest/1st_gbm_02_26-26.jpg";
 import IMG_250 from "../../newassest/1st_gbm_02_26-29.jpg";
+import IMG_251 from "../../newassest/IMG_8663.jpg";
+
 
 
 
 const imageData = [
+  {
+    id: 251,
+    imgSrc: IMG_251,
+  },
   {
     id: 233,
     imgSrc: IMG_2696_1,
