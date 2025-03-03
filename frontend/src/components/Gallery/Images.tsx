@@ -140,60 +140,62 @@ import dmcclass_5 from "../../newassest/dmcclass-5.jpeg";
 import dmcclass_3 from "../../newassest/dmcclass-3.jpeg";
 import IMG_2696 from "../../newassest/IMG_2696.jpg";
 import IMG_2708 from "../../newassest/IMG_2708.jpg";
-import IMG_242 from "../../newassest/1st_gbm_02_26-01.jpg";
-import IMG_243 from "../../newassest/1st_gbm_02_26-06.jpg";
-import IMG_244 from "../../newassest/1st_gbm_02_26-07.jpg";
-import IMG_245 from "../../newassest/1st_gbm_02_26-08.jpg";
-import IMG_246 from "../../newassest/1st_gbm_02_26-15.jpg";
-import IMG_247 from "../../newassest/1st_gbm_02_26-21.jpg";
-import IMG_248 from "../../newassest/1st_gbm_02_26-25.jpg";
-import IMG_249 from "../../newassest/1st_gbm_02_26-26.jpg";
-import IMG_250 from "../../newassest/1st_gbm_02_26-29.jpg";
-import IMG_251 from "../../newassest/IMG_8663.jpg";
+
+import IMG_252 from "../../newassest/gbm1.jpg";
+import IMG_253 from "../../newassest/gbm2.jpg";
+import IMG_254 from "../../newassest/gbm3.jpg";
+import IMG_255 from "../../newassest/gbm4.jpg";
+import IMG_256 from "../../newassest/gbm5.jpg";
+import IMG_257 from "../../newassest/gbm6.jpg";
+import IMG_258 from "../../newassest/gbm7.jpg";
+import IMG_259 from "../../newassest/gbm8.jpg";
+import IMG_260 from "../../newassest/gbm9.jpg";
+import IMG_261 from "../../newassest/ITevent1.jpg";
 
 
 
 
 const imageData = [
+  
   {
-    id: 251,
-    imgSrc: IMG_251,
+    id: 252,
+    imgSrc: IMG_252,
   },
   {
-    id: 233,
-    imgSrc: IMG_2696_1,
+    id: 253,
+    imgSrc: IMG_253,
   },
   {
-    id: 234,
-    imgSrc: IMG_2680,
+    id: 254,
+    imgSrc: IMG_254,
   },
   {
-    id: 235,
-    imgSrc: IMG_2676,
+    id: 255,
+    imgSrc: IMG_255,
   },
   {
-    id: 236,
-    imgSrc: dmcclass_6,
+    id: 256,
+    imgSrc: IMG_256,
   },
   {
-    id: 237,
-    imgSrc: dmcclass_9,
+    id: 257,
+    imgSrc: IMG_257,
   },
   {
-    id: 238,
-    imgSrc: dmcclass_5,
+    id: 258,
+    imgSrc: IMG_258,
   },
   {
-    id: 239,
-    imgSrc: dmcclass_3,
+    id: 259,
+    imgSrc: IMG_259,
   },
   {
-    id: 240,
-    imgSrc: IMG_2696,
+    id: 260,
+    imgSrc: IMG_260,
   },
   {
-    id: 241,
-    imgSrc: IMG_2708,
+    id: 261,
+    imgSrc: IMG_261,
   },
   {
     id: 242,
@@ -230,6 +232,10 @@ const imageData = [
   {
     id: 250,
     imgSrc: IMG_250,
+  },
+  {
+    id: 251,
+    imgSrc: IMG_251,
   },
 
   {
