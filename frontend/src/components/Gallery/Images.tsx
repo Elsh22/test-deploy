@@ -140,10 +140,91 @@ import dmcclass_5 from "../../newassest/dmcclass-5.jpeg";
 import dmcclass_3 from "../../newassest/dmcclass-3.jpeg";
 import IMG_2696 from "../../newassest/IMG_2696.jpg";
 import IMG_2708 from "../../newassest/IMG_2708.jpg";
+import IMG_242 from "../../newassest/1st_gbm_02_26-01.jpg";
+import IMG_243 from "../../newassest/1st_gbm_02_26-06.jpg";
+import IMG_244 from "../../newassest/1st_gbm_02_26-07.jpg";
+import IMG_245 from "../../newassest/1st_gbm_02_26-08.jpg";
+import IMG_246 from "../../newassest/1st_gbm_02_26-15.jpg";
+import IMG_247 from "../../newassest/1st_gbm_02_26-21.jpg";
+import IMG_248 from "../../newassest/1st_gbm_02_26-25.jpg";
+import IMG_249 from "../../newassest/1st_gbm_02_26-26.jpg";
+import IMG_250 from "../../newassest/1st_gbm_02_26-29.jpg";
 
 
 
 const imageData = [
+  {
+    id: 233,
+    imgSrc: IMG_2696_1,
+  },
+  {
+    id: 234,
+    imgSrc: IMG_2680,
+  },
+  {
+    id: 235,
+    imgSrc: IMG_2676,
+  },
+  {
+    id: 236,
+    imgSrc: dmcclass_6,
+  },
+  {
+    id: 237,
+    imgSrc: dmcclass_9,
+  },
+  {
+    id: 238,
+    imgSrc: dmcclass_5,
+  },
+  {
+    id: 239,
+    imgSrc: dmcclass_3,
+  },
+  {
+    id: 240,
+    imgSrc: IMG_2696,
+  },
+  {
+    id: 241,
+    imgSrc: IMG_2708,
+  },
+  {
+    id: 242,
+    imgSrc: IMG_242,
+  },
+  {
+    id: 243,
+    imgSrc: IMG_243,
+  },
+  {
+    id: 244,
+    imgSrc: IMG_244,
+  },
+  {
+    id: 245,
+    imgSrc: IMG_245,
+  },
+  {
+    id: 246,
+    imgSrc: IMG_246,
+  },
+  {
+    id: 247,
+    imgSrc: IMG_247,
+  },
+  {
+    id: 248,
+    imgSrc: IMG_248,
+  },
+  {
+    id: 249,
+    imgSrc: IMG_249,
+  },
+  {
+    id: 250,
+    imgSrc: IMG_250,
+  },
 
   {
     id: 233,
