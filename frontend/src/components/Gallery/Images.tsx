@@ -156,88 +156,19 @@ import IMG_261 from "../../newassest/ITevent1.jpg";
 
 
 const imageData = [
-  
-  {
-    id: 252,
-    imgSrc: IMG_252,
-  },
-  {
-    id: 253,
-    imgSrc: IMG_253,
-  },
-  {
-    id: 254,
-    imgSrc: IMG_254,
-  },
-  {
-    id: 255,
-    imgSrc: IMG_255,
-  },
-  {
-    id: 256,
-    imgSrc: IMG_256,
-  },
-  {
-    id: 257,
-    imgSrc: IMG_257,
-  },
-  {
-    id: 258,
-    imgSrc: IMG_258,
-  },
-  {
-    id: 259,
-    imgSrc: IMG_259,
-  },
-  {
-    id: 260,
-    imgSrc: IMG_260,
-  },
-  {
-    id: 261,
-    imgSrc: IMG_261,
-  },
-  {
-    id: 242,
-    imgSrc: IMG_242,
-  },
-  {
-    id: 243,
-    imgSrc: IMG_243,
-  },
-  {
-    id: 244,
-    imgSrc: IMG_244,
-  },
-  {
-    id: 245,
-    imgSrc: IMG_245,
-  },
-  {
-    id: 246,
-    imgSrc: IMG_246,
-  },
-  {
-    id: 247,
-    imgSrc: IMG_247,
-  },
-  {
-    id: 248,
-    imgSrc: IMG_248,
-  },
-  {
-    id: 249,
-    imgSrc: IMG_249,
-  },
-  {
-    id: 250,
-    imgSrc: IMG_250,
-  },
-  {
-    id: 251,
-    imgSrc: IMG_251,
-  },
+ 
 
+
+    { id: 252, imgSrc: IMG_252 },
+    { id: 253, imgSrc: IMG_253 },
+    { id: 254, imgSrc: IMG_254 },
+    { id: 255, imgSrc: IMG_255 },
+    { id: 256, imgSrc: IMG_256 },
+    { id: 257, imgSrc: IMG_257 },
+    { id: 258, imgSrc: IMG_258 },
+    { id: 259, imgSrc: IMG_259 },
+    { id: 260, imgSrc: IMG_260 },
+    { id: 261, imgSrc: IMG_261 },
   {
     id: 233,
     imgSrc: IMG_2696_1,
