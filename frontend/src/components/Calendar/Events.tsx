@@ -1,4 +1,10 @@
 const events = [
+  {
+    title: "President Rao Reception",
+    start: "2025-4-18T09:30:00",
+    end: "2025-04-18T140:00:00",
+    location: "VCU Campus"
+  },
 
     {
       title: "President Rao Reception",
