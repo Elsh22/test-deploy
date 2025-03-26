@@ -1,5 +1,107 @@
 const events = [
   {
+    title: "DMC Narca Cert. Event",
+    start: "2025-03-23T16:00:00",
+    end: "2025-03-23T17:00:00",
+    location: "TBD"
+  },
+  {
+    title: "DMC Ringers Basketball",
+    start: "2025-03-25T20:30:00",
+    end: "2025-03-25T21:30:00",
+    location: "TBD"
+  },
+  {
+    title: "DMC Ringers Soccer",
+    start: "2025-03-27T19:30:00",
+    end: "2025-03-27T20:30:00",
+    location: "TBD"
+  },
+  {
+    title: "Team DMC Basketball",
+    start: "2025-03-27T20:30:00",
+    end: "2025-03-27T21:30:00",
+    location: "TBD"
+  },
+  {
+    title: "DMC CGI Collab Event",
+    start: "2025-04-01T18:00:00",
+    end: "2025-04-01T19:00:00",
+    location: "TBD"
+  },
+  {
+    title: "DMC Non-Profit E-Board",
+    start: "2025-04-01T18:15:00",
+    end: "2025-04-01T19:15:00",
+    location: "TBD"
+  },
+  {
+    title: "DMC Ringers Basketball",
+    start: "2025-04-01T20:30:00",
+    end: "2025-04-01T21:30:00",
+    location: "TBD"
+  },
+  {
+    title: "DMC Ringers Soccer",
+    start: "2025-04-03T19:30:00",
+    end: "2025-04-03T20:30:00",
+    location: "TBD"
+  },
+  {
+    title: "Team DMC Basketball",
+    start: "2025-04-03T20:30:00",
+    end: "2025-04-03T21:30:00",
+    location: "TBD"
+  },
+  {
+    title: "Spring Mixer for DMC Non-Profit",
+    start: "2025-04-05T16:00:00",
+    end: "2025-04-05T18:00:00",
+    location: "TBD"
+  },
+  {
+    title: "Suit Day",
+    start: "2025-04-13T18:00:00",
+    end: "2025-04-13T19:00:00",
+    location: "TBD"
+  },
+  {
+    title: "DMC Non-Profit E-Board",
+    start: "2025-04-15T18:15:00",
+    end: "2025-04-15T19:15:00",
+    location: "TBD"
+  },
+  {
+    title: "3rd GBM",
+    start: "2025-04-16T19:00:00",
+    end: "2025-04-16T20:30:00",
+    location: "TBD"
+  },
+  {
+    title: "DMC Shadow Day",
+    start: "2025-04-18T11:00:00",
+    end: "2025-04-18T13:00:00",
+    location: "TBD"
+  },
+  {
+    title: "The Gallery (Catalyst)",
+    start: "2025-04-19T18:00:00",
+    end: "2025-04-19T20:00:00",
+    location: "TBD"
+  },
+  {
+    title: "DMC Eboard Retreat",
+    start: "2025-04-25T15:00:00",
+    end: "2025-04-25T17:00:00",
+    location: "TBD"
+  },
+  {
+    title: "DMC Non-Profit E-Board",
+    start: "2025-04-29T18:15:00",
+    end: "2025-04-29T19:15:00",
+    location: "TBD"
+  },
+  {
     title: "President Rao Reception",
     start: "2025-4-18T09:30:00",
     end: "2025-04-18T140:00:00",
