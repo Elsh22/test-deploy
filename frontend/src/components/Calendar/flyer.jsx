@@ -1,19 +1,27 @@
 import React from 'react'; 
 import Image from 'next/image';
 import image1 from '../../newassest/weeklyFlyers/DMC Dodgeball - Jan 23 (1).png';
-import image2 from '../../newassest/weeklyFlyers/Black Yellow Bold We are Hiring Instagram Post (1).png';
+import image2 from '../../newassest/gbm5.jpg';
 import image3 from '../../newassest/weeklyFlyers/White and Blue Illustrative Back To School Instagram Post (Instagram Post).png';
 import image4 from '../../newassest/weeklyFlyers/CGI.png';
 
 const FlyerPost = () => {
 
   const flyers = [
+{
+    image: image2,
+title: '3rd General Body Meeting',
+description: 'Join us for our 3rd general body meeting of the semester to learn more about DMC.',
+date: 'April, 16, 2025'
+  },
+
     {
       image: image4,
       title: 'CGI Collaboration Event',
       description: 'Join us for a CGI Collaboration Event at the Senate Chambers!',
       date: 'Rescheduled to April 1, 2025',
         },
+
     {
       image: image3,
       title: 'General Body Meeting',
@@ -26,13 +34,6 @@ const FlyerPost = () => {
     description: 'Join us for in a friendly game of dodgeball at the Cary Street Gym.',
     date: 'Passed',
       },
- 
-  {
-image: image2,
-title: 'DMC Hoodie Day',
-description: 'Join us for in representing DMC through VCU campus by wearing your DMC Hoodie.',
-date: 'Passed',
-  },
   
 ];
 
