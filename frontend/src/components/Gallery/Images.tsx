@@ -151,24 +151,49 @@ import IMG_258 from "../../newassest/gbm7.jpg";
 import IMG_259 from "../../newassest/gbm8.jpg";
 import IMG_260 from "../../newassest/gbm9.jpg";
 import IMG_261 from "../../newassest/ITevent1.jpg";
-
+import IMG_262 from "../../newassest/GBM_Hoodie.jpg";
+import IMG_263 from "../../newassest/creditunion_handup.jpg";
+import IMG_264 from "../../newassest/interactions.jpg";
+import IMG_265 from "../../newassest/huge_line.jpg";
+import IMG_266 from "../../newassest/IT_1.jpeg";
+import IMG_267 from "../../newassest/IT_2.jpeg";
+import IMG_268 from "../../newassest/IT_3.jpeg";
+import IMG_269 from "../../newassest/IT_4.jpeg";
 
 
 
 const imageData = [
- 
+
+  { id: 262, imgSrc: IMG_262 },
+  { id: 263, imgSrc: IMG_263 },
+  { id: 264, imgSrc: IMG_264 },
+  { id: 265, imgSrc: IMG_265 },
+  { id: 266, imgSrc: IMG_266 },
+  { id: 267, imgSrc: IMG_267 },
+  { id: 268, imgSrc: IMG_268 },
+  { id: 269, imgSrc: IMG_269 },
 
 
     { id: 252, imgSrc: IMG_252 },
+
     { id: 253, imgSrc: IMG_253 },
+
     { id: 254, imgSrc: IMG_254 },
+
     { id: 255, imgSrc: IMG_255 },
+
     { id: 256, imgSrc: IMG_256 },
+
     { id: 257, imgSrc: IMG_257 },
+
     { id: 258, imgSrc: IMG_258 },
+
     { id: 259, imgSrc: IMG_259 },
+
     { id: 260, imgSrc: IMG_260 },
+
     { id: 261, imgSrc: IMG_261 },
+
   {
     id: 233,
     imgSrc: IMG_2696_1,
