@@ -1,0 +1,78 @@
+.professional_container {
+    width: 100%;
+    padding: 2rem;
+    margin: 0;
+    background-color: #000; /* Black background */
+    color: #fff; /* White text */
+    text-align: center; /* Center all text within the container */
+  }
+  
+  .professional_container h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #ffcc00; /* Yellow heading */
+  }
+  
+  .professional_container p {
+    font-size: 1.125rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+  }
+  
+  .picture_section {
+    margin-bottom: 2rem;
+  }
+  
+  .picture_section img {
+    display: block;       /* Makes the image a block element */
+    margin: 0 auto;       /* Centers the image horizontally */
+    max-width: auto;
+    height: 30rem;
+    border-radius: 8px;
+    border: 4px solid #ffcc00; /* Yellow border around the image */
+  }
+  
+  .professional_container h2 {
+    font-size: 2rem;
+    margin: 2rem 0 1rem;
+    color: #ffcc00; /* Yellow sub-heading */
+  }
+  
+  .cta_section {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center; /* Center the CTA items horizontally */
+  }
+  
+  .cta_item {
+    border: 1px solid #ffcc00; /* Yellow border */
+    padding: 1rem;
+    border-radius: 4px;
+    background-color: #1a1a1a; /* Slightly lighter black for contrast */
+    transition: background-color 0.3s ease;
+    width: 100%;
+    max-width: 400px; /* Limit CTA item width for consistency */
+    text-align: center; /* Center text inside CTA items */
+  }
+  
+  .cta_item:hover {
+    background-color: #333; /* Lighter on hover */
+  }
+  
+  .cta_item h3 {
+    margin-top: 0;
+    color: #ffcc00;
+  }
+  
+  .cta_item a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #ffcc00;
+  }
+  
+  .cta_item a:hover {
+    text-decoration: underline;
+    color: #fff;
+  }
+  
