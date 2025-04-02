@@ -1,6 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
-import Picture from '../../newassest/dmcclass-3.jpeg';
+import Picture from '../../newassest/CGIPic.png';
 import './Professional.css';
 
 const Professional = () => {
