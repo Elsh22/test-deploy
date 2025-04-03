@@ -8,10 +8,13 @@ const Professional = () => {
     <div className="professional_container">
       <h1>NEW Professional Academy</h1>
       <p>
-        Welcome to the Professional Academy – a comprehensive program designed exclusively for VCU students.
-        Our mission is to help you perfect your professional profile through resume guidance, LinkedIn optimization, 
-        and invaluable career tips. Whether you are pursuing a career in health, tech & engineering, or business, 
-        we have the resources to propel your professional journey forward.
+      At the  Professional Academy, we transform career readiness for men of color through peer-to-peer mentoring in personalized 30-40 minute sessions. Our approach connects students with mentors who've already found success in similar paths, creating authentic connections and advice that resonates. In a relaxed setting, we help polish resumes with both technical fixes and strategic improvements that catch recruiters' eyes. We overhaul LinkedIn profiles on the spot and take professional headshots to replace awkward selfies. Our mentors shares real-world insights about what actually works in job searches, not just theory.
+
+          <br/><br/>
+
+      We've addressed practical barriers by offering free tie rentals and shoe shining services because we know these details matter but aren't always accessible. Every participant leaves with clear next steps and resources to continue their professional growth. We've built a program that bridges the gap between classroom learning and workplace success, giving men of color not just better documents, but greater confidence and community support as they launch their careers.
+
+
       </p>
       
       {/* Visuals Section */}
