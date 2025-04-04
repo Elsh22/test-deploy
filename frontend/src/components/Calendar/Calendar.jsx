@@ -29,30 +29,43 @@ const Calendar = ({ id }) => {
 };
 
 function renderEventContent(eventInfo) {
-  let bgColor = 'bg-purple-500'; 
-  if (eventInfo.event.title.includes('GBM')) {
-    bgColor = 'bg-red-500';
-  } else if (eventInfo.event.title.includes('Committee')) {
-    bgColor = 'bg-green-500';
-  } else if (eventInfo.event.extendedProps.backgroundColor) {
-    bgColor = `bg-[${eventInfo.event.extendedProps.backgroundColor}]`; 
-  }else if (eventInfo.event.title.includes('Mentoring')) {
-    bgColor = 'bg-orange-500';
-  }else if (eventInfo.event.title.includes('CGI')) {
-    bgColor = 'bg-red-500';
-  }else if (eventInfo.event.title.includes('Game')) {
-    bgColor = 'bg-yellow-500';
-  }else if (eventInfo.event.title.includes('Not On Your Resume')) {
-    bgColor = 'bg-green-500';
-  } else if (eventInfo.event.title.includes('Study Session')) {
-    bgColor = 'bg-blue-500';
-  } 
+  let title = eventInfo.event.title;
+  let bgColor = 'bg-gray-700'; // Default
 
+  if (title.includes('GBM')) {
+    bgColor = 'bg-purple-500';
+  } else if (title.includes('Mentoring')) {
+    bgColor = 'bg-green-500';
+  } else if (
+    title.includes('Workshop') ||
+    title.includes('Internship') ||
+    title.includes('Reception') ||
+    title.includes('Mixer') ||
+    title.includes('LinkedIn') ||
+    title.includes('Collaboration') ||
+    title.includes('Professional Development') ||
+    title.includes('Not On Your Resume') ||
+    title.includes('Orientation') ||
+    title.includes('Eboard')
+  ) {
+    bgColor = 'bg-red-500';
+  } else if (
+    title.includes('Game') ||
+    title.includes('Basketball') ||
+    title.includes('Soccer') ||
+    title.includes('Flag Football') ||
+    title.includes('Kickball') ||
+    title.includes('Dodgeball')
+  ) {
+    bgColor = 'bg-yellow-500';
+  } else if (title.includes('Study Session')) {
+    bgColor = 'bg-blue-500';
+  }
 
   return (
     <div className={`${bgColor} text-white text-xs sm:text-sm p-1 sm:p-2 rounded-lg`}>
       <b>{eventInfo.timeText}</b>
-      <i>{eventInfo.event.title}</i>
+      <i>{title}</i>
     </div>
   );
 }
