@@ -53,12 +53,7 @@ const events = [
     end: "2025-04-03T21:30:00",
     location: "TBD"
   },
-  {
-    title: "Spring Mixer for DMC Non-Profit",
-    start: "2025-04-05T16:00:00",
-    end: "2025-04-05T18:00:00",
-    location: "TBD"
-  },
+ 
   {
     title: "Suit Day",
     start: "2025-04-13T18:00:00",
@@ -120,12 +115,7 @@ const events = [
     end: "2025-03-21T20:00:00"
 
   },
-  {
-    title:"DMC Spring Mixer",
-    start: "2025-04-05T16:00:00",
-    end: "2025-04-05T20:00:00"
 
-  },
   {
     title: "Team DMC Intramural Soccer Game",
     start: "2025-01-27T19:30:00",

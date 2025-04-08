@@ -159,10 +159,30 @@ import IMG_266 from "../../newassest/IT_1.jpeg";
 import IMG_267 from "../../newassest/IT_2.jpeg";
 import IMG_268 from "../../newassest/IT_3.jpeg";
 import IMG_269 from "../../newassest/IT_4.jpeg";
+import CG_1 from "../../newassest/cg1.jpg";
+import CG_2 from "../../newassest/cg2.jpg";
+import CG_3 from "../../newassest/cg3.jpg";
+import CG_4 from "../../newassest/cg4.jpg";
+import CG_5 from "../../newassest/cg5.jpg";
+import CG_6 from "../../newassest/cg6.jpg";
+import CG_7 from "../../newassest/cg7.jpg";
+import CG_8 from "../../newassest/cg8.jpg";
+import CG_9 from "../../newassest/cg9.jpg";
+import CG_10 from "../../newassest/cg10.jpg";
 
 
 
 const imageData = [
+  { id: 270, imgSrc: CG_1 },
+  { id: 271, imgSrc: CG_2 },
+  { id: 272, imgSrc: CG_3 },
+  { id: 273, imgSrc: CG_4 },
+  { id: 274, imgSrc: CG_5 },
+  { id: 275, imgSrc: CG_6 },
+  { id: 276, imgSrc: CG_7 },
+  { id: 277, imgSrc: CG_8 },
+  { id: 278, imgSrc: CG_9 },
+  { id: 279, imgSrc: CG_10 },
 
   { id: 262, imgSrc: IMG_262 },
   { id: 263, imgSrc: IMG_263 },

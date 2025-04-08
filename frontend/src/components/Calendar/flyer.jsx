@@ -19,7 +19,7 @@ date: 'April, 16, 2025'
       image: image4,
       title: 'CGI Collaboration Event',
       description: 'Join us for a CGI Collaboration Event at the Senate Chambers!',
-      date: 'Rescheduled to April 1, 2025',
+      date: 'Passed',
         },
 
     {
