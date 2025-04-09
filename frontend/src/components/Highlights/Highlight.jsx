@@ -3,10 +3,9 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import "./Highlight.css";
-import img1 from "../../newassest/jacobchancespicture.jpg";
+import img1 from "../../newassest/sports4.jpg";
 import img2 from "../../newassest/kidsNexttounderground.jpg";
-import img3 from "../../newassest/moreresourcefairsauce.jpg";
-import img4 from "../../newassest/DMCGettingCheckfromVACU.jpg";
+import img4 from "../../newassest/mixer4.jpg";
 import img5 from "../../newassest/darrellgettinglinkedin.jpg";
 
 const events = [
