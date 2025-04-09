@@ -1,5 +1,10 @@
 const events = [
   {
+    title: "DMC Spring Mixer",
+    start: "2025-05-24T16:00:00",
+    end: "2025-05-24T19:00:00"
+  },
+  {
     title: "DMC CPR Certification",
     start: "2025-04-26T17:30:00",
     end: "2025-04-26T19:00:00",
