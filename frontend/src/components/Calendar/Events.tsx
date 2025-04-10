@@ -1,5 +1,10 @@
 const events = [
   {
+    title: "Jacob's Chance",
+    start: "2025-04-27T15:00:00",
+    end: "2025-04-27T17:00:00"
+  },
+  {
     title: "Community Service Field day",
     start: "2025-04-13T14:00:00",
     end: "2025-04-13T15:00:00",
