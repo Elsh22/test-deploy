@@ -1,6 +1,6 @@
 const events = [
   {
-    title: "DMC CPR Certification",
+    title: "Community Service Field day",
     start: "2025-04-13T14:00:00",
     end: "2025-04-13T15:00:00",
   },
