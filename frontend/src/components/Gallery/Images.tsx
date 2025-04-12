@@ -183,7 +183,6 @@ const imageData = [
   { id: 277, imgSrc: CG_8 },
   { id: 278, imgSrc: CG_9 },
   { id: 279, imgSrc: CG_10 },
-
   { id: 262, imgSrc: IMG_262 },
   { id: 263, imgSrc: IMG_263 },
   { id: 264, imgSrc: IMG_264 },
@@ -192,7 +191,6 @@ const imageData = [
   { id: 267, imgSrc: IMG_267 },
   { id: 268, imgSrc: IMG_268 },
   { id: 269, imgSrc: IMG_269 },
-
 
     { id: 252, imgSrc: IMG_252 },
 
