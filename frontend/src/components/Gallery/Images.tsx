@@ -169,10 +169,16 @@ import CG_7 from "../../newassest/cg7.jpg";
 import CG_8 from "../../newassest/cg8.jpg";
 import CG_9 from "../../newassest/cg9.jpg";
 import CG_10 from "../../newassest/cg10.jpg";
-
+import GitFitted1 from "../../newassest/git_fitted_1-2.jpg";
+import GitFitted2 from "../../newassest/git_fitted_1-4.jpg";
+import GitFitted3 from "../../newassest/git_fitted_1-8.jpg";
 
 
 const imageData = [
+  { id: 280, imgSrc: GitFitted1 },
+  { id: 281, imgSrc: GitFitted2 },
+  { id: 282, imgSrc: GitFitted3 },
+
   { id: 270, imgSrc: CG_1 },
   { id: 271, imgSrc: CG_2 },
   { id: 272, imgSrc: CG_3 },
