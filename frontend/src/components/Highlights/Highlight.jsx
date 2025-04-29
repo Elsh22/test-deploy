@@ -10,6 +10,14 @@ import img5 from "../../newassest/darrellgettinglinkedin.jpg";
 
 const events = [
   {
+    id: 5,
+    title: "DMC Get Fitted Suit Day",
+    imgSrc: img4,
+    description:
+      "A special event where members received professional attire to enhance their career readiness.",
+    videoUrl: "https://drive.google.com/file/d/1UIVgO5oqk-ahEtBWf4E6rS6aF4Nd6Ljp/preview",    
+  },
+  {
     id: 1,
     title: "General Body Meeting with Virginia Credit Union",
     imgSrc: img4,
