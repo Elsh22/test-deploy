@@ -4,10 +4,23 @@ import image1 from '../../newassest/weeklyFlyers/DMC Dodgeball - Jan 23 (1).png'
 import image2 from '../../newassest/gbm5.jpg';
 import image3 from '../../newassest/weeklyFlyers/White and Blue Illustrative Back To School Instagram Post (Instagram Post).png';
 import image4 from '../../newassest/weeklyFlyers/CGI.png';
+import image5 from '../../newassest/weeklyFlyers/Red Cream Bold Typography New Year Party Instagram Post.png';
 
 const FlyerPost = () => {
 
   const flyers = [
+    {
+      image: image5,
+      title: 'Jacobs Chance',
+      description: 'Join us for a kick ball game with Jacobs Chance to learn more about their mission and how you can get involved.',
+      date: 'Passed',
+        },
+    {
+    image: image1,
+    title: 'DMC Dodge Ball',
+    description: 'Join us for in a friendly game of dodgeball at the Cary Street Gym.',
+    date: 'Passed',
+      },
 {
     image: image2,
 title: '3rd General Body Meeting',
