@@ -7,12 +7,13 @@ import img1 from "../../newassest/sports4.jpg";
 import img2 from "../../newassest/Ourmissionpicture.jpg";
 import img4 from "../../newassest/creditunion_handup.jpg";
 import img5 from "../../newassest/darrellgettinglinkedin.jpg";
+import img3 from "../../newassest/suitday.jpg";
 
 const events = [
   {
     id: 5,
     title: "DMC Get Fitted Suit Day",
-    imgSrc: img4,
+    imgSrc: img3,
     description:
       "A special event where members received professional attire to enhance their career readiness.",
     videoUrl: "https://drive.google.com/file/d/1UIVgO5oqk-ahEtBWf4E6rS6aF4Nd6Ljp/preview",    

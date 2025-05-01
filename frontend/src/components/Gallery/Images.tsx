@@ -169,28 +169,25 @@ import CG_7 from "../../newassest/cg7.jpg";
 import CG_8 from "../../newassest/cg8.jpg";
 import CG_9 from "../../newassest/cg9.jpg";
 import CG_10 from "../../newassest/cg10.jpg";
-import GitFitted1 from "../../newassest/git_fitted_1-2.jpg";
-import GitFitted2 from "../../newassest/git_fitted_1-4.jpg";
-import GitFitted3 from "../../newassest/git_fitted_1-8.jpg";
 import Handshakes from "../../newassest/handshakes.jpg";
-import JasonWithPpl from "../../newassest/jason_with_ppl_behind.jpg";
+import JasonWithPpl from "../../newassest/jason with ppl behind.jpg";
 import KBRonZion from "../../newassest/KBRonZion.jpg";
-import LockedIn from "../../newassest/locked_in.jpg";
+import LockedIn from "../../newassest/locked in.jpg";
 import MoedaVeZion from "../../newassest/moedavezion.jpg";
-import XavieDeloJason from "../../newassest/xavie_delo_jason.jpg";
-import XavierSpeaking from "../../newassest/Xavier_Speaking.jpg";
-import ZionAndDave from "../../newassest/Zion_and_Dave.jpg";
-import ZionAndSteph from "../../newassest/Zion_and_Steph.jpg";
-import GroupActivity1 from "../../newassest/GroupActivity1.jpg";
-import GroupActivity2 from "../../newassest/GroupActivity2.jpg";
-import DeloWorking1 from "../../newassest/DeloWorking1.jpg";
-import DeloWorking2 from "../../newassest/DeloWorking2.jpg";
-import Desserts1 from "../../newassest/Desserts1.jpg";
-import Desserts2 from "../../newassest/Desserts2.jpg";
-import KabirDlo from "../../newassest/KabirDlo.jpg";
-import DonaldKnight from "../../newassest/DonaldKnight.jpg";
-import FullRoomCrowd from "../../newassest/FullRoomCrowd.jpg";
-import Handshakes2 from "../../newassest/Handshakes2.jpg";
+import XavieDeloJason from "../../newassest/xavie, delo ,jason.jpg";
+import XavierSpeaking from "../../newassest/Xavier Speaking.jpg";
+import ZionAndDave from "../../newassest/Zion and Dave.jpg";
+import ZionAndSteph from "../../newassest/Zion and Steph.jpg";
+import GroupActivity1 from "../../newassest/group of the crowd.jpg";
+import GroupActivity2 from "../../newassest/grouppic2.jpg";
+import DeloWorking1 from "../../newassest/Delo working.jpg";
+import DeloWorking2 from "../../newassest/Delo working-1.jpg";
+import Desserts1 from "../../newassest/desserts.jpg";
+import Desserts2 from "../../newassest/desserts 2.jpg";
+import KabirDlo from "../../newassest/Dlo and Kabir .jpg";
+import DonaldKnight from "../../newassest/Donald Knight.jpg";
+import FullRoomCrowd from "../../newassest/group of the crowd.jpg";
+import Handshakes2 from "../../newassest/handshakes.jpg";
 import Kickball1 from "../../newassest/IMG_8704.jpg";
 import Kickball2 from "../../newassest/IMG_8715.jpg";
 import Kickball3 from "../../newassest/IMG_8724.jpg";
@@ -200,8 +197,9 @@ import Kickball6 from "../../newassest/IMG_8758.jpg";
 import Kickball7 from "../../newassest/IMG_8793.jpg";
 import Kickball8 from "../../newassest/IMG_8827.jpg";
 import Kickball9 from "../../newassest/IMG_8852.jpg";
-
-
+import GitFitted1 from "../../newassest/git fitted 1-2.jpg";
+import GitFitted2 from "../../newassest/git fitted 1-4.jpg";
+import GitFitted3 from "../../newassest/git fitted 1-8.jpg";
 
 const imageData = [
   { id: 302, imgSrc: Kickball1 },
@@ -232,6 +230,7 @@ const imageData = [
   { id: 289, imgSrc: XavierSpeaking },
   { id: 290, imgSrc: ZionAndDave },
   { id: 291, imgSrc: ZionAndSteph },
+
   { id: 280, imgSrc: GitFitted1 },
   { id: 281, imgSrc: GitFitted2 },
   { id: 282, imgSrc: GitFitted3 },
