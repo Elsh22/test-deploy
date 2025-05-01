@@ -191,11 +191,28 @@ import KabirDlo from "../../newassest/KabirDlo.jpg";
 import DonaldKnight from "../../newassest/DonaldKnight.jpg";
 import FullRoomCrowd from "../../newassest/FullRoomCrowd.jpg";
 import Handshakes2 from "../../newassest/Handshakes2.jpg";
-
+import Kickball1 from "../../newassest/IMG_8704.jpg";
+import Kickball2 from "../../newassest/IMG_8715.jpg";
+import Kickball3 from "../../newassest/IMG_8724.jpg";
+import Kickball4 from "../../newassest/IMG_8727.jpg";
+import Kickball5 from "../../newassest/IMG_8755.jpg";
+import Kickball6 from "../../newassest/IMG_8758.jpg";
+import Kickball7 from "../../newassest/IMG_8793.jpg";
+import Kickball8 from "../../newassest/IMG_8827.jpg";
+import Kickball9 from "../../newassest/IMG_8852.jpg";
 
 
 
 const imageData = [
+  { id: 302, imgSrc: Kickball1 },
+  { id: 303, imgSrc: Kickball2 },
+  { id: 304, imgSrc: Kickball3 },
+  { id: 305, imgSrc: Kickball4 },
+  { id: 306, imgSrc: Kickball5 },
+  { id: 307, imgSrc: Kickball6 },
+  { id: 308, imgSrc: Kickball7 },
+  { id: 309, imgSrc: Kickball8 },
+  { id: 310, imgSrc: Kickball9 },
   { id: 292, imgSrc: GroupActivity1 },
   { id: 293, imgSrc: GroupActivity2 },
   { id: 294, imgSrc: DeloWorking1 },
