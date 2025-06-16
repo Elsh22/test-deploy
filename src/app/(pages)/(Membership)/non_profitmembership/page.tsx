@@ -13,7 +13,6 @@ import {
   Briefcase,
   BookOpen
 } from 'lucide-react';
-import Image from 'next/image'
 
 const NonProfitMembershipPage = () => {
   const router = useRouter();
@@ -80,23 +79,20 @@ const NonProfitMembershipPage = () => {
   const initiatives = [
     {
       title: "Mentorship Program",
-      description: "Connecting members with experienced professionals",
-      image: "/api/placeholder/400/300"
+      description: "Connecting members with experienced professionals"
     },
     {
       title: "Career Workshops",
-      description: "Regular professional development sessions",
-      image: "/api/placeholder/400/300"
+      description: "Regular professional development sessions"
     },
     {
       title: "Community Projects",
-      description: "Regular service initiatives and outreach programs",
-      image: "/api/placeholder/400/300"
+      description: "Regular service initiatives and outreach programs"
     }
   ];
 
   return (
-    <div className="bg-white overflow-hidden">
+    <div className="bg-dmc-white overflow-hidden">
       {/* Hero Section with Gradient */}
       <motion.section 
         className="min-h-screen relative flex items-center justify-center"
@@ -104,12 +100,12 @@ const NonProfitMembershipPage = () => {
         animate="visible"
       >
         <motion.div
-          className="absolute inset-0 bg-gradient-to-r from-blue-600 via-purple-600 to-blue-600"
+          className="absolute inset-0 bg-dmc-professional"
           animate={{
             background: [
-              'linear-gradient(to right, #2563eb, #9333ea, #2563eb)',
-              'linear-gradient(to right, #9333ea, #2563eb, #9333ea)',
-              'linear-gradient(to right, #2563eb, #9333ea, #2563eb)'
+              'linear-gradient(135deg, #000000 0%, #333333 50%, #FFD700 100%)',
+              'linear-gradient(135deg, #8B6914 0%, #DAA520 50%, #FFD700 100%)',
+              'linear-gradient(135deg, #000000 0%, #333333 50%, #FFD700 100%)'
             ]
           }}
           transition={{
@@ -127,9 +123,9 @@ const NonProfitMembershipPage = () => {
             }}
             transition={{ delay: 0.5 }}
           >
-            <Heart className="w-16 h-16 mx-auto mb-6" />
-            <h1 className="text-6xl font-bold mb-6">DMC Non-Profit Membership</h1>
-            <p className="text-xl mb-8 max-w-3xl mx-auto">
+            <Heart className="w-16 h-16 mx-auto mb-6 text-dmc-gold" />
+            <h1 className="text-6xl font-bold mb-6 font-dmc-primary">DMC Non-Profit Membership</h1>
+            <p className="text-xl mb-8 max-w-3xl mx-auto body-dmc-primary text-dmc-white">
               DMC empowers men of color through community, education, and leadership development, 
               creating a supportive brotherhood that fosters academic excellence and professional growth 
               while serving our community.
@@ -145,7 +141,7 @@ const NonProfitMembershipPage = () => {
             variants={revealFromCenter}
             initial="hidden"
             whileInView="visible"
-            className="text-4xl font-bold text-center mb-16"
+            className="text-4xl font-bold text-center mb-16 heading-dmc-secondary"
           >
             Our Goals
           </motion.h2>
@@ -169,12 +165,12 @@ const NonProfitMembershipPage = () => {
                   transition: { duration: 0.2 }
                 }}
               >
-                <div className="bg-white rounded-lg shadow-lg p-6 h-full">
-                  <div className="flex items-center mb-4 text-blue-600">
+                <div className="card-dmc-elegant h-full">
+                  <div className="flex items-center mb-4 text-dmc-warm-brown">
                     {goal.icon}
-                    <h3 className="text-xl font-bold ml-3">{goal.title}</h3>
+                    <h3 className="text-xl font-bold ml-3 text-dmc-charcoal">{goal.title}</h3>
                   </div>
-                  <p className="text-gray-600">{goal.description}</p>
+                  <p className="text-dmc-slate-gray body-dmc-professional">{goal.description}</p>
                 </div>
               </motion.div>
             ))}
@@ -183,13 +179,13 @@ const NonProfitMembershipPage = () => {
       </section>
 
       {/* Initiatives Section */}
-      <section className="py-20 px-4 bg-gray-50">
+      <section className="py-20 px-4 bg-dmc-pearl">
         <div className="max-w-6xl mx-auto">
           <motion.h2
             variants={revealFromCenter}
             initial="hidden"
             whileInView="visible"
-            className="text-4xl font-bold text-center mb-16"
+            className="text-4xl font-bold text-center mb-16 heading-dmc-secondary"
           >
             Our Initiatives
           </motion.h2>
@@ -213,16 +209,15 @@ const NonProfitMembershipPage = () => {
                   transition: { duration: 0.2 }
                 }}
               >
-                <div className="bg-white rounded-lg shadow-lg overflow-hidden">
-                  <Image
-                    src={initiative.image}
-                    alt={initiative.title}
-                    className="w-full h-48 object-cover"
-                    fill
-                  />
-                  <div className="p-6">
-                    <h3 className="text-xl font-bold mb-2">{initiative.title}</h3>
-                    <p className="text-gray-600">{initiative.description}</p>
+                <div className="card-dmc-professional p-6">
+                  <div className="w-full h-48 bg-dmc-light-gray rounded-dmc mb-4 flex items-center justify-center">
+                    <div className="text-dmc-warm-brown text-4xl font-bold">
+                      {initiative.title.charAt(0)}
+                    </div>
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold mb-2 text-dmc-charcoal">{initiative.title}</h3>
+                    <p className="text-dmc-slate-gray body-dmc-professional">{initiative.description}</p>
                   </div>
                 </div>
               </motion.div>
@@ -234,7 +229,7 @@ const NonProfitMembershipPage = () => {
       {/* Sign Up Section */}
       <section className="min-h-screen relative flex items-center justify-center py-20 px-4">
         <motion.div
-          className="absolute inset-0 bg-blue-600"
+          className="absolute inset-0 bg-dmc-warm"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ duration: 1 }}
@@ -243,7 +238,7 @@ const NonProfitMembershipPage = () => {
           {[...Array(20)].map((_, i) => (
             <motion.div
               key={i}
-              className="absolute w-2 h-2 bg-white rounded-full"
+              className="absolute w-2 h-2 bg-dmc-white rounded-full"
               animate={{
                 x: ["0%", "100%"],
                 y: ["0%", "100%"],
@@ -267,9 +262,9 @@ const NonProfitMembershipPage = () => {
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8 }}
           >
-            <HandHeart className="w-16 h-16 text-white mx-auto mb-6" />
-            <h2 className="text-4xl font-bold text-white mb-6">Ready to Make an Impact?</h2>
-            <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
+            <HandHeart className="w-16 h-16 text-dmc-white mx-auto mb-6" />
+            <h2 className="text-4xl font-bold text-dmc-white mb-6 font-dmc-primary">Ready to Make an Impact?</h2>
+            <p className="text-xl text-dmc-white/90 mb-8 max-w-2xl mx-auto body-dmc-primary">
               Join our community of leaders dedicated to empowering and uplifting men of color
             </p>
             <motion.div
@@ -278,7 +273,7 @@ const NonProfitMembershipPage = () => {
             >
               <button 
                 onClick={() => router.push('/non_profitsignup')}
-                className="bg-white text-blue-600 hover:bg-blue-50 px-8 py-4 text-lg rounded-lg transition-colors duration-200"
+                className="bg-dmc-white text-dmc-warm-brown hover:bg-dmc-pearl px-8 py-4 text-lg rounded-dmc transition-colors duration-200 font-dmc-secondary font-semibold shadow-dmc-sophisticated"
               >
                 Start Your Application
               </button>

@@ -2,86 +2,368 @@
 @tailwind components;
 @tailwind utilities;
 
+/* DMC Brand Color Variables - Updated per Branding Guide */
+:root {
+  /* Primary Colors - Core DMC Identity */
+  --dmc-black: #000000;
+  --dmc-gold: #FFD700;
+  --dmc-white: #FFFFFF;
+  
+  /* Secondary Colors - Earthy Tones & Sophisticated Neutrals */
+  --dmc-dark-gold: #B8860B;
+  --dmc-light-gold: #FFF8DC;
+  --dmc-warm-gold: #DAA520;
+  
+  /* Sophisticated Grays & Silvers */
+  --dmc-charcoal: #333333;
+  --dmc-silver: #C0C0C0;
+  --dmc-metallic-silver: #BCC6CC;
+  --dmc-light-gray: #F5F5F5;
+  --dmc-medium-gray: #808080;
+  --dmc-dark-gray: #505050;
+  --dmc-slate-gray: #708090;
+  --dmc-platinum: #E5E4E2;
+  
+  /* Earthy Tones - Browns & Warm Neutrals */
+  --dmc-warm-brown: #8B6914;
+  --dmc-bronze: #CD7F32;
+  --dmc-taupe: #8B8680;
+  --dmc-cream: #F7F3E9;
+  --dmc-champagne: #F7E7CE;
+  
+  /* Off-Whites & Sophisticated Neutrals */
+  --dmc-off-white: #FAFAFA;
+  --dmc-pearl: #F8F6F0;
+  --dmc-ivory: #FFFFF0;
+  --dmc-linen: #FAF0E6;
+  
+  /* Professional Accent Colors */
+  --dmc-deep-navy: #1C2951;
+  --dmc-midnight: #191970;
+  --dmc-royal: #4169E1;
+  
+  /* Enhanced Gradients */
+  --dmc-gold-gradient: linear-gradient(135deg, #FFD700 0%, #B8860B 100%);
+  --dmc-sophisticated-gradient: linear-gradient(135deg, #333333 0%, #808080 50%, #C0C0C0 100%);
+  --dmc-warm-gradient: linear-gradient(135deg, #8B6914 0%, #DAA520 50%, #FFD700 100%);
+  --dmc-professional-gradient: linear-gradient(135deg, #000000 0%, #333333 50%, #FFD700 100%);
+  
+  /* Enhanced Shadow Colors */
+  --dmc-gold-shadow: 0 4px 20px rgba(255, 215, 0, 0.3);
+  --dmc-black-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+  --dmc-silver-shadow: 0 4px 15px rgba(192, 192, 192, 0.3);
+  --dmc-sophisticated-shadow: 0 8px 30px rgba(51, 51, 51, 0.2);
+  --dmc-elegant-shadow: 0 12px 40px rgba(255, 215, 0, 0.15);
+}
+
 html {
   scroll-behavior: smooth;
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Spectral', 'Georgia', serif;
 }
 
-.elements-style {
-  color: var(--elements-color);
-  border: 1px solid var(--elements-color);
-}
-.elements-style-background {
-  background: var(--elements-color);
-  transition: box-shadow var(--transition-duration);
-}
-.card.elements-style-background:hover {
-  box-shadow: 20px 20px 60px #464e9c, -20px -20px 60px #8896ff;
-}
-
-.custom-img {
-  background-image: url('../assets/mixer_background.jpg');
+/* Enhanced DMC Button Styles */
+.btn-dmc-primary {
+  background: var(--dmc-gold);
+  color: var(--dmc-black);
+  border: 2px solid var(--dmc-gold);
+  font-family: 'Playfair Display', serif;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: var(--dmc-gold-shadow);
 }
 
-
-.donor-img {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../newassest/social2.png');
-
-}
-form > div {
-  @apply flex flex-col gap-2;
-}
-
-input,
-textarea {
-  @apply shadow-md px-6 py-2 border border-slate-300;
+.btn-dmc-primary:hover {
+  background: var(--dmc-black);
+  color: var(--dmc-gold);
+  border: 2px solid var(--dmc-gold);
+  box-shadow: var(--dmc-elegant-shadow);
+  transform: translateY(-2px);
 }
 
-html {
-  scroll-behavior: smooth;
-
+.btn-dmc-secondary {
+  background: transparent;
+  color: var(--dmc-gold);
+  border: 2px solid var(--dmc-gold);
+  font-family: 'Playfair Display', serif;
+  font-weight: 600;
+  transition: all 0.3s ease;
 }
 
-.theme{
-  transition: 1s all ease;
+.btn-dmc-secondary:hover {
+  background: var(--dmc-gold);
+  color: var(--dmc-black);
+  box-shadow: var(--dmc-gold-shadow);
+  transform: translateY(-2px);
 }
 
-.light {
-  background-color: white;
-  color: #111;
+.btn-dmc-professional {
+  background: var(--dmc-charcoal);
+  color: var(--dmc-white);
+  border: 2px solid var(--dmc-charcoal);
+  font-family: 'Merriweather', serif;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  box-shadow: var(--dmc-black-shadow);
 }
 
-.dark {
-  background-color: #111;
-  color: #bbb;
-}
-.theme.light .theme-text {
-  color: black; 
-}
-
-.theme.dark .theme-text {
-  color: white; 
+.btn-dmc-professional:hover {
+  background: var(--dmc-metallic-silver);
+  color: var(--dmc-black);
+  border: 2px solid var(--dmc-gold);
+  box-shadow: var(--dmc-sophisticated-shadow);
+  transform: translateY(-2px);
 }
 
-@media (max-width: 1230px) {
-  .explore-card-container {
-    flex-direction: column !important;
+.btn-dmc-elegant {
+  background: var(--dmc-professional-gradient);
+  color: var(--dmc-white);
+  border: 2px solid transparent;
+  font-family: 'Playfair Display', serif;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: var(--dmc-sophisticated-shadow);
+}
+
+.btn-dmc-elegant:hover {
+  background: var(--dmc-warm-gradient);
+  box-shadow: var(--dmc-elegant-shadow);
+  transform: translateY(-3px);
+}
+
+/* Enhanced DMC Specific Classes */
+.text-dmc-gold { color: var(--dmc-gold) !important; }
+.text-dmc-black { color: var(--dmc-black) !important; }
+.text-dmc-white { color: var(--dmc-white) !important; }
+.text-dmc-silver { color: var(--dmc-silver) !important; }
+.text-dmc-warm-brown { color: var(--dmc-warm-brown) !important; }
+.text-dmc-bronze { color: var(--dmc-bronze) !important; }
+.text-dmc-charcoal { color: var(--dmc-charcoal) !important; }
+.text-dmc-slate-gray { color: var(--dmc-slate-gray) !important; }
+
+.bg-dmc-gold { background-color: var(--dmc-gold) !important; }
+.bg-dmc-black { background-color: var(--dmc-black) !important; }
+.bg-dmc-white { background-color: var(--dmc-white) !important; }
+.bg-dmc-silver { background-color: var(--dmc-silver) !important; }
+.bg-dmc-charcoal { background-color: var(--dmc-charcoal) !important; }
+.bg-dmc-warm-brown { background-color: var(--dmc-warm-brown) !important; }
+.bg-dmc-bronze { background-color: var(--dmc-bronze) !important; }
+.bg-dmc-off-white { background-color: var(--dmc-off-white) !important; }
+.bg-dmc-cream { background-color: var(--dmc-cream) !important; }
+.bg-dmc-pearl { background-color: var(--dmc-pearl) !important; }
+.bg-dmc-platinum { background-color: var(--dmc-platinum) !important; }
+
+/* Professional Gradient Backgrounds */
+.bg-dmc-professional { background: var(--dmc-professional-gradient) !important; }
+.bg-dmc-sophisticated { background: var(--dmc-sophisticated-gradient) !important; }
+.bg-dmc-warm { background: var(--dmc-warm-gradient) !important; }
+
+.border-dmc-gold { border-color: var(--dmc-gold) !important; }
+.border-dmc-black { border-color: var(--dmc-black) !important; }
+.border-dmc-silver { border-color: var(--dmc-silver) !important; }
+.border-dmc-charcoal { border-color: var(--dmc-charcoal) !important; }
+
+/* Enhanced Card Styles */
+.card-dmc {
+  background: var(--dmc-white);
+  border: 2px solid var(--dmc-silver);
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: var(--dmc-silver-shadow);
+  transition: all 0.3s ease;
+}
+
+.card-dmc:hover {
+  border-color: var(--dmc-gold);
+  box-shadow: var(--dmc-elegant-shadow);
+  transform: translateY(-4px);
+}
+
+.card-dmc-professional {
+  background: var(--dmc-pearl);
+  border: 2px solid var(--dmc-platinum);
+  border-radius: 16px;
+  padding: 32px;
+  box-shadow: var(--dmc-sophisticated-shadow);
+  transition: all 0.3s ease;
+}
+
+.card-dmc-professional:hover {
+  border-color: var(--dmc-warm-brown);
+  box-shadow: var(--dmc-elegant-shadow);
+  transform: translateY(-4px);
+  background: var(--dmc-white);
+}
+
+.card-dmc-elegant {
+  background: linear-gradient(135deg, var(--dmc-white) 0%, var(--dmc-cream) 100%);
+  border: 2px solid var(--dmc-metallic-silver);
+  border-radius: 20px;
+  padding: 32px;
+  box-shadow: var(--dmc-sophisticated-shadow);
+  transition: all 0.4s ease;
+}
+
+.card-dmc-elegant:hover {
+  border-color: var(--dmc-gold);
+  box-shadow: var(--dmc-elegant-shadow);
+  transform: translateY(-6px) scale(1.02);
+}
+
+/* Enhanced Typography */
+.heading-dmc-primary {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  color: var(--dmc-gold);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.heading-dmc-secondary {
+  font-family: 'Merriweather', serif;
+  font-weight: 600;
+  color: var(--dmc-charcoal);
+}
+
+.body-dmc-primary {
+  font-family: 'Spectral', serif;
+  font-weight: 400;
+  color: var(--dmc-dark-gray);
+  line-height: 1.6;
+}
+
+.body-dmc-professional {
+  font-family: 'Georgia', serif;
+  font-weight: 400;
+  color: var(--dmc-slate-gray);
+  line-height: 1.7;
+}
+
+/* Enhanced Form Styling */
+input, textarea, select {
+  font-family: 'Spectral', serif;
+  box-shadow: var(--dmc-silver-shadow);
+  border: 2px solid var(--dmc-platinum);
+  border-radius: 12px;
+  padding: 12px 16px;
+  transition: all 0.3s ease;
+}
+
+input:focus, textarea:focus, select:focus {
+  border-color: var(--dmc-gold);
+  box-shadow: var(--dmc-gold-shadow);
+  outline: none;
+}
+
+/* Professional Navigation Enhancements */
+.navbar-dmc {
+  background: var(--dmc-professional-gradient);
+  backdrop-filter: blur(12px);
+  border-bottom: 2px solid var(--dmc-gold);
+  box-shadow: var(--dmc-sophisticated-shadow);
+}
+
+.navbar-brand-dmc {
+  font-family: 'Playfair Display', serif;
+  color: var(--dmc-gold) !important;
+  font-weight: 700;
+  font-size: 2rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Enhanced Footer Styling */
+.footer-dmc {
+  background: var(--dmc-sophisticated-gradient);
+  color: var(--dmc-white);
+  border-top: 3px solid var(--dmc-gold);
+}
+
+.footer-dmc a {
+  color: var(--dmc-platinum);
+  transition: color 0.3s ease;
+}
+
+.footer-dmc a:hover {
+  color: var(--dmc-gold);
+  text-shadow: 0 0 8px rgba(255, 215, 0, 0.5);
+}
+
+/* Enhanced Modal and Overlay Styling */
+.modal-dmc {
+  background: var(--dmc-white);
+  border: 3px solid var(--dmc-gold);
+  border-radius: 20px;
+  box-shadow: var(--dmc-elegant-shadow);
+}
+
+.overlay-dmc {
+  background: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(8px);
+}
+
+/* Professional Section Separators */
+.section-separator-dmc {
+  height: 3px;
+  background: var(--dmc-warm-gradient);
+  border-radius: 2px;
+  margin: 48px 0;
+}
+
+/* Enhanced Accessibility and Responsive Design */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
   }
 }
 
-
-@keyframes letterGlow {
-  0%, 100% { 
-    text-shadow: 0 0 20px rgba(255, 215, 0, 0.5);
-    transform: translateY(0);
-  }
-  50% { 
-    text-shadow: 0 0 30px rgba(255, 215, 0, 0.8);
-    transform: translateY(-10px);
-  }
+/* Enhanced Focus States for Accessibility */
+button:focus, a:focus, input:focus, textarea:focus, select:focus {
+  outline: 3px solid var(--dmc-gold);
+  outline-offset: 2px;
+  box-shadow: 0 0 0 6px rgba(255, 215, 0, 0.3);
 }
 
-@keyframes lineWidth {
-  0%, 100% { width: 100px; opacity: 0.5; }
-  50% { width: 200px; opacity: 1; }
+/* Professional Animation Classes */
+.animate-dmc-fade-in {
+  animation: dmcFadeIn 0.8s ease-out;
+}
+
+.animate-dmc-slide-up {
+  animation: dmcSlideUp 1s ease-out;
+}
+
+.animate-dmc-gold-shimmer {
+  animation: dmcGoldShimmer 2.5s ease-in-out infinite;
+}
+
+@keyframes dmcFadeIn {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes dmcSlideUp {
+  0% { opacity: 0; transform: translateY(50px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes dmcGoldShimmer {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.8; transform: scale(1.05); }
+}
+
+/* Text Effects */
+.text-dmc-gradient {
+  background: var(--dmc-warm-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 700;
+}
+
+.text-dmc-sophisticated {
+  background: var(--dmc-sophisticated-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 600;
 }

@@ -10,8 +10,6 @@ import {
   Clock,
   CheckCircle
 } from 'lucide-react';
-import Image from 'next/image'
-
 
 const ContactPage = () => {
   const [isSubmitted, setIsSubmitted] = useState(false);
@@ -95,13 +93,13 @@ const ContactPage = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-blue-50 to-white">
+    <div className="min-h-screen bg-dmc-elegant">
       {/* Background Elements */}
       <div className="fixed inset-0 pointer-events-none">
         {[...Array(20)].map((_, i) => (
           <motion.div
             key={i}
-            className="absolute w-2 h-2 bg-blue-200 rounded-full"
+            className="absolute w-2 h-2 bg-dmc-light-gold rounded-full"
             animate={{
               y: [0, -20, 0],
               opacity: [0.3, 0.6, 0.3]
@@ -127,8 +125,8 @@ const ContactPage = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          <h1 className="text-5xl font-bold mb-6">Get in Touch</h1>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+          <h1 className="text-5xl font-bold mb-6 heading-dmc-primary">Get in Touch</h1>
+          <p className="text-xl text-dmc-slate-gray max-w-2xl mx-auto body-dmc-professional">
             Have questions or want to collaborate? We&apos;d love to hear from you.
           </p>
         </motion.div>
@@ -140,52 +138,52 @@ const ContactPage = () => {
             initial="hidden"
             animate="visible"
           >
-            <div className="bg-white/90 backdrop-blur-sm rounded-lg shadow-lg p-8 relative">
+            <div className="card-dmc-elegant glass-dmc p-8 relative">
               <form onSubmit={handleSubmit} className="space-y-6">
                 <motion.div variants={fadeInUp} custom={0}>
-                  <label className="block text-sm font-medium mb-2">Name</label>
+                  <label className="block text-sm font-medium mb-2 text-dmc-charcoal">Name</label>
                   <input 
                     type="text"
                     name="fullname"
                     value={formData.fullname}
                     onChange={handleChange}
                     placeholder="Enter your name"
-                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    className="w-full px-4 py-2 border border-dmc-silver rounded-dmc focus:outline-none focus:ring-2 focus:ring-dmc-gold focus:border-dmc-gold transition-colors"
                   />
                 </motion.div>
 
                 <motion.div variants={fadeInUp} custom={1}>
-                  <label className="block text-sm font-medium mb-2">Email</label>
+                  <label className="block text-sm font-medium mb-2 text-dmc-charcoal">Email</label>
                   <input 
                     type="email"
                     name="email"
                     value={formData.email}
                     onChange={handleChange}
                     placeholder="Enter your email"
-                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    className="w-full px-4 py-2 border border-dmc-silver rounded-dmc focus:outline-none focus:ring-2 focus:ring-dmc-gold focus:border-dmc-gold transition-colors"
                   />
                 </motion.div>
 
                 <motion.div variants={fadeInUp} custom={2}>
-                  <label className="block text-sm font-medium mb-2">Subject</label>
+                  <label className="block text-sm font-medium mb-2 text-dmc-charcoal">Subject</label>
                   <input 
                     type="text"
                     name="subject"
                     value={formData.subject}
                     onChange={handleChange}
                     placeholder="What&apos;s this about?"
-                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    className="w-full px-4 py-2 border border-dmc-silver rounded-dmc focus:outline-none focus:ring-2 focus:ring-dmc-gold focus:border-dmc-gold transition-colors"
                   />
                 </motion.div>
 
                 <motion.div variants={fadeInUp} custom={3}>
-                  <label className="block text-sm font-medium mb-2">Message</label>
+                  <label className="block text-sm font-medium mb-2 text-dmc-charcoal">Message</label>
                   <textarea 
                     name="message"
                     value={formData.message}
                     onChange={handleChange}
                     placeholder="Your message"
-                    className="w-full px-4 py-2 border border-gray-300 rounded-lg h-32 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent resize-none"
+                    className="w-full px-4 py-2 border border-dmc-silver rounded-dmc h-32 focus:outline-none focus:ring-2 focus:ring-dmc-gold focus:border-dmc-gold resize-none transition-colors"
                   />
                 </motion.div>
 
@@ -212,7 +210,7 @@ const ContactPage = () => {
                 >
                   <button 
                     type="submit"
-                    className="w-full px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-colors duration-200 flex items-center justify-center"
+                    className="btn-dmc-primary w-full flex items-center justify-center"
                   >
                     <Send className="w-4 h-4 mr-2" />
                     Send Message
@@ -227,12 +225,12 @@ const ContactPage = () => {
                     initial={{ opacity: 0, y: 10 }}
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0 }}
-                    className="absolute inset-0 flex items-center justify-center bg-white/95 rounded-lg"
+                    className="absolute inset-0 flex items-center justify-center bg-dmc-white/95 rounded-dmc-lg"
                   >
                     <div className="text-center">
-                      <CheckCircle className="w-16 h-16 text-green-500 mx-auto mb-4" />
-                      <h3 className="text-xl font-bold mb-2">Message Sent!</h3>
-                      <p className="text-gray-600">We&apos;ll get back to you soon.</p>
+                      <CheckCircle className="w-16 h-16 text-dmc-gold mx-auto mb-4" />
+                      <h3 className="text-xl font-bold mb-2 text-dmc-charcoal">Message Sent!</h3>
+                      <p className="text-dmc-slate-gray">We&apos;ll get back to you soon.</p>
                     </div>
                   </motion.div>
                 )}
@@ -261,14 +259,14 @@ const ContactPage = () => {
                 animate="visible"
                 whileHover={{ scale: 1.02 }}
               >
-                <div className="bg-white/90 backdrop-blur-sm rounded-lg shadow-lg p-6">
+                <div className="card-dmc-elegant glass-dmc-sophisticated p-6">
                   <div className="flex items-start">
-                    <div className="text-blue-600 mr-4">
+                    <div className="text-dmc-warm-brown mr-4">
                       {item.icon}
                     </div>
                     <div>
-                      <h3 className="font-medium mb-1">{item.title}</h3>
-                      <p className="text-gray-600">{item.content}</p>
+                      <h3 className="font-medium mb-1 text-dmc-charcoal">{item.title}</h3>
+                      <p className="text-dmc-slate-gray body-dmc-professional">{item.content}</p>
                     </div>
                   </div>
                 </div>
@@ -282,17 +280,12 @@ const ContactPage = () => {
               initial="hidden"
               animate="visible"
             >
-              <div className="bg-white rounded-lg shadow-lg p-2 overflow-hidden">
-                <div className="w-full h-48 bg-gray-200 rounded relative">
-                  <Image
-                    src="/api/placeholder/800/400"
-                    alt="Location map"
-                    className="w-full h-full object-cover"
-                    fill
-                  />
+              <div className="bg-dmc-white rounded-dmc-lg shadow-dmc-sophisticated p-2 overflow-hidden">
+                <div className="w-full h-48 bg-dmc-light-gray rounded relative flex items-center justify-center">
+                  <div className="text-dmc-slate-gray text-lg">Map Location</div>
                   <div className="absolute inset-0 flex items-center justify-center">
                     <button 
-                      className="px-4 py-2 bg-white text-blue-600 hover:bg-gray-50 rounded-lg transition-colors duration-200 flex items-center"
+                      className="px-4 py-2 bg-dmc-white text-dmc-warm-brown hover:bg-dmc-pearl rounded-dmc transition-colors duration-200 flex items-center shadow-dmc-silver"
                     >
                       <Globe className="w-4 h-4 mr-2" />
                       View on Map
