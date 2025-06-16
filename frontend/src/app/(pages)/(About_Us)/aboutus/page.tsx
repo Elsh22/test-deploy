@@ -57,10 +57,10 @@ const AboutUsPage = () => {
   };
 
   return (
-    <div ref={containerRef} className="bg-white">
+    <div ref={containerRef} className="bg-dmc-white">
       {/* Progress Bar */}
       <motion.div
-        className="fixed top-0 left-0 right-0 h-1 bg-blue-500 origin-left z-50"
+        className="fixed top-0 left-0 right-0 h-1 bg-dmc-gold origin-left z-50"
         style={{ scaleX: smoothProgress }}
       />
 
@@ -77,17 +77,17 @@ const AboutUsPage = () => {
           animate={{ y: 0, opacity: 1 }}
           transition={{ delay: 0.2, duration: 0.8 }}
         >
-          <h1 className="text-6xl font-bold mb-6 bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent">
+          <h1 className="text-6xl font-bold mb-6 text-dmc-gradient heading-dmc-primary">
             Our Mission
           </h1>
-          <p className="text-xl text-gray-700 leading-relaxed mb-8">
+          <p className="text-xl text-dmc-slate-gray leading-relaxed mb-8 body-dmc-professional">
             DMC was made to create an organization in which men of color can interact and grow as a community, 
             our goal is to equip these individuals with the means and resources needed in order to thrive in 
             the college setting. We plan to do so by providing academic advice from other successful members 
             and faculty, insight into how to navigate the undergraduate years, means to professional development 
             and most importantly, provide a brotherhood of students striving together.
           </p>
-          <p className="text-xl text-gray-700 leading-relaxed">
+          <p className="text-xl text-dmc-slate-gray leading-relaxed body-dmc-professional">
             A critical aspect of our organization is our commitment to community service, 
             this is shown by our consistent mentoring at nearby underserved public schools, 
             our volunteering in the local Richmond community, and our participation in service 
@@ -99,32 +99,32 @@ const AboutUsPage = () => {
           transition={{ repeat: Infinity, duration: 2 }}
           className="absolute bottom-10"
         >
-          <ChevronDown className="w-8 h-8 text-gray-400" />
+          <ChevronDown className="w-8 h-8 text-dmc-warm-brown" />
         </motion.div>
       </motion.section>
 
       {/* Goals Section */}
       <motion.section 
-        className="py-20 bg-gray-50"
+        className="py-20 bg-dmc-pearl"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
       >
         <div className="max-w-6xl mx-auto px-4">
-          <h2 className="text-4xl font-bold mb-16 text-center">Our Goals</h2>
+          <h2 className="text-4xl font-bold mb-16 text-center heading-dmc-secondary">Our Goals</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {goals.map((goal, index) => (
               <motion.div
                 key={goal.title}
-                className="bg-white p-8 rounded-lg shadow-lg border border-gray-200"
+                className="card-dmc-professional"
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.2 }}
                 whileHover={{ scale: 1.05 }}
               >
-                <h3 className="text-xl font-bold mb-4 text-blue-600">{goal.title}</h3>
-                <p className="text-gray-600">{goal.description}</p>
+                <h3 className="text-xl font-bold mb-4 text-dmc-warm-brown">{goal.title}</h3>
+                <p className="text-dmc-slate-gray body-dmc-professional">{goal.description}</p>
               </motion.div>
             ))}
           </div>
@@ -139,12 +139,12 @@ const AboutUsPage = () => {
         viewport={{ once: true }}
       >
         <div className="max-w-6xl mx-auto px-4">
-          <h2 className="text-4xl font-bold mb-16 text-center">Core Values</h2>
+          <h2 className="text-4xl font-bold mb-16 text-center heading-dmc-secondary">Core Values</h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {values.map((value, index) => (
               <motion.div
                 key={value}
-                className="bg-gradient-to-br from-blue-500 to-blue-600 text-white p-8 rounded-lg shadow-lg text-center"
+                className="bg-dmc-professional text-dmc-white p-8 rounded-dmc-lg shadow-dmc-elegant text-center"
                 initial={{ rotateY: 90, opacity: 0 }}
                 whileInView={{ rotateY: 0, opacity: 1 }}
                 viewport={{ once: true }}
@@ -159,16 +159,14 @@ const AboutUsPage = () => {
       </motion.section>
 
       {/* Board Selection Section */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-20 bg-dmc-pearl">
         <div className="max-w-6xl mx-auto px-4">
-          <h2 className="text-4xl font-bold mb-12 text-center">Our Leadership</h2>
+          <h2 className="text-4xl font-bold mb-12 text-center heading-dmc-secondary">Our Leadership</h2>
           <div className="flex flex-wrap justify-center gap-4 mb-12">
             <motion.button
               onClick={() => setSelectedBoard('vcu')}
-              className={`px-6 py-3 rounded-full transition-colors ${
-                selectedBoard === 'vcu'
-                  ? 'bg-blue-600 text-white'
-                  : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
+              className={`btn-dmc-primary ${
+                selectedBoard === 'vcu' ? '' : 'btn-dmc-secondary'
               }`}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
@@ -177,10 +175,8 @@ const AboutUsPage = () => {
             </motion.button>
             <motion.button
               onClick={() => setSelectedBoard('jmu')}
-              className={`px-6 py-3 rounded-full transition-colors ${
-                selectedBoard === 'jmu'
-                  ? 'bg-blue-600 text-white'
-                  : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
+              className={`btn-dmc-primary ${
+                selectedBoard === 'jmu' ? '' : 'btn-dmc-secondary'
               }`}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
@@ -189,10 +185,8 @@ const AboutUsPage = () => {
             </motion.button>
             <motion.button
               onClick={() => setSelectedBoard('odu')}
-              className={`px-6 py-3 rounded-full transition-colors ${
-                selectedBoard === 'odu'
-                  ? 'bg-blue-600 text-white'
-                  : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
+              className={`btn-dmc-primary ${
+                selectedBoard === 'odu' ? '' : 'btn-dmc-secondary'
               }`}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
@@ -201,10 +195,8 @@ const AboutUsPage = () => {
             </motion.button>
             <motion.button
               onClick={() => setSelectedBoard('nonprofit')}
-              className={`px-6 py-3 rounded-full transition-colors ${
-                selectedBoard === 'nonprofit'
-                  ? 'bg-blue-600 text-white'
-                  : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
+              className={`btn-dmc-primary ${
+                selectedBoard === 'nonprofit' ? '' : 'btn-dmc-secondary'
               }`}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}

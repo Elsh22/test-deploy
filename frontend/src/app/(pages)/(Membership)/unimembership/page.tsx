@@ -130,18 +130,15 @@ const UniversityMembershipPage = () => {
   const initiatives = [
     {
       title: "Tech Mentorship",
-      description: "Connecting students with industry professionals",
-      image: "/api/placeholder/400/300"
+      description: "Connecting students with industry professionals"
     },
     {
       title: "Hackathon Series",
-      description: "Annual coding competitions across chapters",
-      image: "/api/placeholder/400/300"
+      description: "Annual coding competitions across chapters"
     },
     {
       title: "Community Outreach",
-      description: "Local tech education programs",
-      image: "/api/placeholder/400/300"
+      description: "Local tech education programs"
     }
   ];
 
@@ -150,7 +147,13 @@ const UniversityMembershipPage = () => {
   );
 
   return (
-    <div ref={containerRef} className="bg-white">
+    <div ref={containerRef} className="bg-dmc-white">
+      {/* Progress Bar */}
+      <motion.div
+        className="fixed top-0 left-0 right-0 h-1 bg-dmc-gold origin-left z-50"
+        style={{ scaleX: smoothProgress }}
+      />
+
       {/* Hero Section */}
       <div className="relative overflow-hidden">
         <motion.section 
@@ -163,7 +166,7 @@ const UniversityMembershipPage = () => {
           }}
         >
           <motion.div
-            className="absolute inset-0 bg-blue-600 rounded-full"
+            className="absolute inset-0 bg-dmc-warm rounded-full"
             initial={{ scale: 0 }}
             animate={{ scale: 100 }}
             transition={{ duration: 1.5, ease: "easeInOut" }}
@@ -174,15 +177,15 @@ const UniversityMembershipPage = () => {
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0.5, duration: 0.8 }}
           >
-            <h1 className="text-6xl font-bold mb-6 text-white">
+            <h1 className="text-6xl font-bold mb-6 text-dmc-white font-dmc-primary">
               University Chapters
             </h1>
-            <p className="text-xl text-white/90 leading-relaxed mb-8">
+            <p className="text-xl text-dmc-white/90 leading-relaxed mb-8 body-dmc-primary">
               Join a community of innovators and leaders shaping the future of technology
             </p>
             <button 
               onClick={scrollToChapters}
-              className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-4 rounded-lg text-lg transition-colors duration-200"
+              className="bg-dmc-white text-dmc-warm-brown hover:bg-dmc-pearl px-8 py-4 rounded-dmc text-lg transition-colors duration-200 font-dmc-secondary font-semibold shadow-dmc-sophisticated"
             >
               Find Your Chapter
             </button>
@@ -191,10 +194,10 @@ const UniversityMembershipPage = () => {
       </div>
 
       {/* Structure Section */}
-      <motion.section className="py-20 bg-white">
+      <motion.section className="py-20 bg-dmc-white">
         <div className="max-w-6xl mx-auto px-4">
           <motion.h2 
-            className="text-4xl font-bold mb-16 text-center"
+            className="text-4xl font-bold mb-16 text-center heading-dmc-secondary"
             variants={expandOut}
             initial="hidden"
             whileInView="visible"
@@ -215,10 +218,10 @@ const UniversityMembershipPage = () => {
                   transition: { duration: 0.2 }
                 }}
               >
-                <div className="bg-white rounded-lg shadow-lg p-8 h-full">
+                <div className="card-dmc-elegant h-full">
                   <div className="flex items-center mb-6">
-                    {section.icon}
-                    <h3 className="text-2xl font-bold ml-4">{section.title}</h3>
+                    <div className="text-dmc-warm-brown">{section.icon}</div>
+                    <h3 className="text-2xl font-bold ml-4 text-dmc-charcoal">{section.title}</h3>
                   </div>
                   <ul className="space-y-4">
                     {section.roles.map((role) => (
@@ -229,8 +232,8 @@ const UniversityMembershipPage = () => {
                         whileInView={{ opacity: 1, x: 0 }}
                         transition={{ delay: 0.2 }}
                       >
-                        <ArrowRight className="w-4 h-4 mr-2 text-blue-500" />
-                        <span>{role}</span>
+                        <ArrowRight className="w-4 h-4 mr-2 text-dmc-gold" />
+                        <span className="text-dmc-slate-gray">{role}</span>
                       </motion.li>
                     ))}
                   </ul>
@@ -242,10 +245,10 @@ const UniversityMembershipPage = () => {
       </motion.section>
 
       {/* Initiatives Section */}
-      <motion.section className="py-20 bg-gray-50">
+      <motion.section className="py-20 bg-dmc-pearl">
         <div className="max-w-6xl mx-auto px-4">
           <motion.h2 
-            className="text-4xl font-bold mb-16 text-center"
+            className="text-4xl font-bold mb-16 text-center heading-dmc-secondary"
             variants={expandOut}
             initial="hidden"
             whileInView="visible"
@@ -272,17 +275,15 @@ const UniversityMembershipPage = () => {
                   transition: { duration: 0.2 }
                 }}
               >
-                <div className="bg-white rounded-lg shadow-lg overflow-hidden">
-                  <motion.img
-                    src={initiative.image}
-                    alt={initiative.title}
-                    className="w-full h-48 object-cover"
-                    whileHover={{ scale: 1.1 }}
-                    transition={{ duration: 0.3 }}
-                  />
-                  <div className="p-6">
-                    <h3 className="text-xl font-bold mb-2">{initiative.title}</h3>
-                    <p className="text-gray-600">{initiative.description}</p>
+                <div className="card-dmc-professional p-6">
+                  <div className="w-full h-48 bg-dmc-light-gray rounded-dmc mb-4 flex items-center justify-center">
+                    <div className="text-dmc-warm-brown text-4xl font-bold">
+                      {initiative.title.charAt(0)}
+                    </div>
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold mb-2 text-dmc-charcoal">{initiative.title}</h3>
+                    <p className="text-dmc-slate-gray body-dmc-professional">{initiative.description}</p>
                   </div>
                 </div>
               </motion.div>
@@ -292,10 +293,10 @@ const UniversityMembershipPage = () => {
       </motion.section>
 
       {/* Chapters Section */}
-      <motion.section ref={chaptersRef} className="py-20 bg-white">
+      <motion.section ref={chaptersRef} className="py-20 bg-dmc-white">
         <div className="max-w-6xl mx-auto px-4">
           <motion.h2 
-            className="text-4xl font-bold mb-16 text-center"
+            className="text-4xl font-bold mb-16 text-center heading-dmc-secondary"
             variants={expandOut}
             initial="hidden"
             whileInView="visible"
@@ -306,13 +307,13 @@ const UniversityMembershipPage = () => {
           {/* Search Bar */}
           <div className="max-w-md mx-auto mb-12">
             <div className="relative">
-              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-dmc-slate-gray w-5 h-5" />
               <input
                 type="text"
                 placeholder="Search chapters..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500"
+                className="w-full pl-10 pr-4 py-2 border border-dmc-silver rounded-dmc focus:outline-none focus:border-dmc-gold focus:ring-1 focus:ring-dmc-gold"
               />
             </div>
           </div>
@@ -332,15 +333,15 @@ const UniversityMembershipPage = () => {
                   transition: { duration: 0.2 }
                 }}
               >
-                <div className="bg-white rounded-lg shadow-lg p-6 text-center">
-                  <GraduationCap className="w-12 h-12 mx-auto mb-4 text-gray-600" />
-                  <h3 className="text-2xl font-bold mb-2">{chapter.name}</h3>
-                  <p className="text-gray-600 mb-4">{chapter.members} Members</p>
+                <div className="card-dmc-elegant text-center">
+                  <GraduationCap className="w-12 h-12 mx-auto mb-4 text-dmc-warm-brown" />
+                  <h3 className="text-2xl font-bold mb-2 text-dmc-charcoal">{chapter.name}</h3>
+                  <p className="text-dmc-slate-gray mb-4 body-dmc-professional">{chapter.members} Members</p>
                   <a 
                     href={chapter.joinLink}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-block w-full bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded-lg transition-colors duration-200"
+                    className="btn-dmc-primary inline-block w-full text-center"
                   >
                     Join Chapter
                   </a>
@@ -350,7 +351,7 @@ const UniversityMembershipPage = () => {
           </div>
 
           {filteredChapters.length === 0 && (
-            <div className="text-center text-gray-500 mt-8">
+            <div className="text-center text-dmc-slate-gray mt-8">
               No chapters found matching your search.
             </div>
           )}
@@ -364,7 +365,7 @@ const UniversityMembershipPage = () => {
         whileInView="visible"
       >
         <motion.div
-          className="absolute inset-0 bg-gradient-to-r from-blue-600 to-purple-600"
+          className="absolute inset-0 bg-dmc-sophisticated"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ duration: 1 }}
@@ -384,14 +385,14 @@ const UniversityMembershipPage = () => {
               }
             }}
           >
-            <Plus className="w-16 h-16 mx-auto mb-8 text-white" />
-            <h2 className="text-4xl font-bold mb-6 text-white">Start a New Chapter</h2>
-            <p className="text-xl mb-8 text-white/90">
+            <Plus className="w-16 h-16 mx-auto mb-8 text-dmc-white" />
+            <h2 className="text-4xl font-bold mb-6 text-dmc-white font-dmc-primary">Start a New Chapter</h2>
+            <p className="text-xl mb-8 text-dmc-white/90 body-dmc-primary">
               Don&apos;t see your university? Lead the change by starting a new chapter at your institution.
             </p>
             <button 
               onClick={() => router.push('/newchapter')}
-              className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-4 rounded-lg text-lg transition-colors duration-200"
+              className="bg-dmc-white text-dmc-charcoal hover:bg-dmc-pearl px-8 py-4 rounded-dmc text-lg transition-colors duration-200 font-dmc-secondary font-semibold shadow-dmc-sophisticated"
             >
               Start a Chapter
             </button>
