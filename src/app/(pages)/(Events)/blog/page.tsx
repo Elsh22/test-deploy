@@ -26,6 +26,7 @@ const BlogPage = () => {
         const data = await response.json();
         setBlogs(data.data || []);
         
+        // Modified this part to avoid using Set spread
         const categorySet = new Set(['all']);
         data.data?.forEach((blog: { TypeofArticle: string; }) => {
           if (blog.TypeofArticle) {
@@ -43,6 +44,7 @@ const BlogPage = () => {
     fetchBlogs();
   }, []);
 
+  // Rest of your code remains the same
   const filteredBlogs = blogs.filter(blog => {
     const matchesCategory = selectedCategory === 'all' || blog.TypeofArticle === selectedCategory;
     const matchesSearch = blog.Title?.toLowerCase().includes(searchQuery.toLowerCase()) ||
@@ -53,8 +55,8 @@ const BlogPage = () => {
 
   if (loading) {
     return (
-      <div className="min-h-screen flex items-center justify-center bg-dmc-pearl">
-        <div className="animate-pulse text-xl text-dmc-warm-brown heading-dmc-secondary">Loading blogs...</div>
+      <div className="min-h-screen flex items-center justify-center">
+        <div className="animate-pulse text-xl">Loading blogs...</div>
       </div>
     );
   }
@@ -62,7 +64,7 @@ const BlogPage = () => {
   const featuredPost = blogs[0];
 
   return (
-    <div className="bg-dmc-white min-h-screen">
+    <div className="bg-white min-h-screen">
       {featuredPost && <FeaturedPost post={featuredPost} />}
 
       <SearchAndFilter
