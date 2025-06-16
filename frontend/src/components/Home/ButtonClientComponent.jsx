@@ -7,7 +7,10 @@ const ButtonClientComponent = () => {
 
   return (
     <div style={{ display: 'flex', justifyContent: 'center' }}>
-      <button className='px-8 py-2 border' onClick={handleButtonClick}>
+      <button 
+        className="btn-dmc-primary text-dmc-h4 px-dmc-lg py-dmc-sm hover:shadow-dmc-elegant transition-all duration-300"
+        onClick={handleButtonClick}
+      >
         Join RamsConnect
       </button>
     </div>

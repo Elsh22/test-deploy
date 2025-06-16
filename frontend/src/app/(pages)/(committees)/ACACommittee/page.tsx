@@ -5,16 +5,14 @@ import HomePage from './Hero'
 import AcademicPrograms from './Programs'
 
 const ACACommitteePage = () => {
+  return (
+    <div className="min-h-screen bg-dmc-light-gray">
+      <HomePage />
+      <AcademicPrograms />
+      <Example />
+    </div>
+  );
+};
 
-    return (
-      <div>
-        <HomePage />
-        <AcademicPrograms />
-        <Example />
-      </div>
-    );
-  };
-  
-  export default ACACommitteePage;
-
+export default ACACommitteePage;
   

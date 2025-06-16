@@ -6,68 +6,92 @@ import ResourceFair from '../../../../newassest/LinkedIn.jpg'
 
 const AcademicPrograms = () => {
   return (
-    <div className="container mx-auto px-4">
-      <div className="shadow-md py-4">
-        <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
-         <h2 className="text-3xl lg:text-4xl font-semibold mb-6">Explore Our Academic Programs</h2>
-          <div className="flex justify-around text-center">
-            <div className="flex flex-col items-center">
-              <AiOutlineBook className="text-3xl mb-2" />
-              <span className="font-medium">Arts & Humanities</span>
+    <div className="bg-dmc-white py-16">
+      <div className="max-w-7xl mx-auto px-6">
+        {/* Header */}
+        <div className="text-center mb-12">
+          <h2 className="text-dmc-h1 font-dmc-primary text-dmc-gold mb-6">
+            Explore Our Academic Programs
+          </h2>
+          <div className="w-24 h-1 bg-dmc-gold mx-auto mb-8"></div>
+          
+          {/* Academic Areas */}
+          <div className="flex justify-center flex-wrap gap-6 mb-12">
+            <div className="flex flex-col items-center p-6 bg-dmc-light-gray rounded-dmc-lg hover:bg-dmc-gold hover:text-dmc-black transition-all duration-300 cursor-pointer group">
+              <AiOutlineBook className="text-4xl mb-3 group-hover:scale-110 transition-transform duration-300" />
+              <span className="font-medium text-lg">Arts & Humanities</span>
             </div>
-            <div className="flex flex-col items-center">
-              <AiOutlineExperiment className="text-3xl mb-2" />
-              <span className="font-medium">Science & Technology</span>
+            <div className="flex flex-col items-center p-6 bg-dmc-light-gray rounded-dmc-lg hover:bg-dmc-gold hover:text-dmc-black transition-all duration-300 cursor-pointer group">
+              <AiOutlineExperiment className="text-4xl mb-3 group-hover:scale-110 transition-transform duration-300" />
+              <span className="font-medium text-lg">Science & Technology</span>
             </div>
-            <div className="flex flex-col items-center">
-              <AiOutlineDollarCircle className="text-3xl mb-2" />
-              <span className="font-medium">Business & Economics</span>
+            <div className="flex flex-col items-center p-6 bg-dmc-light-gray rounded-dmc-lg hover:bg-dmc-gold hover:text-dmc-black transition-all duration-300 cursor-pointer group">
+              <AiOutlineDollarCircle className="text-4xl mb-3 group-hover:scale-110 transition-transform duration-300" />
+              <span className="font-medium text-lg">Business & Economics</span>
             </div>
-            <div className="flex flex-col items-center">
-              <AiOutlineHeart className="text-3xl mb-2" />
-              <span className="font-medium">Health & Medicine</span>
+            <div className="flex flex-col items-center p-6 bg-dmc-light-gray rounded-dmc-lg hover:bg-dmc-gold hover:text-dmc-black transition-all duration-300 cursor-pointer group">
+              <AiOutlineHeart className="text-4xl mb-3 group-hover:scale-110 transition-transform duration-300" />
+              <span className="font-medium text-lg">Health & Medicine</span>
             </div>
           </div>
         </div>
-      </div>
-      <div className="text-center my-10">
-      </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        <div className="max-w-sm rounded overflow-hidden shadow-lg">
-          <Image src={studySessionImg} alt="Study Session" className="w-full" />
-          <div className="px-6 py-4">
-            <div className="font-bold text-xl mb-2">Study Session</div>
-            <p className="text-base">
-              Engage in focused study sessions with peers and mentors.
+
+        {/* Program Cards */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+          <div className="card-dmc group">
+            <div className="h-48 bg-dmc-light-gray rounded-dmc mb-6 overflow-hidden">
+              <Image src={studySessionImg} alt="Study Session" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300" />
+            </div>
+            <h3 className="text-dmc-h3 font-dmc-primary text-dmc-black mb-3 group-hover:text-dmc-gold transition-colors duration-300">
+              Study Sessions
+            </h3>
+            <p className="text-dmc-body text-dmc-dark-gray mb-6 leading-relaxed">
+              Engage in focused study sessions with peers and mentors to enhance your academic performance and build lasting study habits.
             </p>
+            <button className="btn-dmc-secondary">Learn More</button>
           </div>
-        </div>
-        <div className="max-w-sm rounded overflow-hidden shadow-lg">
-          <Image src={tutoringImg} alt="Tutoring" className="w-full" />
-          <div className="px-6 py-4">
-            <div className="font-bold text-xl mb-2">Tutoring</div>
-            <p className="text-base">
-              Get personalized assistance in various subjects.
+
+          <div className="card-dmc group">
+            <div className="h-48 bg-dmc-light-gray rounded-dmc mb-6 overflow-hidden">
+              <Image src={tutoringImg} alt="Tutoring" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300" />
+            </div>
+            <h3 className="text-dmc-h3 font-dmc-primary text-dmc-black mb-3 group-hover:text-dmc-gold transition-colors duration-300">
+              Tutoring Services
+            </h3>
+            <p className="text-dmc-body text-dmc-dark-gray mb-6 leading-relaxed">
+              Get personalized assistance in various subjects from our experienced peer tutors and academic mentors.
             </p>
+            <button className="btn-dmc-secondary">Learn More</button>
           </div>
-        </div>
-        <div className="max-w-sm rounded overflow-hidden shadow-lg">
-          <Image src={ResourceFair} alt="Resource-Fair" className="w-full" />
-          <div className="px-6 py-4">
-            <div className="font-bold text-xl mb-2">Resource Fair</div>
-            <p className="text-base">
-              Learn More About the Resource Around Campus 
+
+          <div className="card-dmc group">
+            <div className="h-48 bg-dmc-light-gray rounded-dmc mb-6 overflow-hidden">
+              <Image src={ResourceFair} alt="Resource Fair" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300" />
+            </div>
+            <h3 className="text-dmc-h3 font-dmc-primary text-dmc-black mb-3 group-hover:text-dmc-gold transition-colors duration-300">
+              Resource Fair
+            </h3>
+            <p className="text-dmc-body text-dmc-dark-gray mb-6 leading-relaxed">
+              Discover the various academic resources available around campus to support your educational journey.
             </p>
+            <button className="btn-dmc-secondary">Learn More</button>
           </div>
         </div>
-      </div>
-      <div className="text-center my-10">
-        <h2 className="text-3xl lg:text-4xl font-semibold mb-6">Want to Join the Committee GroupMe?</h2>
-        <a href="https://groupme.com/join_group/90176811/E5gNlYKq" target="_blank" rel="noopener noreferrer">
-          <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-            Join GroupMe
-          </button>
-        </a>
+
+        {/* Call to Action */}
+        <div className="bg-gradient-to-r from-dmc-black to-dmc-charcoal rounded-dmc-xl p-12 text-center">
+          <h3 className="text-dmc-h2 font-dmc-primary text-dmc-gold mb-4">
+            Ready to Join the Academic Committee?
+          </h3>
+          <p className="text-dmc-body text-dmc-silver mb-8 max-w-2xl mx-auto">
+            Connect with like-minded students, enhance your academic journey, and help others succeed in their educational goals.
+          </p>
+          <a href="https://groupme.com/join_group/90176811/E5gNlYKq" target="_blank" rel="noopener noreferrer">
+            <button className="btn-dmc-primary text-lg px-12 py-4">
+              Join Our GroupMe
+            </button>
+          </a>
+        </div>
       </div>
     </div>
   );
