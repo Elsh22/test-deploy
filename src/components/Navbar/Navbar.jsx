@@ -112,11 +112,11 @@ const Navbar = () => {
       />
       
       {/* Conference Banner */}
-      <div className="fixed top-0 left-0 right-0 z-50 bg-blue-600 text-white py-2 text-center">
+      <div className="fixed top-0 left-0 right-0 z-50 bg-amber-400 text-white py-2 text-center">
         <p className="text-sm md:text-base font-medium">
           Join us for our Fall Conference! 
-          <span className="mx-2 font-bold">October 15-17, 2024</span>
-          <Link href="/event" className="underline ml-2 hover:text-blue-200">
+          <span className="mx-2 font-bold">September 7th</span>
+          <Link href="/event/8th-annual-dmc-mixer" className="underline ml-2 hover:text-blue-200">
             Register Now
           </Link>
         </p>
