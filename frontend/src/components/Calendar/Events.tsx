@@ -1,5 +1,15 @@
 const events = [
   {
+    title: "DMC 8th Annual Mixer",
+    start: "2025-09-07T16:00:00",
+    end: "2025-09-07T19:00:00"
+  },
+  {
+    title: "DMC General Body Meeting",
+    start: "2025-09-24T19:00:00",
+    end: "2025-09-24T21:00:00"
+  },
+  {
     title: "Jacob's Chance",
     start: "2025-04-27T15:00:00",
     end: "2025-04-27T17:00:00"
@@ -1193,6 +1203,8 @@ const events = [
     start: "2024-12-19T18:30:00",
     end: "2024-12-19T20:00:00"
   }
+  
+
 ];
 
 export default events;

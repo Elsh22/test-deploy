@@ -4,7 +4,7 @@
 
 html {
   scroll-behavior: smooth;
-  font-family: 'Raleway', sans-serif;
+  font-family: 'LibertinusSerifDisplay', sans-serif;
 }
 
 .elements-style {
@@ -68,5 +68,14 @@ html {
     flex-direction: column !important;
   }
 }
+@font-face {
+  font-family: 'LibertinusSerifDisplay';
+  src: url('/fonts/LibertinusSerifDisplay-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: bold;
+}
 
 
+.font-home {
+  font-family: 'LibertinusSerifDisplay', sans-serif;
+}
