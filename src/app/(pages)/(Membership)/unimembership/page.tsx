@@ -109,13 +109,13 @@ const UniversityMembershipPage = () => {
   const chapters = [
     {
       name: "VCU",
-      members: 120,
+      members: 1070,
       status: "Active",
       joinLink: "https://vcu.edu/join-chapter"
     },
     {
       name: "ODU",
-      members: 85,
+      members: 114,
       status: "Active",
       joinLink: "https://odu.edu/join-chapter"
     },

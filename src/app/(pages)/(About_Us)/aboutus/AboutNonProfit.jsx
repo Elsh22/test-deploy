@@ -7,8 +7,68 @@ const AboutNonProfit = () => {
   // Replace with actual non-profit board members
   const team = [
     { 
+      name: 'Dr. Goode', 
+      role: 'Founder/Strategic Advisor', 
+      image: '../../../../assets/XaiverHeadshotUpdated.jpg', 
+      linkedin: 'https://www.linkedin.com/in/member1' 
+    },
+    { 
+      name: 'Thomas', 
+      role: 'CEO', 
+      image: '../../../../assets/XaiverHeadshotUpdated.jpg', 
+      linkedin: 'https://www.linkedin.com/in/member1' 
+    },
+    { 
+      name: 'Hazim', 
+      role: 'COO', 
+      image: '../../../../assets/XaiverHeadshotUpdated.jpg', 
+      linkedin: 'https://www.linkedin.com/in/member1' 
+    },
+    { 
+      name: 'James', 
+      role: 'CFO', 
+      image: '../../../../assets/XaiverHeadshotUpdated.jpg', 
+      linkedin: 'https://www.linkedin.com/in/member1' 
+    },
+    { 
+      name: 'Stone', 
+      role: 'VP of Marketing & Communications', 
+      image: '../../../../assets/XaiverHeadshotUpdated.jpg', 
+      linkedin: 'https://www.linkedin.com/in/member1' 
+    },
+    { 
+      name: 'Khalid', 
+      role: 'VP of Business Development', 
+      image: '../../../../assets/XaiverHeadshotUpdated.jpg', 
+      linkedin: 'https://www.linkedin.com/in/member1' 
+    },
+    { 
       name: 'Non-Profit Board Member 1', 
       role: 'Board Chair', 
+      image: '../../../../assets/XaiverHeadshotUpdated.jpg', 
+      linkedin: 'https://www.linkedin.com/in/member1' 
+    },
+    { 
+      name: 'Elijah', 
+      role: 'VP of Chapter Development', 
+      image: '../../../../assets/XaiverHeadshotUpdated.jpg', 
+      linkedin: 'https://www.linkedin.com/in/member1' 
+    },
+    { 
+      name: 'Kyle', 
+      role: 'Director of Administration', 
+      image: '../../../../assets/XaiverHeadshotUpdated.jpg', 
+      linkedin: 'https://www.linkedin.com/in/member1' 
+    },
+    { 
+      name: 'Jalen', 
+      role: 'Director of Alumni & Community Engagement', 
+      image: '../../../../assets/XaiverHeadshotUpdated.jpg', 
+      linkedin: 'https://www.linkedin.com/in/member1' 
+    },
+    { 
+      name: 'Caleb', 
+      role: 'Director of IT / IT Coordinator', 
       image: '../../../../assets/XaiverHeadshotUpdated.jpg', 
       linkedin: 'https://www.linkedin.com/in/member1' 
     },

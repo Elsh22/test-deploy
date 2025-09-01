@@ -52,7 +52,7 @@ const AboutUsPage = () => {
       case 'nonprofit':
         return <AboutNonProfit />;
       default:
-        return <AboutVcu />;
+        return <AboutNonProfit />;
     }
   };
 
@@ -164,6 +164,16 @@ const AboutUsPage = () => {
           <h2 className="text-4xl font-bold mb-12 text-center heading-dmc-secondary">Our Leadership</h2>
           <div className="flex flex-wrap justify-center gap-4 mb-12">
             <motion.button
+              onClick={() => setSelectedBoard('nonprofit')}
+              className={`btn-dmc-primary ${
+                selectedBoard === 'nonprofit' ? '' : 'btn-dmc-secondary'
+              }`}
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              Non-Profit Board
+            </motion.button>
+            <motion.button
               onClick={() => setSelectedBoard('vcu')}
               className={`btn-dmc-primary ${
                 selectedBoard === 'vcu' ? '' : 'btn-dmc-secondary'
@@ -192,16 +202,6 @@ const AboutUsPage = () => {
               whileTap={{ scale: 0.95 }}
             >
               ODU Board
-            </motion.button>
-            <motion.button
-              onClick={() => setSelectedBoard('nonprofit')}
-              className={`btn-dmc-primary ${
-                selectedBoard === 'nonprofit' ? '' : 'btn-dmc-secondary'
-              }`}
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              Non-Profit Board
             </motion.button>
           </div>
           <motion.div
