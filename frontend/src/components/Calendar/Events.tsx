@@ -1,11 +1,36 @@
 const events = [
   {
+    title: "DMC Basketball Tournment",
+    start: "2025-11-08T19:00:00",
+    end: "2025-11-08T21:00:00"
+  },
+  {
+    title: "3rd DMC General Body Meeting",
+    start: "2025-11-19T19:00:00",
+    end: "2025-11-19T21:00:00"
+  },
+  {
+    title: "2nd DMC General Body Meeting",
+    start: "2025-10-15T19:00:00",
+    end: "2025-10-15T21:00:00"
+  },
+  {
+    title: "Linkedin Workshop",
+    start: "2025-10-09T18:00:00",
+    end: "2025-10-09T20::00"
+  },
+  {
+    title: "Intership Workshop",
+    start: "2025-10-02T18:00:00",
+    end: "2025-10-02T20:30:00"
+  },
+  {
     title: "DMC 8th Annual Mixer",
     start: "2025-09-07T16:00:00",
     end: "2025-09-07T19:00:00"
   },
   {
-    title: "DMC General Body Meeting",
+    title: "1st DMC General Body Meeting",
     start: "2025-09-24T19:00:00",
     end: "2025-09-24T21:00:00"
   },
