@@ -3,7 +3,7 @@ import React from 'react';
 import Image from 'next/image';
 import ButtonClientComponent from './ButtonClientComponent';
 import Countdown from './Countdown';
-import img1 from '../../assets/8TH_DMC_MIXER.png';
+import img1 from '../../assets/8TH_DMC_MIXER.PNG';
 
 const Home = () => {
   return (
