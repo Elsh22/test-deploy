@@ -5,7 +5,7 @@ import ButtonClientComponent from './ButtonClientComponent';
 import Countdown from './Countdown';
 import img1 from '../../assets/8TH_DMC_MIXER.PNG';
 
-const Home = () => {
+const Home = ({id}) => {
   return (
     <div className="relative w-full min-h-screen bg-gradient-to-b from-black via-black to-yellow-500 overflow-hidden font-home">
 
