@@ -200,8 +200,42 @@ import Kickball9 from "../../newassest/IMG_8852.jpg";
 import GitFitted1 from "../../newassest/git fitted 1-2.jpg";
 import GitFitted2 from "../../newassest/git fitted 1-4.jpg";
 import GitFitted3 from "../../newassest/git fitted 1-8.jpg";
+import SovoFair1 from "../../assets/IMG_9791-27-08-202500-44-02.png"
+import SovoFair2 from "../../assets/IMG_9822.png"
+import SovoFair3 from "../../assets/IMG_9832.png"
+import SovoFair4 from "../../assets/IMG_9843.png"
+import SovoFair5 from "../../assets/IMG_9843.png"
+import SovoFair6 from "../../assets/IMG_9849.png"
+import SovoFair7 from "../../assets/IMG_9866.png"
+import SovoFair8 from "../../assets/IMG_9903.png"
+import SovoFair9 from "../../assets/IMG_9905.png"
+import SovoFair10 from "../../assets/IMG_9914.png"
+import SovoFair11 from "../../assets/IMG_9925.png"
+import SovoFair12 from "../../assets/IMG_9926.png"
+import SovoFair13 from "../../assets/IMG_9933.png"
+import SovoFair14 from "../../assets/IMG_9934.png"
+import SovoFair15 from "../../assets/IMG_9937.png"
+import SovoFair16 from "../../assets/IMG_9944.png"
+import SovoFair17 from "../../assets/IMG_9957.png"
 
 const imageData = [
+  { id: 327, imgSrc: SovoFair17 },
+  { id: 326, imgSrc: SovoFair16 },
+  { id: 325, imgSrc: SovoFair15 },
+  { id: 324, imgSrc: SovoFair14 },
+  { id: 323, imgSrc: SovoFair13 },
+  { id: 322, imgSrc: SovoFair12 },
+  { id: 321, imgSrc: SovoFair11 },
+  { id: 320, imgSrc: SovoFair10 },
+  { id: 319, imgSrc: SovoFair9 },
+  { id: 318, imgSrc: SovoFair8 },
+  { id: 317, imgSrc: SovoFair7 },
+  { id: 316, imgSrc: SovoFair6 },
+  { id: 315, imgSrc: SovoFair5 },
+  { id: 314, imgSrc: SovoFair4 },
+  { id: 313, imgSrc: SovoFair3 },
+  { id: 312, imgSrc: SovoFair2 },
+  { id: 311, imgSrc: SovoFair1 },
   { id: 302, imgSrc: Kickball1 },
   { id: 303, imgSrc: Kickball2 },
   { id: 304, imgSrc: Kickball3 },
