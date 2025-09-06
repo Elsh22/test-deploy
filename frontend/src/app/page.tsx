@@ -1,6 +1,6 @@
 import React from 'react';
 import Home from '../components/Home/Home';
-import CommitteeAbout from '../components/Committee/CommitteeAbout'
+import CommitteeAbout from '../components/Committee/CommitteeAbout';
 import Commitee from '../components/Committee/Commitee';
 import Calendar from '../components/Calendar/Calendar';
 import Mentorship from '../components/Mentorship/Mentorship';
@@ -13,19 +13,20 @@ import FlyerPost from '../components/Calendar/flyer';
 import Youtube from '../components/Youtube/youtube';
 import Highlight from '../components/Highlights/Highlight';
 import Professional from '../components/ProfessionalAcademy/Professional';
-//  <Directory />
 
 const HomePage = () => {
   return (
     <div className='overflow-x-hidden'>
+      {/* Removed video for now */}
+
       <Home id="home" />
       <Mission id="about"/>
-      <Professional  />
+      <Professional />
       <Highlight />
       <Donor />
       <Youtube />
       <CommitteeAbout id="committee" />
-      <Commitee  />
+      <Commitee />
       <Mentorship id="mentorship" />
       <FlyerPost />
       <Calendar id="calendar"/>
@@ -35,5 +36,5 @@ const HomePage = () => {
     </div>
   );
 }
-export default HomePage;
 
+export default HomePage;
