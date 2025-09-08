@@ -15,7 +15,7 @@ import Sam from '../../assets/Sam2025.jpg';
 import Clyde from '../../assets/Clyde2025.jpg';
 import Shawn from '../../assets/Shawn2025.jpg';
 import Mo from '../../assets/Mo2025.jpg';
-import Eboard from '../../assets/Eboard2025.jpg';
+import Eboard from '../../assets/EBoard2025.jpg';
 
 interface AboutProps {
   id: string;
