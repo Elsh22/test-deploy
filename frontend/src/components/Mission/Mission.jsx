@@ -2,7 +2,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { TypingText } from '../../utils/CustomText';
-import IMG1 from '../../newassest/Ourmissionpicture.jpg'; // Ensure this import is correct
+import IMG1 from '../../assets/DMCKBPIC.jpg'; // Ensure this import is correct
 import styles from '../../styles/index';
 import { fadeIn, staggerContainer, planetVariants } from '../../utils/motion';
 

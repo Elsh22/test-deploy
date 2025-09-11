@@ -13,6 +13,7 @@ import FlyerPost from '../components/Calendar/flyer';
 import Youtube from '../components/Youtube/youtube';
 import Highlight from '../components/Highlights/Highlight';
 import Professional from '../components/ProfessionalAcademy/Professional';
+import VideoSection from '../components/VideoSection/VideoSection';
 
 const HomePage = () => {
   return (
@@ -20,6 +21,7 @@ const HomePage = () => {
       {/* Removed video for now */}
 
       <Home id="home" />
+      <VideoSection />
       <Mission id="about"/>
       <Professional />
       <Highlight />

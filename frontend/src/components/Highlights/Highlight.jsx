@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import Image from "next/image";
 import "./Highlight.css";
 import img1 from "../../newassest/sports4.jpg";
-import img2 from "../../newassest/Ourmissionpicture.jpg";
+import img2 from "../../assets/DMC2025MIX.jpg";
 import img4 from "../../newassest/creditunion_handup.jpg";
 import img5 from "../../newassest/darrellgettinglinkedin.jpg";
 import img3 from "../../newassest/suitday.jpg";
