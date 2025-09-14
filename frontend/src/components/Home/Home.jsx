@@ -27,8 +27,8 @@ const Home = ({ id }) => {
         <h1
           className="text-white text-8xl sm:text-6xl md:text-7xl font-bold"
           style={{
-            WebkitTextStroke: '0.1px gold', // Gold outline
-            color: 'white',               // Fill stays white
+            WebkitTextStroke: '0.000001px gold', // Gold outline
+            color: 'gold',               // Fill stays white
           }}
         >
           Developing Men of Color
