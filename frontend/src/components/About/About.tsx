@@ -39,7 +39,7 @@ const AboutTeam = () => {
 
   return (
     <div className="flex flex-col items-center mt-5">
-      <h1 className='text-center text-2xl font-bold w-full mb-5'>Meet the Eboard</h1>
+      <h1 className='text-center text-6xl font-bold w-full mb-5'>Meet the Eboard of DMC</h1>
       
       {/* Big Eboard Photo */}
       <Link href="/eboard">
@@ -53,7 +53,8 @@ const AboutTeam = () => {
         </div>
       </Link>
 
-      {/* Individual team member photos */}
+      {/* Individual team member photos (commented out) */}
+      {/*
       <div className="flex flex-wrap justify-center mt-5">
         {team.map((member, index) => (
           <Link key={index} href={`/eboard/${member.name.replace(/\s+/g, '-').toLowerCase()}`}>
@@ -67,6 +68,7 @@ const AboutTeam = () => {
           </Link>
         ))}
       </div>
+      */}
     </div>
   );
 };

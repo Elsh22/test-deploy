@@ -1,7 +1,7 @@
 'use client';
 import React from 'react';
 import Link from 'next/link';
-import Goode from '../../../assets/Goode.jpg';
+import Goode from '../../../assets/Goode2025.jpg';
 import Thomas from '../../../assets/Thomas.jpg';
 import Kaleb from '../../../assets/Kaleb2025.jpg';
 import Xavier from '../../../assets/Xavier2025.jpg';
@@ -36,24 +36,25 @@ const EboardPage = () => {
     { name: 'Thomas Chatman', role: 'Second Advisor', image: Thomas.src, link: '/eboard/second-advisor' },
   ];
 
-  return (
-    <div className="flex flex-col items-center py-10 bg-white">
-      <h1 className="text-3xl font-bold mb-10 text-black">E-Board Members</h1>
-      <div className="flex flex-wrap justify-center gap-10">
-        {team.map((member, index) => (
-          <Link key={index} href={member.link}>
-            <div className="cursor-pointer transition-all duration-300 hover:scale-110">
-              <div className="w-48 h-48 rounded-full border-4 border-black overflow-hidden hover:shadow-[0_0_20px_#FFD700] hover:border-yellow-400 transition-shadow duration-300">
-                <img src={member.image} alt={member.name} className="w-full h-full object-cover" />
-              </div>
-              <h3 className="text-center mt-4 font-semibold text-black">{member.name}</h3>
-              <p className="text-center text-black">{member.role}</p>
+return (
+  <div className="flex flex-col items-center pt-20 pb-10 bg-white">
+    <h1 className="text-6xl font-bold mb-10 text-black">E-Board Members</h1>
+    <div className="flex flex-wrap justify-center gap-10">
+      {team.map((member, index) => (
+        <Link key={index} href={member.link}>
+          <div className="cursor-pointer transition-all duration-300 hover:scale-110">
+            <div className="w-48 h-48 rounded-full border-4 border-black overflow-hidden hover:shadow-[0_0_20px_#FFD700] hover:border-yellow-400 transition-shadow duration-300">
+              <img src={member.image} alt={member.name} className="w-full h-full object-cover" />
             </div>
-          </Link>
-        ))}
-      </div>
+            <h3 className="text-center mt-4 font-semibold text-black">{member.name}</h3>
+            <p className="text-center text-black">{member.role}</p>
+          </div>
+        </Link>
+      ))}
     </div>
-  );
+  </div>
+);
+
 };
 
 export default EboardPage;

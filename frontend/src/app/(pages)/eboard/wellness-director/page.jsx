@@ -5,32 +5,36 @@ import Image from 'next/image';
 import Sam from '../../../../assets/Sam2025.jpg';
 
 const WellnessDirectorPage = () => {
-  return (
-    <div className="min-h-screen bg-white py-20 px-6 flex justify-center items-start">
-      <div className="max-w-5xl w-full grid grid-cols-1 md:grid-cols-2 gap-12">
-        
-        {/* Picture on the left */}
-        <div className="flex justify-center">
-          <div className="w-64 h-64 rounded-full overflow-hidden shadow-xl border-4 border-yellow-500">
-            <Image
-              src={Sam}
-              alt="Goode"
-              className="object-cover w-full h-full"
-            />
-          </div>
-        </div>
+   return (
+    <div className="flex flex-col md:flex-row items-center md:items-start justify-center min-h-screen bg-white px-6 py-16 gap-10 pt-28">
+      
+      {/* Left Side - Full Picture with LinkedIn */}
+      <div className="w-full md:w-1/2 flex justify-center">
+        <a
+          href="https://www.linkedin.com/in/samuel-brannen-ba47b82b4/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="transition-all duration-300 hover:shadow-[0_0_30px_#FFD700] rounded-lg"
+        >
+          <Image
+            src={Sam}
+            alt="Samuel Brannen"
+            className="rounded-lg shadow-lg w-full h-auto object-contain cursor-pointer"
+          />
+        </a>
+      </div>
 
-        {/* Bio on the right */}
-        <div className="flex flex-col justify-center">
-          <h1 className="text-3xl md:text-4xl font-bold text-black mb-4">
-            Samuel Brannen
-          </h1>
-          <p className="text-lg text-gray-700 leading-relaxed">
-            {/* Replace this with the actual bio */}
-            
-          </p>
-        </div>
-
+      {/* Right Side - Bio */}
+      <div className="w-full md:w-1/2 text-black flex flex-col justify-center">
+        <h1 className="text-8xl font-extrabold text-center mb-4">
+        Samuel Brannen
+        </h1>
+        <h2 className="text-6xl font-semibold text-center mb-8">
+        Wellness Director
+        </h2>
+        <p className="text-lg leading-relaxed text-justify">
+          {/* Bio content here */}
+        </p>
       </div>
     </div>
   );

@@ -48,7 +48,7 @@ const events = [
     imgSrc: img2,
     description:
       "A mixer event that brought together students and professionals for networking.",
-    videoUrl: "https://drive.google.com/file/d/1IrtvsugCM3E5MhykBckUDGn_CA0-RO0E/preview",
+    videoUrl: "https://drive.google.com/file/d/1gHdVsuv4e2fyipT3fbZJfi5nUcj7ACrR/preview",
   },
 ];
 

@@ -69,42 +69,50 @@ const Navbar = () => {
         </div>
 
         <div className={nav ? 'absolute top-0 left-0 right-0 bottom-0 flex justify-center items-center w-full h-screen bg-black text-center ease-in duration-300' : 'absolute top-0 left-[-100%] right-0 bottom-0 flex justify-center items-center w-full h-screen bg-black text-center ease-in duration-300'}>
-          <ul style={{ color: 'white' }}>
-            <li onClick={handleNav} className='p-4 text-4xl hover:text-gray-500 select-none'>
-              <Link href='/'>Home</Link>
-            </li>
-            <li className='p-4 text-4xl hover:text-gray-500 select-none flex items-center'>
-            <span onClick={toggleDropdown} style={{ display: 'flex', alignItems: 'center', cursor: 'pointer' }}>
-              Committees
-              <AiOutlineDown className={`ml-2 ${dropdown ? 'rotate-180' : ''}`} />
-            </span>
-              {dropdown && (
-                <ul className='bg-black text-white text-3xl space-y-2'>
-                  <li onClick={handleNav} className='p-2 text-4xl hover:text-gray-500 select-none flex items-center'><Link href='/#committee'>Committee</Link></li>
-                  <li onClick={handleNav} className='p-2 text-4xl hover:text-gray-500 select-none flex items-center'><Link href='/ACACommittee'>Academic Committee</Link></li>
-                  <li onClick={handleNav} className='p-2 text-4xl hover:text-gray-500 select-none flex items-center'><Link href='/CommCommittee'>Community Service Committee</Link></li>
-                  <li onClick={handleNav} className='p-2 text-4xl hover:text-gray-500 select-none flex items-center'><Link href='/ITCommittee'>Information Technology Committee</Link></li>
-                  <li onClick={handleNav} className='p-2 text-4xl hover:text-gray-500 select-none flex items-center'><Link href='/ProfCommittee'>Professional Development</Link></li>
-                  <li onClick={handleNav} className='p-2 text-4xl hover:text-gray-500 select-none flex items-center'><Link href='/SocCommittee'>Social Committee</Link></li>
-                </ul>
-              )}
-            </li>
-            <li onClick={handleNav} className='p-4 text-4xl hover:text-gray-500 select-none'>
-              <Link href='/#mentorship'>Mentorship</Link>
-            </li>
-            <li onClick={handleNav} className='p-4 text-4xl hover:text-gray-500 select-none'>
-              <Link href='/#sports'>Sports</Link>
-            </li>
-            <li onClick={handleNav} className='p-4 text-4xl hover:text-gray-500 select-none'>
-              <Link href='/#contact'>Contact</Link>
-            </li>
-            <li onClick={handleNav} className='p-4 text-4xl hover:text-gray-500 select-none'>
-              <Link href='/#about'>About</Link>
-            </li>
-            <li onClick={handleNav} className='p-4 text-4xl hover:text-gray-500 select-none'>
-              <Link href='/gallery'>Gallery</Link>
-            </li>
-          </ul>
+        <ul style={{ color: 'white' }}>
+  <li onClick={handleNav} className='p-4 text-4xl hover:text-gray-500 select-none'>
+    <Link href='/'>Home</Link>
+  </li>
+
+  <li className='p-4 text-4xl hover:text-gray-500 select-none flex items-center'>
+    <span onClick={toggleDropdown} style={{ display: 'flex', alignItems: 'center', cursor: 'pointer' }}>
+      Committees
+      <AiOutlineDown className={`ml-2 ${dropdown ? 'rotate-180' : ''}`} />
+    </span>
+    {dropdown && (
+      <ul className='bg-black text-white text-3xl space-y-2'>
+        <li onClick={handleNav} className='p-2 text-4xl hover:text-gray-500 select-none flex items-center'><Link href='/#committee'>Committee</Link></li>
+        <li onClick={handleNav} className='p-2 text-4xl hover:text-gray-500 select-none flex items-center'><Link href='/ACACommittee'>Academic Committee</Link></li>
+        <li onClick={handleNav} className='p-2 text-4xl hover:text-gray-500 select-none flex items-center'><Link href='/CommCommittee'>Community Service Committee</Link></li>
+        <li onClick={handleNav} className='p-2 text-4xl hover:text-gray-500 select-none flex items-center'><Link href='/ITCommittee'>Information Technology Committee</Link></li>
+        <li onClick={handleNav} className='p-2 text-4xl hover:text-gray-500 select-none flex items-center'><Link href='/ProfCommittee'>Professional Development</Link></li>
+        <li onClick={handleNav} className='p-2 text-4xl hover:text-gray-500 select-none flex items-center'><Link href='/SocCommittee'>Social Committee</Link></li>
+      </ul>
+    )}
+  </li>
+
+  <li onClick={handleNav} className='p-4 text-4xl hover:text-gray-500 select-none'>
+    <Link href='/#mentorship'>Mentorship</Link>
+  </li>
+  <li onClick={handleNav} className='p-4 text-4xl hover:text-gray-500 select-none'>
+    <Link href='/#sports'>Sports</Link>
+  </li>
+  <li onClick={handleNav} className='p-4 text-4xl hover:text-gray-500 select-none'>
+    <Link href='/#contact'>Contact</Link>
+  </li>
+  <li onClick={handleNav} className='p-4 text-4xl hover:text-gray-500 select-none'>
+    <Link href='/#about'>About</Link>
+  </li>
+  <li onClick={handleNav} className='p-4 text-4xl hover:text-gray-500 select-none'>
+    <Link href='/gallery'>Gallery</Link>
+  </li>
+
+  {/* New eBoard link */}
+  <li onClick={handleNav} className='p-4 text-4xl hover:text-gray-500 select-none'>
+    <Link href='/eboard'>E-Board</Link>
+  </li>
+</ul>
+
         </div>
       </div>
     </div>
