@@ -21,8 +21,8 @@ const events = [
   },
   {
     title: "Intership Workshop",
-    start: "2025-10-02T18:00:00",
-    end: "2025-10-02T20:30:00"
+    start: "2025-09-30T18:00:00",
+    end: "2025-09-30T20:30:00"
   },
   {
     title: "DMC 8th Annual Mixer",

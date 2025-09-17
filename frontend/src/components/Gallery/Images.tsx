@@ -217,8 +217,43 @@ import SovoFair14 from "../../assets/IMG_9934.png"
 import SovoFair15 from "../../assets/IMG_9937.png"
 import SovoFair16 from "../../assets/IMG_9944.png"
 import SovoFair17 from "../../assets/IMG_9957.png"
-
+import eigithMixer1 from "../../assets/DMCMIXER1.jpg"
+import eigithMixer2 from "../../assets/DMCMIXER2.jpg"
+import eigithMixer3 from "../../assets/DMCMIXER3.jpg"
+import eigithMixer4 from "../../assets/DMCMIXER4.jpg"
+import eigithMixer5 from "../../assets/DMCMIXER5.jpg"
+import eigithMixer6 from "../../assets/DMCMIXER6.jpg"
+import eigithMixer7 from "../../assets/DMCMIXER7.jpg"
+import eigithMixer8 from "../../assets/DMCMIXER8.jpg"
+import eigithMixer9 from "../../assets/DMCMIXER9.jpg"
+import eigithMixer10 from "../../assets/DMCMIXER10.jpg"
+import eigithMixer11 from "../../assets/DMCMIXER11.jpg"
+import eigithMixer12 from "../../assets/DMCMIXER12.jpg"
+import eigithMixer13 from "../../assets/DMCMIXER13.jpg"
+import eigithMixer14 from "../../assets/DMCMIXER14.jpg"
+import eigithMixer15 from "../../assets/DMCMIXER15.jpg"
+import eigithMixer16 from "../../assets/DMCMIXER16.jpg"
+import eigithMixer17 from "../../assets/DMCMIXER17.jpg"
+import eigithMixer18 from "../../assets/DMCMIXER18.jpg"
 const imageData = [
+  { id: 345, imgSrc: eigithMixer18 },
+  { id: 344, imgSrc: eigithMixer17 },
+  { id: 343, imgSrc: eigithMixer16 },
+  { id: 342, imgSrc: eigithMixer15 },
+  { id: 341, imgSrc: eigithMixer14 },
+  { id: 340, imgSrc: eigithMixer13 },
+  { id: 339, imgSrc: eigithMixer12 },
+  { id: 338, imgSrc: eigithMixer11 },
+  { id: 337, imgSrc: eigithMixer10 },
+  { id: 336, imgSrc: eigithMixer9 },
+  { id: 335, imgSrc: eigithMixer8 },
+  { id: 334, imgSrc: eigithMixer7 },
+  { id: 333, imgSrc: eigithMixer6 },
+  { id: 332, imgSrc: eigithMixer5 },
+  { id: 331, imgSrc: eigithMixer4 },
+  { id: 330, imgSrc: eigithMixer3 },
+  { id: 329, imgSrc: eigithMixer2 },
+  { id: 328, imgSrc: eigithMixer1 },
   { id: 327, imgSrc: SovoFair17 },
   { id: 326, imgSrc: SovoFair16 },
   { id: 325, imgSrc: SovoFair15 },
