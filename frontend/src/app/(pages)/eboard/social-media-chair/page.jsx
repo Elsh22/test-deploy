@@ -27,14 +27,53 @@ const SocialMediaChairPage = () => {
       {/* Right Side - Bio */}
       <div className="w-full md:w-1/2 text-black flex flex-col justify-center">
         <h1 className="text-8xl font-extrabold text-center mb-4">
-        Paul Adelugba
+          Paul Adelugba
         </h1>
         <h2 className="text-6xl font-semibold text-center mb-8">
-        Social Media Chair
+          Social Media Chair
         </h2>
-        <p className="text-lg leading-relaxed text-justify">
-          {/* Bio content here */}
-        </p>
+        
+        <ul className="list-disc list-inside space-y-3 text-3xl leading-relaxed">
+          <li>Mechanical Engineering major; minors in Mathematics & Aerospace Engineering</li>
+          <li>Senior</li>
+          <li>
+            Clubs/Orgs: DMC, ASU, NSU, NSBE
+          </li>
+          <li>
+            Plans after college: pursue further education into a Master’s degree
+          </li>
+          <li>
+            Instagram:{" "}
+            <a
+              href="https://instagram.com/pauladelugba"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-blue-600 hover:underline"
+            >
+              @pauladelugba
+            </a>
+          </li>
+          <li>
+            LinkedIn:{" "}
+            <a
+              href="https://www.linkedin.com/in/paul-adeugba/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-blue-600 hover:underline"
+            >
+              pauladelugba
+            </a>
+          </li>
+          <li>
+            Email:{" "}
+            <a
+              href="mailto:adelugbab@vcu.edu"
+              className="text-blue-600 hover:underline"
+            >
+              adelugbab@vcu.edu
+            </a>
+          </li>
+        </ul>
       </div>
     </div>
   );

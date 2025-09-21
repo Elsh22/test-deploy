@@ -31,12 +31,25 @@ const PresidentPage = () => {
         <h2 className="text-6xl font-semibold text-center mb-8">
           President
         </h2>
-        <p className="text-lg leading-relaxed text-justify">
-          {/* Bio content here */}
-        </p>
+        
+        <ul className="list-disc list-inside space-y-3 text-3xl leading-relaxed">
+          <li>Information Systems major with a Sports Management minor</li>
+          <li>Junior</li>
+          <li>Students Providing Aid (SPAid) – Vice President</li>
+          <li>NSBE – Member</li>
+          <li>
+            Plans after college: pursue a career in IT or Business and eventually 
+            create a scholarship fund to help students from his hometown break 
+            financial barriers
+          </li>
+          <li>Phone: (757) 646-6483</li>
+          <li>Work Email: <a href="mailto:Kalebbrown2023@gmaii.com" className="text-blue-600 hover:underline">Kalebbrown2023@gmaii.com</a></li>
+          <li>School Email: <a href="mailto:Brownkj7@vcu.edu" className="text-blue-600 hover:underline">Brownkj7@vcu.edu</a></li>
+        </ul>
       </div>
     </div>
   );
 };
 
 export default PresidentPage;
+

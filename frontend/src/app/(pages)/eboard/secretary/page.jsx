@@ -32,9 +32,23 @@ const SecretaryPage = () => {
           <h2 className="text-6xl font-semibold text-center mb-8">
             Secretary
           </h2>
-          <p className="text-lg leading-relaxed text-justify">
-            {/* Bio content here */}
-          </p>
+          
+          <ul className="list-disc list-inside space-y-3 text-3xl leading-relaxed">
+            <li>HPEX major with a concentration in Health Science</li>
+            <li>Chemistry minor, Pre-Dental track</li>
+            <li>Senior</li>
+            <li>President, Katie’s Art Project Chapter at VCU</li>
+            <li>Future plans: attend dental school</li>
+            <li>
+              Email:{" "}
+              <a 
+                href="mailto:munjwanikp@vcu.edu" 
+                className="text-blue-600 hover:underline"
+              >
+                munjwanikp@vcu.edu
+              </a>
+            </li>
+          </ul>
         </div>
       </div>
     );

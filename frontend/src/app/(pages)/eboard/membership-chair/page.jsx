@@ -27,14 +27,31 @@ const MembershipChairPage = () => {
       {/* Right Side - Bio */}
       <div className="w-full md:w-1/2 text-black flex flex-col justify-center">
         <h1 className="text-8xl font-extrabold text-center mb-4">
-        Naod Daniel
+          Naod Daniel
         </h1>
         <h2 className="text-6xl font-semibold text-center mb-8">
-        Membership Chair
+          Membership Chair
         </h2>
-        <p className="text-lg leading-relaxed text-justify">
-          {/* Bio content here */}
-        </p>
+        
+        <ul className="list-disc list-inside space-y-3 text-3xl leading-relaxed">
+          <li>Mechanical Engineering major</li>
+          <li>Member, National Society of Black Engineers (NSBE)</li>
+          <li>Member, Eritrean Student Association (ESA)</li>
+          <li>Junior</li>
+          <li>
+            Long-term goal: take over father’s construction business and grow it into a 
+            multi-million-dollar company using an engineering background to expand, modernize, and create opportunities
+          </li>
+          <li>
+            Email:{" "}
+            <a 
+              href="mailto:danielnt@vcu.edu" 
+              className="text-blue-600 hover:underline"
+            >
+              danielnt@vcu.edu
+            </a>
+          </li>
+        </ul>
       </div>
     </div>
   );

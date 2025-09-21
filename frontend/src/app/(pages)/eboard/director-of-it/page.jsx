@@ -27,14 +27,43 @@ const DirectorOfITPage = () => {
       {/* Right Side - Bio */}
       <div className="w-full md:w-1/2 text-black flex flex-col justify-center">
         <h1 className="text-8xl font-extrabold text-center mb-4">
-      Shawn Watson
+          Shawn Watson
         </h1>
         <h2 className="text-6xl font-semibold text-center mb-8">
-       Director of IT
+          Director of IT
         </h2>
-        <p className="text-lg leading-relaxed text-justify">
-          {/* Bio content here */}
-        </p>
+        
+        <ul className="list-disc list-inside space-y-3 text-3xl leading-relaxed">
+          <li>Computer Science major w/ a concentration in Software Engineering, Mathematics major with a minor in Applied Mathematics, Minor in Artificial Intelligence</li>
+          <li>Junior</li>
+          <li>President, Delta Upsilon Chapter of Phi Beta Sigma Fraternity, Inc.</li>
+          <li>Student Director, Emerging Leaders Program</li>
+          <li>Member, National Society of Black Engineers</li>
+          <li>
+            Plans after college: Startup a video game company and become a professor at an HBCU
+          </li>
+          <li>
+            Email:{" "}
+            <a
+              href="mailto:watsonsm2@vcu.edu"
+              className="text-blue-600 hover:underline"
+            >
+              watsonsm2@vcu.edu
+            </a>
+          </li>
+          <li>Phone: 757-310-7370</li>
+          <li>
+            Instagram:{" "}
+            <a
+              href="https://instagram.com/realshawnnnn"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-blue-600 hover:underline"
+            >
+              @realshawnnnn
+            </a>
+          </li>
+        </ul>
       </div>
     </div>
   );

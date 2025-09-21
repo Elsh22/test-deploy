@@ -32,9 +32,34 @@ const VicePresidentPage = () => {
         <h2 className="text-6xl font-semibold text-center mb-8">
           Vice President
         </h2>
-        <p className="text-lg leading-relaxed text-justify">
-          {/* Bio content here */}
-        </p>
+        
+        <ul className="list-disc list-inside space-y-3 text-3xl leading-relaxed">
+          <li>Biology major, with minors in Chemistry and Pre-Dentistry</li>
+          <li>President, Eta Xi Chapter of Kappa Alpha Psi Fraternity, Inc.</li>
+          <li>Pre-Dental Ambassador, Black Men in Medicine</li>
+          <li>Academic Chair, National Pan-Hellenic Council</li>
+          <li>Future plans: attend dental school and attain a D.D.S.</li>
+          <li>
+            Email:{" "}
+            <a 
+              href="mailto:lewisxm@vcu.edu" 
+              className="text-blue-600 hover:underline"
+            >
+              lewisxm@vcu.edu
+            </a>
+          </li>
+          <li>
+            Instagram:{" "}
+            <a 
+              href="https://instagram.com/xvrlws" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="text-blue-600 hover:underline"
+            >
+              @xvrlws
+            </a>
+          </li>
+        </ul>
       </div>
     </div>
   );

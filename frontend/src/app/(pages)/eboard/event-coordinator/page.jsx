@@ -27,14 +27,38 @@ const EventCoordinatorPage = () => {
       {/* Right Side - Bio */}
       <div className="w-full md:w-1/2 text-black flex flex-col justify-center">
         <h1 className="text-8xl font-extrabold text-center mb-4">
-        Clyde Clark III
+          Clyde Clark III
         </h1>
         <h2 className="text-6xl font-semibold text-center mb-8">
-        Event Coordinator
+          Event Coordinator
         </h2>
-        <p className="text-lg leading-relaxed text-justify">
-          {/* Bio content here */}
-        </p>
+        
+        <ul className="list-disc list-inside space-y-3 text-3xl leading-relaxed">
+          <li>Business Management major with a focus in Finance</li>
+          <li>Junior</li>
+          <li>Clubs/Orgs: VCU Professional Selling Team, VCU Young Democrats</li>
+          <li>Plans after college: Pursue a career in Banking</li>
+          <li>
+            Instagram:{" "}
+            <a
+              href="https://instagram.com/clyde.c3"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-blue-600 hover:underline"
+            >
+              @clyde.c3
+            </a>
+          </li>
+          <li>
+            Email:{" "}
+            <a
+              href="mailto:clarkct2@vcu.edu"
+              className="text-blue-600 hover:underline"
+            >
+              clarkct2@vcu.edu
+            </a>
+          </li>
+        </ul>
       </div>
     </div>
   );
