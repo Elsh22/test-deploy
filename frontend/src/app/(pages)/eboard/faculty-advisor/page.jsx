@@ -2,7 +2,7 @@ import Image from "next/image";
 import Goode from "../../../../assets/Goode2025.jpg"; // adjust path if needed
 
 const GoodePage = () => {
-    return (
+  return (
     <div className="flex flex-col md:flex-row items-center md:items-start justify-center min-h-screen bg-white px-6 py-16 gap-10 pt-28">
       
       {/* Left Side - Full Picture with LinkedIn */}
@@ -24,14 +24,23 @@ const GoodePage = () => {
       {/* Right Side - Bio */}
       <div className="w-full md:w-1/2 text-black flex flex-col justify-center">
         <h1 className="text-8xl font-extrabold text-center mb-4">
-        Dr. Carlton Goode
+          Dr. Carlton Goode
         </h1>
         <h2 className="text-6xl font-semibold text-center mb-8">
-        Faculty Advisor
+          Faculty Advisor
         </h2>
-        <p className="text-lg leading-relaxed text-justify">
-          {/* Bio content here */}
-        </p>
+        <ul className="list-disc list-inside text-3xl leading-relaxed space-y-3">
+          <li>Director of Intercultural Success & Initiatives</li>
+          <li>Bachelor of Arts in Psychology — Shaw University</li>
+          <li>Master of Science in Student Development — University of Iowa</li>
+          <li>Doctorate in Education Leadership — Virginia Commonwealth University</li>
+          <li>
+            I advise DMC because I see myself in the young me who walks into the room. 
+            Advising DMC gives me the chance to create that space for others — a space 
+            where men of color can show up as they are and be celebrated for who they are, 
+            while being challenged and supported at the same time.
+          </li>
+        </ul>
       </div>
     </div>
   );
