@@ -2,7 +2,7 @@
 import React from 'react';
 import Image from 'next/image';
 import ButtonClientComponent from './ButtonClientComponent';
-import img1 from '../../assets/DMC_MIXER_PHOTO.jpg';
+import img1 from '../../assets/DMCMIXER8/DMC_MIXER_PHOTO.jpg';
 
 const Home = ({ id }) => {
   return (

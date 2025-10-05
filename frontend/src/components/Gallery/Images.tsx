@@ -1,6 +1,6 @@
-import img2 from "../../assets/2.png";
-import img3 from "../../assets/3.png";
-import img15 from "../../assets/15.png";
+import img2 from "../../assets/Miscellaneous/2.png";
+import img3 from "../../assets/Miscellaneous/3.png";
+import img15 from "../../assets/Miscellaneous/15.png";
 import img16 from "../../newassest/Benford.jpg";
 import img17 from "../../newassest/Benford2.jpg";
 import img18 from "../../newassest/home.jpg";
@@ -200,41 +200,40 @@ import Kickball9 from "../../newassest/IMG_8852.jpg";
 import GitFitted1 from "../../newassest/git fitted 1-2.jpg";
 import GitFitted2 from "../../newassest/git fitted 1-4.jpg";
 import GitFitted3 from "../../newassest/git fitted 1-8.jpg";
-import SovoFair1 from "../../assets/IMG_9791-27-08-202500-44-02.png"
-import SovoFair2 from "../../assets/IMG_9822.png"
-import SovoFair3 from "../../assets/IMG_9832.png"
-import SovoFair4 from "../../assets/IMG_9843.png"
-import SovoFair5 from "../../assets/IMG_9843.png"
-import SovoFair6 from "../../assets/IMG_9849.png"
-import SovoFair7 from "../../assets/IMG_9866.png"
-import SovoFair8 from "../../assets/IMG_9903.png"
-import SovoFair9 from "../../assets/IMG_9905.png"
-import SovoFair10 from "../../assets/IMG_9914.png"
-import SovoFair11 from "../../assets/IMG_9925.png"
-import SovoFair12 from "../../assets/IMG_9926.png"
-import SovoFair13 from "../../assets/IMG_9933.png"
-import SovoFair14 from "../../assets/IMG_9934.png"
-import SovoFair15 from "../../assets/IMG_9937.png"
-import SovoFair16 from "../../assets/IMG_9944.png"
-import SovoFair17 from "../../assets/IMG_9957.png"
-import eigithMixer1 from "../../assets/DMCMIXER1.jpg"
-import eigithMixer2 from "../../assets/DMCMIXER2.jpg"
-import eigithMixer3 from "../../assets/DMCMIXER3.jpg"
-import eigithMixer4 from "../../assets/DMCMIXER4.jpg"
-import eigithMixer5 from "../../assets/DMCMIXER5.jpg"
-import eigithMixer6 from "../../assets/DMCMIXER6.jpg"
-import eigithMixer7 from "../../assets/DMCMIXER7.jpg"
-import eigithMixer8 from "../../assets/DMCMIXER8.jpg"
-import eigithMixer9 from "../../assets/DMCMIXER9.jpg"
-import eigithMixer10 from "../../assets/DMCMIXER10.jpg"
-import eigithMixer11 from "../../assets/DMCMIXER11.jpg"
-import eigithMixer12 from "../../assets/DMCMIXER12.jpg"
-import eigithMixer13 from "../../assets/DMCMIXER13.jpg"
-import eigithMixer14 from "../../assets/DMCMIXER14.jpg"
-import eigithMixer15 from "../../assets/DMCMIXER15.jpg"
-import eigithMixer16 from "../../assets/DMCMIXER16.jpg"
-import eigithMixer17 from "../../assets/DMCMIXER17.jpg"
-import eigithMixer18 from "../../assets/DMCMIXER18.jpg"
+import SovoFair1 from "../../assets/SOVO-FAIR-2025/SOVO2025-1.png"
+import SovoFair2 from "../../assets/SOVO-FAIR-2025/SOVO2025-2.png"
+import SovoFair3 from "../../assets/SOVO-FAIR-2025/SOVO2025-3.png"
+import SovoFair4 from "../../assets/SOVO-FAIR-2025/SOVO2025-4.png"
+import SovoFair5 from "../../assets/SOVO-FAIR-2025/SOVO2025-5.png"
+import SovoFair6 from "../../assets/SOVO-FAIR-2025/SOVO2025-6.png"
+import SovoFair7 from "../../assets/SOVO-FAIR-2025/SOVO2025-7.png"
+import SovoFair8 from "../../assets/SOVO-FAIR-2025/SOVO2025-8.png"
+import SovoFair9 from "../../assets/SOVO-FAIR-2025/SOVO2025-9.png"
+import SovoFair10 from "../../assets/SOVO-FAIR-2025/SOVO2025-10.png"
+import SovoFair11 from "../../assets/SOVO-FAIR-2025/SOVO2025-11.png"
+import SovoFair12 from "../../assets/SOVO-FAIR-2025/SOVO2025-12.png"
+import SovoFair13 from "../../assets/SOVO-FAIR-2025/SOVO2025-13.png"
+import SovoFair14 from "../../assets/SOVO-FAIR-2025/SOVO2025-14.png"
+import SovoFair15 from "../../assets/SOVO-FAIR-2025/SOVO2025-15.png"
+import eigithMixer1 from "../../assets/DMCMIXER8/DMCMIXER1.jpg";
+import eigithMixer2 from "../../assets/DMCMIXER8/DMCMIXER2.jpg";
+import eigithMixer3 from "../../assets/DMCMIXER8/DMCMIXER3.jpg";
+import eigithMixer4 from "../../assets/DMCMIXER8/DMCMIXER4.jpg";
+import eigithMixer5 from "../../assets/DMCMIXER8/DMCMIXER5.jpg";
+import eigithMixer6 from "../../assets/DMCMIXER8/DMCMIXER6.jpg";
+import eigithMixer7 from "../../assets/DMCMIXER8/DMCMIXER7.jpg";
+import eigithMixer8 from "../../assets/DMCMIXER8/DMCMIXER8.jpg";
+import eigithMixer9 from "../../assets/DMCMIXER8/DMCMIXER9.jpg";
+import eigithMixer10 from "../../assets/DMCMIXER8/DMCMIXER10.jpg";
+import eigithMixer11 from "../../assets/DMCMIXER8/DMCMIXER11.jpg";
+import eigithMixer12 from "../../assets/DMCMIXER8/DMCMIXER12.jpg";
+import eigithMixer13 from "../../assets/DMCMIXER8/DMCMIXER13.jpg";
+import eigithMixer14 from "../../assets/DMCMIXER8/DMCMIXER14.jpg";
+import eigithMixer15 from "../../assets/DMCMIXER8/DMCMIXER15.jpg";
+import eigithMixer16 from "../../assets/DMCMIXER8/DMCMIXER16.jpg";
+import eigithMixer17 from "../../assets/DMCMIXER8/DMCMIXER17.jpg";
+import eigithMixer18 from "../../assets/DMCMIXER8/DMCMIXER18.jpg";
+
 const imageData = [
   { id: 345, imgSrc: eigithMixer18 },
   { id: 344, imgSrc: eigithMixer17 },
@@ -254,8 +253,6 @@ const imageData = [
   { id: 330, imgSrc: eigithMixer3 },
   { id: 329, imgSrc: eigithMixer2 },
   { id: 328, imgSrc: eigithMixer1 },
-  { id: 327, imgSrc: SovoFair17 },
-  { id: 326, imgSrc: SovoFair16 },
   { id: 325, imgSrc: SovoFair15 },
   { id: 324, imgSrc: SovoFair14 },
   { id: 323, imgSrc: SovoFair13 },

@@ -20,7 +20,7 @@ html {
 }
 
 .custom-img {
-  background-image: url('../assets/mixer_background.jpg');
+  background-image: url('/mixer_background.jpg');
 }
 
 
