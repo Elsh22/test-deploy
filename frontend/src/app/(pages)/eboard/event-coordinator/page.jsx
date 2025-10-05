@@ -2,7 +2,7 @@
 import React from 'react';
 import Image from 'next/image';
 
-import Clyde from '../../../../assets/Clyde2025.jpg';
+import Clyde from '../../../../assets/EBOARD2025/Clyde2025.jpg';
 
 const EventCoordinatorPage = () => {
    return (
