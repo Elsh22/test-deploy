@@ -1,4 +1,5 @@
 "use client";
+
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -20,8 +21,15 @@ import Professional from "../components/ProfessionalAcademy/Professional";
 import VideoSection from "../components/VideoSection/VideoSection";
 import SundaySpotlight from "../components/SundaySpotlight/SundaySpotlight";
 import OtherChapters from "../components/OtherChapters/chapters.jsx";
-// Splash screen component
-const LoadingScreen = ({ onFinish }) => {
+
+// ------------------------
+// LoadingScreen Component
+// ------------------------
+interface LoadingScreenProps {
+  onFinish: () => void; // explicitly type the prop
+}
+
+const LoadingScreen: React.FC<LoadingScreenProps> = ({ onFinish }) => {
   useEffect(() => {
     const timer = setTimeout(() => {
       onFinish();
@@ -38,7 +46,7 @@ const LoadingScreen = ({ onFinish }) => {
       transition={{ duration: 1.5 }}
     >
       <motion.h1
-        className="text-6xl md:text-9xl font-extrabold text-yellow-400"
+        className="text-6xl md:text-9xl font-extrabold text-yellow-400 text-center"
         initial={{ opacity: 0, textShadow: "0 0 0px #FFD700" }}
         animate={{ opacity: 1, textShadow: "0 0 25px #FFD700" }}
         transition={{ duration: 2 }}
@@ -49,8 +57,11 @@ const LoadingScreen = ({ onFinish }) => {
   );
 };
 
-const HomePage = () => {
-  const [loading, setLoading] = useState(true);
+// ------------------------
+// HomePage Component
+// ------------------------
+const HomePage: React.FC = () => {
+  const [loading, setLoading] = useState<boolean>(true);
 
   return (
     <>
