@@ -1,8 +1,8 @@
 import { motion, useTransform, useScroll } from "framer-motion";
 import { useRef } from "react";
 import Image from 'next/image';
-import img1 from '../../../../assets/1.png';
-import img2 from '../../../../assets/3.png';
+import img1 from '../../../../assets/Miscellaneous/1.png';
+import img2 from '../../../../assets/Miscellaneous/3.png';
 import img3 from '../../../../newassest/home3.jpg';
 import img4 from '../../../../newassest/lunch.jpg';
 import img5 from '../../../../newassest/lunch2.jpeg';

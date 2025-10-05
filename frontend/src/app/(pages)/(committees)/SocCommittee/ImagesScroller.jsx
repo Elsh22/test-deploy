@@ -6,7 +6,7 @@ import img2 from '../../../../newassest/sports5.jpg';
 import img3 from '../../../../newassest/social3.jpg';
 import img4 from '../../../../newassest/sports6.jpg';
 import img5 from '../../../../newassest/football01.jpg';
-import img6 from '../../../../assets/2.png';
+import img6 from '../../../../assets/Miscellaneous/2.png';
 
 const Example = () => {
   return (

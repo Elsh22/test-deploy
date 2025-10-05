@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import DMCOlympicsImg from '../../../../assets/2.png'; 
+import DMCOlympicsImg from '../../../../assets/Miscellaneous/2.png'; 
 import SportsEventImg from '../../../../newassest/Soccerball.JPG';
 import Sports from '../../../../newassest/sports3.jpg'
 
