@@ -2,7 +2,7 @@
 import React from 'react';
 import Image from 'next/image';
 
-import Thomas from '../../../../assets/Thomas.jpg';
+import Thomas from '../../../../assets/EBOARD2024/Thomas.jpg';
 
 const SecondAdvisorPage = () => {
      return (

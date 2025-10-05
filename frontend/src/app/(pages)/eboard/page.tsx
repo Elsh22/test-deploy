@@ -1,22 +1,21 @@
 'use client';
 import React from 'react';
 import Link from 'next/link';
-import Goode from '../../../assets/Goode2025.jpg';
-import Thomas from '../../../assets/Thomas.jpg';
-import Kaleb from '../../../assets/Kaleb2025.jpg';
-import Xavier from '../../../assets/Xavier2025.jpg';
-import Kwame from '../../../assets/Kwame2025.jpg';
-import Kabir from '../../../assets/Kabir2025.jpg';
-import Sean from '../../../assets/Sean2025.jpg';
-import Thurman from '../../../assets/Thurman.jpg';
-import Jason from '../../../assets/Jason2025.jpg';
-import Paul from '../../../assets/Paul2025.jpg';
-import Naod from '../../../assets/Naod2025.jpg';
-import Sam from '../../../assets/Sam2025.jpg';
-import Clyde from '../../../assets/Clyde2025.jpg';
-import Shawn from '../../../assets/Shawn2025.jpg';
-import Mo from '../../../assets/Mo2025.jpg';
-
+import Goode from '../../../assets/EBOARD2025/Goode2025.jpg';
+import Thomas from '../../../assets/EBOARD2024/Thomas.jpg';
+import Kaleb from '../../../assets/EBOARD2025/Kaleb2025.jpg';
+import Xavier from '../../../assets/EBOARD2025/Xavier2025.jpg';
+import Kwame from '../../../assets/EBOARD2025/Kwame2025.jpg';
+import Kabir from '../../../assets/EBOARD2025/Kabir2025.jpg';
+import Sean from '../../../assets/EBOARD2025/Sean2025.jpg';
+import Thurman from '../../../assets/EBOARD2025/Thurman.jpg';
+import Jason from '../../../assets/EBOARD2025/Jason2025.jpg';
+import Paul from '../../../assets/EBOARD2025/Paul2025.jpg';
+import Naod from '../../../assets/EBOARD2025/Naod2025.jpg';
+import Sam from '../../../assets/EBOARD2025/Sam2025.jpg';
+import Clyde from '../../../assets/EBOARD2025/Clyde2025.jpg';
+import Shawn from '../../../assets/EBOARD2025/Shawn2025.jpg';
+import Mo from '../../../assets/EBOARD2025/Mo2025.jpg';
 const EboardPage = () => {
   const team = [
     { name: 'Kaleb Brown', role: 'President', image: Kaleb.src, link: '/eboard/president' },

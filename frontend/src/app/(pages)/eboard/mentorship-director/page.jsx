@@ -2,7 +2,7 @@
 import React from 'react';
 import Image from 'next/image';
 
-import Thurman from '../../../../assets/Thurman.jpg';
+import Thurman from '../../../../assets/EBOARD2025/Thurman.jpg';
 
 const MentorshipDirectorPage = () => {
    return (
@@ -34,12 +34,12 @@ const MentorshipDirectorPage = () => {
         </h2>
         
         <ul className="list-disc list-inside space-y-3 text-3xl leading-relaxed">
-          <li>Bachelor of Science in Electrical Engineering</li>
-          <li>Junior, Class of 2027</li>
-          <li>Vice President, National Society of Black Engineers @ VCU</li>
-          <li>Vice President, Black Student Union @ VCU</li>
+          <li>Major: Bachelor of Science in Electrical Engineering</li>
+          <li>Class: Junior, Class of 2027</li>
+          <li>Org Position: Vice President, National Society of Black Engineers @ VCU</li>
+          <li>Org Position: Vice President, Black Student Union @ VCU</li>
           <li>
-            Plans: Work with father as an Electrical Contractor or pursue a career as an Electrical Design Engineer
+            Future Plans: Work with father as an Electrical Contractor or pursue a career as an Electrical Design Engineer
           </li>
           <li>
             School Email:{" "}

@@ -1,7 +1,7 @@
 'use client';
 import React from 'react';
 import Image from 'next/image';
-import Kaleb from '../../../../assets/Kaleb2025.jpg';
+import Kaleb from '../../../../assets/EBOARD2025/Kaleb2025.jpg';
 
 const PresidentPage = () => {
   return (
@@ -33,12 +33,12 @@ const PresidentPage = () => {
         </h2>
         
         <ul className="list-disc list-inside space-y-3 text-3xl leading-relaxed">
-          <li>Information Systems major with a Sports Management minor</li>
-          <li>Junior</li>
-          <li>Students Providing Aid (SPAid) – Vice President</li>
-          <li>NSBE – Member</li>
+          <li>Major: Information Systems major with a Sports Management minor</li>
+          <li>Class: Junior</li>
+          <li>Org Position: Students Providing Aid (SPAid) – Vice President</li>
+          <li>Org Position: NSBE – Member</li>
           <li>
-            Plans after college: pursue a career in IT or Business and eventually 
+            Future Plans: pursue a career in IT or Business and eventually 
             create a scholarship fund to help students from his hometown break 
             financial barriers
           </li>

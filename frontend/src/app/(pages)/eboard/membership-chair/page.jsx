@@ -2,7 +2,7 @@
 import React from 'react';
 import Image from 'next/image';
 
-import Naod from '../../../../assets/Naod2025.jpg';
+import Naod from '../../../../assets/EBOARD2025/Naod2025.jpg';
 
 const MembershipChairPage = () => {
   return (
@@ -34,12 +34,12 @@ const MembershipChairPage = () => {
         </h2>
         
         <ul className="list-disc list-inside space-y-3 text-3xl leading-relaxed">
-          <li>Mechanical Engineering major</li>
-          <li>Member, National Society of Black Engineers (NSBE)</li>
-          <li>Member, Eritrean Student Association (ESA)</li>
-          <li>Junior</li>
+          <li>Major: Mechanical Engineering major</li>
+          <li>Class: Junior</li>
+          <li>Org Position: Member, National Society of Black Engineers (NSBE)</li>
+          <li>Org Position: Member, Eritrean Student Association (ESA)</li>
           <li>
-            Long-term goal: take over father’s construction business and grow it into a 
+            Future Plans: take over father’s construction business and grow it into a 
             multi-million-dollar company using an engineering background to expand, modernize, and create opportunities
           </li>
           <li>

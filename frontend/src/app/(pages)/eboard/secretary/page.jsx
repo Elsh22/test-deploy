@@ -2,7 +2,7 @@
 import React from 'react';
 import Image from 'next/image';
 
-import Kabir from '../../../../assets/Kabir2025.jpg';
+import Kabir from '../../../../assets/EBOARD2025/Kabir2025.jpg';
 
 const SecretaryPage = () => {
     return (
@@ -34,11 +34,10 @@ const SecretaryPage = () => {
           </h2>
           
           <ul className="list-disc list-inside space-y-3 text-3xl leading-relaxed">
-            <li>HPEX major with a concentration in Health Science</li>
-            <li>Chemistry minor, Pre-Dental track</li>
-            <li>Senior</li>
-            <li>President, Katie’s Art Project Chapter at VCU</li>
-            <li>Future plans: attend dental school</li>
+            <li>Major: HPEX major with a concentration in Health Science, Chemistry minor, Pre-Dental track</li>
+            <li>Class: Senior</li>
+            <li>Org Position: President, Katie’s Art Project Chapter at VCU</li>
+            <li>Future plans: Attend dental school</li>
             <li>
               Email:{" "}
               <a 

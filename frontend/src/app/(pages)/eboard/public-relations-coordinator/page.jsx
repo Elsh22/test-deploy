@@ -2,7 +2,7 @@
 import React from 'react';
 import Image from 'next/image';
 
-import Jason from '../../../../assets/Jason2025.jpg';
+import Jason from '../../../../assets/EBOARD2025/Jason2025.jpg';
 
 const PublicRelationsPage = () => {
   return (
@@ -34,10 +34,10 @@ const PublicRelationsPage = () => {
         </h2>
         
         <ul className="list-disc list-inside space-y-3 text-3xl leading-relaxed">
-          <li>Marketing major with a Minor in Sports/Fitness Management</li>
-          <li>Senior</li>
+          <li>Major: Marketing major with a Minor in Sports/Fitness Management</li>
+          <li>Class: Senior</li>
           <li>
-            Plans after college: Continue growing and expanding media production business, Visualize Collective Media; pursue opportunities in sports marketing, with focus on NBA career
+            Future Plans: Continue growing and expanding media production business, Visualize Collective Media; pursue opportunities in sports marketing, with focus on NBA career
           </li>
           <li>
             Personal Instagram:{" "}

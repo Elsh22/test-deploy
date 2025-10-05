@@ -2,7 +2,7 @@
 import React from 'react';
 import Image from 'next/image';
 
-import Mo from '../../../../assets/Mo2025.jpg';
+import Mo from '../../../../assets/EBOARD2025/Mo2025.jpg';
 
 const DirectorOfCommitteesPage = () => {
    return (
@@ -34,10 +34,10 @@ const DirectorOfCommitteesPage = () => {
         </h2>
         
         <ul className="list-disc list-inside space-y-3 text-3xl leading-relaxed">
-          <li>Management Information Systems / AI major</li>
-          <li>Junior</li>
-          <li>Clubs/Orgs: DMC, VCU Professional Selling Team</li>
-          <li>Plans after college: pursue a career in Data Analytics or Tech Risk</li>
+          <li>Major: Management Information Systems / AI major</li>
+          <li>Class: Junior</li>
+          <li>Org Positions: DMC, VCU Professional Selling Team</li>
+          <li>Future Plans: pursue a career in Data Analytics or Tech Risk</li>
           <li>
             LinkedIn:{" "}
             <a

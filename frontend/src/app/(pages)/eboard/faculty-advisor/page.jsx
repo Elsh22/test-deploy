@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Goode from "../../../../assets/Goode2025.jpg"; // adjust path if needed
+import Goode from "../../../../assets/EBOARD2025/Goode2025.jpg"; // adjust path if needed
 
 const GoodePage = () => {
   return (

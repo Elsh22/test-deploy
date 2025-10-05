@@ -2,7 +2,7 @@
 import React from 'react';
 import Image from 'next/image';
 
-import Xavier from '../../../../assets/Xavier2025.jpg';
+import Xavier from '../../../../assets/EBOARD2025/Xavier2025.jpg';
 
 const VicePresidentPage = () => {
    return (
@@ -34,11 +34,12 @@ const VicePresidentPage = () => {
         </h2>
         
         <ul className="list-disc list-inside space-y-3 text-3xl leading-relaxed">
-          <li>Biology major, with minors in Chemistry and Pre-Dentistry</li>
-          <li>President, Eta Xi Chapter of Kappa Alpha Psi Fraternity, Inc.</li>
-          <li>Pre-Dental Ambassador, Black Men in Medicine</li>
-          <li>Academic Chair, National Pan-Hellenic Council</li>
-          <li>Future plans: attend dental school and attain a D.D.S.</li>
+          <li>Major: Biology major, with minors in Chemistry and Pre-Dentistry</li>
+          <li>Class: Senior</li>
+          <li>Org Position: President, Eta Xi Chapter of Kappa Alpha Psi Fraternity, Inc.</li>
+          <li>Org Position: Pre-Dental Ambassador, Black Men in Medicine</li>
+          <li>Org Position: Academic Chair, National Pan-Hellenic Council</li>
+          <li>Future plans: Attend dental school and attain a D.D.S.</li>
           <li>
             Email:{" "}
             <a 

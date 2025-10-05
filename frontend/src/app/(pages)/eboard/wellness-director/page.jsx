@@ -2,7 +2,7 @@
 import React from 'react';
 import Image from 'next/image';
 
-import Sam from '../../../../assets/Sam2025.jpg';
+import Sam from '../../../../assets/EBOARD2025/Sam2025.jpg';
 
 const WellnessDirectorPage = () => {
    return (
@@ -34,10 +34,10 @@ const WellnessDirectorPage = () => {
         </h2>
         
         <ul className="list-disc list-inside space-y-3 text-3xl leading-relaxed">
-          <li>Computer Science major with a concentration in Cybersecurity</li>
-          <li>Junior</li>
-          <li>Member, NSBA</li>
-          <li>Plans: pursue a career in Cybersecurity</li>
+          <li>Major: Computer Science major with a concentration in Cybersecurity</li>
+          <li>Class: Junior</li>
+          <li>Org Position: Member NSBA</li>
+          <li>Future Plans: Pursue a career in Cybersecurity</li>
           <li>
             Instagram:{" "}
             <a

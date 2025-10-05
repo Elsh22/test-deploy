@@ -2,7 +2,7 @@
 import React from 'react';
 import Image from 'next/image';
 
-import Shawn from '../../../../assets/Shawn2025.jpg';
+import Shawn from '../../../../assets/EBOARD2025/Shawn2025.jpg';
 
 const DirectorOfITPage = () => {
     return (
@@ -34,13 +34,13 @@ const DirectorOfITPage = () => {
         </h2>
         
         <ul className="list-disc list-inside space-y-3 text-3xl leading-relaxed">
-          <li>Computer Science major w/ a concentration in Software Engineering, Mathematics major with a minor in Applied Mathematics, Minor in Artificial Intelligence</li>
-          <li>Junior</li>
-          <li>President, Delta Upsilon Chapter of Phi Beta Sigma Fraternity, Inc.</li>
-          <li>Student Director, Emerging Leaders Program</li>
-          <li>Member, National Society of Black Engineers</li>
+          <li>Major: Computer Science major w/ a concentration in Software Engineering, Mathematics major with a minor in Applied Mathematics, Minor in Artificial Intelligence</li>
+          <li>Class: Junior</li>
+          <li>Org Position: President, Delta Upsilon Chapter of Phi Beta Sigma Fraternity, Inc.</li>
+          <li>Org Position: Student Director, Emerging Leaders Program</li>
+          <li>Org Position: Member, National Society of Black Engineers</li>
           <li>
-            Plans after college: Startup a video game company and become a professor at an HBCU
+            Future Plans: Startup a video game company and become a professor at an HBCU
           </li>
           <li>
             Email:{" "}

@@ -2,7 +2,7 @@
 import React from 'react';
 import Image from 'next/image';
 
-import Kwame from '../../../../assets/Kwame2025.jpg';
+import Kwame from '../../../../assets/EBOARD2025/Kwame2025.jpg';
 
 const ParliamentarianPage = () => {
    return (
@@ -34,10 +34,10 @@ const ParliamentarianPage = () => {
           </h2>
           
           <ul className="list-disc list-inside space-y-3 text-3xl leading-relaxed">
-            <li>Computer Science major; concentration in Cybersecurity and Minor in General Business</li>
-            <li>Senior</li>
+            <li>Major: Computer Science major; concentration in Cybersecurity and Minor in General Business</li>
+            <li>Class: Senior</li>
             <li>
-              Plans after college: Aspiring Ethical Hacker/Penetration Tester, move to Charlotte, NC or Dallas, TX, travel the world, build own business
+              Future Plans: Aspiring Ethical Hacker/Penetration Tester, move to Charlotte, NC or Dallas, TX, travel the world, build own business
             </li>
             <li>
               LinkedIn:{" "}

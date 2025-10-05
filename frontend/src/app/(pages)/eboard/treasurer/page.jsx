@@ -2,7 +2,7 @@
 import React from 'react';
 import Image from 'next/image';
 
-import Sean from '../../../../assets/Sean2025.jpg';
+import Sean from '../../../../assets/EBOARD2025/Sean2025.jpg';
 
 const TreasurerPage = () => {
   return (
@@ -34,9 +34,9 @@ const TreasurerPage = () => {
         </h2>
         
         <ul className="list-disc list-inside space-y-3 text-3xl leading-relaxed">
-          <li>Finance major</li>
-          <li>Sophomore</li>
-          <li>Member, Student Managed Investment Portfolio</li>
+          <li>Major: Finance major</li>
+          <li>Class: Sophomore</li>
+          <li>Org Position: Member, Student Managed Investment Portfolio</li>
           <li>Future plans: Equity Research or Wealth/Asset Management</li>
           <li>
             Email:{" "}

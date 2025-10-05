@@ -34,10 +34,10 @@ const EventCoordinatorPage = () => {
         </h2>
         
         <ul className="list-disc list-inside space-y-3 text-3xl leading-relaxed">
-          <li>Business Management major with a focus in Finance</li>
-          <li>Junior</li>
-          <li>Clubs/Orgs: VCU Professional Selling Team, VCU Young Democrats</li>
-          <li>Plans after college: Pursue a career in Banking</li>
+          <li>Major: Business Management major with a focus in Finance</li>
+          <li>Class: Junior</li>
+          <li>Org Positions: VCU Professional Selling Team, VCU Young Democrats</li>
+          <li>Future Plans: Pursue a career in Banking</li>
           <li>
             Instagram:{" "}
             <a

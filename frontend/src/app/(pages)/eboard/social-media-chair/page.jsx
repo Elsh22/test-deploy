@@ -2,7 +2,7 @@
 import React from 'react';
 import Image from 'next/image';
 
-import Paul from '../../../../assets/Paul2025.jpg';
+import Paul from '../../../../assets/EBOARD2025/Paul2025.jpg';
 
 const SocialMediaChairPage = () => {
    return (
@@ -34,13 +34,13 @@ const SocialMediaChairPage = () => {
         </h2>
         
         <ul className="list-disc list-inside space-y-3 text-3xl leading-relaxed">
-          <li>Mechanical Engineering major; minors in Mathematics & Aerospace Engineering</li>
-          <li>Senior</li>
+          <li>Major: Mechanical Engineering major; minors in Mathematics & Aerospace Engineering</li>
+          <li>Class: Senior</li>
           <li>
-            Clubs/Orgs: DMC, ASU, NSU, NSBE
+            Org Positions: Member, ASU, NSU, NSBE
           </li>
           <li>
-            Plans after college: pursue further education into a Master’s degree
+            Future Plans: pursue further education into a Master’s degree
           </li>
           <li>
             Instagram:{" "}
