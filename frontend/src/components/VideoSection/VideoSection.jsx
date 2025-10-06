@@ -1,5 +1,6 @@
 'use client';
 import React from 'react';
+import { motion } from 'framer-motion';
 
 const VideoSection = () => {
   const videos = [
@@ -18,28 +19,54 @@ const VideoSection = () => {
   ];
 
   return (
-    <div className="relative w-full bg-black py-16 px-6">
-      <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-10">
-        DMC 8th Annual Mixer Promo and Recap
-      </h2>
+    <section className="relative w-full bg-black py-20 px-6 sm:px-12 overflow-hidden">
+      {/* Gold gradient accent */}
+      <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-yellow-500 via-yellow-300 to-yellow-600"></div>
 
-      <div className="grid md:grid-cols-2 gap-8">
-        {videos.map((video) => (
-          <div
+      {/* Title */}
+      <motion.h2
+        className="text-4xl md:text-5xl font-extrabold text-yellow-400 text-center mb-16 tracking-tight"
+        initial={{ opacity: 0, y: 40 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1 }}
+      >
+        DMC 8th Annual Mixer Promo & Recap
+      </motion.h2>
+
+      {/* Video Grid */}
+      <div className="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto">
+        {videos.map((video, index) => (
+          <motion.div
             key={video.id}
-            className="aspect-video bg-gray-800 rounded-xl overflow-hidden shadow-lg transition-all duration-300 hover:shadow-[0_0_20px_5px_rgba(253,224,71,0.7)]"
+            className="relative rounded-2xl overflow-hidden bg-neutral-900 border border-yellow-600/20 shadow-[0_0_20px_rgba(255,215,0,0.2)] transition-all duration-500 hover:shadow-[0_0_40px_rgba(255,215,0,0.6)]"
+            initial={{ opacity: 0, y: 60 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, delay: index * 0.2 }}
           >
-            <iframe
-              src={video.videoUrl}
-              allow="autoplay"
-              className="w-full h-full"
-            ></iframe>
-            <h3 className="text-xl text-white font-semibold mt-4">{video.title}</h3>
-            <p className="text-gray-300">{video.description}</p>
-          </div>
+            {/* Video Frame */}
+            <div className="aspect-video relative">
+              <iframe
+                src={video.videoUrl}
+                allow="autoplay; fullscreen"
+                allowFullScreen
+                className="w-full h-full"
+              ></iframe>
+            </div>
+
+            {/* Text Content */}
+            <div className="p-6 text-center">
+              <h3 className="text-2xl font-semibold text-yellow-400 mb-2">
+                {video.title}
+              </h3>
+              <p className="text-gray-300 text-lg">{video.description}</p>
+            </div>
+          </motion.div>
         ))}
       </div>
-    </div>
+
+      {/* Subtle gold fade at bottom */}
+      <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-yellow-600 via-yellow-400 to-yellow-600"></div>
+    </section>
   );
 };
 

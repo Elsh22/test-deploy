@@ -1,63 +1,46 @@
 'use client';
 import React from 'react';
 import Image from 'next/image';
-
 import Sam from '../../../../assets/EBOARD2025/Sam2025.jpg';
 
-const WellnessDirectorPage = () => {
-   return (
-    <div className="flex flex-col md:flex-row items-center md:items-start justify-center min-h-screen bg-white px-6 py-16 gap-10 pt-28">
-      
-      {/* Left Side - Full Picture with LinkedIn */}
+const SamPage = () => {
+  return (
+    <div className="flex flex-col md:flex-row items-center justify-center min-h-screen bg-black px-6 py-16 gap-10">
       <div className="w-full md:w-1/2 flex justify-center">
         <a
           href="https://www.linkedin.com/in/samuel-brannen-ba47b82b4/"
           target="_blank"
           rel="noopener noreferrer"
-          className="transition-all duration-300 hover:shadow-[0_0_30px_#FFD700] rounded-lg"
+          className="transition-transform duration-300 hover:scale-105 hover:shadow-xl rounded-lg"
         >
           <Image
             src={Sam}
-            alt="Samuel Brannen"
-            className="rounded-lg shadow-lg w-full h-auto object-contain cursor-pointer"
+            alt="Sam"
+            className="rounded-lg shadow-lg w-full max-w-md h-auto object-cover cursor-pointer"
           />
         </a>
       </div>
-
-      {/* Right Side - Bio */}
-      <div className="w-full md:w-1/2 text-black flex flex-col justify-center">
-        <h1 className="text-8xl font-extrabold text-center mb-4">
-          Samuel Brannen
+      <div className="w-full md:w-1/2 text-white flex flex-col justify-center max-w-lg">
+        <h1 className="text-6xl md:text-7xl font-extrabold mb-2 text-center md:text-left">
+          Sam Brannen
         </h1>
-        <h2 className="text-6xl font-semibold text-center mb-8">
-          Wellness Director
+        <h2 className="text-3xl md:text-4xl font-semibold mb-6 text-yellow-400 text-center md:text-left">
+          Director of Wellness
         </h2>
-        
-        <ul className="list-disc list-inside space-y-3 text-3xl leading-relaxed">
+        <ul className="list-disc list-inside space-y-2 text-lg md:text-xl leading-relaxed">
           <li>Major: Computer Science major with a concentration in Cybersecurity</li>
-          <li>Class: Junior</li>
-          <li>Org Position: Member NSBA</li>
+          <li>Class:  Junior</li>
+          <li>Org Positions: Member NSBA</li>
           <li>Future Plans: Pursue a career in Cybersecurity</li>
-          <li>
-            Instagram:{" "}
-            <a
-              href="https://instagram.com/samuellbrannen"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-blue-600 hover:underline"
-            >
-              @samuellbrannen
-            </a>
-          </li>
           <li>
             LinkedIn:{" "}
             <a
               href="https://www.linkedin.com/in/samuel-brannen-ba47b82b4/"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-blue-600 hover:underline"
+              className="text-blue-400 hover:underline"
             >
-              samuel-brannen
+              Sam Brannen
             </a>
           </li>
         </ul>
@@ -66,4 +49,4 @@ const WellnessDirectorPage = () => {
   );
 };
 
-export default WellnessDirectorPage;
+export default SamPage;

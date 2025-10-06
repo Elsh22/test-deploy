@@ -11,7 +11,11 @@ const Commitee = () => {
   const [active, setActive] = useState('world-4');
 
   return (
-    <section className={`${styles.paddings} `} id="explore" style={{ overflow:'hidden', }}>
+    <section
+      className={`${styles.paddings} bg-black`}
+      id="explore"
+      style={{ overflow: 'hidden' }}
+    >
       <motion.div
         variants={staggerContainer}
         initial="hidden"
@@ -19,10 +23,10 @@ const Commitee = () => {
         viewport={{ once: false, amount: 0.25 }}
         className={`${styles.innerWidth} mx-auto flex flex-col`}
       >
-        <TypingText title="" textStyles="text-center" />
+        <TypingText title="" textStyles="text-center text-white" />
         <TitleText
           title={<> <br className="md:block hidden" /> </>}
-          textStyles="text-center"
+          textStyles="text-center text-white"
         />
         <div className="mt-[50px] flex xl:flex-row flex-col min-h-[70vh] gap-5">
           {exploreWorlds.map((world, index) => (

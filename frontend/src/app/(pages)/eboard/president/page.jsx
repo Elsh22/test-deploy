@@ -3,53 +3,51 @@ import React from 'react';
 import Image from 'next/image';
 import Kaleb from '../../../../assets/EBOARD2025/Kaleb2025.jpg';
 
-const PresidentPage = () => {
+const KalebPage = () => {
   return (
-    <div className="flex flex-col md:flex-row items-center md:items-start justify-center min-h-screen bg-white px-6 py-16 gap-10 pt-28">
-      
-      {/* Left Side - Full Picture with LinkedIn */}
+    <div className="flex flex-col md:flex-row items-center justify-center min-h-screen bg-black px-6 py-16 gap-10">
       <div className="w-full md:w-1/2 flex justify-center">
         <a
           href="https://www.linkedin.com/in/kaleb--brown/"
           target="_blank"
           rel="noopener noreferrer"
-          className="transition-all duration-300 hover:shadow-[0_0_30px_#FFD700] rounded-lg"
+          className="transition-transform duration-300 hover:scale-105 hover:shadow-xl rounded-lg"
         >
           <Image
             src={Kaleb}
-            alt="Kaleb Brown"
-            className="rounded-lg shadow-lg w-full h-auto object-contain cursor-pointer"
+            alt="Kaleb"
+            className="rounded-lg shadow-lg w-full max-w-md h-auto object-cover cursor-pointer"
           />
         </a>
       </div>
-
-      {/* Right Side - Bio */}
-      <div className="w-full md:w-1/2 text-black flex flex-col justify-center">
-        <h1 className="text-8xl font-extrabold text-center mb-4">
+      <div className="w-full md:w-1/2 text-white flex flex-col justify-center max-w-lg">
+        <h1 className="text-6xl md:text-7xl font-extrabold mb-2 text-center md:text-left">
           Kaleb Brown
         </h1>
-        <h2 className="text-6xl font-semibold text-center mb-8">
+        <h2 className="text-3xl md:text-4xl font-semibold mb-6 text-yellow-400 text-center md:text-left">
           President
         </h2>
-        
-        <ul className="list-disc list-inside space-y-3 text-3xl leading-relaxed">
+        <ul className="list-disc list-inside space-y-2 text-lg md:text-xl leading-relaxed">
           <li>Major: Information Systems major with a Sports Management minor</li>
           <li>Class: Junior</li>
-          <li>Org Position: Students Providing Aid (SPAid) – Vice President</li>
-          <li>Org Position: NSBE – Member</li>
+          <li>Org Positions: Org Position: Students Providing Aid (SPAid) – Vice President</li>
+          <li>Org Positions: NSBE - Member</li>
+          <li>Future Plans: pursue a career in IT or Business and eventually create a scholarship fund to help students from his hometown break financial barriers</li>
           <li>
-            Future Plans: pursue a career in IT or Business and eventually 
-            create a scholarship fund to help students from his hometown break 
-            financial barriers
+            LinkedIn:{" "}
+            <a
+              href="https://www.linkedin.com/in/kaleb--brown/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-blue-400 hover:underline"
+            >
+              Kaleb Brown
+            </a>
           </li>
-          <li>Phone: (757) 646-6483</li>
-          <li>Work Email: <a href="mailto:Kalebbrown2023@gmaii.com" className="text-blue-600 hover:underline">Kalebbrown2023@gmaii.com</a></li>
-          <li>School Email: <a href="mailto:Brownkj7@vcu.edu" className="text-blue-600 hover:underline">Brownkj7@vcu.edu</a></li>
         </ul>
       </div>
     </div>
   );
 };
 
-export default PresidentPage;
-
+export default KalebPage;

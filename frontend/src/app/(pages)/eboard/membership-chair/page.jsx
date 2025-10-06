@@ -1,54 +1,51 @@
 'use client';
 import React from 'react';
 import Image from 'next/image';
-
 import Naod from '../../../../assets/EBOARD2025/Naod2025.jpg';
 
-const MembershipChairPage = () => {
+const NaodTeklePage = () => {
   return (
-    <div className="flex flex-col md:flex-row items-center md:items-start justify-center min-h-screen bg-white px-6 py-16 gap-10 pt-28">
+    <div className="flex flex-col md:flex-row items-center justify-center min-h-screen bg-black px-6 py-16 gap-10">
       
-      {/* Left Side - Full Picture with LinkedIn */}
+      {/* Left Side - Picture */}
       <div className="w-full md:w-1/2 flex justify-center">
         <a
-          href="https://www.linkedin.com/in/naod-daniel/"
+          href="https://www.linkedin.com/in/naod-tekle-12345678/" // Replace with Naod's actual LinkedIn
           target="_blank"
           rel="noopener noreferrer"
-          className="transition-all duration-300 hover:shadow-[0_0_30px_#FFD700] rounded-lg"
+          className="transition-transform duration-300 hover:scale-105 hover:shadow-xl rounded-lg"
         >
           <Image
             src={Naod}
-            alt="Naod Daniel"
-            className="rounded-lg shadow-lg w-full h-auto object-contain cursor-pointer"
+            alt="Naod Tekle"
+            className="rounded-lg shadow-lg w-full max-w-md h-auto object-cover cursor-pointer"
           />
         </a>
       </div>
 
       {/* Right Side - Bio */}
-      <div className="w-full md:w-1/2 text-black flex flex-col justify-center">
-        <h1 className="text-8xl font-extrabold text-center mb-4">
-          Naod Daniel
+      <div className="w-full md:w-1/2 text-white flex flex-col justify-center max-w-lg">
+        <h1 className="text-6xl md:text-7xl font-extrabold mb-2 text-center md:text-left">
+          Naod Tekle
         </h1>
-        <h2 className="text-6xl font-semibold text-center mb-8">
-          Membership Chair
+        <h2 className="text-3xl md:text-4xl font-semibold mb-6 text-yellow-400 text-center md:text-left">
+          Vice President
         </h2>
         
-        <ul className="list-disc list-inside space-y-3 text-3xl leading-relaxed">
-          <li>Major: Mechanical Engineering major</li>
+        <ul className="list-disc list-inside space-y-2 text-lg md:text-xl leading-relaxed">
+          <li>Major: Computer Science</li>
           <li>Class: Junior</li>
-          <li>Org Position: Member, National Society of Black Engineers (NSBE)</li>
-          <li>Org Position: Member, Eritrean Student Association (ESA)</li>
+          <li>Org Positions: DMC, Coding Club</li>
+          <li>Future Plans: pursue a career in software development or AI research</li>
           <li>
-            Future Plans: take over father’s construction business and grow it into a 
-            multi-million-dollar company using an engineering background to expand, modernize, and create opportunities
-          </li>
-          <li>
-            Email:{" "}
-            <a 
-              href="mailto:danielnt@vcu.edu" 
-              className="text-blue-600 hover:underline"
+            LinkedIn:{" "}
+            <a
+              href="https://www.linkedin.com/in/naod-tekle-12345678/" // Replace with actual
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-blue-400 hover:underline"
             >
-              danielnt@vcu.edu
+              Naod Tekle
             </a>
           </li>
         </ul>
@@ -57,4 +54,4 @@ const MembershipChairPage = () => {
   );
 };
 
-export default MembershipChairPage;
+export default NaodTeklePage;

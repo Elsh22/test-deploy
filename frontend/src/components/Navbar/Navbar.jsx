@@ -1,21 +1,22 @@
 "use client";
-import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
-import { AiOutlineMenu, AiOutlineClose, AiOutlineUser, AiOutlineDown } from 'react-icons/ai';
+import React, { useState, useEffect } from "react";
+import Link from "next/link";
+import {
+  AiOutlineMenu,
+  AiOutlineClose,
+  AiOutlineDown,
+} from "react-icons/ai";
 import DarkModeToggle from "../DarkModeToggle/DarkModeToggle";
-//import img1 from '../../newassest/person.jpg';
 
 const Navbar = () => {
   const [nav, setNav] = useState(false);
   const [dropdown, setDropdown] = useState(false);
-  const [color, setColor] = useState('#000000');
-  const [textColor, setTextColor] = useState('white'); 
-  const [iconColor, setIconColor] = useState('white'); 
-
+  const [color, setColor] = useState("transparent");
+  const [textColor, setTextColor] = useState("white");
 
   const handleNav = () => {
     setNav(!nav);
-    if (dropdown) setDropdown(false); // Close dropdown when nav is toggled
+    if (dropdown) setDropdown(false);
   };
 
   const toggleDropdown = () => {
@@ -24,105 +25,153 @@ const Navbar = () => {
 
   useEffect(() => {
     const changeColor = () => {
-      if (window.scrollY >= 90 || nav) {
-        setColor('#ffffff');
-        setTextColor('#000000'); 
-        setIconColor('#000000');
+      if (window.scrollY >= 90) {
+        setColor("#ffffff");
+        setTextColor("#000000");
       } else {
-        setColor('#000000');
-        setTextColor('white'); 
-        setIconColor('white'); 
+        setColor("transparent");
+        setTextColor("white");
       }
     };
-    window.addEventListener('scroll', changeColor);
+    window.addEventListener("scroll", changeColor);
     changeColor();
-    return () => window.removeEventListener('scroll', changeColor);
-  }, [nav]);
-/*
-<Link href='/login'>
-          <AiOutlineUser  className='rounded-full cursor-pointer' size={20} style={{ color: `${iconColor}`, marginLeft: '2rem' }} />
-          </Link> 
+    return () => window.removeEventListener("scroll", changeColor);
+  }, []);
 
-          {session ? (
-            <Link href="/api/auth/signout?callbackUrl=/">Logout</Link>
-          ) : (
-            <Link href="/api/auth/signin">Login</Link>
-          )}
-          
-*/
   return (
-    <div style={{ backgroundColor: `${color}` }} className='fixed left-0 top-0 w-full z-10 ease-in duration-300'>
-      <div className='max-w-[1240px] m-auto flex justify-between items-center p-4'>
-        <Link href='/'>
-          <h1 style={{ color: `${textColor}` }} className='font-bold text-4xl'>DMC</h1>
+    <div
+      style={{ backgroundColor: color }}
+      className="fixed top-0 left-0 w-full z-50 transition-all duration-300 backdrop-blur-md shadow-md"
+    >
+      <div className="max-w-[1240px] mx-auto flex justify-between items-center py-4 px-6">
+        {/* Logo */}
+        <Link href="/">
+          <h1
+            className="font-extrabold text-4xl tracking-wide cursor-pointer transition-all duration-300 hover:text-yellow-400"
+            style={{ color: textColor }}
+          >
+            DMC
+          </h1>
         </Link>
 
-        <div className='flex items-center'> 
-        <DarkModeToggle  />
-          <div onClick={handleNav} className='z-10 cursor-pointer ml-4'> 
+        {/* Desktop Menu */}
+        <ul
+          className={`hidden md:flex space-x-8 text-lg font-semibold`}
+          style={{ color: textColor }}
+        >
+          <li className="hover:text-yellow-400 transition-colors">
+            <Link href="/">Home</Link>
+          </li>
+          <li className="relative group cursor-pointer">
+            <div className="flex items-center hover:text-yellow-400 transition-colors">
+              Committees
+              <AiOutlineDown className="ml-1 mt-1 text-sm group-hover:rotate-180 transition-transform duration-200" />
+            </div>
+            {/* Dropdown */}
+            <ul className="absolute left-0 mt-2 hidden group-hover:flex flex-col bg-white text-black shadow-lg rounded-lg p-2 w-60 z-50">
+              <Link href="/#committee" className="hover:text-yellow-600 p-2">Committee</Link>
+              <Link href="/ACACommittee" className="hover:text-yellow-600 p-2">Academic Committee</Link>
+              <Link href="/CommCommittee" className="hover:text-yellow-600 p-2">Community Service</Link>
+              <Link href="/ITCommittee" className="hover:text-yellow-600 p-2">Information Tech</Link>
+              <Link href="/ProfCommittee" className="hover:text-yellow-600 p-2">Professional Dev</Link>
+              <Link href="/SocCommittee" className="hover:text-yellow-600 p-2">Social Committee</Link>
+            </ul>
+          </li>
+          <li className="hover:text-yellow-400 transition-colors">
+            <Link href="/#mentorship">Mentorship</Link>
+          </li>
+          <li className="hover:text-yellow-400 transition-colors">
+            <Link href="/#sports">Sports</Link>
+          </li>
+          <li className="hover:text-yellow-400 transition-colors">
+            <Link href="/#contact">Contact</Link>
+          </li>
+          <li className="hover:text-yellow-400 transition-colors">
+            <Link href="/#about">About</Link>
+          </li>
+          <li className="hover:text-yellow-400 transition-colors">
+            <Link href="/gallery">Gallery</Link>
+          </li>
+          <li className="hover:text-yellow-400 transition-colors">
+            <Link href="/eboard">E-Board</Link>
+          </li>
+        </ul>
+
+        {/* Right-side icons */}
+        <div className="flex items-center">
+          <DarkModeToggle />
+          <div
+            onClick={handleNav}
+            className="md:hidden z-10 cursor-pointer ml-4"
+          >
             {nav ? (
-              <AiOutlineClose size={20} style={{ color: 'white' }} />
+              <AiOutlineClose size={25} style={{ color: "#fff" }} />
             ) : (
-              <AiOutlineMenu size={20} style={{ color: `${iconColor}` }} />
+              <AiOutlineMenu size={25} style={{ color: textColor }} />
             )}
           </div>
         </div>
+      </div>
 
-        <div className={nav ? 'absolute top-0 left-0 right-0 bottom-0 flex justify-center items-center w-full h-screen bg-black text-center ease-in duration-300' : 'absolute top-0 left-[-100%] right-0 bottom-0 flex justify-center items-center w-full h-screen bg-black text-center ease-in duration-300'}>
-        <ul style={{ color: 'white' }}>
-  <li onClick={handleNav} className='p-4 text-4xl hover:text-gray-500 select-none'>
-    <Link href='/'>Home</Link>
-  </li>
-
-  <li className='p-4 text-4xl hover:text-gray-500 select-none flex items-center'>
-    <span onClick={toggleDropdown} style={{ display: 'flex', alignItems: 'center', cursor: 'pointer' }}>
-      Committees
-      <AiOutlineDown className={`ml-2 ${dropdown ? 'rotate-180' : ''}`} />
-    </span>
-    {dropdown && (
-      <ul className='bg-black text-white text-3xl space-y-2'>
-        <li onClick={handleNav} className='p-2 text-4xl hover:text-gray-500 select-none flex items-center'><Link href='/#committee'>Committee</Link></li>
-        <li onClick={handleNav} className='p-2 text-4xl hover:text-gray-500 select-none flex items-center'><Link href='/ACACommittee'>Academic Committee</Link></li>
-        <li onClick={handleNav} className='p-2 text-4xl hover:text-gray-500 select-none flex items-center'><Link href='/CommCommittee'>Community Service Committee</Link></li>
-        <li onClick={handleNav} className='p-2 text-4xl hover:text-gray-500 select-none flex items-center'><Link href='/ITCommittee'>Information Technology Committee</Link></li>
-        <li onClick={handleNav} className='p-2 text-4xl hover:text-gray-500 select-none flex items-center'><Link href='/ProfCommittee'>Professional Development</Link></li>
-        <li onClick={handleNav} className='p-2 text-4xl hover:text-gray-500 select-none flex items-center'><Link href='/SocCommittee'>Social Committee</Link></li>
-      </ul>
-    )}
-  </li>
-
-  <li onClick={handleNav} className='p-4 text-4xl hover:text-gray-500 select-none'>
-    <Link href='/#mentorship'>Mentorship</Link>
-  </li>
-  <li onClick={handleNav} className='p-4 text-4xl hover:text-gray-500 select-none'>
-    <Link href='/#sports'>Sports</Link>
-  </li>
-  <li onClick={handleNav} className='p-4 text-4xl hover:text-gray-500 select-none'>
-    <Link href='/#contact'>Contact</Link>
-  </li>
-  <li onClick={handleNav} className='p-4 text-4xl hover:text-gray-500 select-none'>
-    <Link href='/#about'>About</Link>
-  </li>
-  <li onClick={handleNav} className='p-4 text-4xl hover:text-gray-500 select-none'>
-    <Link href='/gallery'>Gallery</Link>
-  </li>
-
-  {/* New eBoard link */}
-  <li onClick={handleNav} className='p-4 text-4xl hover:text-gray-500 select-none'>
-    <Link href='/eboard'>E-Board</Link>
-  </li>
-</ul>
-
-        </div>
+      {/* Mobile Menu Overlay */}
+      <div
+        className={`${
+          nav
+            ? "fixed left-0 top-0 w-full h-screen bg-black/90 text-white flex flex-col justify-center items-center transition-all duration-500"
+            : "fixed left-[-100%]"
+        }`}
+      >
+        <ul className="text-center space-y-8 text-3xl font-semibold">
+          <li onClick={handleNav}>
+            <Link href="/">Home</Link>
+          </li>
+          <li onClick={toggleDropdown} className="flex flex-col items-center">
+            Committees <AiOutlineDown className="mt-2" />
+            {dropdown && (
+              <ul className="mt-3 space-y-3 text-2xl">
+                <li onClick={handleNav}>
+                  <Link href="/#committee">Committee</Link>
+                </li>
+                <li onClick={handleNav}>
+                  <Link href="/ACACommittee">Academic Committee</Link>
+                </li>
+                <li onClick={handleNav}>
+                  <Link href="/CommCommittee">Community Service</Link>
+                </li>
+                <li onClick={handleNav}>
+                  <Link href="/ITCommittee">Information Tech</Link>
+                </li>
+                <li onClick={handleNav}>
+                  <Link href="/ProfCommittee">Professional Dev</Link>
+                </li>
+                <li onClick={handleNav}>
+                  <Link href="/SocCommittee">Social Committee</Link>
+                </li>
+              </ul>
+            )}
+          </li>
+          <li onClick={handleNav}>
+            <Link href="/#mentorship">Mentorship</Link>
+          </li>
+          <li onClick={handleNav}>
+            <Link href="/#sports">Sports</Link>
+          </li>
+          <li onClick={handleNav}>
+            <Link href="/#contact">Contact</Link>
+          </li>
+          <li onClick={handleNav}>
+            <Link href="/#about">About</Link>
+          </li>
+          <li onClick={handleNav}>
+            <Link href="/gallery">Gallery</Link>
+          </li>
+          <li onClick={handleNav}>
+            <Link href="/eboard">E-Board</Link>
+          </li>
+        </ul>
       </div>
     </div>
   );
 };
 
 export default Navbar;
-
-/*
-<li onClick={handleNav} className='p-4 text-4xl hover:text-gray-500 select-none'>
-              <Link href='/scholarship'>Scholarship</Link>
-            </li>
-*/

@@ -7,13 +7,20 @@ interface ContactProps {
 
 const Contact = ({ id }: ContactProps) => {
   return (
-    <div className="p-4 max-w-3xl mt-10 mx-auto" id={id}>
-      <h1 className="text-3xl font-bold text-center">Contact Us</h1>
-      <p className="text-center mb-4">Please fill in the form below</p>
-      
-      <ContactForm />
-    
-    </div>
+    <section className="py-16 bg-black text-white border-t-8 border-b-8 border-yellow-400" id={id}>
+      <div className="max-w-3xl mx-auto px-4">
+        <h1 className="text-4xl md:text-5xl font-extrabold text-center text-yellow-400 mb-4">
+          Contact Us
+        </h1>
+        <p className="text-center text-lg md:text-xl text-gray-300 mb-10">
+          Fill in the form below and we’ll get back to you as soon as possible.
+        </p>
+
+        <div className="bg-gray-900/80 p-8 rounded-2xl shadow-lg">
+          <ContactForm />
+        </div>
+      </div>
+    </section>
   );
 }
 

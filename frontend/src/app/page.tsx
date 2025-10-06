@@ -1,4 +1,4 @@
-"use client";
+'use client';
 
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
@@ -21,39 +21,31 @@ import Professional from "../components/ProfessionalAcademy/Professional";
 import VideoSection from "../components/VideoSection/VideoSection";
 import SundaySpotlight from "../components/SundaySpotlight/SundaySpotlight";
 import OtherChapters from "../components/OtherChapters/chapters.jsx";
-
+import NonProfitCard from '../components/NonProfit/NonProfitCard';
 // ------------------------
 // LoadingScreen Component
 // ------------------------
 interface LoadingScreenProps {
-  onFinish: () => void; // explicitly type the prop
+  onFinish: () => void;
 }
 
 const LoadingScreen: React.FC<LoadingScreenProps> = ({ onFinish }) => {
   useEffect(() => {
-    const timer = setTimeout(() => {
-      onFinish();
-    }, 5000); // 5 seconds
+    const timer = setTimeout(() => onFinish(), 5000); // 5 seconds
     return () => clearTimeout(timer);
   }, [onFinish]);
 
   return (
-    <motion.div
-      className="fixed inset-0 bg-black flex items-center justify-center z-50"
-      initial={{ opacity: 1 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
-      transition={{ duration: 1.5 }}
-    >
+    <div className="fixed inset-0 bg-black flex items-center justify-center z-50">
       <motion.h1
-        className="text-6xl md:text-9xl font-extrabold text-yellow-400 text-center"
-        initial={{ opacity: 0, textShadow: "0 0 0px #FFD700" }}
-        animate={{ opacity: 1, textShadow: "0 0 25px #FFD700" }}
-        transition={{ duration: 2 }}
+        className="text-8xl md:text-[12rem] font-extrabold text-yellow-400"
+        initial={{ scale: 0.8, opacity: 0 }}
+        animate={{ scale: 1, opacity: 1 }}
+        transition={{ duration: 1.5, ease: "easeOut" }}
       >
-        Excellence is our Standard
+        DMC
       </motion.h1>
-    </motion.div>
+    </div>
   );
 };
 
@@ -92,6 +84,7 @@ const HomePage: React.FC = () => {
         <Sports id="sports" />
         <Contact id="contact" />
         <About />
+        <NonProfitCard />
         <OtherChapters />
       </div>
     </>

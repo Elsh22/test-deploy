@@ -1,33 +1,43 @@
+/* Tailwind base imports */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+/* Scroll behavior and font */
 html {
   scroll-behavior: smooth;
   font-family: 'LibertinusSerifDisplay', sans-serif;
 }
 
+/* Elements styles */
 .elements-style {
   color: var(--elements-color);
   border: 1px solid var(--elements-color);
 }
+
 .elements-style-background {
   background: var(--elements-color);
   transition: box-shadow var(--transition-duration);
 }
+
 .card.elements-style-background:hover {
   box-shadow: 20px 20px 60px #464e9c, -20px -20px 60px #8896ff;
 }
 
+/* Background images */
 .custom-img {
   background-image: url('/mixer_background.jpg');
 }
 
-
 .donor-img {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../newassest/social2.png');
-
+  background-image: linear-gradient(
+      rgba(0, 0, 0, 0.6),
+      rgba(0, 0, 0, 0.6)
+    ),
+    url('../newassest/social2.png');
 }
+
+/* Form styling */
 form > div {
   @apply flex flex-col gap-2;
 }
@@ -37,15 +47,12 @@ textarea {
   @apply shadow-md px-6 py-2 border border-slate-300;
 }
 
-html {
-  scroll-behavior: smooth;
-
-}
-
-.theme{
+/* Smooth theme transition */
+.theme {
   transition: 1s all ease;
 }
 
+/* Light/Dark mode */
 .light {
   background-color: white;
   color: #111;
@@ -55,26 +62,30 @@ html {
   background-color: #111;
   color: #bbb;
 }
+
+/* Text colors for theme */
 .theme.light .theme-text {
-  color: black; 
+  color: black !important;
 }
 
 .theme.dark .theme-text {
-  color: white; 
+  color: white !important;
 }
 
+/* Responsive adjustments */
 @media (max-width: 1230px) {
   .explore-card-container {
     flex-direction: column !important;
   }
 }
+
+/* Custom font */
 @font-face {
   font-family: 'LibertinusSerifDisplay';
   src: url('/fonts/LibertinusSerifDisplay-Regular.ttf') format('truetype');
   font-weight: 400;
   font-style: bold;
 }
-
 
 .font-home {
   font-family: 'LibertinusSerifDisplay', sans-serif;

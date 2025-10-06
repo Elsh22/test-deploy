@@ -1,83 +1,46 @@
 'use client';
 import React from 'react';
 import Image from 'next/image';
-
 import Jason from '../../../../assets/EBOARD2025/Jason2025.jpg';
 
-const PublicRelationsPage = () => {
+const JasonPage = () => {
   return (
-    <div className="flex flex-col md:flex-row items-center md:items-start justify-center min-h-screen bg-white px-6 py-16 gap-10 pt-28">
-      
-      {/* Left Side - Full Picture with LinkedIn */}
+    <div className="flex flex-col md:flex-row items-center justify-center min-h-screen bg-black px-6 py-16 gap-10">
       <div className="w-full md:w-1/2 flex justify-center">
         <a
           href="https://www.linkedin.com/in/jason-gallardo-gonzalez/"
           target="_blank"
           rel="noopener noreferrer"
-          className="transition-all duration-300 hover:shadow-[0_0_30px_#FFD700] rounded-lg"
+          className="transition-transform duration-300 hover:scale-105 hover:shadow-xl rounded-lg"
         >
           <Image
             src={Jason}
-            alt="Jason Gallardo Gonzalez"
-            className="rounded-lg shadow-lg w-full h-auto object-contain cursor-pointer"
+            alt="Jason"
+            className="rounded-lg shadow-lg w-full max-w-md h-auto object-cover cursor-pointer"
           />
         </a>
       </div>
-
-      {/* Right Side - Bio */}
-      <div className="w-full md:w-1/2 text-black flex flex-col justify-center">
-        <h1 className="text-8xl font-extrabold text-center mb-4">
+      <div className="w-full md:w-1/2 text-white flex flex-col justify-center max-w-lg">
+        <h1 className="text-6xl md:text-7xl font-extrabold mb-2 text-center md:text-left">
           Jason Gallardo Gonzalez
         </h1>
-        <h2 className="text-6xl font-semibold text-center mb-8">
-          Public Relations Coordinator
+        <h2 className="text-3xl md:text-4xl font-semibold mb-6 text-yellow-400 text-center md:text-left">
+          Public Relations Director
         </h2>
-        
-        <ul className="list-disc list-inside space-y-3 text-3xl leading-relaxed">
-          <li>Major: Marketing major with a Minor in Sports/Fitness Management</li>
+        <ul className="list-disc list-inside space-y-2 text-lg md:text-xl leading-relaxed">
+          <li>Major:  Marketing major with a Minor in Sports/Fitness Management</li>
           <li>Class: Senior</li>
+          <li>Future Plans: Continue growing and expanding media production business, Visualize Collective Media; pursue opportunities in sports marketing, with focus on NBA career</li>
+          <li>Business Contact: flaco@visualizecollective.com, Insta: @flacovangogh</li>
           <li>
-            Future Plans: Continue growing and expanding media production business, Visualize Collective Media; pursue opportunities in sports marketing, with focus on NBA career
-          </li>
-          <li>
-            Personal Instagram:{" "}
+            LinkedIn:{" "}
             <a
-              href="https://instagram.com/flacosmi"
+              href="https://www.linkedin.com/in/jason-gallardo-gonzalez/"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-blue-600 hover:underline"
+              className="text-blue-400 hover:underline"
             >
-              @flacosmi
-            </a>
-          </li>
-          <li>
-            Business Instagram:{" "}
-            <a
-              href="https://instagram.com/flacovangogh"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-blue-600 hover:underline"
-            >
-              @flacovangogh
-            </a>
-          </li>
-          <li>Business Phone: 757-274-5827</li>
-          <li>
-            School Email:{" "}
-            <a
-              href="mailto:gallardogoj@vcu.edu"
-              className="text-blue-600 hover:underline"
-            >
-              gallardogoj@vcu.edu
-            </a>
-          </li>
-          <li>
-            Business Email:{" "}
-            <a
-              href="mailto:flaco@visualizecollective.com"
-              className="text-blue-600 hover:underline"
-            >
-              flaco@visualizecollective.com
+              Jason Gallardo Gonzalez
             </a>
           </li>
         </ul>
@@ -86,4 +49,4 @@ const PublicRelationsPage = () => {
   );
 };
 
-export default PublicRelationsPage;
+export default JasonPage;
