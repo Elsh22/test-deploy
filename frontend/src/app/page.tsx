@@ -71,7 +71,7 @@ const HomePage: React.FC = () => {
         <Home id="home" />
         <VideoSection />
         <Mission id="about" />
-        <Professional />
+        <Professional id="professional"/>
         <SundaySpotlight />
         <Highlight />
         <Donor />
