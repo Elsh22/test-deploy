@@ -385,7 +385,7 @@ const folderImages = {
     eigithMixer11, eigithMixer12, eigithMixer13, eigithMixer14, eigithMixer15,
     eigithMixer16, eigithMixer17, eigithMixer18,
   ],
-  2: [
+  4: [
     Internship1, Internship2, Internship3, Internship4, Internship5,
     Internship6, Internship7, Internship8, Internship9, Internship10,
     Internship11, Internship12, Internship13, Internship14, Internship15,
@@ -397,9 +397,9 @@ const folderImages = {
     SovoFair6, SovoFair7, SovoFair8, SovoFair9, SovoFair10,
     SovoFair11, SovoFair12, SovoFair13, SovoFair14, SovoFair15,
   ],
-  4: [Kickball1, Kickball2, Kickball3, Kickball4, Kickball5, Kickball6, Kickball7, Kickball8, Kickball9], // Kickball Game
+  6: [Kickball1, Kickball2, Kickball3, Kickball4, Kickball5, Kickball6, Kickball7, Kickball8, Kickball9], // Kickball Game
   7: [CG_1, CG_2, CG_3, CG_4, CG_5, CG_6, CG_7, CG_8, CG_9, CG_10], // CGI Event
-  6: [finalExam01, finalExam02, finalExam03, finalExam04, finalExam05, finalExam06, finalExam07, finalExam08, finalExam09, finalExam10,
+  8: [finalExam01, finalExam02, finalExam03, finalExam04, finalExam05, finalExam06, finalExam07, finalExam08, finalExam09, finalExam10,
       finalExam11, finalExam12, finalExam13, finalExam14, finalExam15, finalExam16, finalExam17], // DMC Final Exam
   5: [img39,
   img40,
@@ -475,7 +475,7 @@ const folderImages = {
   football67,
 ]
 , // DMC Sports
-     8: [
+     2: [
     GBM1,
     GBM2,
     GBM3,
