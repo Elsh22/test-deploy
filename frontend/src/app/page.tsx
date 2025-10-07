@@ -22,6 +22,7 @@ import VideoSection from "../components/VideoSection/VideoSection";
 import SundaySpotlight from "../components/SundaySpotlight/SundaySpotlight";
 import OtherChapters from "../components/OtherChapters/chapters.jsx";
 import NonProfitCard from '../components/NonProfit/NonProfitCard';
+
 // ------------------------
 // LoadingScreen Component
 // ------------------------
@@ -31,20 +32,40 @@ interface LoadingScreenProps {
 
 const LoadingScreen: React.FC<LoadingScreenProps> = ({ onFinish }) => {
   useEffect(() => {
-    const timer = setTimeout(() => onFinish(), 5000); // 5 seconds
+    const timer = setTimeout(() => onFinish(), 4000); // 4 seconds
     return () => clearTimeout(timer);
   }, [onFinish]);
 
   return (
-    <div className="fixed inset-0 bg-black flex items-center justify-center z-50">
+    <div className="fixed inset-0 bg-black flex flex-col items-center justify-center z-50">
       <motion.h1
-        className="text-8xl md:text-[12rem] font-extrabold text-yellow-400"
-        initial={{ scale: 0.8, opacity: 0 }}
-        animate={{ scale: 1, opacity: 1 }}
-        transition={{ duration: 1.5, ease: "easeOut" }}
+        className="text-5xl md:text-8xl font-extrabold text-yellow-400 text-center tracking-wide"
+        initial={{ opacity: 0, scale: 0.9 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 1.5, ease: 'easeOut' }}
+        style={{
+          textShadow: `
+            0 0 10px #FFD700,
+            0 0 20px #FFD700,
+            0 0 40px #FFC300,
+            0 0 80px #FFB800
+          `,
+          animation: "glowPulse 2.5s ease-in-out infinite alternate"
+        }}
       >
-        DMC
+        Excellence is Our Standard
       </motion.h1>
+
+      <style jsx global>{`
+        @keyframes glowPulse {
+          0% {
+            text-shadow: 0 0 10px #FFD700, 0 0 20px #FFD700, 0 0 40px #FFC300;
+          }
+          100% {
+            text-shadow: 0 0 20px #FFD700, 0 0 40px #FFD700, 0 0 80px #FFB800;
+          }
+        }
+      `}</style>
     </div>
   );
 };
@@ -71,7 +92,7 @@ const HomePage: React.FC = () => {
         <Home id="home" />
         <VideoSection />
         <Mission id="about" />
-        <Professional id="professional"/>
+        <Professional id="professional" />
         <SundaySpotlight />
         <Highlight />
         <Donor />

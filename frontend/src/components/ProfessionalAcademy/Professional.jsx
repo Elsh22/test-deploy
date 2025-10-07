@@ -31,7 +31,7 @@ const Professional = ({ id }) => {
 >
   <TypingText
     title="Professional Academy"
-    textStyles="font-semibold text-yellow-400 text-8xl md:text-8xl mb-4"
+    textStyles="font-semibold text-yellow-400 text-7xl md:text-8xl mb-4"
   />
 
   {/* First Paragraph */}
