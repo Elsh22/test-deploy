@@ -28,7 +28,7 @@ const EboardPage = () => {
     { name: 'Paul Adelugba', role: 'Social Media Director', image: Paul.src, link: '/eboard/social-media-chair' },
     { name: 'Samuel Brannen', role: 'Director of Wellness', image: Sam.src, link: '/eboard/wellness-director' },
     { name: 'Shawn Watson', role: 'Director of IT', image: Shawn.src, link: '/eboard/director-of-it' },
-    { name: 'Thurman Smith Jr', role: 'Director of Membership', image: Thurman.src, link: '/eboard/mentorship-director' },
+    { name: 'Thurman Smith Jr', role: 'Director of Mentorship', image: Thurman.src, link: '/eboard/mentorship-director' },
     { name: 'Clyde Clark III', role: 'Event Coordinator', image: Clyde.src, link: '/eboard/event-coordinator' },
     { name: 'Mohamed Turay', role: 'Director of Committees', image: Mo.src, link: '/eboard/director-of-committees' },
     { name: 'Dr. Carlton Goode', role: 'Faculty Advisor', image: Goode.src, link: '/eboard/faculty-advisor' },
