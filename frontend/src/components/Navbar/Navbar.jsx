@@ -1,11 +1,7 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
-import {
-  AiOutlineMenu,
-  AiOutlineClose,
-  AiOutlineDown,
-} from "react-icons/ai";
+import { AiOutlineMenu, AiOutlineClose, AiOutlineDown } from "react-icons/ai";
 import DarkModeToggle from "../DarkModeToggle/DarkModeToggle";
 
 const Navbar = () => {
@@ -56,7 +52,7 @@ const Navbar = () => {
 
         {/* Desktop Menu */}
         <ul
-          className={`hidden md:flex space-x-8 text-lg font-semibold`}
+          className="hidden md:flex space-x-8 text-lg font-semibold"
           style={{ color: textColor }}
         >
           <li className="hover:text-yellow-400 transition-colors">
@@ -75,7 +71,7 @@ const Navbar = () => {
               <Link href="/ITCommittee" className="hover:text-yellow-600 p-2">Information Tech</Link>
               <Link href="/ProfCommittee" className="hover:text-yellow-600 p-2">Professional Dev</Link>
               <Link href="/SocCommittee" className="hover:text-yellow-600 p-2">Social Committee</Link>
-            </ul>
+              </ul>
           </li>
           <li className="hover:text-yellow-400 transition-colors">
             <Link href="/#mentorship">Mentorship</Link>
@@ -100,10 +96,7 @@ const Navbar = () => {
         {/* Right-side icons */}
         <div className="flex items-center">
           <DarkModeToggle />
-          <div
-            onClick={handleNav}
-            className="md:hidden z-10 cursor-pointer ml-4"
-          >
+          <div onClick={handleNav} className="md:hidden z-10 cursor-pointer ml-4">
             {nav ? (
               <AiOutlineClose size={25} style={{ color: "#fff" }} />
             ) : (
@@ -122,52 +115,26 @@ const Navbar = () => {
         }`}
       >
         <ul className="text-center space-y-8 text-3xl font-semibold">
-          <li onClick={handleNav}>
-            <Link href="/">Home</Link>
-          </li>
+          <li onClick={handleNav}><Link href="/">Home</Link></li>
           <li onClick={toggleDropdown} className="flex flex-col items-center">
             Committees <AiOutlineDown className="mt-2" />
             {dropdown && (
               <ul className="mt-3 space-y-3 text-2xl">
-                <li onClick={handleNav}>
-                  <Link href="/#committee">Committee</Link>
-                </li>
-                <li onClick={handleNav}>
-                  <Link href="/ACACommittee">Academic Committee</Link>
-                </li>
-                <li onClick={handleNav}>
-                  <Link href="/CommCommittee">Community Service</Link>
-                </li>
-                <li onClick={handleNav}>
-                  <Link href="/ITCommittee">Information Tech</Link>
-                </li>
-                <li onClick={handleNav}>
-                  <Link href="/ProfCommittee">Professional Dev</Link>
-                </li>
-                <li onClick={handleNav}>
-                  <Link href="/SocCommittee">Social Committee</Link>
-                </li>
+                <li onClick={handleNav}><Link href="/#committee">Committee</Link></li>
+                <li onClick={handleNav}><Link href="/ACACommittee">Academic Committee</Link></li>
+                <li onClick={handleNav}><Link href="/CommCommittee">Community Service</Link></li>
+                <li onClick={handleNav}><Link href="/ITCommittee">Information Tech</Link></li>
+                <li onClick={handleNav}><Link href="/ProfCommittee">Professional Dev</Link></li>
+                <li onClick={handleNav}><Link href="/SocCommittee">Social Committee</Link></li>
               </ul>
             )}
           </li>
-          <li onClick={handleNav}>
-            <Link href="/#mentorship">Mentorship</Link>
-          </li>
-          <li onClick={handleNav}>
-            <Link href="/#sports">Sports</Link>
-          </li>
-          <li onClick={handleNav}>
-            <Link href="/#contact">Contact</Link>
-          </li>
-          <li onClick={handleNav}>
-            <Link href="/#about">About</Link>
-          </li>
-          <li onClick={handleNav}>
-            <Link href="/gallery">Gallery</Link>
-          </li>
-          <li onClick={handleNav}>
-            <Link href="/eboard">E-Board</Link>
-          </li>
+          <li onClick={handleNav}><Link href="/#mentorship">Mentorship</Link></li>
+          <li onClick={handleNav}><Link href="/#sports">Sports</Link></li>
+          <li onClick={handleNav}><Link href="/#contact">Contact</Link></li>
+          <li onClick={handleNav}><Link href="/#about">About</Link></li>
+          <li onClick={handleNav}><Link href="/gallery">Gallery</Link></li>
+          <li onClick={handleNav}><Link href="/eboard">E-Board</Link></li>
         </ul>
       </div>
     </div>
@@ -175,3 +142,6 @@ const Navbar = () => {
 };
 
 export default Navbar;
+
+
+

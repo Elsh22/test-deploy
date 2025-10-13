@@ -1,7 +1,7 @@
 'use client';
 import React from "react";
 import { motion } from "framer-motion";
-import flyerImage from "../../assets/SundaySpotlight/SundaySpotlight2.jpg";
+import flyerImage from "../../assets/SundaySpotlight/SundaySpotlight3.jpg";
 import { fadeIn, staggerContainer, planetVariants } from "../../utils/motion";
 
 const SundaySpotlight = () => {
@@ -19,7 +19,7 @@ const SundaySpotlight = () => {
       {/* Flyer */}
       <motion.a
         variants={planetVariants("left")}
-        href="https://www.instagram.com/p/DPJt95Ojab2/"
+        href="https://www.instagram.com/p/DPuG1ahEuzH/"
         target="_blank"
         rel="noopener noreferrer"
         className="flex-shrink-0 relative group"
@@ -42,16 +42,16 @@ const SundaySpotlight = () => {
           DMC Sunday Spotlight
         </h2>
         <p className="text-lg text-gray-200">
-          DMC congratulates Clyde Clark III on their role as Chairmen’s Intern for the DPVA (Democratic Party of Virginia)!
+         DMC congratulates Bolawole Orenuga on successfully completing his internship working as an AutoCAD Intern with Tridentis, LLC over the summer!
         </p>
         <p className="text-lg text-gray-200">
-          More words from Clyde:
+          More words from Bola:
         </p>
         <p className="text-lg text-yellow-300 italic">
-          “I am grateful for the skills and experiences I have gained through DMC and my college journey, as they have both played a major role in helping me earn this internship opportunity. DMC has pushed me to grow as a leader and hold myself to higher standards, while my college experience has strengthened my academic foundation and prepared me for professional growth.
+        “Spending my summer at Tridentis was beyond insightful. As a full-time AutoCad intern, I became more proficient in both the software and a professional, occupational lifestyle.
         </p>
         <p className="text-lg text-yellow-300 italic">
-          I look forward to taking full advantage of this internship, not only by contributing my best work but also by networking with others and learning as much as possible. Just as importantly, I hope to bring back what I learn and share my knowledge and experiences with my DMC peers, so that we can all continue to grow as a student org.”
+         Thanks to DMC, my professional development was more than adequate to receive such an opportunity. This role immediately challenged me to move from textbook exercises to create a real-world impact. This hands-on experience not only cemented my technical AutoCad expertise but also instilled a greater sense of accountability and pride in my work as an engineer.”
         </p>
       </motion.div>
 
