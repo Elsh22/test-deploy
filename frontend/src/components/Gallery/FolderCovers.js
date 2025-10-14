@@ -7,16 +7,18 @@ import finalExam from "../../newassest/dmc final exam-14.jpg";
 import sports from "../../assets/DMCSPORTS/7on7-2.jpg";
 import GBM from "../../assets/GBMs/DSC00512.jpg";
 import misc from "../../newassest/DSC09585.jpg";
+import Linked from "../../assets/LINKEDINWORK/IMG_0752.png";
 const folderCovers = {
   1: Mixer,
-  2: GBM,
-  3: SOVO,
-  4: INT,
-  5: sports,
-  6: Kickball,
-  7: CGI,
-  8: finalExam,
-  9: misc,
+  2: Linked,
+  3: GBM,
+  4: SOVO,
+  5: INT,
+  6: sports,
+  7: Kickball,
+  8: CGI,
+  9: finalExam,
+  10: misc,
 };
 
 export default folderCovers;

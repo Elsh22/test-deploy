@@ -373,6 +373,24 @@ import GBM31 from "../../assets/GBMs/DSC00827.jpg";
 import GBM32 from "../../assets/GBMs/DSC00844.jpg";
 import GBM33 from "../../assets/GBMs/DSC00857.jpg";
 
+//Linkedin Workshop
+import Linked1 from "../../assets/LINKEDINWORK/IMG_0736.png"
+import Linked2 from "../../assets/LINKEDINWORK/IMG_0739.png"
+import Linked3 from "../../assets/LINKEDINWORK/IMG_0740.png"
+import Linked4 from "../../assets/LINKEDINWORK/IMG_0746.png"
+import Linked5 from "../../assets/LINKEDINWORK/IMG_0747.png"
+import Linked6 from "../../assets/LINKEDINWORK/IMG_0752.png"
+import Linked7 from "../../assets/LINKEDINWORK/IMG_0756.png"
+import Linked8 from "../../assets/LINKEDINWORK/IMG_0762.png"
+import Linked9 from "../../assets/LINKEDINWORK/IMG_0766.png"
+import Linked10 from "../../assets/LINKEDINWORK/IMG_0770.png"
+import Linked11 from "../../assets/LINKEDINWORK/IMG_0775.png"
+import Linked12 from "../../assets/LINKEDINWORK/IMG_0776.png"
+import Linked13 from "../../assets/LINKEDINWORK/IMG_0778.png"
+import Linked14 from "../../assets/LINKEDINWORK/IMG_0779.png"
+import Linked15 from "../../assets/LINKEDINWORK/IMG_0786.png"
+import Linked16 from "../../assets/LINKEDINWORK/IMG_0794.png"
+
 const shuffleArray = (arr) => arr
   .map((value) => ({ value, sort: Math.random() }))
   .sort((a, b) => a.sort - b.sort)
@@ -385,23 +403,27 @@ const folderImages = {
     eigithMixer11, eigithMixer12, eigithMixer13, eigithMixer14, eigithMixer15,
     eigithMixer16, eigithMixer17, eigithMixer18,
   ],
-  4: [
+  2: [
+    Linked1, Linked2, Linked3, Linked4, Linked5, Linked6, Linked7, Linked8,
+    Linked9, Linked10, Linked11, Linked12, Linked13, Linked14, Linked15, Linked16,
+  ],
+  5: [
     Internship1, Internship2, Internship3, Internship4, Internship5,
     Internship6, Internship7, Internship8, Internship9, Internship10,
     Internship11, Internship12, Internship13, Internship14, Internship15,
     Internship16, Internship17, Internship18, Internship19, Internship20,
     Internship21, Internship22, Internship23,
   ],
-  3: [
+  4: [
     SovoFair1, SovoFair2, SovoFair3, SovoFair4, SovoFair5,
     SovoFair6, SovoFair7, SovoFair8, SovoFair9, SovoFair10,
     SovoFair11, SovoFair12, SovoFair13, SovoFair14, SovoFair15,
   ],
-  6: [Kickball1, Kickball2, Kickball3, Kickball4, Kickball5, Kickball6, Kickball7, Kickball8, Kickball9], // Kickball Game
-  7: [CG_1, CG_2, CG_3, CG_4, CG_5, CG_6, CG_7, CG_8, CG_9, CG_10], // CGI Event
-  8: [finalExam01, finalExam02, finalExam03, finalExam04, finalExam05, finalExam06, finalExam07, finalExam08, finalExam09, finalExam10,
+  7: [Kickball1, Kickball2, Kickball3, Kickball4, Kickball5, Kickball6, Kickball7, Kickball8, Kickball9], // Kickball Game
+  8: [CG_1, CG_2, CG_3, CG_4, CG_5, CG_6, CG_7, CG_8, CG_9, CG_10], // CGI Event
+  9: [finalExam01, finalExam02, finalExam03, finalExam04, finalExam05, finalExam06, finalExam07, finalExam08, finalExam09, finalExam10,
       finalExam11, finalExam12, finalExam13, finalExam14, finalExam15, finalExam16, finalExam17], // DMC Final Exam
-  5: [img39,
+  6: [img39,
   img40,
   img41,
   img42,
@@ -475,7 +497,7 @@ const folderImages = {
   football67,
 ]
 , // DMC Sports
-     2: [
+     3: [
     GBM1,
     GBM2,
     GBM3,
@@ -510,7 +532,7 @@ const folderImages = {
     GBM32,
     GBM33
   ],
-  9: [img2, img3, img15, img16, img17, img18, img19, img20, img21, img22, img23, img24, img25, img26, img27, img28, img29,
+  10: [img2, img3, img15, img16, img17, img18, img19, img20, img21, img22, img23, img24, img25, img26, img27, img28, img29,
       img30, img31, img32, img33, img34, img35, img36, img37, img38, img45, img46, img47, img48, img49, img50, img51, img52,
       img53, img54, img55, img56, img57, img58, img59, img60, img61, img62, img63, img64, img65, img66, img67, img68, img69,
       img70, img71, PanelShotVACU, FoodGBMVACU, FoodPresentedGBMVACU, PanelVACU, ZiadbeinglightskinVACU, ShotofRobert,
