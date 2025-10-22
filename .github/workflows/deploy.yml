@@ -10,37 +10,40 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    # 0. Clean up disk space before anything else
-    - name: Clean up disk space
-      run: |
-        echo "=== Cleaning up temporary files ==="
-        sudo rm -rf /tmp/*
-        sudo rm -rf backend/node_modules
-        sudo rm -rf frontend/node_modules
-        # Remove dangling Docker resources if Docker is available
-        if command -v docker >/dev/null 2>&1; then
-          docker system prune -af || true
-        fi
-        echo "=== Disk usage after cleanup ==="
-        df -h
-
     # 1. Check out the repository
     - uses: actions/checkout@v2
 
-    # 2. Set up Node.js
+    # 2. Clean up runner disk before anything else
+    - name: Pre-build cleanup
+      run: |
+        echo "Cleaning up temporary files..."
+        sudo rm -rf /tmp/*
+        sudo rm -rf backend/node_modules
+        sudo rm -rf frontend/node_modules
+        docker system prune -af || true
+        echo "Disk usage after cleanup:"
+        df -h
+
+    # 3. Set up Node.js
     - name: Set up Node.js
       uses: actions/setup-node@v2
       with:
         node-version: '20'
 
-    # 3. Debug Backend Directory (Optional)
+    # 4. Increase Node memory for Next.js
+    - name: Set Node memory limit
+      run: |
+        export NODE_OPTIONS="--max-old-space-size=4096"
+        echo "Node memory limit set to 4GB"
+
+    # 5. Debug Backend Directory (Optional)
     - name: Debug Backend Folder
       run: |
         echo "Checking backend folder contents..."
         cd backend
         ls -la
 
-    # 4. Install Backend Dependencies (Strapi)
+    # 6. Install Backend Dependencies (Strapi)
     - name: Install Backend Dependencies
       run: |
         cd backend
@@ -50,20 +53,20 @@ jobs:
           npm install
         fi
 
-    # 5. Build Backend (Strapi)
+    # 7. Build Backend (Strapi)
     - name: Build Backend
       run: |
         cd backend
         npm run build
 
-    # 6. Debug Frontend Directory (Optional)
+    # 8. Debug Frontend Directory (Optional)
     - name: Debug Frontend Folder
       run: |
         echo "Checking frontend folder contents..."
         cd frontend
         ls -la
 
-    # 7. Install Frontend Dependencies (Next.js)
+    # 9. Install Frontend Dependencies (Next.js)
     - name: Install Frontend Dependencies
       run: |
         cd frontend
@@ -73,11 +76,11 @@ jobs:
           npm install
         fi
 
-    # 8. Build Frontend (Next.js)
+    # 10. Build Frontend (Next.js) with debug
     - name: Build Frontend
       run: |
         cd frontend
-        npm run build
+        npx next build --debug
       env:
         MONGODB_URI: ${{ secrets.MONGODB_URI }}
         MONGODB_Signin_URI: ${{ secrets.MONGODB_Signin_URI }}
@@ -86,4 +89,3 @@ jobs:
         STRIPE_SECRET_KEY: ${{ secrets.STRIPE_SECRET_KEY }}
         STRIPE_PAYMENT_DESCRIPTION: ${{ secrets.STRIPE_PAYMENT_DESCRIPTION }}
         STRIPE_WEBHOOK_SECRET: ${{ secrets.STRIPE_WEBHOOK_SECRET }}
-
