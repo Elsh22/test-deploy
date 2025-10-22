@@ -10,6 +10,20 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+    # 0. Clean up disk space before anything else
+    - name: Clean up disk space
+      run: |
+        echo "=== Cleaning up temporary files ==="
+        sudo rm -rf /tmp/*
+        sudo rm -rf backend/node_modules
+        sudo rm -rf frontend/node_modules
+        # Remove dangling Docker resources if Docker is available
+        if command -v docker >/dev/null 2>&1; then
+          docker system prune -af || true
+        fi
+        echo "=== Disk usage after cleanup ==="
+        df -h
+
     # 1. Check out the repository
     - uses: actions/checkout@v2
 
@@ -73,15 +87,3 @@ jobs:
         STRIPE_PAYMENT_DESCRIPTION: ${{ secrets.STRIPE_PAYMENT_DESCRIPTION }}
         STRIPE_WEBHOOK_SECRET: ${{ secrets.STRIPE_WEBHOOK_SECRET }}
 
-    # 🧹 9. Clean up disk space to prevent "No space left on device" errors
-    - name: Clean up disk space
-      run: |
-        echo "Cleaning up..."
-        sudo rm -rf /tmp/*
-        sudo rm -rf ${{ github.workspace }}/backend/node_modules
-        sudo rm -rf ${{ github.workspace }}/frontend/node_modules
-        docker system prune -af || true
-        echo "Disk space after cleanup:"
-        df -h
-
-        
