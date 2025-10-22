@@ -4,9 +4,9 @@ import Image from "next/image";
 import img1 from "../../assets/DMCSPORTS/7on7(1).jpg";
 import img2 from "../../assets/DMCMIXER8/DMCMIXER20.jpg";
 import img3 from "../../newassest/suitday.jpg";
-import img4 from "../../newassest/creditunion_handup.jpg";
+import img4 from "../../assets/GBMs/GBM 2 DMCxVACU 10-15-25-20.png";
 import img5 from "../../assets/IntershipWorkshop/IntWork20.png";
-import img6 from "../../newassest/sports4.jpg";
+import img6 from "../../assets/DMCSPORTS/DSC01192.jpg";
 
 const events = [
   {
@@ -23,7 +23,7 @@ const events = [
     imgSrc: img4,
     description:
       "An engaging session with VACU that highlighted financial literacy and support.",
-    videoUrl: "https://drive.google.com/file/d/1eOwJoj9_UVN0_1uXOCPijmwYEMddWZV8/preview",
+    videoUrl: "https://drive.google.com/file/d/1BggVKnHJAXKKl7MCd8EEoUKJSVxFda2G/preview",
   },
   {
     id: 2,
@@ -55,7 +55,7 @@ const events = [
     imgSrc: img6,
     description:
       "A fun-filled day of basketball games, showcasing teamwork and sportsmanship.",
-    videoUrl: "https://drive.google.com/file/d/1fztFYrfzcGyw-7Ne_iNTowR-FHfZL-QG/preview",
+    videoUrl: "https://drive.google.com/file/d/11DRpJ8PIrarpE4WVcjVCXUxj6eU5OMhB/preview",
   },
 ];
 

@@ -1,4 +1,34 @@
 const events = [
+    {
+    title: "DMC Intermural Basketball: Cary Street Gym",
+    start: "2025-10-21T19:30:00",
+    end: "2025-10-21T21:30:00"
+  },
+   {
+    title: "DMC Study Session Hibbs 426",
+    start: "2025-10-20T19:00:00",
+    end: "2025-10-20T21:00:00"
+  },
+  {
+    title: "DMC Study Session Hibbs TBA",
+    start: "2025-10-21T17:00:00",
+    end: "2025-10-21T22:00:00"
+  },
+  {
+    title: "DMC Study Session Library 250",
+    start: "2025-10-26T17:00:00",
+    end: "2025-10-26T22:00:00"
+  },
+  {
+    title: "DMC Study Session Hibbs 426",
+    start: "2025-10-27T19:00:00",
+    end: "2025-10-27T21:00:00"
+  },
+  {
+    title: "Jacob's Chance Kickball Match",
+    start: "2025-10-26T14:30:00",
+    end: "2025-10-26T16:30:00"
+  },
   {
     title: "DMC Basketball Tournment",
     start: "2025-11-08T19:00:00",

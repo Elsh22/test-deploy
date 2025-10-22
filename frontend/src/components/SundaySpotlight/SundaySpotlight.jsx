@@ -1,7 +1,7 @@
 'use client';
 import React from "react";
 import { motion } from "framer-motion";
-import flyerImage from "../../assets/SundaySpotlight/SundaySpotlight3.jpg";
+import flyerImage from "../../assets/SundaySpotlight/SundaySpotlight4.jpg";
 import { fadeIn, staggerContainer, planetVariants } from "../../utils/motion";
 
 const SundaySpotlight = () => {
@@ -19,7 +19,7 @@ const SundaySpotlight = () => {
       {/* Flyer */}
       <motion.a
         variants={planetVariants("left")}
-        href="https://www.instagram.com/p/DPuG1ahEuzH/"
+        href="https://www.instagram.com/vcu.dmc/p/DP_ysoWDYDJ/"
         target="_blank"
         rel="noopener noreferrer"
         className="flex-shrink-0 relative group"
@@ -42,17 +42,15 @@ const SundaySpotlight = () => {
           DMC Sunday Spotlight
         </h2>
         <p className="text-lg text-gray-200">
-         DMC congratulates Bolawole Orenuga on successfully completing his internship working as an AutoCAD Intern with Tridentis, LLC over the summer!
+         This week’s Sunday Spotlight is a unique one, a CO-OP! Take a few moments to congratulate our nominee, Hassan Elshowaya and learn more!
         </p>
         <p className="text-lg text-gray-200">
-          More words from Bola:
+          More words from Hassan:
         </p>
         <p className="text-lg text-yellow-300 italic">
-        “Spending my summer at Tridentis was beyond insightful. As a full-time AutoCad intern, I became more proficient in both the software and a professional, occupational lifestyle.
-        </p>
+        “Developing Men of Color really helped me build real connections and meet the right people who pushed me to grow. I learned a lot from talking with others who were already doing what I wanted to do. Those connections and conversations helped open the door for my co-op with Newport News Shipbuilding.        </p>
         <p className="text-lg text-yellow-300 italic">
-         Thanks to DMC, my professional development was more than adequate to receive such an opportunity. This role immediately challenged me to move from textbook exercises to create a real-world impact. This hands-on experience not only cemented my technical AutoCad expertise but also instilled a greater sense of accountability and pride in my work as an engineer.”
-        </p>
+         This unique experience provided a rigorous foundation in executing mission-critical objectives within a highly controlled operational environment. I cultivated a skill set defined by acute critical analysis, a deep commitment to information integrity and security protocol, and the ability to master complex, proprietary systems under pressure. The role fundamentally strengthened my capacity for professional adaptability and concise, high-impact reporting to key stakeholders, preparing me for environments demanding absolute discretion and elevated performance standards.”        </p>
       </motion.div>
 
       {/* Bottom Gold Accent */}
