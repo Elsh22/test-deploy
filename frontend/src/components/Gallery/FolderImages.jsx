@@ -103,13 +103,20 @@ import finalExam14 from "../../newassest/dmc final exam-14.jpg";
 import finalExam15 from "../../newassest/dmc final exam-15.jpg";
 import finalExam17 from "../../newassest/dmc final exam-17.jpg";
 
-//DMC Sports//
-import img39 from "../../newassest/sports.jpg";
-import img40 from "../../newassest/sports2.jpg";
-import img41 from "../../newassest/sports3.jpg";
-import img42 from "../../newassest/sports4.jpg";
-import img43 from "../../newassest/sports5.jpg";
-import img44 from "../../newassest/sports6.jpg";
+//DMC Basketball//
+import basketball1 from "../../assets/DMCSPORTS/DSC01094.jpg";
+import basketball2 from "../../assets/DMCSPORTS/DSC01105.jpg";
+import basketball3 from "../../assets/DMCSPORTS/DSC01123.jpg";
+import basketball4 from "../../assets/DMCSPORTS/DSC01149.jpg";
+import basketball5 from "../../assets/DMCSPORTS/DSC01154.jpg";
+import basketball6 from "../../assets/DMCSPORTS/DSC01177.jpg";
+import basketball7 from "../../assets/DMCSPORTS/DSC01186.jpg";
+import basketball8 from "../../assets/DMCSPORTS/DSC01192.jpg";
+import basketball9 from "../../assets/DMCSPORTS/DSC01201.jpg";
+import basketball10 from "../../assets/DMCSPORTS/DSC01208.jpg";
+import basketball11 from "../../assets/DMCSPORTS/DSC01214.jpg";
+import basketball12 from "../../assets/DMCSPORTS/DSC01234.jpg";
+
 
 //Misc//
 import img2 from "../../assets/Miscellaneous/2.png";
@@ -373,6 +380,91 @@ import GBM31 from "../../assets/GBMs/DSC00827.jpg";
 import GBM32 from "../../assets/GBMs/DSC00844.jpg";
 import GBM33 from "../../assets/GBMs/DSC00857.jpg";
 
+//2nd GBM//
+import GBM2ND1 from "../../assets/GBMs/GBM 2 DMCxVACU 10-15-25-01.png";
+import GBM2ND2 from "../../assets/GBMs/GBM 2 DMCxVACU 10-15-25-02.png";
+import GBM2ND3 from "../../assets/GBMs/GBM 2 DMCxVACU 10-15-25-03.png";
+import GBM2ND4 from "../../assets/GBMs/GBM 2 DMCxVACU 10-15-25-04.png";
+import GBM2ND5 from "../../assets/GBMs/GBM 2 DMCxVACU 10-15-25-05.png";
+import GBM2ND6 from "../../assets/GBMs/GBM 2 DMCxVACU 10-15-25-06.png";
+import GBM2ND7 from "../../assets/GBMs/GBM 2 DMCxVACU 10-15-25-07.png";
+import GBM2ND8 from "../../assets/GBMs/GBM 2 DMCxVACU 10-15-25-08.png";
+import GBM2ND9 from "../../assets/GBMs/GBM 2 DMCxVACU 10-15-25-09.png";
+import GBM2ND10 from "../../assets/GBMs/GBM 2 DMCxVACU 10-15-25-10.png";
+import GBM2ND11 from "../../assets/GBMs/GBM 2 DMCxVACU 10-15-25-11.png";
+import GBM2ND12 from "../../assets/GBMs/GBM 2 DMCxVACU 10-15-25-12.png";
+import GBM2ND13 from "../../assets/GBMs/GBM 2 DMCxVACU 10-15-25-13.png";
+import GBM2ND14 from "../../assets/GBMs/GBM 2 DMCxVACU 10-15-25-14.png";
+import GBM2ND15 from "../../assets/GBMs/GBM 2 DMCxVACU 10-15-25-15.png";
+import GBM2ND16 from "../../assets/GBMs/GBM 2 DMCxVACU 10-15-25-16.png";
+import GBM2ND17 from "../../assets/GBMs/GBM 2 DMCxVACU 10-15-25-17.png";
+import GBM2ND18 from "../../assets/GBMs/GBM 2 DMCxVACU 10-15-25-18.png";
+import GBM2ND19 from "../../assets/GBMs/GBM 2 DMCxVACU 10-15-25-19.png";
+import GBM2ND20 from "../../assets/GBMs/GBM 2 DMCxVACU 10-15-25-20.png";
+import GBM2ND21 from "../../assets/GBMs/GBM 2 DMCxVACU 10-15-25-21.png";
+import GBM2ND22 from "../../assets/GBMs/GBM 2 DMCxVACU 10-15-25-22.png";
+import GBM2ND23 from "../../assets/GBMs/GBM 2 DMCxVACU 10-15-25-23.png";
+import GBM2ND24 from "../../assets/GBMs/GBM 2 DMCxVACU 10-15-25-24.png";
+import GBM2ND25 from "../../assets/GBMs/GBM 2 DMCxVACU 10-15-25-25.png";
+import GBM2ND26 from "../../assets/GBMs/GBM 2 DMCxVACU 10-15-25-26.png";
+import GBM2ND27 from "../../assets/GBMs/GBM 2 DMCxVACU 10-15-25-27.png";
+import GBM2ND28 from "../../assets/GBMs/GBM 2 DMCxVACU 10-15-25-28.png";
+import GBM2ND29 from "../../assets/GBMs/GBM 2 DMCxVACU 10-15-25-29.png";
+import GBM2ND30 from "../../assets/GBMs/GBM 2 DMCxVACU 10-15-25-30.png";
+import GBM2ND31 from "../../assets/GBMs/GBM 2 DMCxVACU 10-15-25-31.png";
+import GBM2ND32 from "../../assets/GBMs/GBM 2 DMCxVACU 10-15-25-32.png";
+import GBM2ND33 from "../../assets/GBMs/GBM 2 DMCxVACU 10-15-25-33.png";
+import GBM2ND34 from "../../assets/GBMs/GBM 2 DMCxVACU 10-15-25-34.png";
+import GBM2ND35 from "../../assets/GBMs/GBM 2 DMCxVACU 10-15-25-35.png";
+import GBM2ND36 from "../../assets/GBMs/GBM 2 DMCxVACU 10-15-25-36.png";
+import GBM2ND37 from "../../assets/GBMs/GBM 2 DMCxVACU 10-15-25-37.png";
+import GBM2ND38 from "../../assets/GBMs/GBM 2 DMCxVACU 10-15-25-38.png";
+import GBM2ND39 from "../../assets/GBMs/GBM 2 DMCxVACU 10-15-25-39.png";
+import GBM2ND40 from "../../assets/GBMs/GBM 2 DMCxVACU 10-15-25-40.png";
+import GBM2ND41 from "../../assets/GBMs/GBM 2 DMCxVACU 10-15-25-41.png";
+import GBM2ND42 from "../../assets/GBMs/GBM 2 DMCxVACU 10-15-25-42.png";
+import GBM2ND43 from "../../assets/GBMs/GBM 2 DMCxVACU 10-15-25-43.png";
+import GBM2ND44 from "../../assets/GBMs/GBM 2 DMCxVACU 10-15-25-44.png";
+import GBM2ND45 from "../../assets/GBMs/GBM 2 DMCxVACU 10-15-25-45.png";
+import GBM2ND46 from "../../assets/GBMs/GBM 2 DMCxVACU 10-15-25-46.png";
+import GBM2ND47 from "../../assets/GBMs/GBM 2 DMCxVACU 10-15-25-47.png";
+import GBM2ND48 from "../../assets/GBMs/GBM 2 DMCxVACU 10-15-25-48.png";
+import GBM2ND49 from "../../assets/GBMs/GBM 2 DMCxVACU 10-15-25-49.png";
+import GBM2ND50 from "../../assets/GBMs/GBM 2 DMCxVACU 10-15-25-50.png";
+import GBM2ND51 from "../../assets/GBMs/GBM 2 DMCxVACU 10-15-25-51.png";
+import GBM2ND52 from "../../assets/GBMs/GBM 2 DMCxVACU 10-15-25-52.png";
+import GBM2ND53 from "../../assets/GBMs/GBM 2 DMCxVACU 10-15-25-53.png";
+import GBM2ND54 from "../../assets/GBMs/GBM 2 DMCxVACU 10-15-25-54.png";
+import GBM2ND55 from "../../assets/GBMs/GBM 2 DMCxVACU 10-15-25-55.png";
+import GBM2ND56 from "../../assets/GBMs/GBM 2 DMCxVACU 10-15-25-56.png";
+import GBM2ND57 from "../../assets/GBMs/GBM 2 DMCxVACU 10-15-25-57.png";
+import GBM2ND58 from "../../assets/GBMs/GBM 2 DMCxVACU 10-15-25-58.png";
+import GBM2ND59 from "../../assets/GBMs/GBM 2 DMCxVACU 10-15-25-59.png";
+import GBM2ND60 from "../../assets/GBMs/GBM 2 DMCxVACU 10-15-25-60.png";
+import GBM2ND61 from "../../assets/GBMs/GBM 2 DMCxVACU 10-15-25-61.png";
+import GBM2ND62 from "../../assets/GBMs/GBM 2 DMCxVACU 10-15-25-62.png";
+import GBM2ND63 from "../../assets/GBMs/GBM 2 DMCxVACU 10-15-25-63.png";
+import GBM2ND64 from "../../assets/GBMs/GBM 2 DMCxVACU 10-15-25-64.png";
+import GBM2ND65 from "../../assets/GBMs/GBM 2 DMCxVACU 10-15-25-65.png";
+import GBM2ND66 from "../../assets/GBMs/GBM 2 DMCxVACU 10-15-25-66.png";
+import GBM2ND67 from "../../assets/GBMs/GBM 2 DMCxVACU 10-15-25-67.png";
+import GBM2ND68 from "../../assets/GBMs/GBM 2 DMCxVACU 10-15-25-68.png";
+import GBM2ND69 from "../../assets/GBMs/GBM 2 DMCxVACU 10-15-25-69.png";
+import GBM2ND70 from "../../assets/GBMs/GBM 2 DMCxVACU 10-15-25-70.png";
+import GBM2ND71 from "../../assets/GBMs/GBM 2 DMCxVACU 10-15-25-71.png";
+import GBM2ND72 from "../../assets/GBMs/GBM 2 DMCxVACU 10-15-25-72.png";
+import GBM2ND73 from "../../assets/GBMs/GBM 2 DMCxVACU 10-15-25-73.png";
+import GBM2ND74 from "../../assets/GBMs/GBM 2 DMCxVACU 10-15-25-74.png";
+import GBM2ND75 from "../../assets/GBMs/GBM 2 DMCxVACU 10-15-25-75.png";
+import GBM2ND76 from "../../assets/GBMs/GBM 2 DMCxVACU 10-15-25-76.png";
+import GBM2ND77 from "../../assets/GBMs/GBM 2 DMCxVACU 10-15-25-77.png";
+import GBM2ND78 from "../../assets/GBMs/GBM 2 DMCxVACU 10-15-25-78.png";
+import GBM2ND79 from "../../assets/GBMs/GBM 2 DMCxVACU 10-15-25-79.png";
+import GBM2ND80 from "../../assets/GBMs/GBM 2 DMCxVACU 10-15-25-80.png";
+import GBM2ND81 from "../../assets/GBMs/GBM 2 DMCxVACU 10-15-25-81.png";
+import GBM2ND82 from "../../assets/GBMs/GBM 2 DMCxVACU 10-15-25-82.png";
+import GBM2ND83 from "../../assets/GBMs/GBM 2 DMCxVACU 10-15-25-83.png";
+
 //Linkedin Workshop
 import Linked1 from "../../assets/LINKEDINWORK/IMG_0736.png"
 import Linked2 from "../../assets/LINKEDINWORK/IMG_0739.png"
@@ -423,12 +515,18 @@ const folderImages = {
   8: [CG_1, CG_2, CG_3, CG_4, CG_5, CG_6, CG_7, CG_8, CG_9, CG_10], // CGI Event
   9: [finalExam01, finalExam02, finalExam03, finalExam04, finalExam05, finalExam06, finalExam07, finalExam08, finalExam09, finalExam10,
       finalExam11, finalExam12, finalExam13, finalExam14, finalExam15, finalExam16, finalExam17], // DMC Final Exam
-  6: [img39,
-  img40,
-  img41,
-  img42,
-  img43,
-  img44,
+  6: [basketball1,
+    basketball2,
+    basketball3,
+    basketball4,
+    basketball5,
+    basketball6,
+    basketball7,
+    basketball8,
+    basketball9,
+    basketball10,
+    basketball11,
+    basketball12,
   football1,
   football2,
   football3,
@@ -530,7 +628,16 @@ const folderImages = {
     GBM30,
     GBM31,
     GBM32,
-    GBM33
+    GBM33,
+GBM2ND1, GBM2ND2, GBM2ND3, GBM2ND4, GBM2ND5, GBM2ND6, GBM2ND7, GBM2ND8, GBM2ND9, GBM2ND10,
+  GBM2ND11, GBM2ND12, GBM2ND13, GBM2ND14, GBM2ND15, GBM2ND16, GBM2ND17, GBM2ND18, GBM2ND19, GBM2ND20,
+  GBM2ND21, GBM2ND22, GBM2ND23, GBM2ND24, GBM2ND25, GBM2ND26, GBM2ND27, GBM2ND28, GBM2ND29, GBM2ND30,
+  GBM2ND31, GBM2ND32, GBM2ND33, GBM2ND34, GBM2ND35, GBM2ND36, GBM2ND37, GBM2ND38, GBM2ND39, GBM2ND40,
+  GBM2ND41, GBM2ND42, GBM2ND43, GBM2ND44, GBM2ND45, GBM2ND46, GBM2ND47, GBM2ND48, GBM2ND49, GBM2ND50,
+  GBM2ND51, GBM2ND52, GBM2ND53, GBM2ND54, GBM2ND55, GBM2ND56, GBM2ND57, GBM2ND58, GBM2ND59, GBM2ND60,
+  GBM2ND61, GBM2ND62, GBM2ND63, GBM2ND64, GBM2ND65, GBM2ND66, GBM2ND67, GBM2ND68, GBM2ND69, GBM2ND70,
+  GBM2ND71, GBM2ND72, GBM2ND73, GBM2ND74, GBM2ND75, GBM2ND76, GBM2ND77, GBM2ND78, GBM2ND79, GBM2ND80,
+  GBM2ND81, GBM2ND82, GBM2ND83
   ],
   10: [img2, img3, img15, img16, img17, img18, img19, img20, img21, img22, img23, img24, img25, img26, img27, img28, img29,
       img30, img31, img32, img33, img34, img35, img36, img37, img38, img45, img46, img47, img48, img49, img50, img51, img52,
