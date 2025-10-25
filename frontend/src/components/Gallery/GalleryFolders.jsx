@@ -12,14 +12,11 @@ const GalleryFolders = () => {
 
   const folders = [
     { id: 1, title: 'DMC 8th Annual Mixer'},
-    { id: 2, title: '2025-2026 GBMs'},
-    { id: 3, title: 'SOVO Fair 2025'},
-    { id: 4, title: 'Internship Workshop 2025'},
-    { id: 5, title: 'DMC Sports'},
-    { id: 6, title: 'Kickball Game'},
-    { id: 7, title: 'CGI Event'},
-    { id: 8, title: 'DMC Final Exam'},
-    { id: 9, title: 'Miscellaneous'}
+    { id: 2, title: "Linkedin Workshop 2025"},
+    { id: 3, title: '2025-2026 GBMs'},
+    { id: 4, title: 'SOVO Fair 2025'},
+    { id: 5, title: 'Internship Workshop 2025'},
+    { id: 6, title: 'DMC Sports'},
   ];
 
   const handleFolderClick = (folderId) => {
