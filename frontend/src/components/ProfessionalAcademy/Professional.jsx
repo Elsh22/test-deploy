@@ -87,20 +87,20 @@ const Professional = ({ id }) => {
                   Hussein
                 </a>
                 <a
-                  href="http://calendly.com/dwivedysk2-vcu/30min"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="block px-4 py-2 hover:bg-yellow-500 hover:text-black transition-colors"
-                >
-                  Sameer
-                </a>
-                <a
                   href="https://calendly.com/smithjrte-vcu/30min?month=2025-09"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="block px-4 py-2 hover:bg-yellow-500 hover:text-black transition-colors"
                 >
                   Thurman
+                </a>
+                <a
+                  href="https://calendly.com/danielnt-vcu/30min"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block px-4 py-2 hover:bg-yellow-500 hover:text-black transition-colors"
+                >
+                  Naod
                 </a>
               </div>
             )}
@@ -131,6 +131,14 @@ const Professional = ({ id }) => {
                   className="block px-4 py-2 hover:bg-yellow-500 hover:text-black transition-colors"
                 >
                   Kaleb
+                </a>
+                 <a
+                  href="http://calendly.com/dwivedysk2-vcu/30min"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block px-4 py-2 hover:bg-yellow-500 hover:text-black transition-colors"
+                >
+                  Sameer
                 </a>
               </div>
             )}
