@@ -76,43 +76,6 @@ import basketball10 from "../../assets/DMCSPORTS/DSC01208.jpg";
 import basketball11 from "../../assets/DMCSPORTS/DSC01214.jpg";
 import basketball12 from "../../assets/DMCSPORTS/DSC01234.jpg";
 
-<<<<<<< HEAD
-=======
-//DMC Final Exam//
-import finalExam01 from "../../newassest/dmc final exam-01.jpg";
-import finalExam02 from "../../newassest/dmc final exam-02.jpg";
-import finalExam03 from "../../newassest/dmc final exam-03.jpg";
-import finalExam04 from "../../newassest/dmc final exam-04.jpg";
-import finalExam05 from "../../newassest/dmc final exam-05.jpg";
-import finalExam06 from "../../newassest/dmc final exam-06.jpg";
-import finalExam09 from "../../newassest/dmc final exam-09.jpg";
-import finalExam10 from "../../newassest/dmc final exam-10.jpg";
-import finalExam11 from "../../newassest/dmc final exam-11.jpg";
-import finalExam16 from "../../newassest/dmc final exam-16.jpg";
-import finalExam07 from "../../newassest/dmc final exam-07.jpg";
-import finalExam08 from "../../newassest/dmc final exam-08.jpg";
-import finalExam12 from "../../newassest/dmc final exam-12.jpg";
-import finalExam13 from "../../newassest/dmc final exam-13.jpg";
-import finalExam14 from "../../newassest/dmc final exam-14.jpg";
-import finalExam15 from "../../newassest/dmc final exam-15.jpg";
-import finalExam17 from "../../newassest/dmc final exam-17.jpg";
-
-//DMC Basketball//
-import basketball1 from "../../assets/DMCSPORTS/DSC01094.jpg";
-import basketball2 from "../../assets/DMCSPORTS/DSC01105.jpg";
-import basketball3 from "../../assets/DMCSPORTS/DSC01123.jpg";
-import basketball4 from "../../assets/DMCSPORTS/DSC01149.jpg";
-import basketball5 from "../../assets/DMCSPORTS/DSC01154.jpg";
-import basketball6 from "../../assets/DMCSPORTS/DSC01177.jpg";
-import basketball7 from "../../assets/DMCSPORTS/DSC01186.jpg";
-import basketball8 from "../../assets/DMCSPORTS/DSC01192.jpg";
-import basketball9 from "../../assets/DMCSPORTS/DSC01201.jpg";
-import basketball10 from "../../assets/DMCSPORTS/DSC01208.jpg";
-import basketball11 from "../../assets/DMCSPORTS/DSC01214.jpg";
-import basketball12 from "../../assets/DMCSPORTS/DSC01234.jpg";
-
->>>>>>> 6193adb4753f2fed5cb693951518f5a2766fab28
-
 //Misc//
 import img2 from "../../assets/Miscellaneous/2.png";
 import img3 from "../../assets/Miscellaneous/3.png";
@@ -352,13 +315,6 @@ const folderImages = {
     SovoFair6, SovoFair7, SovoFair8, SovoFair9, SovoFair10,
     SovoFair11, SovoFair12, SovoFair13, SovoFair14, SovoFair15,
   ],
-<<<<<<< HEAD
-=======
-  7: [Kickball1, Kickball2, Kickball3, Kickball4, Kickball5, Kickball6, Kickball7, Kickball8, Kickball9], // Kickball Game
-  8: [CG_1, CG_2, CG_3, CG_4, CG_5, CG_6, CG_7, CG_8, CG_9, CG_10], // CGI Event
-  9: [finalExam01, finalExam02, finalExam03, finalExam04, finalExam05, finalExam06, finalExam07, finalExam08, finalExam09, finalExam10,
-      finalExam11, finalExam12, finalExam13, finalExam14, finalExam15, finalExam16, finalExam17], // DMC Final Exam
->>>>>>> 6193adb4753f2fed5cb693951518f5a2766fab28
   6: [basketball1,
     basketball2,
     basketball3,
@@ -483,26 +439,6 @@ GBM2ND1, GBM2ND2, GBM2ND3, GBM2ND4, GBM2ND5, GBM2ND6, GBM2ND7, GBM2ND8, GBM2ND9,
   GBM2ND71, GBM2ND72, GBM2ND73, GBM2ND74, GBM2ND75, GBM2ND76, GBM2ND77, GBM2ND78, GBM2ND79, GBM2ND80,
   GBM2ND81, GBM2ND82, GBM2ND83
   ],
-<<<<<<< HEAD
   };
-=======
-  10: [img2, img3, img15, img16, img17, img18, img19, img20, img21, img22, img23, img24, img25, img26, img27, img28, img29,
-      img30, img31, img32, img33, img34, img35, img36, img37, img38, img45, img46, img47, img48, img49, img50, img51, img52,
-      img53, img54, img55, img56, img57, img58, img59, img60, img61, img62, img63, img64, img65, img66, img67, img68, img69,
-      img70, img71, PanelShotVACU, FoodGBMVACU, FoodPresentedGBMVACU, PanelVACU, ZiadbeinglightskinVACU, ShotofRobert,
-      NehoandXWholsomeVACU, MoeNHusseinVACU, FolksatVACU, BigShotatGBMVACU, RobertTalkingAtPanel, ShotOfAudienceWhilePanelTalking,
-      AnotherShotOfRobertTalking, DMCGettingCheckFromVACU, DeloTalkingToPhotoguyAtVACU, KabirTalkingToVPofOps,
-      VACUWithFood, VACUInteractionWithStudents, WholesomePictureVACU, ChrisShocklyMightBeBlushing, kidsAtGymOnBench,
-      kidsDoingPushups, moreKidsDoingPushups, moreResourceFairSauce, resourceFairSauce, resourceFairCoffee, ziadAtResourceFair,
-      nehoAtResourceFair, resourceFairFun, nehoHelpingAtResourceFair, DrBrown, kidsPostedUp, kidsNextToUnderground,
-      kidsNextToRamsHorns, groupPhoto1, postedWin, jasonWinning, shakeHands, pitchingKid, pitchingKid2, groupPic2, groupPic,
-      DSC09850, DSC09862, DSC09864, DSC09875, DSC09901, DSC09945, DSC09964, DSC09983, DSC00124, DSC00127, DSC00057,
-      DSC00104, DSC00019, DSC00027, IMG_2696_1, IMG_2680, IMG_2676, dmcclass_6, dmcclass_9, dmcclass_5, dmcclass_3,
-      IMG_2696, IMG_2708, IMG_252, IMG_253, IMG_254, IMG_255, IMG_256, IMG_257, IMG_258, IMG_259, IMG_260, IMG_261,
-      IMG_262, IMG_263, IMG_264, IMG_265, IMG_266, IMG_267, IMG_268, IMG_269, Handshakes, JasonWithPpl, KBRonZion,
-      LockedIn, MoedaVeZion, XavieDeloJason, XavierSpeaking, ZionAndDave, ZionAndSteph, GroupActivity1, GroupActivity2,
-      DeloWorking1, DeloWorking2, Desserts1, Desserts2, KabirDlo, DonaldKnight, FullRoomCrowd, Handshakes2] // Misc
-};
->>>>>>> 6193adb4753f2fed5cb693951518f5a2766fab28
 
 export default folderImages;
