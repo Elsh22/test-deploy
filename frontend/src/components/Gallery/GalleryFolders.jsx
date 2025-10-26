@@ -17,13 +17,6 @@ const GalleryFolders = () => {
     { id: 4, title: 'SOVO Fair 2025'},
     { id: 5, title: 'Internship Workshop 2025'},
     { id: 6, title: 'DMC Sports'},
-<<<<<<< HEAD
-=======
-    { id: 7, title: 'Kickball Game'},
-    { id: 8, title: 'CGI Event'},
-    { id: 9, title: 'DMC Final Exam'},
-    { id: 10, title: 'Miscellaneous'},
->>>>>>> 6193adb4753f2fed5cb693951518f5a2766fab28
   ];
 
   const handleFolderClick = (folderId) => {
