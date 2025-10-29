@@ -1,7 +1,7 @@
 'use client';
 import React from "react";
 import { motion } from "framer-motion";
-import flyerImage from "../../assets/SundaySpotlight/SundaySpotlight4.jpg";
+import flyerImage from "../../assets/SundaySpotlight/SundaySpotlight5.jpg";
 import { fadeIn, staggerContainer, planetVariants } from "../../utils/motion";
 
 const SundaySpotlight = () => {
@@ -42,15 +42,16 @@ const SundaySpotlight = () => {
           DMC Sunday Spotlight
         </h2>
         <p className="text-lg text-gray-200">
-         This week’s Sunday Spotlight is a unique one, a CO-OP! Take a few moments to congratulate our nominee, Hassan Elshowaya and learn more!
-        </p>
+        This week’s Sunday Spotlight is none other than Sean Goffigan, who recently accepted their internship offer to work as an Investment Advisor with Heritage Wealth Advisors. We celebrate this achievement with you!</p>
         <p className="text-lg text-gray-200">
-          More words from Hassan:
+         More words from Sean:
         </p>
         <p className="text-lg text-yellow-300 italic">
-        “Developing Men of Color really helped me build real connections and meet the right people who pushed me to grow. I learned a lot from talking with others who were already doing what I wanted to do. Those connections and conversations helped open the door for my co-op with Newport News Shipbuilding.        </p>
+        “Being in DMC has pushed me to new heights by giving me the resources to grow as a professional.
+I’ll be starting my Investment Advisory Internship with Heritage Wealth Advisors where I will be helping the portfolio manager research and manage client assets while receiving training on a variety of financial
+topics including private equity.        </p>
         <p className="text-lg text-yellow-300 italic">
-         This unique experience provided a rigorous foundation in executing mission-critical objectives within a highly controlled operational environment. I cultivated a skill set defined by acute critical analysis, a deep commitment to information integrity and security protocol, and the ability to master complex, proprietary systems under pressure. The role fundamentally strengthened my capacity for professional adaptability and concise, high-impact reporting to key stakeholders, preparing me for environments demanding absolute discretion and elevated performance standards.”        </p>
+         What has impressed me the most about DMC is being surrounded by men who have succeeded before, showing you that it is also possible for yourself. By talking to DMC members and learning from them and their experiences, as well as the workshops held by DMC I have gained invaluable insight that is continuing to shape my professional career today.”        </p>
       </motion.div>
 
       {/* Bottom Gold Accent */}
