@@ -19,7 +19,7 @@ const SundaySpotlight = () => {
       {/* Flyer */}
       <motion.a
         variants={planetVariants("left")}
-        href="https://www.instagram.com/vcu.dmc/p/DP_ysoWDYDJ/"
+        href="https://www.instagram.com/p/DQR0jkXETN0/"
         target="_blank"
         rel="noopener noreferrer"
         className="flex-shrink-0 relative group"
