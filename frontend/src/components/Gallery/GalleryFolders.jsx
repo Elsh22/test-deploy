@@ -17,6 +17,7 @@ const GalleryFolders = () => {
     { id: 4, title: 'SOVO Fair 2025'},
     { id: 5, title: 'Internship Workshop 2025'},
     { id: 6, title: 'DMC Sports'},
+    { id: 7, title: 'Other'},
   ];
 
   const handleFolderClick = (folderId) => {
@@ -47,7 +48,13 @@ const GalleryFolders = () => {
     <div
       key={folder.id}
       className="flex-shrink-0 w-[180px] sm:w-[220px] h-[400px] sm:h-[700px] relative cursor-pointer group rounded-[24px] overflow-hidden snap-center"
-      onClick={() => handleFolderClick(folder.id)}
+      onClick={() => {
+  if (folder.title === 'Other') {
+    window.open('https://drive.google.com/drive/folders/1Z-LjzjQDrACQpagawQkj8n8uVdH-3Fyt', '_blank');
+  } else {
+    handleFolderClick(folder.id);
+  }
+}}
     >
       <Image
         src={folderCovers[folder.id]}

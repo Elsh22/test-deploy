@@ -1,7 +1,7 @@
 'use client';
 import React from "react";
 import { motion } from "framer-motion";
-import flyerImage from "../../assets/SundaySpotlight/SundaySpotlight5.jpg";
+import flyerImage from "../../assets/SundaySpotlight/SundaySpotlight6.jpg";
 import { fadeIn, staggerContainer, planetVariants } from "../../utils/motion";
 
 const SundaySpotlight = () => {
@@ -42,16 +42,14 @@ const SundaySpotlight = () => {
           DMC Sunday Spotlight
         </h2>
         <p className="text-lg text-gray-200">
-        This week’s Sunday Spotlight is none other than Sean Goffigan, who recently accepted their internship offer to work as an Investment Advisor with Heritage Wealth Advisors. We celebrate this achievement with you!</p>
+        This week's Sunday Spotlight is none other than Marcus Johnson, who came to the DMC workshop, applied for an internship, and received a role at PepsiCo as a 2026 summer sales intern. Congratulations on your hard work as well as your current and future success!</p>
         <p className="text-lg text-gray-200">
-         More words from Sean:
+         More words from Marcus:
         </p>
         <p className="text-lg text-yellow-300 italic">
-        “Being in DMC has pushed me to new heights by giving me the resources to grow as a professional.
-I’ll be starting my Investment Advisory Internship with Heritage Wealth Advisors where I will be helping the portfolio manager research and manage client assets while receiving training on a variety of financial
-topics including private equity.        </p>
+        "Being part of DMC has been an important part of my college experience. Through the workshops and one-on-one support I received, I was able to improve my interview skills, build confidence, and ultimately secure my Sales Internship with PepsiCo for Summer 2026.        </p>
         <p className="text-lg text-yellow-300 italic">
-         What has impressed me the most about DMC is being surrounded by men who have succeeded before, showing you that it is also possible for yourself. By talking to DMC members and learning from them and their experiences, as well as the workshops held by DMC I have gained invaluable insight that is continuing to shape my professional career today.”        </p>
+        DMC has helped me grow both personally and professionally by providing resources, mentorship, and a strong network of motivated students. Through this internship, I hope to gain hands-on sales experience, develop stronger leadership skills, and continue learning how to connect purpose with professionalism. I’m grateful for how DMC continues to guide and prepare students like me for real opportunities beyond the classroom."        </p>
       </motion.div>
 
       {/* Bottom Gold Accent */}
