@@ -6,7 +6,7 @@ import img1 from '../../assets/mixer_background.jpg';
 
 const Home = ({
   id,
-  heading = 'DMC',
+  heading = 'Developing Men of Color',
   message = '501(c)(3) Non-Profit',
 }) => {
   return (
