@@ -3,76 +3,37 @@ import React from 'react';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 
+// Import images
+import Xavier from '../../../../assets/1.png';
+import Zion from '../../../../assets/Zion.jpg';
+import Kabir from '../../../../assets/KabirHeadshotUpdated.jpg';
+import David from '../../../../assets/DavidHeadshotUpdated.jpg';
+import Josh from '../../../../assets/Josh.png';
+import DeAngelo from '../../../../assets/DeangleoHeadshotUpdated.jpg';
+import Jason from '../../../../assets/JasonHeadshotUpdated.jpg';
+import Stephen from '../../../../assets/StephHeadshotUpdated.jpg';
+import Kaleb from '../../../../assets/KalebHeadshotUpdated.jpg';
+import Neho from '../../../../assets/NehoHeadshotUpdated.jpg';
+import Caleb from '../../../../assets/CalebBarnes.jpeg';
+import Goode from '../../../../assets/Goode.jpg';
+import Thomas from '../../../../assets/Thomas.jpg';
+import Eboard from '../../../../assets/eboardpic.jpg';
+
 const AboutNonProfit = () => {
-  // Replace with actual non-profit board members
   const team = [
-    { 
-      name: 'Dr. Goode', 
-      role: 'Founder/Strategic Advisor', 
-      image: '../../../../assets/XaiverHeadshotUpdated.jpg', 
-      linkedin: 'https://www.linkedin.com/in/member1' 
-    },
-    { 
-      name: 'Thomas', 
-      role: 'CEO', 
-      image: '../../../../assets/XaiverHeadshotUpdated.jpg', 
-      linkedin: 'https://www.linkedin.com/in/member1' 
-    },
-    { 
-      name: 'Hazim', 
-      role: 'COO', 
-      image: '../../../../assets/XaiverHeadshotUpdated.jpg', 
-      linkedin: 'https://www.linkedin.com/in/member1' 
-    },
-    { 
-      name: 'James', 
-      role: 'CFO', 
-      image: '../../../../assets/XaiverHeadshotUpdated.jpg', 
-      linkedin: 'https://www.linkedin.com/in/member1' 
-    },
-    { 
-      name: 'Stone', 
-      role: 'VP of Marketing & Communications', 
-      image: '../../../../assets/XaiverHeadshotUpdated.jpg', 
-      linkedin: 'https://www.linkedin.com/in/member1' 
-    },
-    { 
-      name: 'Khalid', 
-      role: 'VP of Business Development', 
-      image: '../../../../assets/XaiverHeadshotUpdated.jpg', 
-      linkedin: 'https://www.linkedin.com/in/member1' 
-    },
-    { 
-      name: 'Non-Profit Board Member 1', 
-      role: 'Board Chair', 
-      image: '../../../../assets/XaiverHeadshotUpdated.jpg', 
-      linkedin: 'https://www.linkedin.com/in/member1' 
-    },
-    { 
-      name: 'Elijah', 
-      role: 'VP of Chapter Development', 
-      image: '../../../../assets/XaiverHeadshotUpdated.jpg', 
-      linkedin: 'https://www.linkedin.com/in/member1' 
-    },
-    { 
-      name: 'Kyle', 
-      role: 'Director of Administration', 
-      image: '../../../../assets/XaiverHeadshotUpdated.jpg', 
-      linkedin: 'https://www.linkedin.com/in/member1' 
-    },
-    { 
-      name: 'Jalen', 
-      role: 'Director of Alumni & Community Engagement', 
-      image: '../../../../assets/XaiverHeadshotUpdated.jpg', 
-      linkedin: 'https://www.linkedin.com/in/member1' 
-    },
-    { 
-      name: 'Caleb', 
-      role: 'Director of IT / IT Coordinator', 
-      image: '../../../../assets/XaiverHeadshotUpdated.jpg', 
-      linkedin: 'https://www.linkedin.com/in/member1' 
-    },
-    // Add more non-profit board members here
+    { name: 'Xavier Lewis', role: 'President', image: Xavier, linkedin: 'https://www.linkedin.com/in/xavier-lewis-9916bb253/' },
+    { name: 'Zion Segears', role: 'Vice President', image: Zion, linkedin: 'https://www.linkedin.com/in/zion-segears-767bb7242/' },
+    { name: 'Kabir Munjwani', role: 'Secretary', image: Kabir, linkedin: 'https://www.linkedin.com/in/kabir-munjwani-2389bb319/' },
+    { name: 'David Foster', role: 'Treasurer', image: David, linkedin: 'https://www.linkedin.com/in/david-foster-b063b0226/' },
+    { name: 'Josh Hines', role: 'Mentorship Director', image: Josh, linkedin: 'https://www.linkedin.com/in/joshhines4/' },
+    { name: 'DeAngelo Bailey', role: 'Public Relations Coordinator', image: DeAngelo, linkedin: 'https://www.linkedin.com/in/deangelo-bailey-5686ba253/' },
+    { name: 'Jason Gallardo Gonzalez', role: 'Social Media Chair', image: Jason, linkedin: 'https://www.linkedin.com/in/jason-gallardo-gonzalez/' },
+    { name: 'Stephen Kouevi', role: 'Membership Chair', image: Stephen, linkedin: 'https://www.linkedin.com/in/stephenkouevi/' },
+    { name: 'Kaleb Brown', role: 'Wellness Director', image: Kaleb, linkedin: 'https://www.linkedin.com/in/kaleb--brown/' },
+    { name: 'Nehemiah Kibler', role: 'Event Coordinator', image: Neho, linkedin: 'https://www.linkedin.com/in/nehemiah-kibler-ba8764253/' },
+    { name: 'Caleb Barnes', role: 'Director of IT', image: Caleb, linkedin: 'https://www.linkedin.com/in/caleb-barnes1/' },
+    { name: 'Dr. Carlton Goode', role: 'Faculty Advisor', image: Goode, linkedin: 'https://www.linkedin.com/in/carlton-goode-ed-d-69172815/' },
+    { name: 'Thomas Chatman', role: 'Second Advisor', image: Thomas, linkedin: 'https://www.linkedin.com/in/thomas--chatman/' },
   ];
 
   return (
@@ -83,19 +44,23 @@ const AboutNonProfit = () => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
       >
-        Meet Our Non-Profit Board
+        Meet the VCU Board
       </motion.h1>
 
-      {/* Group Photo */}
+      {/* Eboard Group Photo */}
       <motion.div
         initial={{ opacity: 0, scale: 0.95 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.5, delay: 0.2 }}
         className="w-full max-w-5xl mb-12"
       >
-        <div className="w-full h-[400px] bg-gray-200 rounded-lg shadow-xl flex items-center justify-center">
-          <p className="text-gray-500">Non-Profit Board Photo</p>
-        </div>
+        <Image
+          src={Eboard}
+          alt="DMC VCU Board"
+          width={1000}
+          height={600}
+          className="rounded-lg shadow-xl w-full h-auto"
+        />
       </motion.div>
 
       {/* Individual Board Members */}
@@ -114,9 +79,13 @@ const AboutNonProfit = () => {
               rel="noopener noreferrer"
               className="group relative w-40 h-40 mb-4 rounded-full overflow-hidden transform transition-transform duration-300 hover:scale-105"
             >
-              <div className="w-full h-full bg-gray-300 rounded-full flex items-center justify-center">
-                <p className="text-gray-500">Photo</p>
-              </div>
+              <Image
+                src={member.image}
+                alt={member.name}
+                layout="fill"
+                objectFit="cover"
+                className="rounded-full transition-transform duration-300 group-hover:scale-110"
+              />
               <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition-opacity duration-300 rounded-full" />
             </a>
             <h3 className="text-xl font-semibold text-gray-900 hover:text-blue-600 transition-colors duration-300">
