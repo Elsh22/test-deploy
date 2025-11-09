@@ -1,10 +1,10 @@
 'use client';
 import React from 'react';
 import Image from 'next/image';
-import image1 from '../../assets/FLYERS/BasketballTournament.jpg';
+//import image1 from '../../assets/FLYERS/BasketballTournament.jpg';
 import image2 from '../../assets/FLYERS/3rdGBM.jpg';
-import image3 from '../../assets/FLYERS/ShadowDay.PNG';
-import image4 from '../../assets/FLYERS/JacobsChance.jpg';
+//import image3 from '../../assets/FLYERS/ShadowDay.PNG';
+//import image4 from '../../assets/FLYERS/JacobsChance.jpg';
 import { Description } from '@mui/icons-material';
 
 const FlyerPost = () => {
@@ -16,27 +16,27 @@ const FlyerPost = () => {
         'Join us for our 3rd and last general body meeting of the semester to learn more about DMC and engage with our community.',
       date: 'November 19, 2025',
     },
-    {
-    image: image1,
-    title: 'DMC Basketball Tournament',
-    description: 
-    'We’re happy to announce the DMC 5v5 Basketball Tournament! Pair up with your best players and fight through the tournament to claim victory! We’ll be providing a generous cash prize to the victorious team, so be sure to give it your all!',
-    date: 'November 8, 2025',
-    },
-    {
-      image: image3,
-      title: 'DMC Shadow Day',
-      description:
-      'Join us in our DMC Shadow Day! Get an opprotunity to pair with a student and show what is like a day in the life of a college student!',
-      date: 'Coming Soon',
-    },
-    {
-      image: image4,
-      title: 'Jacobs Chance Kickball Match',
-      description:
-      'Let’s play some kickball! Looking for some fun and good vibes? Come out and join us for an all-inclusive kickball game. It’s the perfect way to play, meet new people, and have a great time together.',
-      date: 'October 26, 2025',
-    }
+    //{
+    //image: image1,
+    //title: 'DMC Basketball Tournament',
+    //description: 
+    //'We’re happy to announce the DMC 5v5 Basketball Tournament! Pair up with your best players and fight through the tournament to claim victory! We’ll be providing a generous cash prize to the victorious team, so be sure to give it your all!',
+    //date: 'November 8, 2025',
+    //},
+    //{
+      //image: image3,
+      //title: 'DMC Shadow Day',
+      //description:
+      //'Join us in our DMC Shadow Day! Get an opprotunity to pair with a student and show what is like a day in the life of a college student!',
+      //date: 'Coming Soon',
+    //},
+    //{
+      //image: image4,
+      //title: 'Jacobs Chance Kickball Match',
+      //description:
+      //'Let’s play some kickball! Looking for some fun and good vibes? Come out and join us for an all-inclusive kickball game. It’s the perfect way to play, meet new people, and have a great time together.',
+      //date: 'October 26, 2025',
+    //}
   ];
 
   return (

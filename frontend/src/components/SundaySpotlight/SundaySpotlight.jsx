@@ -1,7 +1,7 @@
 'use client';
 import React from "react";
 import { motion } from "framer-motion";
-import flyerImage from "../../assets/SundaySpotlight/SundaySpotlight6.jpg";
+import flyerImage from "../../assets/SundaySpotlight/SundaySpotlight7.jpg";
 import { fadeIn, staggerContainer, planetVariants } from "../../utils/motion";
 
 const SundaySpotlight = () => {
@@ -19,7 +19,7 @@ const SundaySpotlight = () => {
       {/* Flyer */}
       <motion.a
         variants={planetVariants("left")}
-        href="https://www.instagram.com/p/DQR0jkXETN0/"
+        href="https://www.instagram.com/p/DQ17hzqEQp9/"
         target="_blank"
         rel="noopener noreferrer"
         className="flex-shrink-0 relative group"
@@ -42,14 +42,14 @@ const SundaySpotlight = () => {
           DMC Sunday Spotlight
         </h2>
         <p className="text-lg text-gray-200">
-        This week's Sunday Spotlight is none other than Marcus Johnson, who came to the DMC workshop, applied for an internship, and received a role at PepsiCo as a 2026 summer sales intern. Congratulations on your hard work as well as your current and future success!</p>
+        This week's Sunday Spotlight is none other than Derrick Bryant, who received a role at Dulce Media Agency as a DMA intern. Congratulations on your hard work as well as your current and future success!</p>
         <p className="text-lg text-gray-200">
-         More words from Marcus:
+        More words from Derrick:
         </p>
         <p className="text-lg text-yellow-300 italic">
-        "Being part of DMC has been an important part of my college experience. Through the workshops and one-on-one support I received, I was able to improve my interview skills, build confidence, and ultimately secure my Sales Internship with PepsiCo for Summer 2026.        </p>
+        “Being part of Developing Men of Color has been an important part of my college experience. The mentorship, professional development, and accountability I gained through DMC gave me the confidence and skills to excel within Dulce Media Agency. I’m incredibly grateful for all of these opportunities and can’t wait for more to come.”        </p>
         <p className="text-lg text-yellow-300 italic">
-        DMC has helped me grow both personally and professionally by providing resources, mentorship, and a strong network of motivated students. Through this internship, I hope to gain hands-on sales experience, develop stronger leadership skills, and continue learning how to connect purpose with professionalism. I’m grateful for how DMC continues to guide and prepare students like me for real opportunities beyond the classroom."        </p>
+       </p>
       </motion.div>
 
       {/* Bottom Gold Accent */}
