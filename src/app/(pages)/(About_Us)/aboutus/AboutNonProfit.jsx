@@ -27,7 +27,7 @@ const AboutNonProfit = () => {
     { name: 'Marko Alvarenga', role: 'Mentorship Director', image: Marko , linkedin: 'https://www.linkedin.com/in/marko-alvarenga-5211621a6/' },
     { name: 'Khalid Elshowaya', role: 'VP of Business Development', image: Khalid, linkedin: 'https://www.linkedin.com/in/khalid-elshowaya/' },
     { name: 'Elijah Gartrell', role: 'VP of Chapter Development', image: Elijah, linkedin: 'https://www.linkedin.com/in/elijah-gartrell-8aa628230/' },
-    { name: 'Kyle Weldon', role: 'Director of Administration', image: Kyle, linkedin: 'https://www.linkedin.com/in/weldonkylevcu/overlay/photo/' },
+    { name: 'Kyle Weldon', role: 'Director of Administration', image: Kyle, linkedin: 'https://www.linkedin.com/in/weldonkylevcu/' },
     { name: 'Jalen Gray', role: 'Director of Alumni & Community Engagement', image: Jalen, linkedin: 'https://www.linkedin.com/in/jalen-bray007/' },
     { name: 'Caleb Barnes', role: 'Director of IT', image: Caleb, linkedin: 'https://www.linkedin.com/in/caleb-barnes1/' },
 
