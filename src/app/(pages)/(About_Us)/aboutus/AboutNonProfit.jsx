@@ -4,36 +4,33 @@ import Image from 'next/image';
 import { motion } from 'framer-motion';
 
 // Import images
-import Xavier from '../../../../assets/1.png';
-import Zion from '../../../../assets/Zion.jpg';
-import Kabir from '../../../../assets/KabirHeadshotUpdated.jpg';
-import David from '../../../../assets/DavidHeadshotUpdated.jpg';
-import Josh from '../../../../assets/Josh.png';
-import DeAngelo from '../../../../assets/DeangleoHeadshotUpdated.jpg';
-import Jason from '../../../../assets/JasonHeadshotUpdated.jpg';
-import Stephen from '../../../../assets/StephHeadshotUpdated.jpg';
-import Kaleb from '../../../../assets/KalebHeadshotUpdated.jpg';
-import Neho from '../../../../assets/NehoHeadshotUpdated.jpg';
+import Thomas from '../../../../assets/Thomas.jpg';
+import Hazim from '../../../../assets/Hazim.jpeg';
+import James from '../../../../assets/James.jpeg';
+import Stone from '../../../../assets/Stone.jpeg';
+import Khalid from '../../../../assets/Khalid.jpeg';
+import Elijah from '../../../../assets/Elijah.jpeg';
+import Kyle from '../../../../assets/Kyle.jpeg';
+import Jalen from '../../../../assets/Jalen.jpeg';
 import Caleb from '../../../../assets/CalebBarnes.jpeg';
 import Goode from '../../../../assets/Goode.jpg';
-import Thomas from '../../../../assets/Thomas.jpg';
-import Eboard from '../../../../assets/eboardpic.jpg';
+import Marko from '../../../../assets/Marko.jpeg';
+import Eboard from '../../../../assets/DMCNONPROFITphot.jpeg';
 
 const AboutNonProfit = () => {
   const team = [
-    { name: 'Xavier Lewis', role: 'President', image: Xavier, linkedin: 'https://www.linkedin.com/in/xavier-lewis-9916bb253/' },
-    { name: 'Zion Segears', role: 'Vice President', image: Zion, linkedin: 'https://www.linkedin.com/in/zion-segears-767bb7242/' },
-    { name: 'Kabir Munjwani', role: 'Secretary', image: Kabir, linkedin: 'https://www.linkedin.com/in/kabir-munjwani-2389bb319/' },
-    { name: 'David Foster', role: 'Treasurer', image: David, linkedin: 'https://www.linkedin.com/in/david-foster-b063b0226/' },
-    { name: 'Josh Hines', role: 'Mentorship Director', image: Josh, linkedin: 'https://www.linkedin.com/in/joshhines4/' },
-    { name: 'DeAngelo Bailey', role: 'Public Relations Coordinator', image: DeAngelo, linkedin: 'https://www.linkedin.com/in/deangelo-bailey-5686ba253/' },
-    { name: 'Jason Gallardo Gonzalez', role: 'Social Media Chair', image: Jason, linkedin: 'https://www.linkedin.com/in/jason-gallardo-gonzalez/' },
-    { name: 'Stephen Kouevi', role: 'Membership Chair', image: Stephen, linkedin: 'https://www.linkedin.com/in/stephenkouevi/' },
-    { name: 'Kaleb Brown', role: 'Wellness Director', image: Kaleb, linkedin: 'https://www.linkedin.com/in/kaleb--brown/' },
-    { name: 'Nehemiah Kibler', role: 'Event Coordinator', image: Neho, linkedin: 'https://www.linkedin.com/in/nehemiah-kibler-ba8764253/' },
+    { name: 'Dr. Carlton Goode', role: 'Founder/Strategic Advisor', image: Goode, linkedin: 'https://www.linkedin.com/in/carlton-goode-ed-d-69172815/' },
+    { name: 'Thomas Chatman', role: 'CEO', image: Thomas, linkedin: 'https://www.linkedin.com/in/thomaschatman/' },
+    { name: 'Hazim Oraibi', role: 'COO', image: Hazim, linkedin: 'https://www.linkedin.com/in/hazimoraibi/' },
+    { name: 'James Mbualungu', role: 'CFO', image: James, linkedin: 'https://www.linkedin.com/in/james-mbualungu/' },
+    { name: 'Stone Brickhouse', role: 'VP of Marketing and Communications', image: Stone, linkedin: 'https://www.linkedin.com/in/stone-brickhouse/overlay/about-this-profile/' },
+    { name: 'Marko Alvarenga', role: 'Mentorship Director', image: Marko , linkedin: 'https://www.linkedin.com/in/marko-alvarenga-5211621a6/' },
+    { name: 'Khalid Elshowaya', role: 'VP of Business Development', image: Khalid, linkedin: 'https://www.linkedin.com/in/khalid-elshowaya/' },
+    { name: 'Elijah Gartrell', role: 'VP of Chapter Development', image: Elijah, linkedin: 'https://www.linkedin.com/in/elijah-gartrell-8aa628230/' },
+    { name: 'Kyle Weldon', role: 'Director of Administration', image: Kyle, linkedin: 'https://www.linkedin.com/in/weldonkylevcu/overlay/photo/' },
+    { name: 'Jalen Gray', role: 'Director of Alumni & Community Engagement', image: Jalen, linkedin: 'https://www.linkedin.com/in/jalen-bray007/' },
     { name: 'Caleb Barnes', role: 'Director of IT', image: Caleb, linkedin: 'https://www.linkedin.com/in/caleb-barnes1/' },
-    { name: 'Dr. Carlton Goode', role: 'Faculty Advisor', image: Goode, linkedin: 'https://www.linkedin.com/in/carlton-goode-ed-d-69172815/' },
-    { name: 'Thomas Chatman', role: 'Second Advisor', image: Thomas, linkedin: 'https://www.linkedin.com/in/thomas--chatman/' },
+
   ];
 
   return (
