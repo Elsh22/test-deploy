@@ -15,7 +15,7 @@ import Jalen from '../../../../assets/Jalen.jpeg';
 import Caleb from '../../../../assets/CalebBarnes.jpeg';
 import Goode from '../../../../assets/Goode.jpg';
 import Marko from '../../../../assets/Marko.jpeg';
-import Eboard from '../../../../assets/DMCNONPROFITphot.jpeg';
+import Eboard from '../../../../assets/DMCNONPROFITphoto.jpeg';
 
 const AboutNonProfit = () => {
   const team = [
