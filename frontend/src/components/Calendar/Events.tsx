@@ -1,4 +1,34 @@
 const events = [
+   {
+    title: "DMC Study Session Hibbs 426",
+    start: "2025-11-10T19:00:00",
+    end: "2025-11-10T21:00:00"
+  },
+    {
+    title: "DMC Study Session Cabell Library 240e",
+    start: "2025-11-12T19:00:00",
+    end: "2025-11-12T21:00:00"
+  },
+    {
+    title: "DMC Study Session Hibbs 426",
+    start: "2025-11-13T16:00:00",
+    end: "2025-11-13T18:00:00"
+  },
+    {
+    title: "DMC Study Session Cabell Library 250",
+    start: "2025-11-16T17:00:00",
+    end: "2025-11-16T22:00:00"
+  },
+    {
+    title: "DMC Study Session Hibbs 426",
+    start: "2025-11-17T19:00:00",
+    end: "2025-11-17T21:00:00"
+  },
+   {
+    title: "DMC Intermural Basketball: Cary Street Gym | Championship Game",
+    start: "2025-11-11T21:30:00",
+    end: "2025-11-11T23:30:00"
+  },
     {
     title: "DMC Intermural Basketball: Cary Street Gym",
     start: "2025-10-21T19:30:00",
