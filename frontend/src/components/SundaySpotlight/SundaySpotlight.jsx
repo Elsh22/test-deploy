@@ -1,7 +1,7 @@
 'use client';
 import React from "react";
 import { motion } from "framer-motion";
-import flyerImage from "../../assets/SundaySpotlight/SundaySpotlight7.jpg";
+import flyerImage from "../../assets/SundaySpotlight/SundaySpotlight8.jpg";
 import { fadeIn, staggerContainer, planetVariants } from "../../utils/motion";
 
 const SundaySpotlight = () => {
@@ -19,7 +19,7 @@ const SundaySpotlight = () => {
       {/* Flyer */}
       <motion.a
         variants={planetVariants("left")}
-        href="https://www.instagram.com/p/DQ17hzqEQp9/"
+        href="https://www.instagram.com/p/DRIqkcakbA2/"
         target="_blank"
         rel="noopener noreferrer"
         className="flex-shrink-0 relative group"
@@ -39,16 +39,17 @@ const SundaySpotlight = () => {
         className="text-left md:text-left max-w-md flex flex-col gap-4"
       >
         <h2 className="text-4xl md:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-600">
-          DMC Sunday Spotlight
+        DMC Sunday Spotlight
         </h2>
         <p className="text-lg text-gray-200">
-        This week's Sunday Spotlight is none other than Derrick Bryant, who received a role at Dulce Media Agency as a DMA intern. Congratulations on your hard work as well as your current and future success!</p>
+        This week’s Sunday Spotlight is Tyler, “Ty” Leary, who recently received an internship offer to work next summer at Dominion Energy as an Electric Transmission System Operations Center Intern! We celebrate this achievement with you!</p>
         <p className="text-lg text-gray-200">
-        More words from Derrick:
+        More words from Ty:
         </p>
         <p className="text-lg text-yellow-300 italic">
-        “Being part of Developing Men of Color has been an important part of my college experience. The mentorship, professional development, and accountability I gained through DMC gave me the confidence and skills to excel within Dulce Media Agency. I’m incredibly grateful for all of these opportunities and can’t wait for more to come.”        </p>
+       “Developing Men of Color helped me recognize the true value of networking — that the best way to access opportunities these days is to market yourself and build authentic connections. By applying these skills, I earned my MSI³ Student Research position and my summer internship with Dominion Energy.</p>
         <p className="text-lg text-yellow-300 italic">
+          These opportunities are providing a strong foundation in technical research and professional collaboration. I honed my ability to market my experiences effectively, articulate the value I bring, and position my skills to align with organizational needs. By learning how to present both my technical expertise and professional adaptability, I strengthened my capacity to open doors to new opportunities and demonstrate what I can contribute in high‑impact environments.”
        </p>
       </motion.div>
 
