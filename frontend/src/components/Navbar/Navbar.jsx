@@ -71,6 +71,7 @@ const Navbar = () => {
               <Link href="/ITCommittee" className="hover:text-yellow-600 p-2">Information Tech</Link>
               <Link href="/ProfCommittee" className="hover:text-yellow-600 p-2">Professional Dev</Link>
               <Link href="/SocCommittee" className="hover:text-yellow-600 p-2">Social Committee</Link>
+              <Link href="/HealthCommittee" className="hover:text-yellow-600 p-2">Health Committee</Link>
               </ul>
           </li>
           <li className="hover:text-yellow-400 transition-colors">
@@ -126,6 +127,7 @@ const Navbar = () => {
                 <li onClick={handleNav}><Link href="/ITCommittee">Information Tech</Link></li>
                 <li onClick={handleNav}><Link href="/ProfCommittee">Professional Dev</Link></li>
                 <li onClick={handleNav}><Link href="/SocCommittee">Social Committee</Link></li>
+                <li onClick={handleNav}><Link href="/HealthCommittee">Health Committee</Link></li>
               </ul>
             )}
           </li>
