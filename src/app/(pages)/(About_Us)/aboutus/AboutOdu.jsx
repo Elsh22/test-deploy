@@ -3,15 +3,30 @@ import React from 'react';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 
+// Import images
+import Balde from '../../../../assets/Ibrahima.jpeg';
+import Pan from '../../../../assets/Pan.jpeg';
+import Requizo from '../../../../assets/Requizo.jpeg';
+import Ables from '../../../../assets/Ables.jpeg';
+import Agyeman from '../../../../assets/Agyemang.jpeg';
+import Sledge from '../../../../assets/DeangleoHeadshotUpdated.jpg';
+import Ralston from '../../../../assets/Ralston.jpeg';
+import Wilson from '../../../../assets/JacobWilson.jpeg';
+import Samdani from '../../../../assets/NehoHeadshotUpdated.jpg';
+
 const AboutOdu = () => {
   // Replace with actual ODU board members
   const team = [
-    { 
-      name: 'ODU Board Member 1', 
-      role: 'President', 
-      image: '../../../../assets/XaiverHeadshotUpdated.jpg', 
-      linkedin: 'https://www.linkedin.com/in/member1' 
-    },
+    { name: 'Ibrahima Balde', role: 'Vice President', image: Balde, linkedin: 'https://www.linkedin.com/in/ibalde/' },
+    { name: 'Alan Pan', role: 'President', image: Pan, linkedin: 'https://www.linkedin.com/in/alanpanbusn/' },
+    { name: 'Nicos Requizo', role: 'PDR', image: Requizo, linkedin: 'https://www.linkedin.com/in/nicos-requizo-25a8a5326/' },
+    { name: 'Kyle Ables', role: 'Social Media Director', image: Ables, linkedin: 'https://www.linkedin.com/in/kyleables/' },
+    { name: 'Kojo Agyeman', role: 'Secretary', image: Agyeman, linkedin: 'https://www.linkedin.com/in/kojo-agyemang/' },
+    { name: 'Elijah Sledge', role: 'Mentoring', image: Sledge, linkedin: 'https://www.linkedin.com/in/xavier-lewis-9916bb253/' },
+    { name: 'Ralston Mitchel', role: 'Event Coordinator', image: Ralston, linkedin: 'https://www.linkedin.com/in/ralston-mitchell-8777261b3/' },
+    { name: 'Jacob Wilson', role: 'Event Coordinator', image: Wilson, linkedin: 'https://www.linkedin.com/in/jacobwilsonjr/' },
+  
+    
     // Add more ODU board members here
   ];
 
