@@ -1,17 +1,31 @@
 'use client';
 import React from 'react';
-import Image from 'next/image';
+import Image from 'next/image'; 
 import { motion } from 'framer-motion';
+
+import Seward from '../../../../assets/Thomas.jpg';
+import Blanco from '../../../../assets/AlexBlanco.jpeg';
+import Lowe from '../../../../assets/Revon.jpeg';
+import Myland from '../../../../assets/Stone.jpeg';
+import Tyrell from '../../../../assets/Tyrell.jpeg';
+import Jahleel from '../../../../assets/Jahleel.jpeg';
+import JalenWilliams from '../../../../assets/Kyle.jpeg';
+import Darnell from '../../../../assets/Darnell.jpeg';
+import Samdani from '../../../../assets/Samdani.jpeg';
 
 const AboutJmu = () => {
   // Replace with actual JMU board members
   const team = [
-    { 
-      name: 'JMU Board Member 1', 
-      role: 'President', 
-      image: '../../../../assets/XaiverHeadshotUpdated.jpg', 
-      linkedin: 'https://www.linkedin.com/in/member1' 
-    },
+    { name: 'Chris Seward', role: 'President', image: Seward, linkedin: 'https://www.linkedin.com/in/christopher-seward-b1a501272/' },
+    { name: 'Alex Blanco', role: 'Vice President', image: Blanco, linkedin: 'https://www.linkedin.com/in/alex-blanco-alcala-1737b6222/' },
+    { name: 'Revon Lowe', role: 'Director of Mentorship', image: Lowe, linkedin: 'https://www.linkedin.com/in/revon-lowe-3a9462284/' },
+    { name: 'Myland Williams', role: 'Director of Mentorship', image: Myland, linkedin: 'https://www.linkedin.com/in/myland-williams-302a20240/' },
+    { name: 'Tyrell Bassett', role: 'Event Coordinator', image: Tyrell, linkedin: 'https://www.linkedin.com/in/tyrell-bassett-5b526b387/' },
+    { name: 'Jahleel McCallum', role: 'Secretary', image: Jahleel, linkedin: 'https://www.linkedin.com/in/tyrell-bassett-5b526b387/' },
+    { name: 'Jalen Williams', role: 'Public Relations', image: JalenWilliams, linkedin: 'https://www.linkedin.com/in/jalenw28/' },
+    { name: 'Darnell Hicks', role: 'Public Relations', image: Darnell, linkedin: 'https://www.linkedin.com/in/darnell-hicks-12960dh/' },
+    { name: 'Ayman Samdani', role: 'Treasurer', image: Samdani, linkedin: 'https://www.linkedin.com/in/ayman-samdani/' },
+    
     // Add more JMU board members here
   ];
 
