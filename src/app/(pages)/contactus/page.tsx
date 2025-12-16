@@ -22,9 +22,9 @@ const ContactPage = () => {
   });
 
   const contactInfo = {
-    email: "contact@dmcorg.com",
-    address: "123 Innovation Way, Tech City, TC 12345",
-    phone: "+1 (555) 123-4567",
+    email: "contact@dmcnonprofit.com",
+    address: "900 Park Ave Richmond, VA 23284",
+    phone: "",
     hours: "Monday - Friday: 9AM - 5PM EST"
   };
 
