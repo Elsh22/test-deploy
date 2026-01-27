@@ -1,7 +1,7 @@
 'use client';
 import React from "react";
 import { motion } from "framer-motion";
-import flyerImage from "../../assets/SundaySpotlight/SundaySpotlight8.jpg";
+import flyerImage from "../../assets/SundaySpotlight/SundaySpotlight9.jpg";
 import { fadeIn, staggerContainer, planetVariants } from "../../utils/motion";
 
 const SundaySpotlight = () => {
@@ -19,7 +19,7 @@ const SundaySpotlight = () => {
       {/* Flyer */}
       <motion.a
         variants={planetVariants("left")}
-        href="https://www.instagram.com/p/DRIqkcakbA2/"
+        href="https://www.instagram.com/p/DT8eBvCEv5X/?hl=en"
         target="_blank"
         rel="noopener noreferrer"
         className="flex-shrink-0 relative group"
@@ -42,15 +42,12 @@ const SundaySpotlight = () => {
         DMC Sunday Spotlight
         </h2>
         <p className="text-lg text-gray-200">
-        This week’s Sunday Spotlight is Tyler, “Ty” Leary, who recently received an internship offer to work next summer at Dominion Energy as an Electric Transmission System Operations Center Intern! We celebrate this achievement with you!</p>
+        This week’s Sunday Spotlight is Sameer Dwivedy! We celebrate this moment with you!</p>
         <p className="text-lg text-gray-200">
-        More words from Ty:
+        More words from Sameer:
         </p>
         <p className="text-lg text-yellow-300 italic">
-       “Developing Men of Color helped me recognize the true value of networking — that the best way to access opportunities these days is to market yourself and build authentic connections. By applying these skills, I earned my MSI³ Student Research position and my summer internship with Dominion Energy.</p>
-        <p className="text-lg text-yellow-300 italic">
-          These opportunities are providing a strong foundation in technical research and professional collaboration. I honed my ability to market my experiences effectively, articulate the value I bring, and position my skills to align with organizational needs. By learning how to present both my technical expertise and professional adaptability, I strengthened my capacity to open doors to new opportunities and demonstrate what I can contribute in high‑impact environments.”
-       </p>
+       Since my freshman year, Developing Men of Color has been shaping my professional development. The organization provided consistent support through interview preparation, professional workshops, and networking opportunities that helped me better understand my strengths and career interests. Being surrounded by peers and mentors with similar goals pushed me to better myself and continue to grow. This guidance ultimately helped me land my Business Analyst internship at CGI.</p>
       </motion.div>
 
       {/* Bottom Gold Accent */}

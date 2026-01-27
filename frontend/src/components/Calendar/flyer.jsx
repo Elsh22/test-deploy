@@ -2,7 +2,7 @@
 import React from 'react';
 import Image from 'next/image';
 //import image1 from '../../assets/FLYERS/BasketballTournament.jpg';
-import image2 from '../../assets/FLYERS/3rdGBM.jpg';
+import image2 from '../../assets/FLYERS/1stGBM(Spring).jpg';
 //import image3 from '../../assets/FLYERS/ShadowDay.PNG';
 //import image4 from '../../assets/FLYERS/JacobsChance.jpg';
 import { Description } from '@mui/icons-material';
@@ -11,10 +11,10 @@ const FlyerPost = () => {
   const flyers = [
     {
       image: image2,
-      title: '3rd General Body Meeting',
+      title: '1st Spring General Body Meeting',
       description:
-        'Join us for our 3rd and last general body meeting of the semester to learn more about DMC and engage with our community.',
-      date: 'November 19, 2025',
+        'Join us for our 1st general body meeting of the spring semester to learn more about DMC and engage with our community.',
+      date: 'February 11, 2026',
     },
     //{
     //image: image1,

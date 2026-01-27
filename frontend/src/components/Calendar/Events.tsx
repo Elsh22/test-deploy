@@ -1,4 +1,64 @@
 const events = [
+  {
+    title: "College Day",
+    start: "2026-04-21T09:00:00",
+    end: "2026-04-21T22:00:00"
+  },
+  {
+    title: "Jacob's Chance Kickball Event",
+    start: "2026-04-19T14:30:00",
+    end: "2026-04-19T16:30:00"
+  },
+  {
+    title: "Suit Day",
+    start: "2026-04-03T17:00:00",
+    end: "2026-04-03T20:00:00"
+  },
+   {
+    title: "3rd Spring DMC General Body Meeting",
+    start: "2026-04-15T19:00:00",
+    end: "2026-04-15T21:00:00"
+  },
+  {
+    title: "2nd Spring DMC General Body Meeting",
+    start: "2026-03-25T19:00:00",
+    end: "2026-03-25T21:00:00"
+  },
+  {
+    title: "DMC Health Event",
+    start: "2026-03-22T16:00:00",
+    end: "2026-03-22T17:00:00"
+  },
+  {
+    title: "IT Workshop",
+    start: "2026-03-17T19:00:00",
+    end: "2026-03-17T21:00:00"
+  },
+  {
+    title: "Get Fitted",
+    start: "2026-02-28T209:00:00",
+    end: "2026-02-28T17:00:00"
+  },
+  {
+    title: "DMC CGI Event",
+    start: "2026-02-24T18:00:00",
+    end: "2026-02-24T21:00:00"
+  },
+  {
+    title: "VCU DMC ODU Summit",
+    start: "2026-02-19T00:00:00",
+    end: "2026-02-21T23:59:00"
+  },
+   {
+    title: "DMC Study Session",
+    start: "2026-02-16T16:00:00",
+    end: "2026-02-16T22:59:00"
+  },
+  {
+    title: "1st Spring DMC General Body Meeting",
+    start: "2026-02-11T19:00:00",
+    end: "2026-02-11T21:00:00"
+  },
    {
     title: "DMC Study Session Hibbs 426",
     start: "2025-11-10T19:00:00",
