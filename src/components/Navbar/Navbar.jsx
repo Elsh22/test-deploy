@@ -236,9 +236,6 @@ const Navbar = () => {
           </div>
         )}
       </div>
-
-      {/* Spacer for fixed navbar */}
-      <div className="h-28" />
     </>
   );
 };

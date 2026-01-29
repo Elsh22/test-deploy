@@ -54,37 +54,41 @@ const AboutOdu = () => {
       </motion.div>
 
       {/* Individual Board Members */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto px-4">
-        {team.map((member, index) => (
-          <motion.div
-            key={member.name}
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: index * 0.1 }}
-            className="flex flex-col items-center"
-          >
-            <a
-              href={member.linkedin}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group relative w-40 h-40 mb-4 rounded-full overflow-hidden transform transition-transform duration-300 hover:scale-105"
-            >
-              <div className="w-full h-full bg-gray-300 rounded-full flex items-center justify-center">
-                <p className="text-gray-500">Photo</p>
-              </div>
-              <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition-opacity duration-300 rounded-full" />
-            </a>
-            <h3 className="text-xl font-semibold text-gray-900 hover:text-blue-600 transition-colors duration-300">
-              <a href={member.linkedin} target="_blank" rel="noopener noreferrer">
-                {member.name}
-              </a>
-            </h3>
-            <p className="text-gray-600 mt-1">{member.role}</p>
-          </motion.div>
-        ))}
-      </div>
-    </div>
-  );
-};
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto px-4">
+              {team.map((member, index) => (
+                <motion.div
+                  key={member.name}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  className="flex flex-col items-center"
+                >
+                  <a
+                    href={member.linkedin}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group relative w-40 h-40 mb-4 rounded-full overflow-hidden transform transition-transform duration-300 hover:scale-105"
+                  >
+                    <Image
+                      src={member.image}
+                      alt={member.name}
+                      layout="fill"
+                      objectFit="cover"
+                      className="rounded-full transition-transform duration-300 group-hover:scale-110"
+                    />
+                    <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition-opacity duration-300 rounded-full" />
+                  </a>
+                  <h3 className="text-xl font-semibold text-gray-900 hover:text-blue-600 transition-colors duration-300">
+                    <a href={member.linkedin} target="_blank" rel="noopener noreferrer">
+                      {member.name}
+                    </a>
+                  </h3>
+                  <p className="text-gray-600 mt-1">{member.role}</p>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        );
+      };
 
 export default AboutOdu;
