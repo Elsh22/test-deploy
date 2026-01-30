@@ -2,13 +2,11 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import VirginiaTech from "../../assets/OtherChapters/VT.png";
 import ODU from "../../assets/OtherChapters/ODU.png";
 import JMU from "../../assets/OtherChapters/JMU.png";
 
 export default function SchoolsPage() {
   const schools = [
-    { name: "Virginia Tech", image: VirginiaTech, link: null },
     { name: "James Madison University", image: JMU, link: "https://www.instagram.com/jmu.dmc" },
     { name: "Old Dominion University", image: ODU, link: "https://www.instagram.com/odu.dmc" },
   ];
