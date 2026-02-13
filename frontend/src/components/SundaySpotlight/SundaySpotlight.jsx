@@ -1,7 +1,7 @@
 'use client';
 import React from "react";
 import { motion } from "framer-motion";
-import flyerImage from "../../assets/SundaySpotlight/SundaySpotlight9.jpg";
+import flyerImage from "../../assets/SundaySpotlight/SundaySpotlight10.jpg";
 import { fadeIn, staggerContainer, planetVariants } from "../../utils/motion";
 
 const SundaySpotlight = () => {
@@ -19,7 +19,7 @@ const SundaySpotlight = () => {
       {/* Flyer */}
       <motion.a
         variants={planetVariants("left")}
-        href="https://www.instagram.com/p/DT8eBvCEv5X/?hl=en"
+        href="https://www.instagram.com/p/DUgykNvEvJc/"
         target="_blank"
         rel="noopener noreferrer"
         className="flex-shrink-0 relative group"
@@ -42,12 +42,16 @@ const SundaySpotlight = () => {
         DMC Sunday Spotlight
         </h2>
         <p className="text-lg text-gray-200">
-        This week’s Sunday Spotlight is Sameer Dwivedy! We celebrate this moment with you!</p>
+        This week’s spotlight is Deven Martino, who will be starting their role as a Discover Analyst with the Federal Reserve Bank in Richmond, VA! We celebrate this milestone in your career.</p>
         <p className="text-lg text-gray-200">
-        More words from Sameer:
+        More words from Deven:
         </p>
         <p className="text-lg text-yellow-300 italic">
-       Since my freshman year, Developing Men of Color has been shaping my professional development. The organization provided consistent support through interview preparation, professional workshops, and networking opportunities that helped me better understand my strengths and career interests. Being surrounded by peers and mentors with similar goals pushed me to better myself and continue to grow. This guidance ultimately helped me land my Business Analyst internship at CGI.</p>
+       “I’m grateful to be recognized by Developing Men of Color (DMC).
+       </p>
+       <p className="text-lg text-yellow-300 italic">
+        Joining DMC was one of the best decisions I made at VCU, being surrounded by driven, community-focused men pushed me to grow personally and professionally. The mentorship, lessons, and connections I’ve gained have shaped who I am today and will continue to guide me moving forward. Huge shoutout to Dr. Goode and DMC for creating an environment that challenged and supported my growth. Forever grateful!”
+       </p>
       </motion.div>
 
       {/* Bottom Gold Accent */}

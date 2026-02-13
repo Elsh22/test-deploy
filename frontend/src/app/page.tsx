@@ -22,7 +22,7 @@ import VideoSection from "../components/VideoSection/VideoSection";
 import SundaySpotlight from "../components/SundaySpotlight/SundaySpotlight";
 import OtherChapters from "../components/OtherChapters/chapters.jsx";
 import NonProfitCard from '../components/NonProfit/NonProfitCard';
-
+import Philosophy from '../components/Philosophy/Philosophy';
 // ------------------------
 // LoadingScreen Component
 // ------------------------
@@ -92,6 +92,7 @@ const HomePage: React.FC = () => {
         <Home id="home" />
         <VideoSection />
         <Mission id="about" />
+        <Philosophy />
         <Professional id="professional" />
         <SundaySpotlight />
         <Highlight />

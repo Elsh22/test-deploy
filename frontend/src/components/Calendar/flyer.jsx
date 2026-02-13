@@ -14,7 +14,7 @@ const FlyerPost = () => {
       title: '1st Spring General Body Meeting',
       description:
         'Join us for our 1st general body meeting of the spring semester to learn more about DMC and engage with our community.',
-      date: 'February 11, 2026',
+      date: 'February 18, 2026',
     },
     //{
     //image: image1,
