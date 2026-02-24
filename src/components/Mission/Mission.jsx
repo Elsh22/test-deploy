@@ -103,7 +103,7 @@ const Mission = ({ id }) => {
                 variants={fadeIn('up', 'tween', 0.2, 1)}
                 className="heading-dmc-primary text-dmc-h1 leading-tight"
               >
-                Empowering Tomorrow&aposs
+                Empowering Tomorrow's 
                 <span className="text-dmc-gradient block">Leaders</span>
               </motion.h2>
               
