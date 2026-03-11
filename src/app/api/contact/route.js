@@ -22,6 +22,7 @@ export async function POST(req) {
       }
       return NextResponse.json({ msg: errorList });
     }
+    console.log("FULL ERROR:", error.message);
     return NextResponse.json({ msg: ["Unable to send message."] });
   }
 }
