@@ -1,53 +1,23 @@
 'use client';
+
 import React from 'react';
-import Image from 'next/image';
+import EboardProfileTemplate from '../EboardProfileTemplate';
 import Xavier from '../../../../assets/EBOARD2025/Xavier2025.jpg';
 
-const XavierPage = () => {
-  return (
-    <div className="flex flex-col md:flex-row items-center justify-center min-h-screen bg-black px-6 py-16 gap-10">
-      <div className="w-full md:w-1/2 flex justify-center">
-        <a
-          href="https://www.linkedin.com/in/xaviermlewis/"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="transition-transform duration-300 hover:scale-105 hover:shadow-xl rounded-lg"
-        >
-          <Image
-            src={Xavier}
-            alt="Xavier"
-            className="rounded-lg shadow-lg w-full max-w-md h-auto object-cover cursor-pointer"
-          />
-        </a>
-      </div>
-      <div className="w-full md:w-1/2 text-white flex flex-col justify-center max-w-lg">
-        <h1 className="text-6xl md:text-7xl font-extrabold mb-2 text-center md:text-left">
-          Xavier Lewis
-        </h1>
-        <h2 className="text-3xl md:text-4xl font-semibold mb-6 text-yellow-400 text-center md:text-left">
-          Vice President
-        </h2>
-        <ul className="list-disc list-inside space-y-2 text-lg md:text-xl leading-relaxed">
-          <li>Major: Biology major, with minors in Chemistry and Pre-Dentistry</li>
-          <li>Class:  Senior</li>
-          <li>Org Positions: President, Eta Xi Chapter of Kappa Alpha Psi Fraternity, Inc.</li>
-          <li>Org Positions: Pre-Dental Ambassador, Black Men in Medicine</li>
-          <li>Future Plans: Attend dental school and attain a D.D.S.</li>
-          <li>
-            LinkedIn:{" "}
-            <a
-              href="https://www.linkedin.com/in/xaviermlewis/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-blue-400 hover:underline"
-            >
-              Xavier Lewis
-            </a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  );
-};
+const XavierPage = () => (
+  <EboardProfileTemplate
+    name="Xavier Lewis"
+    role="Vice President"
+    image={Xavier}
+    linkedin="https://www.linkedin.com/in/xaviermlewis/"
+    highlight="Xavier supports the executive board's operations and helps guide DMC's programming, partnerships, and member experience."
+    details={[
+      { label: 'Major', value: 'Biology with minors in Chemistry and Pre-Dentistry' },
+      { label: 'Class', value: 'Senior' },
+      { label: 'Organizations', value: 'President, Eta Xi Chapter of Kappa Alpha Psi Fraternity, Inc.; Pre-Dental Ambassador; Black Men in Medicine' },
+      { label: 'Future Plans', value: 'Attend dental school and attain a D.D.S.' },
+    ]}
+  />
+);
 
 export default XavierPage;

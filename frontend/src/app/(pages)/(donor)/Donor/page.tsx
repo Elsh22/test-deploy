@@ -1,113 +1,134 @@
 "use client";
+
 import React from "react";
+import Image from "next/image";
+import Link from "next/link";
+import { ArrowRight, BookOpen, BriefcaseBusiness, HandHeart, LockKeyhole, UsersRound } from "lucide-react";
 import CheckoutForm from "../../../../components/Donor/CheckoutForm";
+import DonorImage from "../../../../assets/DMCMIXER8/DMCMIXER20.jpg";
+
+const impactItems = [
+  {
+    icon: BriefcaseBusiness,
+    title: "Professional attire",
+    text: "Suits, dress shirts, ties, shoes, and confidence-building career events.",
+  },
+  {
+    icon: BookOpen,
+    title: "Academic resources",
+    text: "Study sessions, resource fairs, workshops, and tools members can use immediately.",
+  },
+  {
+    icon: UsersRound,
+    title: "Mentorship and service",
+    text: "Programs that connect members with guidance, community service, and leadership opportunities.",
+  },
+];
 
 export default function DonationPage(): JSX.Element {
   return (
-    <div className="min-h-screen bg-black text-white">
-      {/* Top gold bar */}
-      <div className="h-[3px] w-full bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-600" />
-
-      <div className="mx-auto max-w-5xl px-6 md:px-12 py-12 md:py-16">
-
-        {/* HEADER */}
-        <div className="mb-10">
-          <p className="text-yellow-400 font-semibold tracking-widest uppercase text-sm">
-            DMC Donor Portal
-          </p>
-
-          <h1 className="text-4xl md:text-5xl font-extrabold mt-2">
-            Our Mission Statement
-          </h1>
-
-          <div className="mt-4 h-1 w-24 rounded-full bg-gradient-to-r from-yellow-500 via-yellow-400 to-yellow-600" />
+    <main className="dmc-dark-section">
+      <section className="relative overflow-hidden px-6 pb-20 pt-32 sm:px-8 lg:px-12">
+        <div className="absolute inset-0">
+          <Image src={DonorImage} alt="DMC community event" fill priority className="object-cover opacity-35" />
+          <div className="absolute inset-0 bg-[linear-gradient(110deg,rgba(0,0,0,0.96)_0%,rgba(0,0,0,0.78)_48%,rgba(0,0,0,0.42)_100%)]" />
         </div>
 
-        {/* MISSION TEXT */}
-        <div className="space-y-6 text-lg md:text-xl leading-relaxed text-gray-200">
-          <p>
-            <span className="font-bold text-yellow-400">For over eight years</span>, our student organization
-            has been dedicated to the holistic development of men of color—fostering growth in professional,
-            social, academic, and community engagement spheres. Since our foundation in September 2018,
-            we’ve grown to over <span className="font-semibold text-white">900+ active members</span> and supported{" "}
-            <span className="font-semibold text-white">400+ alumni</span>.
-          </p>
+        <div className="relative z-10 mx-auto grid max-w-7xl gap-12 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
+          <div>
+            <div className="mb-6 inline-flex items-center gap-3 border border-yellow-400/35 bg-black/35 px-4 py-2 text-sm font-black uppercase tracking-[0.22em] text-yellow-300">
+              <HandHeart className="h-4 w-4" />
+              DMC Donor Portal
+            </div>
+            <h1 className="text-5xl font-black leading-[0.95] text-white sm:text-6xl lg:text-8xl">
+              Invest in the next generation of men of color.
+            </h1>
+            <p className="mt-7 max-w-3xl text-lg leading-8 text-gray-200 md:text-xl">
+              For over eight years, DMC has supported students through professional
+              development, academic guidance, service, mentorship, and brotherhood.
+              Your donation helps us expand that work.
+            </p>
 
-          <p>
-            <span className="font-bold text-yellow-400">With your support</span>, we can continue our mission to
-            empower and uplift our members, providing opportunities for personal and professional advancement.
-            Your donation enables us to expand our reach and provide vital resources to students and professionals alike.
-          </p>
-
-          <p>
-            <span className="font-bold text-yellow-400">Join us</span> in cultivating excellence and creating
-            positive change. With your generosity, we can continue to make a lasting difference in the lives
-            of men of color—locally and beyond.
-          </p>
-        </div>
-
-        {/* WHERE DONATION GOES */}
-        <div className="mt-12">
-          <h2 className="text-2xl md:text-3xl font-bold mb-6 text-yellow-400">
-            Where your donation goes
-          </h2>
-
-          <ul className="space-y-4 text-lg md:text-xl text-gray-200 leading-relaxed list-disc pl-6">
-            <li>
-              <span className="font-semibold text-white">Professional Attire Events:</span>{" "}
-              Providing suits, dress shirts, ties, shoes, and attire-focused development events.
-            </li>
-
-            <li>
-              <span className="font-semibold text-white">Resource Rally Events:</span>{" "}
-              Supporting professional development, academic resources, and career readiness programming.
-            </li>
-
-            <li>
-              <span className="font-semibold text-white">General Body Meetings:</span>{" "}
-              Funding large gatherings, venues, refreshments, and engagement programming.
-            </li>
-
-            <li>
-              <span className="font-semibold text-white">Workshops & Training:</span>{" "}
-              Adobe, technology, and professional development workshops for members.
-            </li>
-
-            <li>
-              <span className="font-semibold text-white">Programs & Initiatives:</span>{" "}
-              Networking events, mentorship programs, scholarships, and community service.
-            </li>
-          </ul>
-
-          <p className="mt-8 text-gray-200 text-lg leading-relaxed">
-            By donating, you’re directly supporting the success and empowerment of men of color in our community.
-            Your support strengthens future leaders and expands the opportunities we provide at DMC.
-          </p>
-        </div>
-
-        {/* DONATION BOX BELOW EVERYTHING */}
-        <div className="mt-16 rounded-2xl border border-yellow-400/20 bg-white/5 p-8">
-          <h2 className="text-3xl md:text-4xl font-extrabold text-yellow-400">
-            Make a Donation
-          </h2>
-
-          <p className="text-gray-200 mt-3 text-lg">
-            Every contribution helps us build programs, mentorship, and opportunities that change lives.
-          </p>
-
-          <div className="mt-6">
-            <CheckoutForm uiMode="hosted" />
+            <div className="mt-8 grid gap-4 sm:grid-cols-3">
+              <div className="border border-white/15 bg-white/10 p-5 backdrop-blur">
+                <p className="text-4xl font-black text-yellow-300">900+</p>
+                <p className="mt-2 text-sm font-black uppercase tracking-[0.16em] text-gray-300">Active members</p>
+              </div>
+              <div className="border border-white/15 bg-white/10 p-5 backdrop-blur">
+                <p className="text-4xl font-black text-yellow-300">400+</p>
+                <p className="mt-2 text-sm font-black uppercase tracking-[0.16em] text-gray-300">Alumni</p>
+              </div>
+              <div className="border border-white/15 bg-white/10 p-5 backdrop-blur">
+                <p className="text-4xl font-black text-yellow-300">8</p>
+                <p className="mt-2 text-sm font-black uppercase tracking-[0.16em] text-gray-300">Years of impact</p>
+              </div>
+            </div>
           </div>
 
-          <p className="mt-6 text-sm text-gray-400">
-            Secure checkout • Your support powers DMC programming and community impact.
-          </p>
+          <div className="dmc-card-solid border p-6 shadow-2xl md:p-8">
+            <div className="mb-6 flex items-start justify-between gap-4">
+              <div>
+                <p className="text-sm font-black uppercase tracking-[0.2em] text-yellow-500">
+                  Secure donation
+                </p>
+                <h2 className="mt-2 text-3xl font-black">Make a gift</h2>
+              </div>
+              <LockKeyhole className="h-7 w-7 text-yellow-500" />
+            </div>
+            <CheckoutForm uiMode="hosted" />
+            <p className="dmc-muted mt-5 text-sm leading-6">
+              You will be redirected to Stripe Checkout to complete your donation.
+            </p>
+          </div>
         </div>
+      </section>
 
-        {/* Bottom gold accent */}
-        <div className="mt-10 h-2 w-full rounded-full bg-gradient-to-r from-yellow-500 via-yellow-400 to-yellow-600" />
+      <section className="dmc-light-section px-6 py-24 sm:px-8 lg:px-12">
+        <div className="mx-auto max-w-7xl">
+          <div className="mb-12 flex flex-col justify-between gap-6 md:flex-row md:items-end">
+            <div>
+              <p className="mb-3 text-sm font-black uppercase tracking-[0.24em] text-yellow-600">
+                Where your gift goes
+              </p>
+              <h2 className="max-w-3xl text-4xl font-black leading-tight md:text-6xl">
+                Practical support members can feel.
+              </h2>
+            </div>
+            <p className="dmc-muted max-w-md text-lg leading-8">
+              Donations support programs that remove barriers, create access, and help
+              members build momentum.
+            </p>
+          </div>
 
-      </div>
-    </div>
+          <div className="grid gap-5 md:grid-cols-3">
+            {impactItems.map(({ icon: Icon, title, text }) => (
+              <div key={title} className="dmc-card-solid border p-6">
+                <Icon className="mb-5 h-8 w-8 text-yellow-500" />
+                <h3 className="text-2xl font-black">{title}</h3>
+                <p className="dmc-muted mt-3 leading-7">{text}</p>
+              </div>
+            ))}
+          </div>
+
+          <div className="dmc-card mt-10 border p-6 md:p-8">
+            <h3 className="text-3xl font-black">Questions before giving?</h3>
+            <p className="dmc-muted mt-3 max-w-3xl leading-7">
+              We are happy to talk through partnerships, sponsorships, in-kind support,
+              or how your contribution can support a specific program.
+            </p>
+            <div className="mt-6 flex flex-col gap-3 sm:flex-row">
+              <Link href="/Donor/FAQ" className="inline-flex items-center justify-center gap-3 bg-yellow-400 px-6 py-4 font-black text-black transition hover:bg-black hover:text-white">
+                Donation FAQ
+                <ArrowRight className="h-5 w-5" />
+              </Link>
+              <Link href="/#contact" className="inline-flex items-center justify-center gap-3 border border-[var(--dmc-border)] px-6 py-4 font-black transition hover:border-yellow-400 hover:text-yellow-500">
+                Contact DMC
+                <ArrowRight className="h-5 w-5" />
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
   );
 }

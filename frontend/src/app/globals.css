@@ -9,6 +9,100 @@ html {
   font-family: 'LibertinusSerifDisplay', sans-serif;
 }
 
+body {
+  margin: 0;
+  background: var(--dmc-bg);
+  color: var(--dmc-text);
+}
+
+:root {
+  --dmc-bg: #050505;
+  --dmc-panel: #0a0a0a;
+  --dmc-card: rgba(255, 255, 255, 0.04);
+  --dmc-card-solid: #111111;
+  --dmc-text: #f8fafc;
+  --dmc-muted: #d4d4d8;
+  --dmc-border: rgba(255, 255, 255, 0.12);
+}
+
+html[data-theme='light'] {
+  --dmc-bg: #f7f4ed;
+  --dmc-panel: #ffffff;
+  --dmc-card: rgba(255, 255, 255, 0.86);
+  --dmc-card-solid: #ffffff;
+  --dmc-text: #111111;
+  --dmc-muted: #4b5563;
+  --dmc-border: rgba(0, 0, 0, 0.12);
+}
+
+.dmc-dark-section {
+  background: var(--dmc-bg);
+  color: var(--dmc-text);
+}
+
+.dmc-panel-section {
+  background: var(--dmc-panel);
+  color: var(--dmc-text);
+}
+
+.dmc-light-section {
+  background: var(--dmc-panel);
+  color: var(--dmc-text);
+}
+
+.dmc-card {
+  background: var(--dmc-card);
+  border-color: var(--dmc-border);
+}
+
+.dmc-card-solid {
+  background: var(--dmc-card-solid);
+  border-color: var(--dmc-border);
+}
+
+.dmc-muted {
+  color: var(--dmc-muted);
+}
+
+html[data-theme='light'] .dmc-invert-on-light {
+  filter: invert(1);
+}
+
+html[data-theme='light'] .fc {
+  --fc-page-bg-color: #ffffff;
+  --fc-neutral-bg-color: #f6f3ea;
+  --fc-border-color: rgba(0, 0, 0, 0.14);
+  --fc-button-bg-color: #111111;
+  --fc-button-border-color: #111111;
+  --fc-button-hover-bg-color: #facc15;
+  --fc-button-hover-border-color: #facc15;
+  --fc-button-text-color: #ffffff;
+  color: #111111;
+}
+
+html[data-theme='dark'] .fc {
+  --fc-page-bg-color: #0a0a0a;
+  --fc-neutral-bg-color: #111111;
+  --fc-border-color: rgba(255, 255, 255, 0.14);
+  --fc-button-bg-color: #facc15;
+  --fc-button-border-color: #facc15;
+  --fc-button-hover-bg-color: #ffffff;
+  --fc-button-hover-border-color: #ffffff;
+  --fc-button-text-color: #111111;
+  color: #f8fafc;
+}
+
+::selection {
+  background: #facc15;
+  color: #050505;
+}
+
+img,
+video,
+iframe {
+  max-width: 100%;
+}
+
 /* Elements styles */
 .elements-style {
   color: var(--elements-color);

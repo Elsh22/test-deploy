@@ -1,19 +1,33 @@
 'use client';
+
 import React from 'react';
 import FullCalendar from '@fullcalendar/react';
 import dayGridPlugin from '@fullcalendar/daygrid';
 import timeGridPlugin from '@fullcalendar/timegrid';
 import interactionPlugin from '@fullcalendar/interaction';
+import { CalendarDays } from 'lucide-react';
 import events from './Events';
 
 const Calendar = ({ id }) => {
   return (
-    <section
-      id={id}
-      className="bg-black border-t-4 border-b-4 border-yellow-400 py-16 px-4 sm:px-6 lg:px-8"
-    >
-      <div className="flex justify-center">
-        <div className="w-full max-w-6xl">
+    <section id={id} className="dmc-light-section px-6 py-24 sm:px-8 lg:px-12">
+      <div className="mx-auto max-w-7xl">
+        <div className="mb-12 flex flex-col justify-between gap-6 md:flex-row md:items-end">
+          <div>
+            <div className="mb-6 inline-flex items-center gap-3 border border-yellow-400/40 px-4 py-2 text-sm font-black uppercase tracking-[0.2em] text-yellow-600">
+              <CalendarDays className="h-4 w-4" />
+              Calendar
+            </div>
+            <h2 className="max-w-3xl text-4xl font-black leading-tight md:text-6xl">
+              Keep up with what&apos;s next.
+            </h2>
+          </div>
+          <p className="dmc-muted max-w-md text-lg leading-8">
+            Meetings, sports, mentoring, workshops, and community events in one place.
+          </p>
+        </div>
+
+        <div className="dmc-card-solid overflow-hidden border p-3 md:p-6">
           <FullCalendar
             plugins={[dayGridPlugin, timeGridPlugin, interactionPlugin]}
             initialView="dayGridMonth"
@@ -25,11 +39,6 @@ const Calendar = ({ id }) => {
             height="auto"
             events={events}
             eventContent={renderEventContent}
-            className="bg-black text-white rounded-xl shadow-2xl border-2 border-yellow-400"
-            dayHeaderClassNames={() =>
-              'bg-black text-yellow-400 font-bold border-b border-gray-700'
-            }
-            dayCellClassNames={() => 'border border-gray-700'}
           />
         </div>
       </div>
@@ -38,11 +47,11 @@ const Calendar = ({ id }) => {
 };
 
 function renderEventContent(eventInfo) {
-  let title = eventInfo.event.title;
-  let bgColor = 'bg-gray-700'; // Default color
+  const title = eventInfo.event.title;
+  let bgColor = 'bg-neutral-700';
 
-  if (title.includes('GBM')) bgColor = 'bg-purple-600';
-  else if (title.includes('Mentoring')) bgColor = 'bg-green-600';
+  if (title.includes('GBM')) bgColor = 'bg-violet-600';
+  else if (title.includes('Mentoring')) bgColor = 'bg-emerald-600';
   else if (
     title.includes('Workshop') ||
     title.includes('Internship') ||
@@ -55,7 +64,7 @@ function renderEventContent(eventInfo) {
     title.includes('Orientation') ||
     title.includes('Eboard')
   ) {
-    bgColor = 'bg-red-600';
+    bgColor = 'bg-rose-600';
   } else if (
     title.includes('Game') ||
     title.includes('Basketball') ||
@@ -64,17 +73,15 @@ function renderEventContent(eventInfo) {
     title.includes('Kickball') ||
     title.includes('Dodgeball')
   ) {
-    bgColor = 'bg-yellow-500';
+    bgColor = 'bg-yellow-500 text-black';
   } else if (title.includes('Study Session')) {
     bgColor = 'bg-blue-600';
   }
 
   return (
-    <div
-      className={`${bgColor} text-white text-xs sm:text-sm p-2 rounded-lg shadow-md flex flex-col justify-center items-start space-y-1`}
-    >
-      <span className="font-bold">{eventInfo.timeText}</span>
-      <span className="italic">{title}</span>
+    <div className={`${bgColor} w-full p-2 text-xs font-bold leading-tight shadow-sm sm:text-sm`}>
+      <span className="block">{eventInfo.timeText}</span>
+      <span className="block">{title}</span>
     </div>
   );
 }

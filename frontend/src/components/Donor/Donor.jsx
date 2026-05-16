@@ -1,79 +1,69 @@
 'use client';
+
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import { motion } from 'framer-motion';
+import { ArrowRight, HandHeart } from 'lucide-react';
 import VACU from '../../assets/DonorLogos/VACU.png';
 import VCUF from '../../assets/DonorLogos/vcu-foundations-logo-rev-outlines.png';
 import HX from '../../assets/DonorLogos/eta-xi-sucks.png';
-import Rich from '../../assets/DonorLogos/richmond-logo.png';
+
 const Donor = () => {
   return (
-    <div className="relative flex items-center justify-center h-screen bg-fixed bg-center bg-cover donor-img overflow-hidden">
-      
-      {/* Overlay */}
-      <div className="absolute inset-0 bg-black/60 z-0"></div>
+    <section className="dmc-dark-section relative overflow-hidden px-6 py-24 sm:px-8 lg:px-12">
+      <div className="absolute inset-0 donor-img bg-cover bg-center opacity-30" />
+      <div className="absolute inset-0 bg-gradient-to-r from-black via-black/90 to-black/60" />
 
-      {/* Content */}
-      <div className="relative z-10 text-center px-6 md:px-20">
-        <h2 className="text-4xl md:text-6xl font-extrabold text-yellow-400 mb-6 drop-shadow-lg">
-          Join Our Mission to Make a Difference
-        </h2>
-
-        <p className="text-lg md:text-2xl text-gray-200 mb-8 max-w-3xl mx-auto leading-relaxed">
-          Empower the next generation of leaders with your support. 
-          <span className="font-semibold text-yellow-400"> DMC</span> stands at the forefront of fostering a nurturing environment for men of color in the college setting.
-        </p>
-
-        <Link href="/Donor">
-          <button className="px-8 py-3 bg-yellow-400 text-black font-bold rounded-full shadow-lg hover:shadow-2xl hover:bg-yellow-500 transition-all duration-300 ease-in-out">
-            Donate
-          </button>
-        </Link>
-
-        {/* ===== DONOR LOGOS SECTION ===== */}
-        <div className="mt-12">
-          <p className="text-gray-300 mb-4 text-sm uppercase tracking-widest">
-            Notable Donors
+      <motion.div
+        className="relative z-10 mx-auto grid max-w-7xl items-center gap-12 lg:grid-cols-[1.08fr_0.92fr]"
+        initial={{ opacity: 0, y: 24 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.25 }}
+        transition={{ duration: 0.7, ease: 'easeOut' }}
+      >
+        <div>
+          <div className="mb-6 inline-flex items-center gap-3 border border-yellow-300/30 bg-white/[0.05] px-4 py-2 text-sm font-black uppercase tracking-[0.2em] text-yellow-300">
+            <HandHeart className="h-4 w-4" />
+            Support the mission
+          </div>
+          <h2 className="max-w-4xl text-4xl font-black leading-tight md:text-6xl">
+            Fund the next generation of leaders, mentors, and community builders.
+          </h2>
+          <p className="dmc-muted mt-6 max-w-3xl text-lg leading-8 md:text-xl">
+            Your support helps DMC provide resources, mentorship, service opportunities,
+            professional development, and spaces where men of color can thrive.
           </p>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 items-center justify-items-center">
-  
-  <Image
-    src={VACU}
-    alt="VACU"
-    className="h-24 md:h-32 object-contain opacity-80 hover:opacity-100 transition"
-  />
-
-  <Image
-    src={VCUF}
-    alt="Donor 2"
-    className="h-24 md:h-32 object-contain opacity-80 hover:opacity-100 transition"
-  />
-
-  <Image
-    src={HX}
-    alt="Donor 3"
-    className="h-24 md:h-32 object-contain opacity-80 hover:opacity-100 transition"
-  />
-
-  <a
-  href="https://therac1945.com/"
-  target="_blank"
-  rel="noopener noreferrer"
-  className="text-white text-xl md:text-xl font-semibold hover:text-yellow-400 transition"
->
-  Tylen Hazard
-</a>
-
-
-</div>
-
+          <Link
+            href="/Donor"
+            className="mt-8 inline-flex items-center gap-3 bg-yellow-400 px-7 py-4 text-lg font-black text-black transition hover:bg-white"
+          >
+            Donate
+            <ArrowRight className="h-5 w-5" />
+          </Link>
         </div>
-      </div>
 
-      {/* Bottom gold bar */}
-      <div className="absolute bottom-0 left-0 w-full h-2 bg-gradient-to-r from-yellow-500 via-yellow-400 to-yellow-600"></div>
-    </div>
+        <div className="dmc-card border p-6 backdrop-blur">
+          <p className="dmc-muted mb-6 text-sm font-black uppercase tracking-[0.22em]">
+            Notable donors
+          </p>
+          <div className="grid grid-cols-2 gap-6">
+            <Image src={VACU} alt="Virginia Credit Union" className="h-24 w-full object-contain opacity-90" />
+            <Image src={VCUF} alt="VCU Foundation" className="h-24 w-full object-contain opacity-90" />
+            <Image src={HX} alt="Eta Xi" className="h-24 w-full object-contain opacity-90" />
+            <a
+              href="https://therac1945.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex h-24 items-center justify-center border border-white/10 px-4 text-center text-lg font-black transition hover:border-yellow-300 hover:text-yellow-300"
+            >
+              Tylen Hazard
+            </a>
+          </div>
+        </div>
+      </motion.div>
+    </section>
   );
 };
 

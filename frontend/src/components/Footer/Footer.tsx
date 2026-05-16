@@ -1,53 +1,92 @@
 import React from 'react';
 import Link from 'next/link';
 import { AiFillInstagram, AiFillLinkedin, AiFillYoutube } from 'react-icons/ai';
-// come back to and add the full url to reaplce routes it goes to
+
+const footerGroups = [
+  {
+    title: 'DMC',
+    links: [
+      { href: '/#about', label: 'About' },
+      { href: '/#calendar', label: 'Calendar' },
+      { href: '/gallery', label: 'Gallery' },
+      { href: '/eboard', label: 'E-Board' },
+    ],
+  },
+  {
+    title: 'Programs',
+    links: [
+      { href: '/#mentorship', label: 'Mentorship' },
+      { href: '/ProfCommittee', label: 'Professional Development' },
+      { href: '/#sports', label: 'Sports' },
+      { href: '/Donor', label: 'Donate' },
+    ],
+  },
+  {
+    title: 'Committees',
+    links: [
+      { href: '/ACACommittee', label: 'Academic' },
+      { href: '/CommCommittee', label: 'Community Service' },
+      { href: '/ITCommittee', label: 'Information Tech' },
+      { href: '/SocCommittee', label: 'Social' },
+    ],
+  },
+];
 
 const Footer = () => {
   return (
-    <footer className="bg-black text-white">
-      <div className="max-w-6xl mx-auto px-4 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+    <footer className="dmc-panel-section border-t border-[var(--dmc-border)] px-6 py-14 sm:px-8 lg:px-12">
+      <div className="mx-auto max-w-7xl">
+        <div className="grid gap-10 lg:grid-cols-[1.15fr_1.85fr]">
           <div>
-            <h4 className="text-lg font-bold mb-4">Developing Men of Color</h4>
-            <ul>
-              <li><Link href="/#about" className="hover:text-gray-300">About Us</Link></li>
-            </ul>
-          </div>
-          <div>
-            <h4 className="text-lg font-bold mb-4">Get Help</h4>
-            <ul>
-              <li><Link href="/#contact" className="hover:text-gray-300">Contact Us</Link></li>
-              <li><Link href="/#calendar" className="hover:text-gray-300">Calendar</Link></li>
-              <li><Link href="/#sports" className="hover:text-gray-300">Sports</Link></li>
-            </ul>
-          </div>
-          <div>
-            <h4 className="text-lg font-bold mb-4">Programs</h4>
-            <ul>
-              <li><Link href="#mentorship" className="hover:text-gray-300">Mentorship</Link></li>
-              <li><Link href="/ProfCommittee" className="hover:text-gray-300">Professional Development</Link></li>
-              <li><Link href="/SocCommittee" className="hover:text-gray-300">Social Committee</Link></li>
-              <li><Link href="/CommCommittee" className="hover:text-gray-300">Community Service Committee</Link></li>
-              <li><Link href="/ACACommittee" className="hover:text-gray-300">Academic Committee</Link></li>
-              <li><Link href="/ITCommittee" className="hover:text-gray-300">IT Committee</Link></li>
+            <Link href="/" className="inline-flex items-center gap-3">
+              <span className="flex h-12 w-12 items-center justify-center bg-yellow-400 text-xl font-black text-black">
+                DMC
+              </span>
+              <span className="text-lg font-black">Developing Men of Color</span>
+            </Link>
+            <p className="dmc-muted mt-5 max-w-md leading-7">
+              A VCU brotherhood built around excellence, mentorship, service, and
+              professional growth.
+            </p>
 
-            </ul>
-          </div>
-          <div>
-            <h4 className="text-lg font-bold mb-4">Follow us</h4>
-            <div className="flex">
-            <a href="https://www.instagram.com/vcu.dmc/" target="_blank" rel="noopener noreferrer" className="mr-4 hover:text-gray-300">
-                <AiFillInstagram size={48} />
+            <div className="mt-6 flex gap-3">
+              <a href="https://www.instagram.com/vcu.dmc/" target="_blank" rel="noopener noreferrer" className="flex h-11 w-11 items-center justify-center border border-[var(--dmc-border)] transition hover:border-yellow-400 hover:text-yellow-400" aria-label="DMC Instagram">
+                <AiFillInstagram size={24} />
               </a>
-              <a href="https://www.linkedin.com/in/d-m-c-007824230/" target="_blank" rel="noopener noreferrer" className="hover:text-gray-300">
-                <AiFillLinkedin size={48} />
+              <a href="https://www.linkedin.com/in/d-m-c-007824230/" target="_blank" rel="noopener noreferrer" className="flex h-11 w-11 items-center justify-center border border-[var(--dmc-border)] transition hover:border-yellow-400 hover:text-yellow-400" aria-label="DMC LinkedIn">
+                <AiFillLinkedin size={24} />
               </a>
-              <a href="https://www.youtube.com/@vcudevelopingmenofcolor3402" target="_blank" rel="noopener noreferrer" className="hover:text-gray-300">
-                <AiFillYoutube size={48} />
+              <a href="https://www.youtube.com/@vcudevelopingmenofcolor3402" target="_blank" rel="noopener noreferrer" className="flex h-11 w-11 items-center justify-center border border-[var(--dmc-border)] transition hover:border-yellow-400 hover:text-yellow-400" aria-label="DMC YouTube">
+                <AiFillYoutube size={24} />
               </a>
             </div>
           </div>
+
+          <div className="grid gap-8 sm:grid-cols-3">
+            {footerGroups.map((group) => (
+              <div key={group.title}>
+                <h4 className="mb-4 text-sm font-black uppercase tracking-[0.2em] text-yellow-400">
+                  {group.title}
+                </h4>
+                <ul className="space-y-3">
+                  {group.links.map((link) => (
+                    <li key={link.href}>
+                      <Link href={link.href} className="dmc-muted font-bold transition hover:text-yellow-400">
+                        {link.label}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <div className="mt-12 flex flex-col justify-between gap-4 border-t border-[var(--dmc-border)] pt-6 text-sm font-bold text-[var(--dmc-muted)] md:flex-row">
+          <p>© {new Date().getFullYear()} Developing Men of Color.</p>
+          <Link href="/#contact" className="transition hover:text-yellow-400">
+            Contact DMC
+          </Link>
         </div>
       </div>
     </footer>
@@ -55,4 +94,3 @@ const Footer = () => {
 };
 
 export default Footer;
-

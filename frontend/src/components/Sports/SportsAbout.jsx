@@ -1,33 +1,55 @@
 'use client';
+
 import { motion } from 'framer-motion';
-import { fadeIn, staggerContainer } from "../../utils/motion";
-import styles from '../../styles';
-import { TypingText } from '../../utils/CustomText';
+import { Dumbbell, ShieldCheck, Trophy } from 'lucide-react';
 
 function SportsAbout() {
-  return (
-    <section className="w-full bg-black border-t-8 border-b-8 border-yellow-400 py-16">
-      <motion.div
-        variants={staggerContainer}
-        initial="hidden"
-        whileInView="show"
-        viewport={{ once: false, amount: 0.25 }}
-        className={`${styles.innerWidth} mx-auto flex flex-col items-center`}
-      >
-        {/* Header */}
-        <TypingText
-          title="| About DMC Sports |"
-          textStyles="text-center text-4xl md:text-5xl font-extrabold text-yellow-400 mb-6"
-        />
+  const points = [
+    { icon: Trophy, title: 'Compete' },
+    { icon: ShieldCheck, title: 'Build discipline' },
+    { icon: Dumbbell, title: 'Grow together' },
+  ];
 
-        {/* Paragraph */}
-        <motion.p
-          variants={fadeIn('up', 'tween', 0.2, 1)}
-          className="mt-4 font-normal sm:text-[28px] text-[20px] text-center text-gray-200 max-w-5xl"
+  return (
+    <section className="dmc-light-section px-6 py-24 sm:px-8 lg:px-12">
+      <div className="mx-auto max-w-7xl">
+        <motion.div
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.25 }}
+          transition={{ duration: 0.7, ease: 'easeOut' }}
+          className="max-w-4xl"
         >
-          Developing Men of Color (DMC) aims to support the growth and development of young men of color through sports. With a focus on Basketball, Soccer, and Dodgeball, DMC provides a safe and inclusive environment for young men to learn, grow, and build relationships through athletic competition. The organization's mission is to empower young men with the skills and confidence to succeed both on and off the field, and to help them become positive role models in their communities. With its commitment to excellence and dedication to the well-being of its participants, DMC is making a lasting impact on the lives of young men of color.
-        </motion.p>
-      </motion.div>
+          <p className="mb-3 text-sm font-black uppercase tracking-[0.24em] text-yellow-600">
+            DMC Sports
+          </p>
+          <h2 className="text-4xl font-black leading-tight md:text-6xl">
+            Athletic competition with brotherhood at the center.
+          </h2>
+          <p className="dmc-muted mt-6 text-lg leading-8 md:text-xl">
+            DMC Sports gives members a competitive, inclusive environment to build
+            relationships through basketball, soccer, dodgeball, flag football, and
+            more. The work is bigger than the scoreboard: confidence, discipline,
+            and community carry off the field too.
+          </p>
+        </motion.div>
+
+        <div className="mt-12 grid gap-4 md:grid-cols-3">
+          {points.map(({ icon: Icon, title }, index) => (
+            <motion.div
+              key={title}
+              className="dmc-card-solid border p-6"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.2 }}
+              transition={{ duration: 0.55, delay: index * 0.08 }}
+            >
+              <Icon className="mb-5 h-8 w-8 text-yellow-500" />
+              <h3 className="text-2xl font-black">{title}</h3>
+            </motion.div>
+          ))}
+        </div>
+      </div>
     </section>
   );
 }

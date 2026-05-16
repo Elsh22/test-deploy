@@ -1,22 +1,40 @@
 "use client";
+
 import React from 'react';
-import Example from './ImagesScroller';
-import HealthPrograms from './Programs';
-import HomePage from './Hero';
+import CommitteePageTemplate from '../CommitteePageTemplate';
+import HealthHero from '../../../../newassest/academic.jpeg';
+import WellnessImg from '../../../../newassest/ITPicImproved.png';
+import ServiceImg from '../../../../newassest/community.PNG';
+import WorkshopImg from '../../../../newassest/CGIPic.png';
 
 const HealthCommitteePage = () => {
-      return (
-    <div className="flex items-center justify-center h-screen bg-black">
-      <h1 className="text-5xl font-bold text-white">Coming Soon...</h1>
-    </div>
+  return (
+    <CommitteePageTemplate
+      eyebrow="Health Committee"
+      title="Health Committee"
+      subtitle="Supporting member wellness, health-care exploration, and service-minded programming for students interested in health fields."
+      heroImage={HealthHero}
+      groupMeLabel="Get Involved"
+      focusAreas={['Wellness', 'Health-care pathways', 'Service education']}
+      programs={[
+        {
+          img: WellnessImg,
+          title: 'Wellness Check-ins',
+          description: 'Programs that make space for mental health, balance, and support during demanding semesters.',
+        },
+        {
+          img: ServiceImg,
+          title: 'Health Service Projects',
+          description: 'Service opportunities connected to public health, outreach, and community care.',
+        },
+        {
+          img: WorkshopImg,
+          title: 'Health Career Prep',
+          description: 'Panels and workshops for members exploring medicine, health sciences, and care-centered careers.',
+        },
+      ]}
+    />
   );
-    //return (
-     // <div>
-       // <HomePage />
-       // <HealthPrograms />
-       // <Example />
-      //</div>
-   // );
-  };
-  
-  export default HealthCommitteePage;
+};
+
+export default HealthCommitteePage;

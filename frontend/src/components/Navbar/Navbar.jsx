@@ -7,8 +7,26 @@ import DarkModeToggle from "../DarkModeToggle/DarkModeToggle";
 const Navbar = () => {
   const [nav, setNav] = useState(false);
   const [dropdown, setDropdown] = useState(false);
-  const [color, setColor] = useState("transparent");
-  const [textColor, setTextColor] = useState("white");
+  const [scrolled, setScrolled] = useState(false);
+
+  const committeeLinks = [
+    { href: "/#committee", label: "Committee" },
+    { href: "/ACACommittee", label: "Academic Committee" },
+    { href: "/CommCommittee", label: "Community Service" },
+    { href: "/ITCommittee", label: "Information Tech" },
+    { href: "/ProfCommittee", label: "Professional Dev" },
+    { href: "/SocCommittee", label: "Social Committee" },
+    { href: "/HealthCommittee", label: "Health Committee" },
+  ];
+
+  const mainLinks = [
+    { href: "/", label: "Home" },
+    { href: "/#mentorship", label: "Mentorship" },
+    { href: "/#sports", label: "Sports" },
+    { href: "/gallery", label: "Gallery" },
+    { href: "/eboard", label: "E-Board" },
+    { href: "/#contact", label: "Contact" },
+  ];
 
   const handleNav = () => {
     setNav(!nav);
@@ -21,13 +39,7 @@ const Navbar = () => {
 
   useEffect(() => {
     const changeColor = () => {
-      if (window.scrollY >= 90) {
-        setColor("#ffffff");
-        setTextColor("#000000");
-      } else {
-        setColor("transparent");
-        setTextColor("white");
-      }
+      setScrolled(window.scrollY >= 60);
     };
     window.addEventListener("scroll", changeColor);
     changeColor();
@@ -36,107 +48,108 @@ const Navbar = () => {
 
   return (
     <div
-      style={{ backgroundColor: color }}
-      className="fixed top-0 left-0 w-full z-50 transition-all duration-300 backdrop-blur-md shadow-md"
+      className={`fixed left-0 top-0 z-50 w-full transition-all duration-300 ${
+        scrolled
+          ? "border-b border-[var(--dmc-border)] bg-[var(--dmc-panel)] text-[var(--dmc-text)] shadow-sm backdrop-blur-xl"
+          : "border-b border-white/10 bg-black/15 text-white backdrop-blur-md"
+      }`}
     >
-      <div className="max-w-[1240px] mx-auto flex justify-between items-center py-4 px-6">
-        {/* Logo */}
-        <Link href="/">
-          <h1
-            className="font-extrabold text-4xl tracking-wide cursor-pointer transition-all duration-300 hover:text-yellow-400"
-            style={{ color: textColor }}
-          >
+      <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 sm:px-8 lg:px-12">
+        <Link href="/" className="flex items-center gap-3">
+          <span className="flex h-11 w-11 items-center justify-center bg-yellow-400 text-xl font-black text-black">
             DMC
-          </h1>
+          </span>
+          <span className="hidden text-sm font-bold uppercase tracking-[0.22em] sm:block">
+            Developing Men of Color
+          </span>
         </Link>
 
-        {/* Desktop Menu */}
-        <ul
-          className="hidden md:flex space-x-8 text-lg font-semibold"
-          style={{ color: textColor }}
-        >
-          <li className="hover:text-yellow-400 transition-colors">
-            <Link href="/">Home</Link>
-          </li>
+        <ul className="hidden items-center gap-6 text-sm font-bold uppercase tracking-[0.12em] lg:flex">
+          {mainLinks.slice(0, 1).map((link) => (
+            <li key={link.href} className="transition-colors hover:text-yellow-500">
+              <Link href={link.href}>{link.label}</Link>
+            </li>
+          ))}
           <li className="relative group cursor-pointer">
-            <div className="flex items-center hover:text-yellow-400 transition-colors">
+            <div className="flex items-center transition-colors hover:text-yellow-500">
               Committees
               <AiOutlineDown className="ml-1 mt-1 text-sm group-hover:rotate-180 transition-transform duration-200" />
             </div>
-            {/* Dropdown */}
-            <ul className="absolute left-0 mt-2 hidden group-hover:flex flex-col bg-white text-black shadow-lg rounded-lg p-2 w-60 z-50">
-              <Link href="/#committee" className="hover:text-yellow-600 p-2">Committee</Link>
-              <Link href="/ACACommittee" className="hover:text-yellow-600 p-2">Academic Committee</Link>
-              <Link href="/CommCommittee" className="hover:text-yellow-600 p-2">Community Service</Link>
-              <Link href="/ITCommittee" className="hover:text-yellow-600 p-2">Information Tech</Link>
-              <Link href="/ProfCommittee" className="hover:text-yellow-600 p-2">Professional Dev</Link>
-              <Link href="/SocCommittee" className="hover:text-yellow-600 p-2">Social Committee</Link>
-              <Link href="/HealthCommittee" className="hover:text-yellow-600 p-2">Health Committee</Link>
-              </ul>
+            <ul className="dmc-card-solid absolute left-0 top-full hidden w-64 flex-col border p-3 shadow-xl group-hover:flex">
+              {committeeLinks.map((link) => (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className="px-3 py-2 text-sm normal-case tracking-normal transition hover:bg-yellow-400 hover:text-black"
+                >
+                  {link.label}
+                </Link>
+              ))}
+            </ul>
           </li>
-          <li className="hover:text-yellow-400 transition-colors">
-            <Link href="/#mentorship">Mentorship</Link>
-          </li>
-          <li className="hover:text-yellow-400 transition-colors">
-            <Link href="/#sports">Sports</Link>
-          </li>
-          <li className="hover:text-yellow-400 transition-colors">
-            <Link href="/#contact">Contact</Link>
-          </li>
-          <li className="hover:text-yellow-400 transition-colors">
-            <Link href="/#about">About</Link>
-          </li>
-          <li className="hover:text-yellow-400 transition-colors">
-            <Link href="/gallery">Gallery</Link>
-          </li>
-          <li className="hover:text-yellow-400 transition-colors">
-            <Link href="/eboard">E-Board</Link>
-          </li>
+          {mainLinks.slice(1).map((link) => (
+            <li key={link.href} className="transition-colors hover:text-yellow-500">
+              <Link href={link.href}>{link.label}</Link>
+            </li>
+          ))}
         </ul>
 
-        {/* Right-side icons */}
-        <div className="flex items-center">
+        <div className="flex items-center gap-3">
+          <Link
+            href="/#calendar"
+            className={`hidden border px-4 py-2 text-sm font-extrabold uppercase tracking-[0.12em] transition md:inline-flex ${
+              scrolled
+                ? "border-current hover:bg-yellow-400 hover:text-black"
+                : "border-yellow-300 text-yellow-300 hover:bg-yellow-300 hover:text-black"
+            }`}
+          >
+            Events
+          </Link>
           <DarkModeToggle />
-          <div onClick={handleNav} className="md:hidden z-10 cursor-pointer ml-4">
+          <button
+            onClick={handleNav}
+            className="z-10 flex h-11 w-11 items-center justify-center border border-current lg:hidden"
+            aria-label="Open navigation menu"
+          >
             {nav ? (
-              <AiOutlineClose size={25} style={{ color: "#fff" }} />
+              <AiOutlineClose size={24} className="text-white" />
             ) : (
-              <AiOutlineMenu size={25} style={{ color: textColor }} />
+              <AiOutlineMenu size={24} />
             )}
-          </div>
+          </button>
         </div>
       </div>
 
-      {/* Mobile Menu Overlay */}
       <div
         className={`${
           nav
-            ? "fixed left-0 top-0 w-full h-screen bg-black/90 text-white flex flex-col justify-center items-center transition-all duration-500"
+            ? "fixed left-0 top-0 flex h-screen w-full flex-col items-center justify-center bg-black/95 text-white transition-all duration-500"
             : "fixed left-[-100%]"
         }`}
       >
-        <ul className="text-center space-y-8 text-3xl font-semibold">
-          <li onClick={handleNav}><Link href="/">Home</Link></li>
+        <ul className="max-h-[86vh] space-y-6 overflow-y-auto px-6 text-center text-3xl font-semibold">
+          {mainLinks.slice(0, 1).map((link) => (
+            <li key={link.href} onClick={handleNav}>
+              <Link href={link.href}>{link.label}</Link>
+            </li>
+          ))}
           <li onClick={toggleDropdown} className="flex flex-col items-center">
             Committees <AiOutlineDown className="mt-2" />
             {dropdown && (
-              <ul className="mt-3 space-y-3 text-2xl">
-                <li onClick={handleNav}><Link href="/#committee">Committee</Link></li>
-                <li onClick={handleNav}><Link href="/ACACommittee">Academic Committee</Link></li>
-                <li onClick={handleNav}><Link href="/CommCommittee">Community Service</Link></li>
-                <li onClick={handleNav}><Link href="/ITCommittee">Information Tech</Link></li>
-                <li onClick={handleNav}><Link href="/ProfCommittee">Professional Dev</Link></li>
-                <li onClick={handleNav}><Link href="/SocCommittee">Social Committee</Link></li>
-                <li onClick={handleNav}><Link href="/HealthCommittee">Health Committee</Link></li>
+              <ul className="mt-4 space-y-3 text-xl text-yellow-200">
+                {committeeLinks.map((link) => (
+                  <li key={link.href} onClick={handleNav}>
+                    <Link href={link.href}>{link.label}</Link>
+                  </li>
+                ))}
               </ul>
             )}
           </li>
-          <li onClick={handleNav}><Link href="/#mentorship">Mentorship</Link></li>
-          <li onClick={handleNav}><Link href="/#sports">Sports</Link></li>
-          <li onClick={handleNav}><Link href="/#contact">Contact</Link></li>
-          <li onClick={handleNav}><Link href="/#about">About</Link></li>
-          <li onClick={handleNav}><Link href="/gallery">Gallery</Link></li>
-          <li onClick={handleNav}><Link href="/eboard">E-Board</Link></li>
+          {mainLinks.slice(1).map((link) => (
+            <li key={link.href} onClick={handleNav}>
+              <Link href={link.href}>{link.label}</Link>
+            </li>
+          ))}
         </ul>
       </div>
     </div>

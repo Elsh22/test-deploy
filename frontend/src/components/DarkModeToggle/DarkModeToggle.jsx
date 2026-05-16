@@ -1,23 +1,32 @@
 "use client";
+
 import React, { useContext } from "react";
+import { Moon, Sun } from "lucide-react";
 import { ThemeContext } from "./ThemeContext";
 
 const DarkModeToggle = () => {
   const { toggle, mode } = useContext(ThemeContext);
+  const isLight = mode === "light";
 
   return (
-    <div
-      className="w-12 h-6 border border-gray-500 rounded-full flex items-center justify-between p-0.5 relative cursor-pointer select-none"
+    <button
+      type="button"
       onClick={toggle}
+      aria-label={`Switch to ${isLight ? "dark" : "light"} mode`}
+      aria-pressed={isLight}
+      title={`Switch to ${isLight ? "dark" : "light"} mode`}
+      className="relative inline-flex h-11 w-20 items-center border border-current bg-white/10 px-1.5 transition hover:bg-yellow-400 hover:text-black"
     >
-      <div className="text-xs ml-1">🌙</div>
-      <div className="text-xs mr-1">🔆</div>
-      <div
-        className={`w-5 h-5 bg-green-500 rounded-full absolute top-0.5 transition-all duration-500 ${
-          mode === "light" ? "left-0.5" : "right-0.5"
+      <span
+        className={`absolute top-1.5 flex h-8 w-8 items-center justify-center bg-yellow-400 text-black transition-all duration-300 ${
+          isLight ? "left-10" : "left-1.5"
         }`}
-      />
-    </div>
+      >
+        {isLight ? <Sun className="h-4 w-4" /> : <Moon className="h-4 w-4" />}
+      </span>
+      <Moon className="ml-1 h-4 w-4" />
+      <Sun className="ml-auto mr-1 h-4 w-4" />
+    </button>
   );
 };
 

@@ -1,155 +1,164 @@
 'use client';
+
 import { useState } from 'react';
 import Image from 'next/image';
-import { motion } from 'framer-motion';
+import { AnimatePresence, motion } from 'framer-motion';
+import { ArrowLeft, ArrowRight, ExternalLink, Maximize2, X } from 'lucide-react';
 import folderCovers from './FolderCovers';
 import folderImages from './FolderImages';
-import IMG from '../../../public/headset.svg';
+
+const folders = [
+  { id: 1, title: 'DMC 8th Annual Mixer', tag: 'Mixer' },
+  { id: 2, title: 'LinkedIn Workshop 2025', tag: 'Professional' },
+  { id: 3, title: '2025-2026 GBMs', tag: 'Meetings' },
+  { id: 4, title: 'SOVO Fair 2025', tag: 'Campus' },
+  { id: 5, title: 'Internship Workshop 2025', tag: 'Career' },
+  { id: 6, title: 'DMC Sports', tag: 'Sports' },
+  {
+    id: 7,
+    title: 'More Photos',
+    tag: 'Archive',
+    external: 'https://drive.google.com/drive/folders/1Z-LjzjQDrACQpagawQkj8n8uVdH-3Fyt',
+  },
+];
 
 const GalleryFolders = () => {
   const [activeFolder, setActiveFolder] = useState(null);
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  const folders = [
-    { id: 1, title: 'DMC 8th Annual Mixer'},
-    { id: 2, title: "Linkedin Workshop 2025"},
-    { id: 3, title: '2025-2026 GBMs'},
-    { id: 4, title: 'SOVO Fair 2025'},
-    { id: 5, title: 'Internship Workshop 2025'},
-    { id: 6, title: 'DMC Sports'},
-    { id: 7, title: 'Other'},
-  ];
+  const activeImages = activeFolder ? folderImages[activeFolder.id] || [] : [];
 
-  const handleFolderClick = (folderId) => {
-    setActiveFolder(folders.find(f => f.id === folderId));
+  const handleFolderClick = (folder) => {
+    if (folder.external) {
+      window.open(folder.external, '_blank', 'noopener,noreferrer');
+      return;
+    }
+
+    setActiveFolder(folder);
     setCurrentIndex(0);
   };
 
   const closeLightbox = () => setActiveFolder(null);
+  const nextImage = () => setCurrentIndex((prev) => (prev + 1) % activeImages.length);
+  const prevImage = () => setCurrentIndex((prev) => (prev - 1 + activeImages.length) % activeImages.length);
 
-  const nextImage = () => {
-    setCurrentIndex((prev) => (prev + 1) % folderImages[activeFolder.id].length);
-  };
-
-  const prevImage = () => {
-    setCurrentIndex((prev) => (prev - 1 + folderImages[activeFolder.id].length) % folderImages[activeFolder.id].length);
-  };
-
-  const handleDragEnd = (event, info) => {
+  const handleDragEnd = (_event, info) => {
     if (info.offset.x < -50) nextImage();
     else if (info.offset.x > 50) prevImage();
   };
 
   return (
-    <>
-     {/* Folder Row - responsive with taller cards */}
-<div className="flex overflow-x-auto gap-5 p-5 snap-x snap-mandatory">
-  {folders.map((folder) => (
-    <div
-      key={folder.id}
-      className="flex-shrink-0 w-[180px] sm:w-[220px] h-[400px] sm:h-[700px] relative cursor-pointer group rounded-[24px] overflow-hidden snap-center"
-      onClick={() => {
-  if (folder.title === 'Other') {
-    window.open('https://drive.google.com/drive/folders/1Z-LjzjQDrACQpagawQkj8n8uVdH-3Fyt', '_blank');
-  } else {
-    handleFolderClick(folder.id);
-  }
-}}
-    >
-      <Image
-        src={folderCovers[folder.id]}
-        alt={folder.title}
-        fill
-        className="absolute w-full h-full object-cover rounded-[24px] transition-transform duration-500 group-hover:scale-105"
-      />
-      <div className="absolute inset-0 flex items-center justify-center bg-black/50 rounded-[24px]">
-        <h3 className="text-center text-white font-bold sm:text-[26px] text-[16px] px-2 drop-shadow-lg">
-          {folder.title}
-        </h3>
-      </div>
-    </div>
-  ))}
-</div>
-
-
-      {/* Full-screen Lightbox */}
-      {activeFolder && (
-        <div
-          className="fixed inset-0 z-50 bg-black/90 flex flex-col items-center justify-center p-3 sm:p-5"
-          onClick={closeLightbox}
-        >
-          {/* Header */}
-          <div className="flex items-center gap-3 sm:gap-4 mb-4 sm:mb-6">
-            <div className="flex justify-center items-center w-[40px] h-[40px] sm:w-[50px] sm:h-[50px] rounded-[12px] bg-black/50">
-              <Image src={IMG.src} alt="icon" width={30} height={30} />
-            </div>
-            <div>
-              <p className="text-gray-300 font-medium text-[12px] sm:text-[14px] uppercase">{activeFolder.text}</p>
-              <p className="text-yellow-400 font-semibold text-[12px] sm:text-[14px] uppercase">{activeFolder.Chairman}</p>
-            </div>
-          </div>
-
-          <h2 className="text-white font-extrabold sm:text-[28px] text-[20px] drop-shadow-lg mb-4 sm:mb-6 text-center">
-            {activeFolder.title}
-          </h2>
-
-          {/* Carousel */}
-          <div
-            className="relative w-full sm:max-w-[90%] h-[60vh] sm:h-[80vh] flex items-center justify-center overflow-hidden"
-            onClick={(e) => e.stopPropagation()}
-          >
-            {folderImages[activeFolder.id].map((imgSrc, i) => {
-              let position = 'behind';
-              if (i === currentIndex) position = 'center';
-              else if (i === (currentIndex - 1 + folderImages[activeFolder.id].length) % folderImages[activeFolder.id].length)
-                position = 'left';
-              else if (i === (currentIndex + 1) % folderImages[activeFolder.id].length)
-                position = 'right';
-              else return null;
-
-              let style = {};
-              if (position === 'center') style = { zIndex: 20, scale: 1, x: 0, boxShadow: '0 10px 30px rgba(0,0,0,0.5)' };
-              else if (position === 'left') style = { zIndex: 10, scale: 0.7, x: '-40%', boxShadow: '0 5px 15px rgba(0,0,0,0.3)' };
-              else if (position === 'right') style = { zIndex: 10, scale: 0.7, x: '40%', boxShadow: '0 5px 15px rgba(0,0,0,0.3)' };
-
-              return (
-                <motion.div
-                  key={i}
-                  animate={style}
-                  transition={{ type: 'spring', stiffness: 300, damping: 30 }}
-                  drag="x"
-                  dragConstraints={{ left: 0, right: 0 }}
-                  dragElastic={0.2}
-                  onDragEnd={handleDragEnd}
-                  className="absolute w-full h-full rounded-[16px] overflow-hidden"
-                >
-                  <Image
-                    src={imgSrc}
-                    alt={`${activeFolder.title} image ${i + 1}`}
-                    fill
-                    className="object-contain"
-                  />
-                </motion.div>
-              );
-            })}
-
-            {/* Navigation Buttons */}
-            <button
-              onClick={prevImage}
-              className="absolute left-2 sm:left-4 top-1/2 -translate-y-1/2 text-white text-4xl sm:text-5xl font-bold z-30 touch-manipulation"
+    <section className="dmc-dark-section px-6 pb-24 sm:px-8 lg:px-12">
+      <div className="mx-auto max-w-7xl">
+        <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          {folders.map((folder, index) => (
+            <motion.button
+              key={folder.id}
+              onClick={() => handleFolderClick(folder)}
+              className={`group relative overflow-hidden border border-[var(--dmc-border)] text-left ${
+                index === 0 ? 'lg:col-span-2 lg:row-span-2' : ''
+              }`}
+              initial={{ opacity: 0, y: 24 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.2 }}
+              transition={{ duration: 0.6, delay: index * 0.05 }}
             >
-              ‹
-            </button>
-            <button
-              onClick={nextImage}
-              className="absolute right-2 sm:right-4 top-1/2 -translate-y-1/2 text-white text-4xl sm:text-5xl font-bold z-30 touch-manipulation"
-            >
-              ›
-            </button>
-          </div>
+              <div className={`relative ${index === 0 ? 'aspect-[16/10] lg:aspect-[16/11]' : 'aspect-[4/3]'}`}>
+                <Image
+                  src={folderCovers[folder.id]}
+                  alt={folder.title}
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                  className="object-cover transition duration-500 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent" />
+              </div>
+
+              <div className="absolute inset-x-0 bottom-0 p-6">
+                <div className="mb-3 inline-flex items-center gap-2 bg-yellow-400 px-3 py-1 text-xs font-black uppercase tracking-[0.18em] text-black">
+                  {folder.tag}
+                </div>
+                <div className="flex items-end justify-between gap-4">
+                  <h2 className="text-2xl font-black text-white md:text-3xl">{folder.title}</h2>
+                  <span className="flex h-11 w-11 shrink-0 items-center justify-center bg-white text-black transition group-hover:bg-yellow-400">
+                    {folder.external ? <ExternalLink className="h-5 w-5" /> : <Maximize2 className="h-5 w-5" />}
+                  </span>
+                </div>
+              </div>
+            </motion.button>
+          ))}
         </div>
-      )}
-    </>
+      </div>
+
+      <AnimatePresence>
+        {activeFolder && activeImages.length > 0 && (
+          <motion.div
+            className="fixed inset-0 z-[70] flex flex-col bg-black/95 p-4 text-white sm:p-6"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+          >
+            <div className="mx-auto mb-4 flex w-full max-w-7xl items-center justify-between gap-4">
+              <div>
+                <p className="text-sm font-black uppercase tracking-[0.2em] text-yellow-400">
+                  {activeFolder.tag}
+                </p>
+                <h2 className="text-2xl font-black md:text-4xl">{activeFolder.title}</h2>
+                <p className="mt-1 text-sm font-bold text-gray-400">
+                  {currentIndex + 1} / {activeImages.length}
+                </p>
+              </div>
+              <button
+                onClick={closeLightbox}
+                className="flex h-11 w-11 items-center justify-center bg-yellow-400 text-black"
+                aria-label="Close gallery"
+              >
+                <X className="h-5 w-5" />
+              </button>
+            </div>
+
+            <div className="relative mx-auto flex min-h-0 w-full max-w-7xl flex-1 items-center justify-center overflow-hidden">
+              <button
+                onClick={prevImage}
+                className="absolute left-0 z-20 flex h-12 w-12 items-center justify-center bg-white/10 text-white backdrop-blur transition hover:bg-yellow-400 hover:text-black"
+                aria-label="Previous image"
+              >
+                <ArrowLeft className="h-6 w-6" />
+              </button>
+
+              <motion.div
+                key={`${activeFolder.id}-${currentIndex}`}
+                className="relative h-full max-h-[76vh] w-full"
+                drag="x"
+                dragConstraints={{ left: 0, right: 0 }}
+                dragElastic={0.18}
+                onDragEnd={handleDragEnd}
+                initial={{ opacity: 0, scale: 0.98 }}
+                animate={{ opacity: 1, scale: 1 }}
+                exit={{ opacity: 0, scale: 0.98 }}
+                transition={{ duration: 0.25 }}
+              >
+                <Image
+                  src={activeImages[currentIndex]}
+                  alt={`${activeFolder.title} image ${currentIndex + 1}`}
+                  fill
+                  sizes="100vw"
+                  className="object-contain"
+                />
+              </motion.div>
+
+              <button
+                onClick={nextImage}
+                className="absolute right-0 z-20 flex h-12 w-12 items-center justify-center bg-white/10 text-white backdrop-blur transition hover:bg-yellow-400 hover:text-black"
+                aria-label="Next image"
+              >
+                <ArrowRight className="h-6 w-6" />
+              </button>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </section>
   );
 };
 

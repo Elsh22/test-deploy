@@ -3,7 +3,9 @@ import React, { useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 import img1 from '../../assets/DMCMIXER8/DMC_MIXER_PHOTO.jpg';
-import { Users, GraduationCap, Calendar } from 'lucide-react';
+import img2 from '../../assets/DMCMIXER8/DMCMIXER20.jpg';
+import img3 from '../../assets/EBOARD2025/EBoard2025.jpg';
+import { ArrowRight, CalendarDays, GraduationCap, Handshake, Users } from 'lucide-react';
 
 function CountUp({ end, duration = 1200, suffix = '' }) {
   const [value, setValue] = useState(0);
@@ -50,114 +52,135 @@ function CountUp({ end, duration = 1200, suffix = '' }) {
 }
 
 const Home = ({ id }) => {
+  const stats = [
+    { icon: Users, value: 900, suffix: '+', label: 'Active members' },
+    { icon: GraduationCap, value: 400, suffix: '+', label: 'Alumni graduates' },
+    { icon: CalendarDays, value: 8, suffix: '', label: 'Years of impact' },
+  ];
+
+  const pillars = ['Brotherhood', 'Mentorship', 'Service', 'Professional growth'];
+
   return (
     <section
       id={id}
-      className="relative w-full h-screen overflow-hidden font-home text-white"
+      className="relative min-h-screen w-full overflow-hidden bg-[#070707] font-home text-white"
     >
-      {/* Background Image */}
       <Image
         src={img1}
-        alt="Developing Men of Color"
+        alt="DMC members gathered at the annual mixer"
         fill
-        className="object-cover brightness-90"
+        className="object-cover opacity-55"
         priority
       />
+      <div className="absolute inset-0 bg-[linear-gradient(110deg,rgba(0,0,0,0.95)_0%,rgba(0,0,0,0.78)_45%,rgba(0,0,0,0.36)_100%)]" />
+      <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-black to-transparent" />
 
-      {/* Dark + Gold Gradient Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/50 to-black/90" />
-      <div className="absolute inset-0 bg-gradient-to-r from-yellow-600/10 via-transparent to-yellow-600/10" />
-
-      {/* Top Stats Bar */}
-      <motion.div
-        className="absolute top-24 md:top-32 left-0 w-full px-6"
-        initial={{ opacity: 0, y: -10 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.9 }}
-      >
-        <div className="mx-auto max-w-6xl">
-          <div className="flex flex-col sm:flex-row items-center justify-between gap-6 sm:gap-10">
-            {/* Stat 1 */}
-            <div className="flex items-center gap-3">
-              <Users className="h-7 w-7 text-yellow-400" />
-              <div className="leading-tight">
-                <div className="text-yellow-400 font-extrabold text-3xl sm:text-4xl">
-                  <CountUp end={900} suffix="+" />
-                </div>
-                <div className="text-gray-200 text-sm sm:text-base tracking-wide">
-                  Active Members
-                </div>
-              </div>
+      <div className="relative z-10 mx-auto flex min-h-screen max-w-7xl flex-col justify-center px-6 pb-14 pt-32 sm:px-8 lg:px-12">
+        <div className="grid items-center gap-12 lg:grid-cols-[1.04fr_0.96fr]">
+          <motion.div
+            initial={{ opacity: 0, y: 24 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, ease: 'easeOut' }}
+            className="max-w-3xl"
+          >
+            <div className="mb-6 inline-flex items-center gap-3 border border-yellow-400/30 bg-black/45 px-4 py-2 text-sm font-semibold uppercase tracking-[0.2em] text-yellow-300">
+              <Handshake className="h-4 w-4" />
+              VCU student brotherhood
             </div>
 
-            {/* Stat 2 */}
-            <div className="flex items-center gap-3">
-              <GraduationCap className="h-7 w-7 text-yellow-400" />
-              <div className="leading-tight">
-                <div className="text-yellow-400 font-extrabold text-3xl sm:text-4xl">
-                  <CountUp end={400} suffix="+" />
-                </div>
-                <div className="text-gray-200 text-sm sm:text-base tracking-wide">
-                  Alumni Graduates
-                </div>
-              </div>
+            <h1 className="text-5xl font-black leading-[0.95] tracking-normal text-white sm:text-6xl lg:text-7xl">
+              Developing Men of Color
+            </h1>
+
+            <p className="mt-6 max-w-2xl text-lg leading-8 text-gray-200 sm:text-xl">
+              A campus community built around academic excellence, professional readiness,
+              service, and the kind of brotherhood that keeps students moving forward.
+            </p>
+
+            <div className="mt-8 flex flex-col gap-4 sm:flex-row">
+              <motion.button
+                onClick={() =>
+                  window.open('https://vcu.campusgroups.com/DMC/club_signup', '_blank')
+                }
+                className="inline-flex items-center justify-center gap-3 bg-yellow-400 px-7 py-4 text-lg font-extrabold text-black transition hover:bg-white"
+                whileHover={{ y: -2 }}
+                whileTap={{ scale: 0.98 }}
+              >
+                Join RamsConnect
+                <ArrowRight className="h-5 w-5" />
+              </motion.button>
+
+              <a
+                href="#calendar"
+                className="inline-flex items-center justify-center border border-white/25 bg-white/10 px-7 py-4 text-lg font-bold text-white backdrop-blur transition hover:border-yellow-300 hover:text-yellow-300"
+              >
+                View Events
+              </a>
             </div>
 
-            {/* Stat 3 */}
-            <div className="flex items-center gap-3">
-              <Calendar className="h-7 w-7 text-yellow-400" />
-              <div className="leading-tight">
-                <div className="text-yellow-400 font-extrabold text-3xl sm:text-4xl">
-                  <CountUp end={8} />
-                </div>
-                <div className="text-gray-200 text-sm sm:text-base tracking-wide">
-                  Years Since Founded
-                </div>
+            <div className="mt-8 flex flex-wrap gap-3">
+              {pillars.map((pillar) => (
+                <span
+                  key={pillar}
+                  className="border border-white/15 bg-white/10 px-4 py-2 text-sm font-semibold text-gray-100 backdrop-blur"
+                >
+                  {pillar}
+                </span>
+              ))}
+            </div>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, x: 28 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.9, ease: 'easeOut', delay: 0.15 }}
+            className="hidden lg:block"
+          >
+            <div className="grid grid-cols-[0.85fr_1fr] gap-5">
+              <div className="relative mt-16 aspect-[4/5] overflow-hidden border border-white/15">
+                <Image
+                  src={img2}
+                  alt="DMC mixer event highlight"
+                  fill
+                  sizes="340px"
+                  className="object-cover"
+                />
+              </div>
+              <div className="relative aspect-[4/5] overflow-hidden border border-yellow-300/35">
+                <Image
+                  src={img3}
+                  alt="DMC executive board"
+                  fill
+                  sizes="420px"
+                  className="object-cover"
+                />
               </div>
             </div>
-          </div>
+          </motion.div>
         </div>
-      </motion.div>
 
-      {/* Text + Button Section */}
-      <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-6 space-y-8">
-        <motion.h1
-          className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-extrabold tracking-tight"
-          style={{
-            color: '#FFD700',
-            textShadow: '0 0 25px rgba(255, 215, 0, 0.8)',
-          }}
-          initial={{ opacity: 0, y: 20 }}
+        <motion.div
+          className="mt-12 grid gap-4 border-y border-white/15 bg-black/35 py-5 backdrop-blur md:grid-cols-3"
+          initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1 }}
+          transition={{ duration: 0.75, delay: 0.35 }}
         >
-          Developing Men of Color
-        </motion.h1>
-
-        <motion.p
-          className="text-xl sm:text-2xl md:text-3xl text-gray-200 max-w-3xl"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1.2, delay: 0.3 }}
-        >
-          Excellence is our Standard.
-        </motion.p>
-
-        <motion.button
-          onClick={() =>
-            window.open('https://vcu.campusgroups.com/DMC/club_signup', '_blank')
-          }
-          className="mt-6 px-10 py-4 text-2xl font-bold rounded-full border-2 border-yellow-500 
-                     bg-black/80 text-yellow-400 hover:bg-yellow-500 hover:text-black
-                     transition-all duration-300 shadow-lg hover:shadow-yellow-500/50"
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1.4, delay: 0.6 }}
-        >
-          Join RamsConnect
-        </motion.button>
+          {stats.map(({ icon: Icon, value, suffix, label }) => (
+            <div key={label} className="flex items-center gap-4 px-2 sm:px-5">
+              <div className="flex h-12 w-12 shrink-0 items-center justify-center bg-yellow-400 text-black">
+                <Icon className="h-6 w-6" />
+              </div>
+              <div className="leading-tight">
+                <div className="text-3xl font-black text-yellow-300 sm:text-4xl">
+                  <CountUp end={value} suffix={suffix} />
+                </div>
+                <div className="text-sm font-semibold uppercase tracking-[0.16em] text-gray-300">
+                  {label}
+                </div>
+              </div>
+            </div>
+          ))}
+        </motion.div>
       </div>
     </section>
   );

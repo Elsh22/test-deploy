@@ -1,40 +1,25 @@
 'use client';
+
 import { motion } from 'framer-motion';
-import { fadeIn, staggerContainer, planetVariants } from "../../utils/motion";
+import { CheckCircle2 } from 'lucide-react';
 import { StartStepsSports } from '@/constants/index';
-import styles from '../../styles';
-import { TypingText, TitleText } from '../../utils/CustomText';
 
 const SportsSteps = () => {
-  // Inline Step component (no TypeScript types)
-  const Step = ({ number, text }) => (
-    <div className="flex items-start gap-4">
-      <div className="w-10 h-10 rounded-full bg-yellow-400 flex items-center justify-center font-bold text-black text-lg">
-        {number}
-      </div>
-      <p className="flex-1 text-yellow-400 font-medium text-lg">{text}</p>
-    </div>
-  );
-
   return (
-    <section className="w-full bg-black border-t-8 border-b-8 border-yellow-400 py-16">
-      <motion.div
-        variants={staggerContainer}
-        initial="hidden"
-        whileInView="show"
-        viewport={{ once: false, amount: 0.25 }}
-        className="max-w-6xl mx-auto flex lg:flex-row flex-col gap-12 px-4"
-      >
-        {/* Left: Video */}
+    <section className="dmc-dark-section px-6 pb-24 sm:px-8 lg:px-12">
+      <div className="mx-auto grid max-w-7xl items-center gap-12 lg:grid-cols-[1.05fr_0.95fr]">
         <motion.div
-          variants={planetVariants('left')}
-          className="flex-1 flex justify-center items-center"
+          initial={{ opacity: 0, x: -24 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true, amount: 0.25 }}
+          transition={{ duration: 0.7, ease: 'easeOut' }}
+          className="overflow-hidden border border-[var(--dmc-border)] bg-black"
         >
-          <div className="relative w-full pt-[56.25%] rounded-xl overflow-hidden shadow-lg">
+          <div className="relative aspect-video">
             <iframe
-              className="absolute top-0 left-0 w-full h-full"
+              className="absolute left-0 top-0 h-full w-full"
               src="https://www.youtube.com/embed/Awud3NiZkV4?si=Kkn2twKuj8N5r0m1"
-              title="YouTube video player"
+              title="DMC Sports video"
               frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
@@ -42,33 +27,34 @@ const SportsSteps = () => {
           </div>
         </motion.div>
 
-        {/* Right: Steps */}
         <motion.div
-          variants={fadeIn('left', 'tween', 0.2, 1)}
-          className="flex-[0.75] flex flex-col justify-center text-center lg:text-left"
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.25 }}
+          transition={{ duration: 0.7, ease: 'easeOut' }}
         >
-          <TypingText
-            title="How To Join Sports"
-            textStyles="text-yellow-400 text-3xl lg:text-4xl font-semibold mb-2"
-          />
-          <TitleText
-            title={
-              <p className="text-white text-3xl lg:text-4xl mb-6">
-                Get started with just a few Steps
-              </p>
-            }
-          />
-          <div className="flex flex-col gap-6 max-w-md mx-auto lg:mx-0">
+          <p className="mb-3 text-sm font-black uppercase tracking-[0.24em] text-yellow-400">
+            How to join
+          </p>
+          <h2 className="text-4xl font-black leading-tight md:text-5xl">
+            Get on the roster in three steps.
+          </h2>
+
+          <div className="mt-8 grid gap-4">
             {StartStepsSports.map((feature, index) => (
-              <Step
-                key={index}
-                number={`${index < 9 ? '0' : ''}${index + 1}`}
-                text={feature}
-              />
+              <div key={feature} className="dmc-card flex items-start gap-4 border p-5">
+                <CheckCircle2 className="mt-1 h-6 w-6 shrink-0 text-yellow-400" />
+                <div>
+                  <p className="text-sm font-black uppercase tracking-[0.18em] text-yellow-500">
+                    Step {String(index + 1).padStart(2, '0')}
+                  </p>
+                  <p className="dmc-muted mt-1 text-lg font-bold">{feature}</p>
+                </div>
+              </div>
             ))}
           </div>
         </motion.div>
-      </motion.div>
+      </div>
     </section>
   );
 };

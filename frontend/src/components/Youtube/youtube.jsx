@@ -1,79 +1,80 @@
 'use client';
+
 import React from 'react';
-import Slider from 'react-slick';
-import 'slick-carousel/slick/slick.css';
-import 'slick-carousel/slick/slick-theme.css';
-import { FaPlay } from 'react-icons/fa';
+import { motion } from 'framer-motion';
+import { Play, Youtube as YoutubeIcon } from 'lucide-react';
 
 const Youtube = () => {
   const videos = [
-    { videoId: 'BidFVxIBaHo', title: '' },
-    { videoId: 'kNX907_j3_g', title: '' },
-    { videoId: 'tf0tBafdo0k', title: '' },
-    { videoId: '0M6I3KH3x28', title: '' },
-    { videoId: '6novGvOabco', title: '' },
-    { videoId: 'H1qklEi04lc', title: '' },
-    { videoId: 'L9VGDJ4tuN0', title: '' },
-    { videoId: '1BoLVFluhak', title: '' },
-    { videoId: '3C5SlNyqfvo', title: '' },
-    { videoId: '0P37B_g8lfQ', title: '' },
-    { videoId: 'S-9xvaDMl7k', title: '' },
-    { videoId: 'M4TUCKbL4Bk', title: '' },
-    { videoId: 'fZVZHmwDTeo', title: '' },
+    'BidFVxIBaHo',
+    'kNX907_j3_g',
+    'tf0tBafdo0k',
+    '0M6I3KH3x28',
+    '6novGvOabco',
+    'H1qklEi04lc',
+    'L9VGDJ4tuN0',
+    '1BoLVFluhak',
   ];
 
-  const settings = {
-    dots: true,
-    infinite: false,
-    speed: 500,
-    slidesToShow: 4,
-    slidesToScroll: 4,
-    responsive: [
-      { breakpoint: 1024, settings: { slidesToShow: 3, slidesToScroll: 3 } },
-      { breakpoint: 768, settings: { slidesToShow: 2, slidesToScroll: 2 } },
-      { breakpoint: 480, settings: { slidesToShow: 1, slidesToScroll: 1 } },
-    ],
-  };
-
-  const handleVideoClick = (videoId) => {
-    window.open(`https://www.youtube.com/watch?v=${videoId}`, '_blank');
-  };
-
   return (
-    <section className="py-12 bg-black relative">
-      {/* Title */}
-      <div className="text-center mb-10">
-        <h2 className="text-4xl md:text-5xl font-extrabold text-yellow-400 drop-shadow-lg">
-          YouTube Videos
-        </h2>
-        <div className="w-24 h-1 bg-gradient-to-r from-yellow-500 via-yellow-400 to-yellow-600 mx-auto mt-2 rounded-full"></div>
-      </div>
-
-      {/* Slider */}
-      <Slider {...settings} className="max-w-6xl mx-auto">
-        {videos.map((video) => (
-          <div key={video.videoId} className="px-3">
-            <div
-              className="relative cursor-pointer rounded-2xl overflow-hidden shadow-[0_0_30px_rgba(255,215,0,0.3)] hover:shadow-[0_0_50px_rgba(255,215,0,0.6)] transition-all duration-500"
-              onClick={() => handleVideoClick(video.videoId)}
-            >
-              <img
-                src={`https://img.youtube.com/vi/${video.videoId}/0.jpg`}
-                alt={video.title}
-                className="w-full h-56 md:h-48 lg:h-60 object-cover"
-              />
-              {/* Play button overlay */}
-              <div className="absolute inset-0 flex items-center justify-center bg-black/30 opacity-0 hover:opacity-100 transition-opacity duration-300">
-                <FaPlay className="text-yellow-400 text-5xl md:text-6xl animate-pulse" />
-              </div>
-              {/* Video title */}
-              <div className="absolute bottom-0 left-0 w-full bg-black/60 px-3 py-2 text-white text-center text-sm md:text-base font-semibold">
-                {video.title}
-              </div>
+    <section className="dmc-panel-section px-6 py-24 sm:px-8 lg:px-12">
+      <div className="mx-auto max-w-7xl">
+        <motion.div
+          className="mb-12 flex flex-col justify-between gap-6 md:flex-row md:items-end"
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.25 }}
+          transition={{ duration: 0.7, ease: 'easeOut' }}
+        >
+          <div>
+            <div className="mb-6 inline-flex items-center gap-3 border border-yellow-400/40 px-4 py-2 text-sm font-black uppercase tracking-[0.2em] text-yellow-400">
+              <YoutubeIcon className="h-4 w-4" />
+              YouTube
             </div>
+            <h2 className="max-w-3xl text-4xl font-black leading-tight md:text-6xl">
+              More DMC stories, one play away.
+            </h2>
           </div>
-        ))}
-      </Slider>
+          <a
+            href="https://www.youtube.com/@vcudevelopingmenofcolor3402"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center justify-center gap-3 bg-yellow-400 px-6 py-4 font-black text-black transition hover:bg-white"
+          >
+            Visit Channel
+            <YoutubeIcon className="h-5 w-5" />
+          </a>
+        </motion.div>
+
+        <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+          {videos.map((videoId, index) => (
+            <motion.a
+              key={videoId}
+              href={`https://www.youtube.com/watch?v=${videoId}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group overflow-hidden border border-[var(--dmc-border)] bg-black"
+              initial={{ opacity: 0, y: 22 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.2 }}
+              transition={{ duration: 0.55, delay: index * 0.04 }}
+            >
+              <div className="relative aspect-video overflow-hidden">
+                <img
+                  src={`https://img.youtube.com/vi/${videoId}/hqdefault.jpg`}
+                  alt="DMC YouTube video thumbnail"
+                  className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 flex items-center justify-center bg-black/30 opacity-0 transition group-hover:opacity-100">
+                  <span className="flex h-14 w-14 items-center justify-center bg-yellow-400 text-black">
+                    <Play className="h-6 w-6 fill-black" />
+                  </span>
+                </div>
+              </div>
+            </motion.a>
+          ))}
+        </div>
+      </div>
     </section>
   );
 };

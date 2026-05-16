@@ -1,51 +1,77 @@
 "use client";
-import React from 'react';
-import Link from 'next/link'
+
+import React from "react";
+import Link from "next/link";
+import { ArrowLeft, ChevronDown, Mail, MapPin, Phone } from "lucide-react";
 
 const faqData = [
   {
-    question: 'How can I donate?',
-    answer: 'There are many ways to donate. You can donate online, by phone, or by mail. You can also make a gift of stock or include us in your will. Visit our Ways to Give page to learn more about each option.',
+    question: "How can I donate?",
+    answer:
+      "Use the secure donation form on the donor page. You can choose a preset amount or enter a custom amount before continuing to Stripe Checkout.",
+  },
+  {
+    question: "What does my donation support?",
+    answer:
+      "Donations support professional attire events, academic resources, general body meetings, workshops, mentorship, scholarships, and community service programming.",
+  },
+  {
+    question: "Can I ask about sponsorships or in-kind support?",
+    answer:
+      "Yes. Reach out to DMC by email and we can discuss sponsorships, partnerships, supplies, attire donations, or program-specific support.",
   },
 ];
 
 const Page = () => {
   return (
-    <div className="container mx-auto px-4 py-8 min-h-screen mt-10">
-      <div className="mb-10">
-      <Link href="/Donor" >
-        <button className=" mt-5">Back</button>
-      </Link>
-        <h1 className="text-3xl font-semibold mb-6 ">Frequently Asked Questions</h1>
-      </div>
-      
-      <div className="w-full  mx-auto space-y-6">
-        {faqData.map((faq, index) => (
-          <details key={index} className="group bg-white border border-gray-300 rounded-md p-6">
-            <summary className="text-lg cursor-pointer font-medium flex justify-between items-center text-black">
-              {faq.question}
-              <span className="transition-transform transform group-open:rotate-180">
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-gray-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
-                </svg>
-              </span>
-            </summary>
-            <p className="mt-4 text-black">
-              {faq.answer}
-            </p>
-          </details>
-        ))}
-      </div>
+    <main className="dmc-dark-section min-h-screen px-6 pb-20 pt-32 sm:px-8 lg:px-12">
+      <div className="mx-auto max-w-5xl">
+        <Link href="/Donor" className="mb-8 inline-flex items-center gap-3 font-black text-yellow-400 transition hover:text-yellow-300">
+          <ArrowLeft className="h-5 w-5" />
+          Back to Donate
+        </Link>
 
-      <div className="mt-12">
-        <h2 className="text-2xl font-semibold mb-4 ">Contact Information</h2>
-        <div className="space-y-2 text-lg">
-          <p>Phone: 571-830-8084</p>
-          <p>Email: vcu.dmc@gmail.com</p>
-          <p>Mail: 900 Park Ave, Richmond, VA 23284</p>
+        <div className="mb-12">
+          <p className="mb-3 text-sm font-black uppercase tracking-[0.24em] text-yellow-400">
+            Donor FAQ
+          </p>
+          <h1 className="text-5xl font-black leading-tight md:text-7xl">
+            Questions before giving.
+          </h1>
+          <p className="dmc-muted mt-5 max-w-3xl text-lg leading-8">
+            A quick guide to how donations work and how to contact DMC about
+            larger gifts or partnerships.
+          </p>
+        </div>
+
+        <div className="space-y-4">
+          {faqData.map((faq) => (
+            <details key={faq.question} className="dmc-card group border p-6">
+              <summary className="flex cursor-pointer list-none items-center justify-between gap-4 text-xl font-black">
+                {faq.question}
+                <ChevronDown className="h-5 w-5 shrink-0 text-yellow-400 transition group-open:rotate-180" />
+              </summary>
+              <p className="dmc-muted mt-4 leading-7">{faq.answer}</p>
+            </details>
+          ))}
+        </div>
+
+        <div className="dmc-card-solid mt-10 grid gap-5 border p-6 md:grid-cols-3">
+          <a href="tel:5718308084" className="flex items-center gap-3 font-bold transition hover:text-yellow-400">
+            <Phone className="h-5 w-5 text-yellow-400" />
+            571-830-8084
+          </a>
+          <a href="mailto:vcu.dmc@gmail.com" className="flex items-center gap-3 font-bold transition hover:text-yellow-400">
+            <Mail className="h-5 w-5 text-yellow-400" />
+            vcu.dmc@gmail.com
+          </a>
+          <p className="flex items-center gap-3 font-bold">
+            <MapPin className="h-5 w-5 text-yellow-400" />
+            900 Park Ave, Richmond, VA 23284
+          </p>
         </div>
       </div>
-    </div>
+    </main>
   );
 };
 

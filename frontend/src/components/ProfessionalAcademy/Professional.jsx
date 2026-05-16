@@ -1,10 +1,17 @@
 'use client';
+
 import React, { useState } from 'react';
 import Image from 'next/image';
-import Picture from '../../newassest/CGIPic.png';
 import { motion } from 'framer-motion';
-import { fadeIn, staggerContainer } from '../../utils/motion';
-import { TypingText } from '../../utils/CustomText';
+import {
+  CalendarCheck,
+  Camera,
+  ChevronDown,
+  MessageSquareText,
+  Stethoscope,
+  Wrench,
+} from 'lucide-react';
+import Picture from '../../newassest/CGIPic.png';
 
 const Professional = ({ id }) => {
   const [openDropdown, setOpenDropdown] = useState(null);
@@ -16,171 +23,140 @@ const Professional = ({ id }) => {
   return (
     <section
       id={id}
-      className="relative flex flex-col md:flex-row items-center justify-between bg-black text-white px-6 md:px-16 py-20 md:py-32 gap-12 md:gap-20 overflow-hidden"
+      className="dmc-light-section relative overflow-hidden px-6 py-24 sm:px-8 lg:px-12"
     >
-      {/* Top gold bar */}
-      <div className="absolute top-0 left-0 w-full h-[3px] bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-600" />
-
-      {/* Left: Text */}
-      <motion.div
-        variants={staggerContainer}
-        initial="hidden"
-        whileInView="show"
-        viewport={{ once: true, amount: 0.2 }}
-        className="w-full md:w-1/2 flex flex-col items-center md:items-start text-center md:text-left"
-      >
-        <TypingText
-          title="Professional Academy"
-          textStyles="font-semibold text-yellow-400 text-7xl md:text-8xl mb-4"
-        />
-
-        {/* First Paragraph */}
-        <motion.p
-          variants={fadeIn('up', 'tween', 0.2, 1)}
-          className="text-lg md:text-xl leading-relaxed text-gray-200 mb-6 max-w-2xl"
+      <div className="mx-auto grid max-w-7xl items-center gap-12 lg:grid-cols-[1fr_0.95fr]">
+        <motion.div
+          initial={{ opacity: 0, y: 26 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.25 }}
+          transition={{ duration: 0.7, ease: 'easeOut' }}
         >
-          At the Professional Academy, we transform career readiness for men of color
-          through peer-to-peer mentoring in personalized 30-40 minute sessions. Our
-          approach connects students with mentors who've already found success in
-          similar paths, creating authentic connections and advice that resonates. In a
-          relaxed setting, we help polish resumes with both technical fixes and strategic
-          improvements that catch recruiters' eyes. We overhaul LinkedIn profiles on the
-          spot and take professional headshots to replace awkward selfies. Our mentors
-          share real-world insights about what actually works in job searches, not just
-          theory. We've addressed practical barriers by offering free tie rentals and shoe
-          shining services because we know these details matter but aren't always
-          accessible. Every participant leaves with clear next steps and resources to
-          continue their professional growth. We've built a program that bridges the gap
-          between classroom learning and workplace success, giving men of color not just
-          better documents, but greater confidence and community support as they launch
-          their careers.
-        </motion.p>
+          <p className="mb-3 text-sm font-black uppercase tracking-[0.24em] text-yellow-600">
+            Professional Academy
+          </p>
+          <h2 className="max-w-3xl text-4xl font-black leading-tight md:text-6xl">
+            Career readiness with real feedback and next steps.
+          </h2>
+          <p className="dmc-muted mt-6 max-w-3xl text-lg leading-8 md:text-xl">
+            Members get peer-to-peer career mentoring, resume and LinkedIn feedback,
+            headshots, and practical guidance from students who have already moved
+            through similar paths.
+          </p>
 
-        {/* Dropdown Buttons */}
-        <div className="flex flex-col gap-4 w-full max-w-md mx-auto md:mx-0">
-          {/* Health */}
-          <a
-            href="https://calendly.com/lewisxm-vcu/new-meeting?month=2025-09"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="px-6 py-3 bg-yellow-400 text-black font-bold rounded-lg text-center hover:bg-yellow-500 transition-colors"
-          >
-            For Health Tracks
-          </a>
-
-          {/* Tech & Engineering */}
-          <div className="relative">
-            <button
-              onClick={() => toggleDropdown('tech')}
-              className="w-full px-6 py-3 bg-yellow-400 text-black font-bold rounded-lg hover:bg-yellow-500 transition-colors text-left"
-            >
-              For Tech & Engineering ▾
-            </button>
-            {openDropdown === 'tech' && (
-              <div className="absolute top-full left-0 w-full mt-2 bg-black border border-yellow-400 rounded-lg shadow-lg z-10">
-                <a
-                  href="https://calendly.com/elshowayah2-vcu/career-research"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="block px-4 py-2 hover:bg-yellow-500 hover:text-black transition-colors"
-                >
-                  Hussein
-                </a>
-                <a
-                  href="https://calendly.com/smithjrte-vcu/30min?month=2025-09"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="block px-4 py-2 hover:bg-yellow-500 hover:text-black transition-colors"
-                >
-                  Thurman
-                </a>
-                <a
-                  href="https://calendly.com/danielnt-vcu/30min"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="block px-4 py-2 hover:bg-yellow-500 hover:text-black transition-colors"
-                >
-                  Naod
-                </a>
-              </div>
-            )}
+          <div className="mt-8 grid gap-3 sm:grid-cols-2">
+            <div className="dmc-card-solid border p-4">
+              <MessageSquareText className="mb-3 h-6 w-6 text-yellow-600" />
+              <p className="font-black">Resume and LinkedIn reviews</p>
+            </div>
+            <div className="dmc-card-solid border p-4">
+              <Camera className="mb-3 h-6 w-6 text-yellow-600" />
+              <p className="font-black">Professional headshots</p>
+            </div>
           </div>
 
-          {/* Business */}
-          <div className="relative">
-            <button
-              onClick={() => toggleDropdown('business')}
-              className="w-full px-6 py-3 bg-yellow-400 text-black font-bold rounded-lg hover:bg-yellow-500 transition-colors text-left"
+          <div className="mt-8 flex w-full max-w-xl flex-col gap-3">
+            <a
+              href="https://calendly.com/lewisxm-vcu/new-meeting?month=2025-09"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-between bg-yellow-400 px-5 py-4 font-black text-black transition hover:bg-black hover:text-white"
             >
-              For Business Students ▾
-            </button>
-            {openDropdown === 'business' && (
-              <div className="absolute top-full left-0 w-full mt-2 bg-black border border-yellow-400 rounded-lg shadow-lg z-10">
-                <a
-                  href="https://calendly.com/elshowayah-vcu/lindkln-review"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="block px-4 py-2 hover:bg-yellow-500 hover:text-black transition-colors"
-                >
-                  Hassan
-                </a>
-                <a
-                  href="https://calendly.com/brownkj7-vcu/30min"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="block px-4 py-2 hover:bg-yellow-500 hover:text-black transition-colors"
-                >
-                  Kaleb
-                </a>
-                 <a
-                  href="http://calendly.com/dwivedysk2-vcu/30min"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="block px-4 py-2 hover:bg-yellow-500 hover:text-black transition-colors"
-                >
-                  Sameer
-                </a>
-              </div>
-            )}
+              <span className="inline-flex items-center gap-3">
+                <Stethoscope className="h-5 w-5" />
+                For Health Tracks
+              </span>
+              <CalendarCheck className="h-5 w-5" />
+            </a>
+
+            <div className="relative">
+              <button
+                onClick={() => toggleDropdown('tech')}
+                className="flex w-full items-center justify-between border border-[var(--dmc-border)] px-5 py-4 text-left font-black transition hover:border-yellow-400"
+              >
+                <span className="inline-flex items-center gap-3">
+                  <Wrench className="h-5 w-5" />
+                  For Tech & Engineering
+                </span>
+                <ChevronDown className="h-5 w-5" />
+              </button>
+              {openDropdown === 'tech' && (
+                <div className="dmc-card-solid absolute left-0 top-full z-10 mt-2 w-full border shadow-xl">
+                  <a href="https://calendly.com/elshowayah2-vcu/career-research" target="_blank" rel="noopener noreferrer" className="block px-4 py-3 hover:bg-yellow-400 hover:text-black">
+                    Hussein
+                  </a>
+                  <a href="https://calendly.com/smithjrte-vcu/30min?month=2025-09" target="_blank" rel="noopener noreferrer" className="block px-4 py-3 hover:bg-yellow-400 hover:text-black">
+                    Thurman
+                  </a>
+                  <a href="https://calendly.com/danielnt-vcu/30min" target="_blank" rel="noopener noreferrer" className="block px-4 py-3 hover:bg-yellow-400 hover:text-black">
+                    Naod
+                  </a>
+                </div>
+              )}
+            </div>
+
+            <div className="relative">
+              <button
+                onClick={() => toggleDropdown('business')}
+                className="flex w-full items-center justify-between border border-[var(--dmc-border)] px-5 py-4 text-left font-black transition hover:border-yellow-400"
+              >
+                For Business Students
+                <ChevronDown className="h-5 w-5" />
+              </button>
+              {openDropdown === 'business' && (
+                <div className="dmc-card-solid absolute left-0 top-full z-10 mt-2 w-full border shadow-xl">
+                  <a href="https://calendly.com/elshowayah-vcu/lindkln-review" target="_blank" rel="noopener noreferrer" className="block px-4 py-3 hover:bg-yellow-400 hover:text-black">
+                    Hassan
+                  </a>
+                  <a href="https://calendly.com/brownkj7-vcu/30min" target="_blank" rel="noopener noreferrer" className="block px-4 py-3 hover:bg-yellow-400 hover:text-black">
+                    Kaleb
+                  </a>
+                  <a href="http://calendly.com/dwivedysk2-vcu/30min" target="_blank" rel="noopener noreferrer" className="block px-4 py-3 hover:bg-yellow-400 hover:text-black">
+                    Sameer
+                  </a>
+                </div>
+              )}
+            </div>
+
+            <a
+              href="https://calendly.com/gallardogoj-vcu/30min"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-between border border-[var(--dmc-border)] px-5 py-4 font-black transition hover:border-yellow-400"
+            >
+              Book Headshot Session
+              <Camera className="h-5 w-5" />
+            </a>
+
+            <a
+              href="https://docs.google.com/forms/d/e/1FAIpQLScEX4LpYlbbXUhmAqVvxy0SBDk_9m5pcrAdH7XgJxK4rwMl2A/viewform?usp=dialog"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-between border border-[var(--dmc-border)] px-5 py-4 font-black transition hover:border-yellow-400"
+            >
+              Give Feedback
+              <MessageSquareText className="h-5 w-5" />
+            </a>
           </div>
+        </motion.div>
 
-          {/* Headshots */}
-          <a
-            href="https://calendly.com/gallardogoj-vcu/30min"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="px-6 py-3 bg-yellow-400 text-black font-bold rounded-lg text-center hover:bg-yellow-500 transition-colors"
-          >
-            Book Headshot Session
-          </a>
-
-          {/* Feedback Button */}
-          <a
-            href="https://docs.google.com/forms/d/e/1FAIpQLScEX4LpYlbbXUhmAqVvxy0SBDk_9m5pcrAdH7XgJxK4rwMl2A/viewform?usp=dialog"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="px-6 py-3 bg-yellow-400 text-black font-bold rounded-lg text-center hover:bg-yellow-500 transition-colors"
-          >
-            Give Feedback
-          </a>
-        </div>
-      </motion.div>
-
-      {/* Right: Image */}
-      <div className="flex justify-center w-full md:w-1/2">
-        <div className="relative w-[100%] md:w-[100%] rounded-2xl border-4 border-yellow-400 shadow-[0_0_50px_rgba(255,215,0,0.3)]">
+        <motion.div
+          initial={{ opacity: 0, x: 28 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true, amount: 0.25 }}
+          transition={{ duration: 0.7, ease: 'easeOut' }}
+          className="relative"
+        >
+          <div className="absolute -right-4 -top-4 h-full w-full border border-yellow-400" />
           <Image
             src={Picture}
             alt="Professional Academy"
             width={1200}
             height={600}
-            className="rounded-2xl object-cover"
+            className="relative aspect-[4/3] w-full object-cover"
           />
-        </div>
+        </motion.div>
       </div>
-
-      {/* Bottom gold bar */}
-      <div className="absolute bottom-0 left-0 w-full h-[3px] bg-gradient-to-r from-yellow-600 via-yellow-500 to-yellow-400" />
     </section>
   );
 };

@@ -1,136 +1,160 @@
 'use client';
-import React, { useState } from "react";
-import Image from "next/image";
-import img1 from "../../assets/DMCSPORTS/7on7(1).jpg";
-import img2 from "../../assets/DMCMIXER8/DMCMIXER20.jpg";
-import img3 from "../../newassest/suitday.jpg";
-import img4 from "../../assets/GBMs/GBM 2 DMCxVACU 10-15-25-20.png";
-import img5 from "../../assets/IntershipWorkshop/IntWork20.png";
-import img6 from "../../assets/DMCSPORTS/DSC01192.jpg";
+
+import React, { useState } from 'react';
+import Image from 'next/image';
+import { motion, AnimatePresence } from 'framer-motion';
+import { Play, X } from 'lucide-react';
+import img1 from '../../assets/DMCSPORTS/7on7(1).jpg';
+import img2 from '../../assets/DMCMIXER8/DMCMIXER20.jpg';
+import img3 from '../../newassest/suitday.jpg';
+import img4 from '../../assets/GBMs/GBM 2 DMCxVACU 10-15-25-20.png';
+import img5 from '../../assets/IntershipWorkshop/IntWork20.png';
+import img6 from '../../assets/DMCSPORTS/DSC01192.jpg';
 
 const events = [
   {
     id: 5,
-    title: "DMC Get Fitted Suit Day",
+    title: 'DMC Get Fitted Suit Day',
     imgSrc: img3,
-    description:
-      "A special event where members received professional attire to enhance their career readiness.",
-    videoUrl: "https://drive.google.com/file/d/1UIVgO5oqk-ahEtBWf4E6rS6aF4Nd6Ljp/preview",
+    description: 'Members received professional attire to support career readiness.',
+    videoUrl: 'https://drive.google.com/file/d/1UIVgO5oqk-ahEtBWf4E6rS6aF4Nd6Ljp/preview',
   },
   {
     id: 1,
-    title: "General Body Meeting with Virginia Credit Union",
+    title: 'GBM with Virginia Credit Union',
     imgSrc: img4,
-    description:
-      "An engaging session with VACU that highlighted financial literacy and support.",
-    videoUrl: "https://drive.google.com/file/d/1BggVKnHJAXKKl7MCd8EEoUKJSVxFda2G/preview",
+    description: 'A financial literacy session with practical resources from VACU.',
+    videoUrl: 'https://drive.google.com/file/d/1BggVKnHJAXKKl7MCd8EEoUKJSVxFda2G/preview',
   },
   {
     id: 2,
-    title: "Internship Workshop",
+    title: 'Internship Workshop',
     imgSrc: img5,
-    description:
-      "A workshop dedicated to professional networking and building an impactful LinkedIn profile.",
-    videoUrl: "https://drive.google.com/file/d/1UbGG55vKIolyhGWtipMRS0Mr404RdhII/preview",
+    description: 'Professional networking, LinkedIn support, and career preparation.',
+    videoUrl: 'https://drive.google.com/file/d/1UbGG55vKIolyhGWtipMRS0Mr404RdhII/preview',
   },
   {
     id: 3,
-    title: "DMC 7 on 7 football",
+    title: 'DMC 7 on 7 Football',
     imgSrc: img1,
-    description:
-      "A fun-filled day of football games, showcasing teamwork and sportsmanship.",
-    videoUrl: "https://drive.google.com/file/d/1RB4XWhtfQZKUirPwWNwkV27oBt0TDhPN/preview",
+    description: 'Competition, teamwork, and sportsmanship on the field.',
+    videoUrl: 'https://drive.google.com/file/d/1RB4XWhtfQZKUirPwWNwkV27oBt0TDhPN/preview',
   },
   {
     id: 4,
-    title: "DMC Mixer",
+    title: 'DMC Mixer',
     imgSrc: img2,
-    description:
-      "A mixer event that brought together students and professionals for networking.",
-    videoUrl: "https://drive.google.com/file/d/1gHdVsuv4e2fyipT3fbZJfi5nUcj7ACrR/preview",
+    description: 'Students and professionals gathered for community and networking.',
+    videoUrl: 'https://drive.google.com/file/d/1gHdVsuv4e2fyipT3fbZJfi5nUcj7ACrR/preview',
   },
   {
     id: 6,
-    title: "DMC Basketball",
+    title: 'DMC Basketball',
     imgSrc: img6,
-    description:
-      "A fun-filled day of basketball games, showcasing teamwork and sportsmanship.",
-    videoUrl: "https://drive.google.com/file/d/11DRpJ8PIrarpE4WVcjVCXUxj6eU5OMhB/preview",
+    description: 'A high-energy day of basketball and brotherhood.',
+    videoUrl: 'https://drive.google.com/file/d/11DRpJ8PIrarpE4WVcjVCXUxj6eU5OMhB/preview',
   },
 ];
 
 const Highlight = () => {
   const [selectedEvent, setSelectedEvent] = useState(null);
 
-  const openModal = (event) => setSelectedEvent(event);
-  const closeModal = () => setSelectedEvent(null);
-
   return (
-    <section className="bg-black text-white px-6 md:px-16 py-20">
-      <h1 className="text-4xl md:text-5xl font-extrabold text-yellow-400 text-center mb-4">
-        Video Highlights
-      </h1>
-      <p className="text-gray-300 text-center mb-12 max-w-2xl mx-auto">
-        Catch some of our most memorable moments on video.
-      </p>
-
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-        {events.map((event) => (
-          <div
-            key={event.id}
-            className="highlight-box bg-neutral-900 rounded-2xl overflow-hidden shadow-[0_0_20px_#FFD700] hover:shadow-[0_0_40px_#FFD700] cursor-pointer transition-all duration-300"
-            onClick={() => openModal(event)}
-          >
-            <div className="relative w-full h-64 md:h-56 lg:h-60 rounded-2xl overflow-hidden">
-              <Image
-                src={event.imgSrc}
-                alt={event.title}
-                fill
-                className="object-cover transition-transform duration-300 hover:scale-105"
-              />
-            </div>
-            <div className="p-4">
-              <h3 className="text-xl md:text-2xl font-bold text-yellow-400 mb-2">
-                {event.title}
-              </h3>
-              <p className="text-gray-300 text-sm md:text-base">{event.description}</p>
-            </div>
+    <section className="dmc-dark-section px-6 py-24 sm:px-8 lg:px-12">
+      <div className="mx-auto max-w-7xl">
+        <motion.div
+          className="mb-12 flex flex-col justify-between gap-6 md:flex-row md:items-end"
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.25 }}
+          transition={{ duration: 0.7, ease: 'easeOut' }}
+        >
+          <div>
+            <p className="mb-3 text-sm font-black uppercase tracking-[0.24em] text-yellow-300">
+              Video Highlights
+            </p>
+            <h2 className="max-w-3xl text-4xl font-black leading-tight md:text-6xl">
+              Moments worth replaying.
+            </h2>
           </div>
-        ))}
+          <p className="dmc-muted max-w-md text-lg leading-8">
+            A living archive of service, professional development, athletics, and
+            campus community.
+          </p>
+        </motion.div>
+
+        <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          {events.map((event, index) => (
+            <motion.button
+              key={event.id}
+              onClick={() => setSelectedEvent(event)}
+              className="dmc-card group overflow-hidden border text-left"
+              initial={{ opacity: 0, y: 24 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.2 }}
+              transition={{ duration: 0.6, delay: index * 0.06, ease: 'easeOut' }}
+            >
+              <div className="relative h-72 overflow-hidden">
+                <Image
+                  src={event.imgSrc}
+                  alt={event.title}
+                  fill
+                  className="object-cover transition duration-500 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/15 to-transparent" />
+                <div className="absolute bottom-5 left-5 flex h-12 w-12 items-center justify-center bg-yellow-400 text-black">
+                  <Play className="h-5 w-5 fill-black" />
+                </div>
+              </div>
+              <div className="p-5">
+                <h3 className="text-xl font-black text-[var(--dmc-text)]">{event.title}</h3>
+                <p className="dmc-muted mt-2 text-sm leading-6">{event.description}</p>
+              </div>
+            </motion.button>
+          ))}
+        </div>
       </div>
 
-      {/* Modal */}
-      {selectedEvent && (
-        <div
-          className="fixed inset-0 bg-black/80 flex items-center justify-center z-50"
-          onClick={closeModal}
-        >
-          <div
-            className="bg-neutral-900 rounded-2xl p-6 md:p-8 max-w-3xl w-full relative shadow-[0_0_50px_#FFD700] border-4 border-yellow-400"
-            onClick={(e) => e.stopPropagation()}
+      <AnimatePresence>
+        {selectedEvent && (
+          <motion.div
+            className="fixed inset-0 z-[60] flex items-center justify-center bg-black/85 p-4"
+            onClick={() => setSelectedEvent(null)}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
           >
-            <button
-              className="absolute top-4 right-4 text-yellow-400 font-bold text-2xl hover:text-yellow-500"
-              onClick={closeModal}
+            <motion.div
+              className="relative w-full max-w-4xl border border-white/10 bg-[#0a0a0a] p-4 shadow-2xl"
+              onClick={(event) => event.stopPropagation()}
+              initial={{ scale: 0.96, y: 20 }}
+              animate={{ scale: 1, y: 0 }}
+              exit={{ scale: 0.96, y: 20 }}
             >
-              ×
-            </button>
-            <h2 className="text-2xl md:text-3xl font-extrabold text-yellow-400 mb-4">
-              {selectedEvent.title}
-            </h2>
-            <div className="w-full aspect-video">
-              <iframe
-                src={selectedEvent.videoUrl}
-                width="100%"
-                height="100%"
-                allow="autoplay"
-                allowFullScreen
-                className="rounded-xl"
-              ></iframe>
-            </div>
-          </div>
-        </div>
-      )}
+              <button
+                className="absolute right-4 top-4 z-10 flex h-10 w-10 items-center justify-center bg-yellow-400 text-black"
+                onClick={() => setSelectedEvent(null)}
+                aria-label="Close video"
+              >
+                <X className="h-5 w-5" />
+              </button>
+              <h2 className="mb-4 pr-12 text-2xl font-black text-white md:text-3xl">
+                {selectedEvent.title}
+              </h2>
+              <div className="aspect-video w-full bg-black">
+                <iframe
+                  src={selectedEvent.videoUrl}
+                  title={selectedEvent.title}
+                  width="100%"
+                  height="100%"
+                  allow="autoplay"
+                  allowFullScreen
+                />
+              </div>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </section>
   );
 };
