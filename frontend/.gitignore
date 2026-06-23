@@ -41,3 +41,7 @@ next-env.d.ts
 
 # open-next
 .open-next
+
+# oversized local media preserved outside git
+public/archive-media/newassest/sportsvideos/dmcFlag.mp4
+_archive/src-before-redesign-20260622-201011/newassest/sportsvideos/dmcFlag.mp4

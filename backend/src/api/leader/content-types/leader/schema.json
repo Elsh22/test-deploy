@@ -1,0 +1,68 @@
+{
+  "kind": "collectionType",
+  "collectionName": "leaders",
+  "info": {
+    "singularName": "leader",
+    "pluralName": "leaders",
+    "displayName": "Leader",
+    "description": "Leadership profile data for DMC executive board, advisors, and program leads."
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "slug": {
+      "type": "uid",
+      "targetField": "name",
+      "required": true
+    },
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "role": {
+      "type": "string",
+      "required": true
+    },
+    "group": {
+      "type": "enumeration",
+      "enum": [
+        "Advisor",
+        "Executive Officers",
+        "Operations",
+        "Member Experience",
+        "Program Leads",
+        "Communications"
+      ],
+      "required": true
+    },
+    "focus": {
+      "type": "text",
+      "required": true
+    },
+    "image": {
+      "type": "string",
+      "required": true
+    },
+    "linkedin": {
+      "type": "string"
+    },
+    "biography": {
+      "type": "json",
+      "required": true
+    },
+    "details": {
+      "type": "json"
+    },
+    "organizations": {
+      "type": "json"
+    },
+    "linkedinPosts": {
+      "type": "json"
+    },
+    "order": {
+      "type": "integer",
+      "default": 100
+    }
+  }
+}

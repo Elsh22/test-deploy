@@ -1,0 +1,46 @@
+{
+  "kind": "collectionType",
+  "collectionName": "spotlights",
+  "info": {
+    "singularName": "spotlight",
+    "pluralName": "spotlights",
+    "displayName": "Spotlight",
+    "description": "Sunday, student, alumni, and member spotlights."
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "label": {
+      "type": "string",
+      "required": true
+    },
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "excerpt": {
+      "type": "text",
+      "required": true
+    },
+    "image": {
+      "type": "string",
+      "required": true
+    },
+    "linkedin": {
+      "type": "string"
+    },
+    "featured": {
+      "type": "boolean",
+      "default": false
+    },
+    "order": {
+      "type": "integer",
+      "default": 100
+    }
+  }
+}
