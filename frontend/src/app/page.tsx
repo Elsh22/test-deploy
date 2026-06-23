@@ -267,12 +267,14 @@ export default function HomePage() {
       <section className="relative min-h-screen overflow-hidden bg-black">
         <video
           className="absolute inset-0 h-full w-full object-cover"
-          src="/DMCMIXER2025.mp4"
           autoPlay
           muted
           loop
           playsInline
-        />
+          preload="auto"
+        >
+          <source src="/hero-mixer.webm" type="video/webm" />
+        </video>
 
         <div className="absolute inset-0 bg-black/60" />
         <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-[#050505] to-transparent" />
