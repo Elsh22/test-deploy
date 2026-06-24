@@ -214,7 +214,7 @@ function CountUpNumber({ target }: { target: number }) {
 }
 
 function MixerCountdown() {
-  const mixerDate = new Date("2026-09-07T16:00:00-04:00").getTime();
+  const mixerDate = new Date("2026-09-13T16:00:00-04:00").getTime();
   const [timeLeft, setTimeLeft] = useState({
     days: 0,
     hours: 0,
