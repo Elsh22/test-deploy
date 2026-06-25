@@ -59,8 +59,8 @@ export default function DashboardPage() {
         </section>
       </section>
 
-      <section className="mx-auto max-w-7xl pb-16">
-        <section className="border border-white/10 bg-zinc-950 p-6 md:p-8">
+      <section className="mx-auto grid max-w-7xl gap-8 pb-16 lg:grid-cols-[420px_1fr]">
+        <section className="aspect-square max-h-[420px] w-full overflow-hidden border border-white/10 bg-zinc-950 p-5 md:p-6">
           <div className="flex items-end justify-between gap-4 border-b border-white/10 pb-5">
             <div>
               <p className="font-['PolySans'] text-xs font-black uppercase tracking-[0.22em] text-yellow-400">
@@ -73,7 +73,7 @@ export default function DashboardPage() {
             <p className="font-['PolySans'] text-3xl font-black text-white">{memberEvents.length}</p>
           </div>
 
-          <div className="mt-6 grid gap-4">
+          <div className="mt-5 grid max-h-[285px] gap-4 overflow-y-auto pr-2">
             {memberEvents.map((event) => {
               const isCompleted = event.status === "completed";
 
@@ -90,7 +90,7 @@ export default function DashboardPage() {
                           : "border-yellow-400 text-yellow-400"
                       }`}
                     >
-                      {isCompleted ? "✓" : "RSVP"}
+                      {isCompleted ? "\u2713" : "RSVP"}
                     </span>
                     <div>
                       <h3 className="font-['PolySans'] text-lg font-black uppercase text-white">
@@ -112,6 +112,8 @@ export default function DashboardPage() {
             })}
           </div>
         </section>
+
+        <div />
       </section>
     </main>
   );
