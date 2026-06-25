@@ -32,6 +32,17 @@ The browser can see the anon key, so SQL policies must protect the data. RLS mak
 5. Restart the Next.js dev server.
 6. Visit `/signup`, create an account, confirm email if required, then visit `/dashboard`.
 
+## Updating an Existing Supabase Project
+
+If you already ran the schema before profile photos were added, run the newest
+`schema.sql` in a fresh project, or manually add:
+
+```sql
+alter table public.profiles add column if not exists avatar_url text;
+```
+
+Then create the `profile-photos` bucket and storage policies from `schema.sql`.
+
 ## Environment Variables
 
 ```env

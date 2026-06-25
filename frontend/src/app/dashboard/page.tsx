@@ -1,6 +1,7 @@
 import { redirect } from "next/navigation";
 import DashboardCard from "../../components/Dashboard/DashboardCard";
 import LogoutButton from "../../components/Dashboard/LogoutButton";
+import ProfilePhotoUploader from "../../components/Dashboard/ProfilePhotoUploader";
 import { createSupabaseServerClient } from "../../lib/supabase/server";
 
 export const dynamic = "force-dynamic";
@@ -13,6 +14,7 @@ type Profile = {
   graduation_year: number | null;
   career_interest: string | null;
   linkedin_url: string | null;
+  avatar_url: string | null;
   role: string;
 };
 
@@ -176,14 +178,24 @@ export default async function DashboardPage() {
 
             <aside className="border-t border-white/10 bg-black p-6 md:p-9 lg:border-l lg:border-t-0 lg:p-10">
               <div className="flex items-center gap-4">
-                <div className="grid h-16 w-16 place-items-center bg-yellow-400 font-['PolySans'] text-xl font-black text-black">
-                  {initials}
-                </div>
+                {profile?.avatar_url ? (
+                  <img
+                    src={profile.avatar_url}
+                    alt={`${displayName} profile photo`}
+                    className="h-16 w-16 object-cover"
+                  />
+                ) : (
+                  <div className="grid h-16 w-16 place-items-center bg-yellow-400 font-['PolySans'] text-xl font-black text-black">
+                    {initials}
+                  </div>
+                )}
                 <div>
                   <p className="text-lg font-bold text-white">{displayName}</p>
                   <p className="mt-1 text-sm text-zinc-400">{profile?.email || user.email}</p>
                 </div>
               </div>
+
+              <ProfilePhotoUploader userId={user.id} />
 
               <div className="mt-8 space-y-4 text-sm">
                 {[

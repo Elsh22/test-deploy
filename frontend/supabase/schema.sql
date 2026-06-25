@@ -21,6 +21,7 @@ create table public.profiles (
   graduation_year integer check (graduation_year between 2000 and 2100),
   career_interest text,
   linkedin_url text,
+  avatar_url text,
   role public.member_role not null default 'member',
   created_at timestamptz not null default now(),
   updated_at timestamptz not null default now()
@@ -28,6 +29,12 @@ create table public.profiles (
 
 comment on table public.profiles is
   'DMC member profile records. Each profile belongs to one Supabase Auth user.';
+
+-- Storage bucket for member profile photos. Files are organized by user id:
+-- profile-photos/<auth-user-id>/avatar.jpg
+insert into storage.buckets (id, name, public)
+values ('profile-photos', 'profile-photos', true)
+on conflict (id) do nothing;
 
 -- Events are public-facing DMC programs, GBMs, workshops, service events,
 -- sports events, and signature events.
@@ -257,6 +264,37 @@ create policy "Members can update their own profile"
 on public.profiles for update
 using (auth.uid() = id or public.is_dmc_manager())
 with check (auth.uid() = id or public.is_dmc_manager());
+
+-- Profile photo storage policies. The file path must begin with the user's id,
+-- which prevents members from overwriting another member's avatar.
+create policy "Members can read profile photos"
+on storage.objects for select
+using (bucket_id = 'profile-photos');
+
+create policy "Members can upload their own profile photo"
+on storage.objects for insert
+with check (
+  bucket_id = 'profile-photos'
+  and auth.uid()::text = (storage.foldername(name))[1]
+);
+
+create policy "Members can update their own profile photo"
+on storage.objects for update
+using (
+  bucket_id = 'profile-photos'
+  and auth.uid()::text = (storage.foldername(name))[1]
+)
+with check (
+  bucket_id = 'profile-photos'
+  and auth.uid()::text = (storage.foldername(name))[1]
+);
+
+create policy "Members can delete their own profile photo"
+on storage.objects for delete
+using (
+  bucket_id = 'profile-photos'
+  and auth.uid()::text = (storage.foldername(name))[1]
+);
 
 -- Events: public events are readable by signed-in members. Managers can manage them.
 create policy "Members can read public events"
