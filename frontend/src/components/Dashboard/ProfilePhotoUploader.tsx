@@ -8,7 +8,7 @@ type ProfilePhotoUploaderProps = {
   userId: string;
 };
 
-const maxFileSize = 12 * 1024 * 1024;
+const maxFileSize = 512 * 1024 * 1024;
 
 export default function ProfilePhotoUploader({ userId }: ProfilePhotoUploaderProps) {
   const inputRef = useRef<HTMLInputElement>(null);
@@ -30,7 +30,7 @@ export default function ProfilePhotoUploader({ userId }: ProfilePhotoUploaderPro
     }
 
     if (file.size > maxFileSize) {
-      setMessage("Please choose an image under 12 MB.");
+      setMessage("Please choose an image under 512 MB.");
       return;
     }
 
@@ -95,7 +95,7 @@ export default function ProfilePhotoUploader({ userId }: ProfilePhotoUploaderPro
         {isUploading ? "Uploading..." : "Add profile photo"}
       </button>
       <p className="mt-3 text-xs leading-5 text-zinc-500">
-        JPG, PNG, or WebP. High-resolution images up to 12 MB are supported.
+        JPG, PNG, or WebP. High-resolution images up to 512 MB are supported.
       </p>
       {message ? <p className="mt-2 text-xs leading-5 text-zinc-400">{message}</p> : null}
     </div>
