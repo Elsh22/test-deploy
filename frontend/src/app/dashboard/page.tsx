@@ -17,6 +17,22 @@ export default function DashboardPage() {
           <h1 className="font-['PolySans'] mt-4 text-6xl font-black uppercase leading-none text-white lg:text-8xl">
             Member Name
           </h1>
+
+          <div className="mt-8 grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
+            {[
+              ["Major", "Computer Science"],
+              ["Classification", "Junior"],
+              ["Role", "Member"],
+              ["Track", "Technology"],
+            ].map(([label, value]) => (
+              <div key={label} className="border-l border-yellow-400/60 pl-4">
+                <p className="font-['PolySans'] text-xs font-black uppercase tracking-[0.18em] text-zinc-500">
+                  {label}
+                </p>
+                <p className="mt-2 text-lg font-semibold text-white">{value}</p>
+              </div>
+            ))}
+          </div>
         </section>
       </section>
     </main>
