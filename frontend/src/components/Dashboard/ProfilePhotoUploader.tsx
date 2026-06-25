@@ -8,7 +8,28 @@ type ProfilePhotoUploaderProps = {
   userId: string;
 };
 
-const maxFileSize = 512 * 1024 * 1024;
+const maxFileSize = 25 * 1024 * 1024;
+const minImageWidth = 2960;
+const minImageHeight = 3700;
+
+function getImageDimensions(file: File) {
+  return new Promise<{ width: number; height: number }>((resolve, reject) => {
+    const image = new Image();
+    const objectUrl = URL.createObjectURL(file);
+
+    image.onload = () => {
+      resolve({ width: image.width, height: image.height });
+      URL.revokeObjectURL(objectUrl);
+    };
+
+    image.onerror = () => {
+      reject(new Error("Could not read image dimensions."));
+      URL.revokeObjectURL(objectUrl);
+    };
+
+    image.src = objectUrl;
+  });
+}
 
 export default function ProfilePhotoUploader({ userId }: ProfilePhotoUploaderProps) {
   const inputRef = useRef<HTMLInputElement>(null);
@@ -30,7 +51,19 @@ export default function ProfilePhotoUploader({ userId }: ProfilePhotoUploaderPro
     }
 
     if (file.size > maxFileSize) {
-      setMessage("Please choose an image under 512 MB.");
+      setMessage("Please choose an image under 25 MB.");
+      return;
+    }
+
+    try {
+      const { width, height } = await getImageDimensions(file);
+
+      if (width < minImageWidth || height < minImageHeight) {
+        setMessage(`Please choose an image at least ${minImageWidth} x ${minImageHeight} pixels.`);
+        return;
+      }
+    } catch {
+      setMessage("Could not read the image resolution. Try another image.");
       return;
     }
 
@@ -95,7 +128,7 @@ export default function ProfilePhotoUploader({ userId }: ProfilePhotoUploaderPro
         {isUploading ? "Uploading..." : "Add profile photo"}
       </button>
       <p className="mt-3 text-xs leading-5 text-zinc-500">
-        JPG, PNG, or WebP. High-resolution images up to 512 MB are supported.
+        JPG, PNG, or WebP. Recommended minimum: 2960 x 3700 pixels. Max file size: 25 MB.
       </p>
       {message ? <p className="mt-2 text-xs leading-5 text-zinc-400">{message}</p> : null}
     </div>
