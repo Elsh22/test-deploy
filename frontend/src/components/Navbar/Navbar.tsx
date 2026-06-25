@@ -144,12 +144,20 @@ export default function Navbar() {
             ))}
           </div>
 
-          <Link
-            href="/donate"
-            className="font-['PolySans'] hidden rounded-full bg-yellow-400 px-5 py-3 text-xs font-black uppercase tracking-[0.14em] text-black shadow-[inset_0_1px_0_rgba(255,255,255,0.55)] transition hover:scale-105 hover:bg-white md:px-6 md:text-sm lg:inline-flex"
-          >
-            Donate
-          </Link>
+          <div className="hidden items-center gap-3 lg:flex">
+            <Link
+              href="/login"
+              className="font-['PolySans'] rounded-full border border-white/15 px-5 py-3 text-xs font-black uppercase tracking-[0.14em] text-white transition hover:border-yellow-400 hover:text-yellow-400 md:text-sm"
+            >
+              Portal
+            </Link>
+            <Link
+              href="/donate"
+              className="font-['PolySans'] rounded-full bg-yellow-400 px-5 py-3 text-xs font-black uppercase tracking-[0.14em] text-black shadow-[inset_0_1px_0_rgba(255,255,255,0.55)] transition hover:scale-105 hover:bg-white md:px-6 md:text-sm"
+            >
+              Donate
+            </Link>
+          </div>
 
           <button
             type="button"
@@ -287,6 +295,13 @@ export default function Navbar() {
               className="font-['PolySans'] mt-2 inline-flex items-center justify-center bg-yellow-400 px-5 py-4 text-sm font-black uppercase tracking-[0.14em] text-black"
             >
               Donate
+            </Link>
+            <Link
+              href="/login"
+              onClick={() => setMobileOpen(false)}
+              className="font-['PolySans'] inline-flex items-center justify-center border border-white/15 px-5 py-4 text-sm font-black uppercase tracking-[0.14em] text-white"
+            >
+              Member Portal
             </Link>
           </div>
         </div>
