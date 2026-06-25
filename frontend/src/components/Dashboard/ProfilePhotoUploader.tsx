@@ -87,7 +87,11 @@ export default function ProfilePhotoUploader({ userId }: ProfilePhotoUploaderPro
       });
 
     if (uploadError) {
-      setMessage(uploadError.message);
+      if (uploadError.message.toLowerCase().includes("bucket not found")) {
+        setMessage("Profile photo storage is not set up yet. Run supabase/profile-photos-storage.sql.");
+      } else {
+        setMessage(uploadError.message);
+      }
       setIsUploading(false);
       return;
     }

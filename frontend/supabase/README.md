@@ -41,7 +41,9 @@ If you already ran the schema before profile photos were added, run the newest
 alter table public.profiles add column if not exists avatar_url text;
 ```
 
-Then create the `profile-photos` bucket and storage policies from `schema.sql`.
+Then run `supabase/profile-photos-storage.sql` in the Supabase SQL editor. That
+file creates the `profile-photos` bucket and the storage policies required by
+the dashboard profile photo uploader.
 
 ## Environment Variables
 
