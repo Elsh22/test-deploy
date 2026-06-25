@@ -6,7 +6,7 @@ export default function SignupPage() {
     <AuthShell
       eyebrow="DMC Member Access"
       title="Create your account"
-      description="Build your DMC profile so future member tools can connect events, resources, badges, mentorship, and career support to your account."
+      description="Create a member profile that connects your academic path, career interests, events, resources, and DMC involvement in one place."
       footerText="Already have an account?"
       footerHref="/login"
       footerLink="Log in"

@@ -97,7 +97,7 @@ export default function SignupForm() {
         <select
           id="career_interest"
           name="career_interest"
-          className="mt-2 w-full border border-white/10 bg-black/60 px-4 py-3 text-sm text-white transition focus:border-yellow-400"
+          className="mt-2 w-full border-0 border-b border-white/20 bg-zinc-950 px-0 py-3 text-base text-white transition focus:border-yellow-400"
           defaultValue=""
         >
           <option value="" disabled>

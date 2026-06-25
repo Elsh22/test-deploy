@@ -5,9 +5,9 @@ import LoginForm from "../../components/Auth/LoginForm";
 export default function LoginPage() {
   return (
     <AuthShell
-      eyebrow="DMC Portal"
+      eyebrow="Member Portal"
       title="Welcome back"
-      description="Log in to view your member dashboard, track event registrations, and prepare for future DMC technology features."
+      description="Log in to view your DMC profile, event activity, member resources, and recognition earned through the organization."
       footerText="Need a member account?"
       footerHref="/signup"
       footerLink="Sign up"

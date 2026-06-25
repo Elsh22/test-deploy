@@ -6,7 +6,7 @@ export default function ForgotPasswordPage() {
     <AuthShell
       eyebrow="Account Recovery"
       title="Reset password"
-      description="Enter your account email and Supabase Auth will send a secure reset link. Password recovery is handled outside the database tables."
+      description="Enter your account email and we will send a secure reset link so you can get back into the DMC member portal."
       footerText="Remembered your password?"
       footerHref="/login"
       footerLink="Log in"
