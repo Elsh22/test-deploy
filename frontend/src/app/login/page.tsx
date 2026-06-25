@@ -1,8 +1,13 @@
 import { Suspense } from "react";
 import AuthShell from "../../components/Auth/AuthShell";
 import LoginForm from "../../components/Auth/LoginForm";
+import { isLocalPortalEnabled } from "../../lib/localPortal";
 
 export default function LoginPage() {
+  if (!isLocalPortalEnabled()) {
+    return null;
+  }
+
   return (
     <AuthShell
       eyebrow="Member Portal"

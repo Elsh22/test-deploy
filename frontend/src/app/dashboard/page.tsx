@@ -2,6 +2,7 @@ import { redirect } from "next/navigation";
 import DashboardCard from "../../components/Dashboard/DashboardCard";
 import LogoutButton from "../../components/Dashboard/LogoutButton";
 import ProfilePhotoUploader from "../../components/Dashboard/ProfilePhotoUploader";
+import { isLocalPortalEnabled } from "../../lib/localPortal";
 import { createSupabaseServerClient } from "../../lib/supabase/server";
 
 export const dynamic = "force-dynamic";
@@ -64,6 +65,10 @@ function firstJoinedRow<T>(value: T | T[] | null | undefined) {
 }
 
 export default async function DashboardPage() {
+  if (!isLocalPortalEnabled()) {
+    return null;
+  }
+
   const supabase = createSupabaseServerClient();
 
   if (!supabase) {
