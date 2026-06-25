@@ -1,7 +1,10 @@
 -- DMC profile photo storage setup
 -- Run this in Supabase SQL Editor if the dashboard upload says "Bucket not found".
--- It creates the public profile-photos bucket and the policies that let members
--- upload only inside their own user-id folder.
+-- It adds the avatar_url profile field, creates the public profile-photos bucket,
+-- and adds policies that let members upload only inside their own user-id folder.
+
+alter table public.profiles
+add column if not exists avatar_url text;
 
 insert into storage.buckets (id, name, public)
 values ('profile-photos', 'profile-photos', true)
