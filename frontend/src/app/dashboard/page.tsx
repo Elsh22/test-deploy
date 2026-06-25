@@ -130,32 +130,83 @@ export default async function DashboardPage() {
     [profile?.first_name, profile?.last_name].filter(Boolean).join(" ") ||
     user.email ||
     "DMC Member";
+  const initials =
+    [profile?.first_name?.[0], profile?.last_name?.[0]]
+      .filter(Boolean)
+      .join("")
+      .toUpperCase() || "DM";
 
   return (
-    <main className="min-h-screen bg-[#050505] px-6 pb-20 pt-32 text-white">
+    <main className="min-h-screen bg-[#050505] px-5 pb-20 pt-28 text-white md:px-8">
       <section className="mx-auto max-w-7xl">
-        <div className="flex flex-col gap-6 border-b border-white/10 pb-10 md:flex-row md:items-end md:justify-between">
-          <div>
-            <p className="font-['PolySans'] text-sm font-black uppercase tracking-[0.28em] text-yellow-400">
-              Member Dashboard
-            </p>
-            <h1 className="font-['PolySans'] mt-4 text-5xl font-black uppercase leading-none md:text-7xl">
-              Welcome, {profile?.first_name || "Member"}
-            </h1>
-            <p className="mt-5 max-w-2xl text-lg leading-8 text-zinc-300">
-              This dashboard connects your DMC profile to events, badges,
-              resources, resume support, and future AI Career Coach tools.
-            </p>
+        <div className="border border-white/10 bg-zinc-950">
+          <div className="grid gap-0 lg:grid-cols-[1fr_360px]">
+            <div className="p-6 md:p-9 lg:p-10">
+              <div className="flex flex-col gap-8 md:flex-row md:items-end md:justify-between">
+                <div>
+                  <p className="font-['PolySans'] text-xs font-black uppercase tracking-[0.28em] text-yellow-400">
+                    Member Portal
+                  </p>
+                  <h1 className="font-['PolySans'] mt-4 text-4xl font-black uppercase leading-none md:text-6xl">
+                    {profile?.first_name ? `Welcome, ${profile.first_name}` : "Welcome to DMC"}
+                  </h1>
+                  <p className="mt-5 max-w-2xl text-base leading-7 text-zinc-300 md:text-lg">
+                    Your home base for DMC events, resources, recognition, and
+                    professional growth.
+                  </p>
+                </div>
+                <LogoutButton />
+              </div>
+
+              <div className="mt-10 grid gap-4 border-t border-white/10 pt-6 sm:grid-cols-3">
+                {[
+                  ["Role", profile?.role || "member"],
+                  ["Track", profile?.career_interest || "Not set"],
+                  ["Events", registrations.length ? `${registrations.length} registered` : "None yet"],
+                ].map(([label, value]) => (
+                  <div key={label}>
+                    <p className="font-['PolySans'] text-xs font-black uppercase tracking-[0.18em] text-zinc-500">
+                      {label}
+                    </p>
+                    <p className="mt-2 text-lg font-semibold text-white">{value}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <aside className="border-t border-white/10 bg-black p-6 md:p-9 lg:border-l lg:border-t-0 lg:p-10">
+              <div className="flex items-center gap-4">
+                <div className="grid h-16 w-16 place-items-center bg-yellow-400 font-['PolySans'] text-xl font-black text-black">
+                  {initials}
+                </div>
+                <div>
+                  <p className="text-lg font-bold text-white">{displayName}</p>
+                  <p className="mt-1 text-sm text-zinc-400">{profile?.email || user.email}</p>
+                </div>
+              </div>
+
+              <div className="mt-8 space-y-4 text-sm">
+                {[
+                  ["Major", profile?.major || "Not set"],
+                  ["Graduation", profile?.graduation_year?.toString() || "Not set"],
+                  ["LinkedIn", profile?.linkedin_url ? "Added" : "Not set"],
+                ].map(([label, value]) => (
+                  <div key={label} className="flex items-center justify-between border-b border-white/10 pb-3">
+                    <span className="text-zinc-500">{label}</span>
+                    <span className="font-medium text-zinc-100">{value}</span>
+                  </div>
+                ))}
+              </div>
+            </aside>
           </div>
-          <LogoutButton />
         </div>
 
-        <div className="mt-10 grid gap-6 lg:grid-cols-[0.9fr_1.1fr]">
+        <div className="mt-8 grid gap-10 lg:grid-cols-[360px_1fr]">
           <DashboardCard
             title="Profile"
-            description="Your profile row lives in the profiles table and connects to your Supabase Auth user."
+            description="Keep your member information current so DMC can connect you with the right opportunities."
           >
-            <dl className="grid gap-4 text-sm text-zinc-300 sm:grid-cols-2">
+            <dl className="space-y-4 text-sm text-zinc-300">
               {[
                 ["Name", displayName],
                 ["Email", profile?.email || user.email || "Not set"],
@@ -164,36 +215,44 @@ export default async function DashboardPage() {
                 ["Career Interest", profile?.career_interest || "Not set"],
                 ["Role", profile?.role || "member"],
               ].map(([label, value]) => (
-                <div key={label} className="border border-white/10 bg-black/40 p-4">
+                <div key={label} className="flex flex-col border-b border-white/10 pb-3">
                   <dt className="font-['PolySans'] text-xs font-black uppercase tracking-[0.16em] text-yellow-400">
                     {label}
                   </dt>
-                  <dd className="mt-2">{value}</dd>
+                  <dd className="mt-1 text-white">{value}</dd>
                 </div>
               ))}
             </dl>
           </DashboardCard>
 
+          <div>
           <DashboardCard
             title="Upcoming Events"
-            description="Public events come from the events table. Members can later RSVP from here."
+            description="Stay close to the rooms where the brotherhood, mentorship, and professional work happen."
           >
-            <div className="space-y-3">
+            <div className="divide-y divide-white/10 border-y border-white/10">
               {upcomingEvents.length ? (
                 upcomingEvents.map((event) => (
-                  <article key={event.id} className="border border-white/10 bg-black/40 p-4">
-                    <p className="font-['PolySans'] text-xs font-black uppercase tracking-[0.16em] text-yellow-400">
-                      {formatDate(event.starts_at)}
-                    </p>
-                    <h3 className="mt-2 text-lg font-bold text-white">{event.title}</h3>
-                    <p className="mt-1 text-sm text-zinc-400">
-                      {[event.category, event.location].filter(Boolean).join(" | ") || "DMC Event"}
-                    </p>
+                  <article key={event.id} className="grid gap-3 py-5 sm:grid-cols-[180px_1fr] sm:items-center">
+                    <div>
+                      <p className="font-['PolySans'] text-xs font-black uppercase tracking-[0.16em] text-yellow-400">
+                        {formatDate(event.starts_at)}
+                      </p>
+                      <p className="mt-1 text-xs uppercase tracking-[0.12em] text-zinc-500">
+                        {event.category || "DMC Event"}
+                      </p>
+                    </div>
+                    <div>
+                      <h3 className="text-xl font-bold text-white">{event.title}</h3>
+                      <p className="mt-1 text-sm text-zinc-400">
+                        {event.location || "Location pending"}
+                      </p>
+                    </div>
                   </article>
                 ))
               ) : (
-                <p className="text-sm leading-6 text-zinc-400">
-                  No upcoming events are in Supabase yet. Add event rows after running the SQL schema.
+                <p className="py-5 text-sm leading-6 text-zinc-400">
+                  No upcoming events have been posted yet.
                 </p>
               )}
             </div>
@@ -201,29 +260,31 @@ export default async function DashboardPage() {
 
           <DashboardCard
             title="Registered Events"
-            description="event_registrations connects your profile to the events you RSVP for."
+            description="A quick look at the events you have signed up for."
           >
-            <div className="space-y-3">
+            <div className="divide-y divide-white/10 border-y border-white/10">
               {registrations.length ? (
                 registrations.map((registration) => {
                   const event = firstJoinedRow(registration.events);
 
                   return (
-                    <article key={registration.id} className="border border-white/10 bg-black/40 p-4">
-                      <h3 className="text-lg font-bold text-white">
-                        {event?.title || "Registered event"}
-                      </h3>
-                      <p className="mt-1 text-sm text-zinc-400">
-                        {event?.starts_at ? formatDate(event.starts_at) : "Date pending"}
-                      </p>
-                      <p className="mt-2 text-xs uppercase tracking-[0.16em] text-yellow-400">
+                    <article key={registration.id} className="flex flex-col gap-2 py-5 sm:flex-row sm:items-center sm:justify-between">
+                      <div>
+                        <h3 className="text-lg font-bold text-white">
+                          {event?.title || "Registered event"}
+                        </h3>
+                        <p className="mt-1 text-sm text-zinc-400">
+                          {event?.starts_at ? formatDate(event.starts_at) : "Date pending"}
+                        </p>
+                      </div>
+                      <p className="font-['PolySans'] w-fit bg-yellow-400 px-3 py-1 text-xs font-black uppercase tracking-[0.12em] text-black">
                         {registration.status}
                       </p>
                     </article>
                   );
                 })
               ) : (
-                <p className="text-sm leading-6 text-zinc-400">
+                <p className="py-5 text-sm leading-6 text-zinc-400">
                   You have not registered for any events yet.
                 </p>
               )}
@@ -232,39 +293,41 @@ export default async function DashboardPage() {
 
           <DashboardCard
             title="Earned Badges"
-            description="Badges can recognize service, leadership, mentorship, and career milestones."
+            description="Recognition for service, leadership, mentorship, and professional milestones."
           >
-            <div className="grid gap-3 sm:grid-cols-2">
+            <div className="grid gap-4 sm:grid-cols-2">
               {badges.length ? (
                 badges.map((badge) => {
                   const badgeDetails = firstJoinedRow(badge.badges);
 
                   return (
-                    <article key={`${badgeDetails?.name}-${badge.awarded_at}`} className="border border-white/10 bg-black/40 p-4">
-                      <p className="text-2xl">{badgeDetails?.icon || "*"}</p>
-                      <h3 className="mt-2 font-bold text-white">{badgeDetails?.name}</h3>
-                      <p className="mt-1 text-sm text-zinc-400">{badgeDetails?.description}</p>
+                    <article key={`${badgeDetails?.name}-${badge.awarded_at}`} className="border border-white/10 p-5">
+                      <p className="font-['PolySans'] text-xs font-black uppercase tracking-[0.18em] text-yellow-400">
+                        {badgeDetails?.icon || "DMC"}
+                      </p>
+                      <h3 className="mt-3 text-lg font-bold text-white">{badgeDetails?.name}</h3>
+                      <p className="mt-2 text-sm leading-6 text-zinc-400">{badgeDetails?.description}</p>
                     </article>
                   );
                 })
               ) : (
                 <p className="text-sm leading-6 text-zinc-400">
-                  No badges yet. This section is ready for Professional Academy, service, and mentorship achievements.
+                  Badges will appear here as DMC starts awarding achievements.
                 </p>
               )}
             </div>
           </DashboardCard>
 
           <DashboardCard
-            title="Saved Resources"
-            description="For V1, this shows public resources. Later we can add a saved_resources table for bookmarks."
+            title="Resources"
+            description="Recommended links and materials for academic, career, and leadership growth."
           >
-            <div className="space-y-3">
+            <div className="grid gap-4 sm:grid-cols-2">
               {resources.length ? (
                 resources.map((resource) => (
                   <a
                     key={resource.id}
-                    className="block border border-white/10 bg-black/40 p-4 transition hover:border-yellow-400"
+                    className="group block border border-white/10 p-5 transition hover:border-yellow-400"
                     href={resource.url || "/resources"}
                     rel="noopener noreferrer"
                     target={resource.url ? "_blank" : "_self"}
@@ -274,11 +337,14 @@ export default async function DashboardPage() {
                     </p>
                     <h3 className="mt-2 font-bold text-white">{resource.title}</h3>
                     <p className="mt-1 text-sm leading-6 text-zinc-400">{resource.description}</p>
+                    <p className="mt-4 text-sm font-bold text-yellow-400 transition group-hover:text-white">
+                      Open resource
+                    </p>
                   </a>
                 ))
               ) : (
                 <p className="text-sm leading-6 text-zinc-400">
-                  No resources are in Supabase yet. The public Resources page still works normally.
+                  No dashboard resources have been posted yet.
                 </p>
               )}
             </div>
@@ -286,19 +352,18 @@ export default async function DashboardPage() {
 
           <DashboardCard
             title="AI Career Coach"
-            description="Future feature powered by ai_messages, where each member can have private career coaching history."
+            description="A future space for resume feedback, interview prep, and weekly career action plans."
           >
-            <div className="border border-dashed border-yellow-400/40 bg-yellow-400/10 p-6">
-              <p className="font-['PolySans'] text-xl font-black uppercase text-white">
+            <div className="border border-dashed border-yellow-400/40 p-6">
+              <p className="font-['PolySans'] text-xl font-black uppercase text-yellow-400">
                 Coming soon...
               </p>
               <p className="mt-3 text-sm leading-6 text-zinc-300">
-                The database is ready to store AI messages securely per member.
-                Later, this can support resume feedback, interview prep, role
-                recommendations, and weekly career action plans.
+                This will become a private career support space for DMC members.
               </p>
             </div>
           </DashboardCard>
+          </div>
         </div>
       </section>
     </main>
