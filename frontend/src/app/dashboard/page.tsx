@@ -195,7 +195,7 @@ export default async function DashboardPage() {
                 </div>
               </div>
 
-              <ProfilePhotoUploader userId={user.id} />
+              <ProfilePhotoUploader hasProfilePhoto={Boolean(profile?.avatar_url)} userId={user.id} />
 
               <div className="mt-8 space-y-4 text-sm">
                 {[

@@ -5,6 +5,7 @@ import { useRef, useState } from "react";
 import { createSupabaseBrowserClient } from "../../lib/supabase/client";
 
 type ProfilePhotoUploaderProps = {
+  hasProfilePhoto: boolean;
   userId: string;
 };
 
@@ -31,7 +32,7 @@ function getImageDimensions(file: File) {
   });
 }
 
-export default function ProfilePhotoUploader({ userId }: ProfilePhotoUploaderProps) {
+export default function ProfilePhotoUploader({ hasProfilePhoto, userId }: ProfilePhotoUploaderProps) {
   const inputRef = useRef<HTMLInputElement>(null);
   const router = useRouter();
   const [message, setMessage] = useState("");
@@ -129,7 +130,7 @@ export default function ProfilePhotoUploader({ userId }: ProfilePhotoUploaderPro
         onClick={() => inputRef.current?.click()}
         type="button"
       >
-        {isUploading ? "Uploading..." : "Add profile photo"}
+        {isUploading ? "Uploading..." : hasProfilePhoto ? "Change profile photo" : "Add profile photo"}
       </button>
       <p className="mt-3 text-xs leading-5 text-zinc-500">
         JPG, PNG, or WebP. Recommended minimum: 2960 x 3700 pixels. Max file size: 25 MB.
