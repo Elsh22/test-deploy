@@ -8,6 +8,7 @@ const navItems = [
   { label: "Programs", href: "/programs", hasDropdown: true },
   { label: "Resources", href: "/resources", hasDropdown: true },
   { label: "Leadership", href: "/leadership", hasDropdown: false },
+  { label: "Login", href: "/login", hasDropdown: false },
 ];
 
 const programMenu = [
@@ -57,18 +58,11 @@ const resourcesMenu = [
     items: ["Internships", "Scholarships", "Leadership", "Service"],
   },
   {
-    title: "DMC Edu",
-    href: "/resources#dmc-edu",
-    items: ["Learning Paths", "Badges", "Certificates", "Quizzes"],
-  },
-  {
     title: "Role Search",
     href: "/resources#opportunities",
     items: ["Business", "Tech", "Engineering", "Health"],
   },
 ];
-
-const showLocalPortal = process.env.NODE_ENV !== "production";
 
 export default function Navbar() {
   const [isPastHero, setIsPastHero] = useState(false);
@@ -147,14 +141,6 @@ export default function Navbar() {
           </div>
 
           <div className="hidden items-center gap-3 lg:flex">
-            {showLocalPortal ? (
-              <Link
-                href="/login"
-                className="font-['PolySans'] rounded-full border border-white/15 px-5 py-3 text-xs font-black uppercase tracking-[0.14em] text-white transition hover:border-yellow-400 hover:text-yellow-400 md:text-sm"
-              >
-                Portal
-              </Link>
-            ) : null}
             <Link
               href="/donate"
               className="font-['PolySans'] rounded-full bg-yellow-400 px-5 py-3 text-xs font-black uppercase tracking-[0.14em] text-black shadow-[inset_0_1px_0_rgba(255,255,255,0.55)] transition hover:scale-105 hover:bg-white md:px-6 md:text-sm"
@@ -300,15 +286,6 @@ export default function Navbar() {
             >
               Donate
             </Link>
-            {showLocalPortal ? (
-              <Link
-                href="/login"
-                onClick={() => setMobileOpen(false)}
-                className="font-['PolySans'] inline-flex items-center justify-center border border-white/15 px-5 py-4 text-sm font-black uppercase tracking-[0.14em] text-white"
-              >
-                Member Portal
-              </Link>
-            ) : null}
           </div>
         </div>
       </nav>

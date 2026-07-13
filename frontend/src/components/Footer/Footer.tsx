@@ -15,7 +15,7 @@ const primaryLinks = [
   {
     label: "Resources",
     href: "/resources",
-    description: "Videos, student support, role searches, and DMC Edu preview.",
+    description: "Videos, student support, role searches, and member resources.",
   },
   {
     label: "Leadership",
@@ -46,7 +46,6 @@ const resourceLinks = [
   { label: "Video Highlights", href: "/resources#highlights" },
   { label: "Student Success Toolkit", href: "/resources#student-success" },
   { label: "Opportunities Board", href: "/resources#opportunities" },
-  { label: "DMC Edu", href: "/resources#dmc-edu" },
 ];
 
 const socialLinks = [

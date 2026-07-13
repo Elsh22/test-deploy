@@ -240,33 +240,6 @@ const highlightVideos = [
   },
 ];
 
-const dmcEduPaths = [
-  {
-    title: "Career Fair Certified",
-    level: "Beginner",
-    time: "2 hours",
-    modules: "5 modules",
-    description:
-      "Build a resume, elevator pitch, LinkedIn profile, and employer follow-up system before career fair season.",
-  },
-  {
-    title: "Tech Career Accelerator",
-    level: "Beginner to Intermediate",
-    time: "4 hours",
-    modules: "6 modules",
-    description:
-      "Learn how to organize a portfolio, explain projects, prepare for technical interviews, and use GitHub professionally.",
-  },
-  {
-    title: "Business Professional Accelerator",
-    level: "Beginner",
-    time: "3 hours",
-    modules: "5 modules",
-    description:
-      "Practice networking, interview language, professional dress, finance basics, and workplace communication.",
-  },
-];
-
 export default function ResourcesPage() {
   const [activeVideo, setActiveVideo] = useState<(typeof highlightVideos)[number] | null>(null);
   const [roleQuery, setRoleQuery] = useState("");
@@ -301,7 +274,7 @@ export default function ResourcesPage() {
             </h1>
             <p className="mt-7 max-w-2xl text-lg leading-8 text-zinc-300 md:text-xl">
               Academic support, career readiness, opportunities, video
-              highlights, and the first preview of DMC Edu in one place.
+              highlights, student support, and opportunities in one place.
             </p>
           </div>
 
@@ -310,7 +283,6 @@ export default function ResourcesPage() {
               ["01", "Featured Highlights"],
               ["02", "Student Success Toolkit"],
               ["03", "Opportunities Board"],
-              ["04", "DMC Edu Preview"],
             ].map(([number, item]) => (
               <div
                 key={item}
@@ -536,71 +508,6 @@ export default function ResourcesPage() {
                 No role pathways match that search yet.
               </div>
             ) : null}
-          </div>
-        </div>
-      </section>
-
-      <section id="dmc-edu" className="bg-white px-6 py-24 text-black">
-        <div className="mx-auto max-w-7xl">
-          <div className="grid gap-12 border-y border-zinc-200 py-12 lg:grid-cols-[0.95fr_1.05fr] lg:items-start">
-            <div>
-              <p className="font-['PolySans'] text-sm font-black uppercase tracking-[0.24em] text-yellow-700">
-                DMC Edu
-              </p>
-              <h2 className="font-['PolySans'] mt-4 text-5xl font-black uppercase leading-none md:text-7xl">
-                Coming soon...
-              </h2>
-              <p className="mt-6 text-lg leading-8 text-zinc-700">
-                This will become DMC&apos;s learning hub for professional
-                development, technical training, certificates, badges, and
-                student progress tracking.
-              </p>
-
-              <div className="mt-8 divide-y divide-zinc-200 border-y border-zinc-200">
-                {["Learning Paths", "Badges & Certificates", "Modules & Quizzes", "Career Skill Tracks"].map(
-                  (label, index) => (
-                    <div
-                      key={label}
-                      className="grid grid-cols-[3rem_1fr] py-4"
-                    >
-                      <span className="font-['PolySans'] text-sm font-black text-yellow-700">
-                        0{index + 1}
-                      </span>
-                      <span className="font-['PolySans'] text-sm font-black uppercase tracking-[0.12em]">
-                        {label}
-                      </span>
-                    </div>
-                  ),
-                )}
-              </div>
-            </div>
-
-            <div className="grid gap-4">
-              {dmcEduPaths.map((path) => (
-                <article
-                  key={path.title}
-                  className="border border-zinc-200 bg-white p-6"
-                >
-                  <div className="flex flex-wrap gap-2">
-                    <span className="bg-black px-3 py-1 text-xs font-black uppercase tracking-[0.14em] text-white">
-                      {path.level}
-                    </span>
-                    <span className="bg-yellow-100 px-3 py-1 text-xs font-black uppercase tracking-[0.14em] text-yellow-800">
-                      {path.time}
-                    </span>
-                    <span className="border border-zinc-200 px-3 py-1 text-xs font-black uppercase tracking-[0.14em] text-zinc-600">
-                      {path.modules}
-                    </span>
-                  </div>
-                  <h3 className="font-['PolySans'] mt-5 text-2xl font-black uppercase leading-tight">
-                    {path.title}
-                  </h3>
-                  <p className="mt-3 leading-7 text-zinc-600">
-                    {path.description}
-                  </p>
-                </article>
-              ))}
-            </div>
           </div>
         </div>
       </section>
