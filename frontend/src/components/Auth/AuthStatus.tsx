@@ -5,7 +5,7 @@ type AuthStatusProps = {
 
 export default function AuthStatus({ type, message }: AuthStatusProps) {
   const styles = {
-    error: "border-red-400/40 bg-red-500/10 text-red-100",
+    error: "border-yellow-400/40 bg-yellow-400/10 text-yellow-100",
     success: "border-emerald-400/40 bg-emerald-500/10 text-emerald-100",
     info: "border-yellow-400/40 bg-yellow-400/10 text-yellow-100",
   };

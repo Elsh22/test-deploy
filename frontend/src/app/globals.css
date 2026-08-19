@@ -138,3 +138,25 @@ select:-webkit-autofill:focus {
 .company-logo-marquee:hover .company-logo-marquee-track {
   animation-play-state: paused;
 }
+
+.dmc-scrollbar {
+  scrollbar-color: rgba(250, 204, 21, 0.55) rgba(255, 255, 255, 0.06);
+  scrollbar-width: thin;
+}
+
+.dmc-scrollbar::-webkit-scrollbar {
+  width: 8px;
+}
+
+.dmc-scrollbar::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.dmc-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(250, 204, 21, 0.55);
+  border: 2px solid #09090b;
+}
+
+.dmc-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: rgba(250, 204, 21, 0.8);
+}

@@ -6,15 +6,7 @@ import AuthField from "./AuthField";
 import AuthStatus from "./AuthStatus";
 import { createSupabaseBrowserClient } from "../../lib/supabase/client";
 import { getSiteUrl } from "../../lib/supabase/config";
-
-const careerOptions = [
-  "Business",
-  "Technology",
-  "Engineering",
-  "Health",
-  "Public Service",
-  "Undecided",
-];
+import { careerTrackOptions } from "../../lib/dashboard/platform";
 
 export default function SignupForm() {
   const router = useRouter();
@@ -51,9 +43,13 @@ export default function SignupForm() {
           first_name: String(formData.get("first_name") || ""),
           last_name: String(formData.get("last_name") || ""),
           major: String(formData.get("major") || ""),
+          classification: String(formData.get("classification") || ""),
           graduation_year: String(formData.get("graduation_year") || ""),
           career_interest: String(formData.get("career_interest") || ""),
+          career_end_goal: String(formData.get("career_end_goal") || ""),
+          track: String(formData.get("career_interest") || ""),
           linkedin_url: String(formData.get("linkedin_url") || ""),
+          portfolio_url: String(formData.get("portfolio_url") || ""),
           role: "member",
         },
       },
@@ -87,7 +83,12 @@ export default function SignupForm() {
 
       <div className="grid gap-4 sm:grid-cols-2">
         <AuthField id="major" name="major" label="Major" placeholder="Information Systems" />
+        <AuthField id="classification" name="classification" label="Classification" placeholder="Junior" />
+      </div>
+
+      <div className="grid gap-4 sm:grid-cols-2">
         <AuthField id="graduation_year" name="graduation_year" type="number" label="Graduation year" min={2024} max={2100} />
+        <AuthField id="portfolio_url" name="portfolio_url" type="url" label="Portfolio URL" placeholder="https://..." />
       </div>
 
       <label className="block" htmlFor="career_interest">
@@ -103,7 +104,7 @@ export default function SignupForm() {
           <option value="" disabled>
             Select a track
           </option>
-          {careerOptions.map((option) => (
+          {careerTrackOptions.map((option) => (
             <option key={option} value={option}>
               {option}
             </option>
@@ -112,6 +113,12 @@ export default function SignupForm() {
       </label>
 
       <AuthField id="linkedin_url" name="linkedin_url" type="url" label="LinkedIn URL" placeholder="https://linkedin.com/in/..." />
+      <AuthField
+        id="career_end_goal"
+        name="career_end_goal"
+        label="Career end goal"
+        placeholder="Software engineer, physician assistant, financial analyst..."
+      />
 
       <button
         className="font-['PolySans'] w-full bg-yellow-400 px-6 py-4 text-sm font-black uppercase tracking-[0.16em] text-black transition hover:bg-white disabled:cursor-not-allowed disabled:opacity-60"

@@ -1,7 +1,6 @@
 import './globals.css';
 import type { Metadata } from 'next';
-import Navbar from '../components/Navbar/Navbar';
-import Footer from '../components/Footer/Footer';
+import SiteChrome from '../components/Layout/SiteChrome';
 
 export const metadata: Metadata = {
   title: 'Developing Men of Color at VCU',
@@ -17,9 +16,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <Navbar />
-        {children}
-        <Footer />
+        <SiteChrome>{children}</SiteChrome>
       </body>
     </html>
   );

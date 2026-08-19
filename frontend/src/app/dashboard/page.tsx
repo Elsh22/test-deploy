@@ -1,120 +1,122 @@
-const memberEvents = [
+import { getMemberDashboardContext } from "../../lib/dashboard/getMember";
+import { getDisplayName } from "../../lib/dashboard/platform";
+
+const missionControlCards = [
   {
-    title: "General Body Meeting",
-    date: "April 15, 2026",
-    status: "completed",
+    title: "Upcoming Events",
+    value: "3",
+    description: "Events ready for RSVP and check-in.",
   },
   {
-    title: "Jacob's Chance Kickball",
-    date: "April 19, 2026",
-    status: "completed",
+    title: "Learning Path",
+    value: "1 active",
+    description: "Professional Academy onboarding is in progress.",
   },
   {
-    title: "9th Annual DMC Mixer",
-    date: "September 13, 2026",
-    status: "rsvp",
+    title: "Career Readiness",
+    value: "0%",
+    description: "Build your profile, resume, LinkedIn, and portfolio.",
   },
   {
-    title: "Professional Academy Workshop",
-    date: "Coming soon",
-    status: "rsvp",
+    title: "Notifications",
+    value: "2",
+    description: "New DMC updates and member reminders.",
   },
 ];
 
-export default function DashboardPage() {
+const quickActions = ["RSVP for an event", "Upload resume", "Continue learning", "Update profile"];
+const recentActivity = ["Account created", "Dashboard opened", "Profile setup ready"];
+
+export default async function DashboardPage() {
+  const { email, profile } = await getMemberDashboardContext();
+  const displayName = getDisplayName(profile, email);
+
   return (
-    <main className="min-h-screen bg-black px-6 py-10 text-white md:px-10">
-      <section className="mx-auto flex min-h-[calc(100vh-5rem)] max-w-7xl flex-col items-center justify-center gap-10 md:flex-row md:justify-start">
-        <aside className="flex w-full flex-col items-center gap-6 md:w-[360px] md:items-start">
-          <div className="grid h-64 w-64 place-items-center rounded-full border border-white/10 bg-zinc-950 shadow-[0_24px_80px_rgba(0,0,0,0.55)] md:h-72 md:w-72">
-            <div className="grid h-[94%] w-[94%] place-items-center rounded-full bg-yellow-400 font-['PolySans'] text-7xl font-black uppercase text-black md:text-8xl">
-              DM
-            </div>
-          </div>
-        </aside>
-
-        <section className="w-full text-center md:flex-1 md:text-left">
-          <p className="font-['PolySans'] text-xs font-black uppercase tracking-[0.26em] text-yellow-400">
-            DMC Member
+    <section className="px-6 py-10">
+      <div className="mx-auto max-w-7xl">
+        <div className="flex flex-col gap-3">
+          <p className="text-sm font-normal uppercase tracking-[0.18em] text-yellow-400">
+            Mission Control
           </p>
-          <h1 className="font-['PolySans'] mt-4 text-6xl font-black uppercase leading-none text-white lg:text-8xl">
-            Member Name
+          <h1 className="text-4xl font-semibold tracking-tight text-white md:text-5xl">
+            Welcome Back, {displayName}
           </h1>
+        </div>
 
-          <div className="mt-8 grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
-            {[
-              ["Major", "Computer Science"],
-              ["Classification", "Junior"],
-              ["Role", "Member"],
-              ["Track", "Technology"],
-            ].map(([label, value]) => (
-              <div key={label} className="border-l border-yellow-400/60 pl-4">
-                <p className="font-['PolySans'] text-xs font-black uppercase tracking-[0.18em] text-zinc-500">
-                  {label}
-                </p>
-                <p className="mt-2 text-lg font-semibold text-white">{value}</p>
+        <section className="mt-10 grid gap-4 md:grid-cols-2 xl:grid-cols-4">
+          {missionControlCards.map((card) => (
+            <article className="border border-zinc-800 bg-zinc-950/60 p-5" key={card.title}>
+              <p className="text-sm font-normal text-zinc-400">{card.title}</p>
+              <p className="mt-4 text-3xl font-semibold text-white">{card.value}</p>
+              <p className="mt-3 text-sm leading-6 text-zinc-500">{card.description}</p>
+            </article>
+          ))}
+        </section>
+
+        <section className="mt-6 grid gap-6 lg:grid-cols-[1.1fr_0.9fr]">
+          <article className="border border-zinc-800 bg-zinc-950/60 p-6">
+            <div className="flex items-center justify-between gap-4 border-b border-zinc-800 pb-4">
+              <div>
+                <p className="text-sm font-normal text-zinc-400">Current Learning Path</p>
+                <h2 className="mt-1 text-2xl font-semibold text-white">Professional Academy</h2>
               </div>
-            ))}
-          </div>
-        </section>
-      </section>
-
-      <section className="mx-auto grid max-w-7xl gap-8 pb-16 lg:grid-cols-[420px_1fr]">
-        <section className="aspect-square max-h-[420px] w-full overflow-hidden border border-white/10 bg-zinc-950 p-5 md:p-6">
-          <div className="flex items-end justify-between gap-4 border-b border-white/10 pb-5">
-            <div>
-              <p className="font-['PolySans'] text-xs font-black uppercase tracking-[0.22em] text-yellow-400">
-                Member Activity
-              </p>
-              <h2 className="font-['PolySans'] mt-2 text-2xl font-black uppercase text-white md:text-3xl">
-                Events
-              </h2>
+              <span className="text-sm font-normal text-yellow-400">In Progress</span>
             </div>
-            <p className="font-['PolySans'] text-3xl font-black text-white">{memberEvents.length}</p>
-          </div>
+            <div className="mt-6">
+              <div className="h-2 overflow-hidden rounded-full bg-zinc-800">
+                <div className="h-full w-1/4 rounded-full bg-yellow-400" />
+              </div>
+              <p className="mt-3 text-sm text-zinc-500">25% complete. Next step: Resume foundations.</p>
+            </div>
+          </article>
 
-          <div className="mt-5 grid max-h-[285px] gap-4 overflow-y-auto pr-2">
-            {memberEvents.map((event) => {
-              const isCompleted = event.status === "completed";
-
-              return (
-                <article
-                  key={event.title}
-                  className="flex flex-col gap-4 border border-white/10 bg-black px-4 py-4 sm:flex-row sm:items-center sm:justify-between"
+          <article className="border border-zinc-800 bg-zinc-950/60 p-6">
+            <h2 className="text-2xl font-semibold text-white">Quick Actions</h2>
+            <div className="mt-5 grid gap-3 sm:grid-cols-2">
+              {quickActions.map((action) => (
+                <button
+                  className="border border-zinc-800 px-4 py-3 text-left text-sm font-normal text-zinc-300 transition hover:border-yellow-400 hover:text-yellow-400"
+                  key={action}
+                  type="button"
                 >
-                  <div className="flex items-center gap-4">
-                    <span
-                      className={`grid h-9 w-9 shrink-0 place-items-center rounded-full border font-['PolySans'] text-sm font-black ${
-                        isCompleted
-                          ? "border-emerald-400 bg-emerald-400 text-black"
-                          : "border-yellow-400 text-yellow-400"
-                      }`}
-                    >
-                      {isCompleted ? "\u2713" : "RSVP"}
-                    </span>
-                    <div>
-                      <h3 className="font-['PolySans'] text-lg font-black uppercase text-white">
-                        {event.title}
-                      </h3>
-                      <p className="mt-1 text-sm font-semibold text-yellow-400">{event.date}</p>
-                    </div>
-                  </div>
-
-                  <p
-                    className={`font-['PolySans'] text-xs font-black uppercase tracking-[0.16em] ${
-                      isCompleted ? "text-emerald-400" : "text-yellow-400"
-                    }`}
-                  >
-                    {isCompleted ? "Completed" : "RSVP'd"}
-                  </p>
-                </article>
-              );
-            })}
-          </div>
+                  {action}
+                </button>
+              ))}
+            </div>
+          </article>
         </section>
 
-        <div />
-      </section>
-    </main>
+        <section className="mt-6 grid gap-6 xl:grid-cols-[0.85fr_1.15fr]">
+          <article className="border border-zinc-800 bg-zinc-950/60 p-6">
+            <h2 className="text-2xl font-semibold text-white">Recent Activity</h2>
+            <div className="mt-5 grid gap-4">
+              {recentActivity.map((activity) => (
+                <div className="border-b border-zinc-800 pb-4 text-sm text-zinc-400" key={activity}>
+                  {activity}
+                </div>
+              ))}
+            </div>
+          </article>
+
+          <article className="border border-zinc-800 bg-zinc-950/60 p-6">
+            <h2 className="text-2xl font-semibold text-white">Notifications</h2>
+            <div className="mt-5 grid gap-4">
+              <div>
+                <p className="text-sm font-normal text-white">Complete your profile</p>
+                <p className="mt-1 text-sm leading-6 text-zinc-500">
+                  Add your major, classification, and graduation year to unlock better recommendations.
+                </p>
+              </div>
+              <div>
+                <p className="text-sm font-normal text-white">Academy tools are coming together</p>
+                <p className="mt-1 text-sm leading-6 text-zinc-500">
+                  Academy modules, badges, and certificates will live here soon.
+                </p>
+              </div>
+            </div>
+          </article>
+        </section>
+      </div>
+    </section>
   );
 }

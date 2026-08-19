@@ -1,12 +1,7 @@
 import AuthShell from "../../components/Auth/AuthShell";
 import ForgotPasswordForm from "../../components/Auth/ForgotPasswordForm";
-import { isLocalPortalEnabled } from "../../lib/localPortal";
 
 export default function ForgotPasswordPage() {
-  if (!isLocalPortalEnabled()) {
-    return null;
-  }
-
   return (
     <AuthShell
       eyebrow="Account Recovery"

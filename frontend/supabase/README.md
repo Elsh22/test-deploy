@@ -1,49 +1,43 @@
-# DMC Supabase Setup
+# DMC Supabase Member Platform Setup
 
-This folder contains the SQL schema for the DMC member account system.
+This folder contains the SQL and setup notes for the DMC member platform.
 
 ## What Supabase Auth Does
 
-Supabase Auth manages account creation, login, logout, password reset emails, and secure user sessions. The website uses the public anon key in the browser, but Row Level Security controls what each signed-in user can read or write.
+Supabase Auth manages account creation, login, logout, password reset emails, and secure user sessions. The website uses the public anon key in the browser. PostgreSQL Row Level Security decides what each signed-in member can read or write.
 
 ## What PostgreSQL Stores
 
-Supabase includes PostgreSQL. The `schema.sql` file creates DMC-specific tables:
+Run `supabase/schema.sql` to create the platform tables:
 
-- `profiles`: member profile information connected to `auth.users`
-- `events`: public DMC events
-- `event_registrations`: member RSVPs for events
-- `badges`: achievements DMC can award
-- `member_badges`: connects members to earned badges
-- `resources`: member resources and toolkit links
-- `resume_reviews`: Professional Academy resume review workflow
-- `ai_messages`: future AI Career Coach conversation history
+- `profiles`: one DMC member profile for each Supabase Auth user
+- `events`: GBMs, workshops, service events, sports events, mixers
+- `event_registrations`: RSVP and attendance records
+- `learning_modules`: future DMC Edu learning paths
+- `module_progress`: member progress through learning modules
+- `badges`: digital badges DMC can award
+- `member_badges`: badges earned by members
+- `certificates`: issued certificates
+- `community_service_hours`: service-hour tracking
+- `mentor_assignments`: mentor/mentee relationships
+- `goals`: personal member goals
+- `resources`: managed career, academic, wellness, and DMC resources
+- `saved_resources`: member-saved resources
+- `resume_reviews`: Professional Academy resume review and mock interview records
+- `ai_messages`: future AI Career Coach chat history
 
 ## Why Row Level Security Matters
 
-The browser can see the anon key, so SQL policies must protect the data. RLS makes the database enforce rules like "members can only read their own resume reviews" even if someone edits browser code.
+The browser can see the anon key, so the database must enforce privacy. RLS policies make sure members can only access their own private dashboard data, while officer/admin/advisor roles can manage organization-level records.
 
 ## Setup Steps
 
 1. Create a Supabase project.
-2. Open the Supabase SQL editor.
+2. Open Supabase SQL Editor.
 3. Paste and run `supabase/schema.sql`.
 4. Copy your Project URL and anon key into `frontend/.env.local`.
 5. Restart the Next.js dev server.
 6. Visit `/signup`, create an account, confirm email if required, then visit `/dashboard`.
-
-## Updating an Existing Supabase Project
-
-If you already ran the schema before profile photos were added, run the newest
-`schema.sql` in a fresh project, or manually add:
-
-```sql
-alter table public.profiles add column if not exists avatar_url text;
-```
-
-Then run `supabase/profile-photos-storage.sql` in the Supabase SQL editor. That
-file creates the `profile-photos` bucket and the storage policies required by
-the dashboard profile photo uploader.
 
 ## Environment Variables
 
@@ -53,4 +47,28 @@ NEXT_PUBLIC_SUPABASE_ANON_KEY="your-supabase-anon-key"
 NEXT_PUBLIC_SITE_URL="http://localhost:3000"
 ```
 
-Only add `SUPABASE_SERVICE_ROLE_KEY` for server-only admin workflows. Do not use it in client components.
+Only add `SUPABASE_SERVICE_ROLE_KEY` for server-only admin workflows. Never expose it in client components.
+
+## How To Test Locally
+
+1. Run `npm install` in `frontend` if dependencies are missing.
+2. Run `npm run dev`.
+3. Go to `http://localhost:3000/signup`.
+4. Create a test member account.
+5. Log in at `/login`.
+6. Confirm `/dashboard` loads only when signed in.
+7. Check dashboard subpages:
+   - `/dashboard/profile`
+   - `/dashboard/events`
+   - `/dashboard/badges`
+   - `/dashboard/resources`
+   - `/dashboard/career`
+   - `/dashboard/goals`
+
+## AI Career Coach Notes
+
+The `ai_messages` table is intentionally connected to `profiles`. Later, an AI Career Coach can use profile completion, career readiness, saved resources, resume review status, learning modules, and goals as context, then store member-specific conversations in `ai_messages`.
+
+## Existing Project Note
+
+If you already ran an older schema, use a fresh Supabase project while learning. The current `schema.sql` is designed as a complete Version 1 setup file.

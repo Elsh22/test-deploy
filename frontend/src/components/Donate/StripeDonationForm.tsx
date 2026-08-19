@@ -109,7 +109,7 @@ export default function StripeDonationForm() {
         </div>
       </div>
 
-      {error ? <p className="text-sm font-semibold text-red-300">{error}</p> : null}
+      {error ? <p className="text-sm font-semibold text-yellow-200">{error}</p> : null}
 
       <button
         type="submit"

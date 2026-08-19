@@ -1,12 +1,7 @@
 import AuthShell from "../../components/Auth/AuthShell";
 import SignupForm from "../../components/Auth/SignupForm";
-import { isLocalPortalEnabled } from "../../lib/localPortal";
 
 export default function SignupPage() {
-  if (!isLocalPortalEnabled()) {
-    return null;
-  }
-
   return (
     <AuthShell
       eyebrow="DMC Member Access"

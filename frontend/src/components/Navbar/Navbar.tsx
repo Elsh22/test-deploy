@@ -8,7 +8,6 @@ const navItems = [
   { label: "Programs", href: "/programs", hasDropdown: true },
   { label: "Resources", href: "/resources", hasDropdown: true },
   { label: "Leadership", href: "/leadership", hasDropdown: false },
-  { label: "Login", href: "/login", hasDropdown: false },
 ];
 
 const programMenu = [
