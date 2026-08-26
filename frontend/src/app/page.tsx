@@ -1,7 +1,27 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { Lora, PT_Serif_Caption } from "next/font/google";
 import { useEffect, useState } from "react";
+
+const ptSerifCaption = PT_Serif_Caption({
+  subsets: ["latin"],
+  weight: "400",
+  style: ["normal", "italic"],
+});
+
+const lora = Lora({
+  subsets: ["latin"],
+  weight: ["400", "500", "700"],
+});
+
+const mixerCalendarUrl =
+  "https://calendar.google.com/calendar/render?action=TEMPLATE" +
+  "&text=Developing%20Men%20of%20Color%209th%20Annual%20Mixer" +
+  "&dates=20260913T160000/20260913T200000" +
+  "&ctz=America%2FNew_York" +
+  "&location=VCU%20Campus" +
+  "&details=Join%20us%20for%20the%209th%20Annual%20DMC%20Mixer%20on%20September%2013th%2C%202026%20from%204-8pm.%20Connect%20with%20the%20brotherhood%2C%20meet%20campus%20leaders%2C%20and%20build%20your%20network%20with%20other%20men%20of%20color.";
 
 const companyLogos = [
   {
@@ -213,57 +233,58 @@ function CountUpNumber({ target }: { target: number }) {
   );
 }
 
-function MixerCountdown() {
-  const mixerDate = new Date("2026-09-13T16:00:00-04:00").getTime();
-  const [timeLeft, setTimeLeft] = useState({
-    days: 0,
-    hours: 0,
-    minutes: 0,
-    seconds: 0,
-  });
-
-  useEffect(() => {
-    const updateCountdown = () => {
-      const distance = Math.max(0, mixerDate - Date.now());
-
-      setTimeLeft({
-        days: Math.floor(distance / (1000 * 60 * 60 * 24)),
-        hours: Math.floor((distance / (1000 * 60 * 60)) % 24),
-        minutes: Math.floor((distance / (1000 * 60)) % 60),
-        seconds: Math.floor((distance / 1000) % 60),
-      });
-    };
-
-    updateCountdown();
-    const interval = window.setInterval(updateCountdown, 1000);
-
-    return () => window.clearInterval(interval);
-  }, [mixerDate]);
-
-  return (
-    <div className="flex flex-wrap items-center gap-4">
-      {[
-        ["Days", timeLeft.days],
-        ["Hours", timeLeft.hours],
-        ["Minutes", timeLeft.minutes],
-        ["Seconds", timeLeft.seconds],
-      ].map(([label, value]) => (
-        <div key={label} className="flex items-baseline gap-2">
-          <span className="font-['PolySans'] text-2xl font-black text-white md:text-3xl">
-            {String(value).padStart(2, "0")}
-          </span>
-          <span className="text-xs font-black uppercase tracking-[0.18em] text-zinc-400">
-            {label}
-          </span>
-        </div>
-      ))}
-    </div>
-  );
-}
-
 export default function HomePage() {
+  const [showPopup, setShowPopup] = useState(true);
+
   return (
     <main className="bg-[#050505] text-white">
+      {showPopup ? (
+        <div className="fixed inset-0 z-[60] flex items-center justify-center bg-black/70 px-6 backdrop-blur-sm">
+          <motion.div
+            className="relative w-full max-w-lg border border-yellow-400/60 bg-black p-6 text-center shadow-[0_24px_80px_rgba(0,0,0,0.65)]"
+            initial={{ opacity: 0, scale: 0.82, y: 24 }}
+            animate={{ opacity: 1, scale: 1, y: 0 }}
+            transition={{ duration: 0.35, ease: "easeOut" }}
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="homepage-popup-title"
+          >
+            <button
+              type="button"
+              aria-label="Close mixer popup"
+              onClick={() => setShowPopup(false)}
+              className="absolute right-3 top-3 grid h-10 w-10 place-items-center text-2xl leading-none text-white transition hover:text-yellow-400"
+            >
+              x
+            </button>
+            <p
+              id="homepage-popup-title"
+              className={`${ptSerifCaption.className} text-4xl font-normal italic leading-tight text-yellow-400`}
+            >
+              Developing Men of Color Mixer
+            </p>
+            <p className={`${lora.className} mt-4 text-base leading-7 text-zinc-200`}>
+              Join us for the 9th Annual DMC Mixer on September 13th, 2026 from 4-8pm. Connect with the brotherhood, meet campus leaders, and build your network with other men of color.
+            </p>
+            <img
+              src="/images/event-posters/dmc-mixer-save-the-date-2026.jpg"
+              alt="9th Annual DMC Mixer save the date flyer"
+              className="mt-5 max-h-[460px] w-full object-contain"
+            />
+            <div className="mt-7 flex flex-col gap-3 sm:flex-row sm:justify-center">
+              <a
+                href={mixerCalendarUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`${lora.className} inline-flex items-center justify-center bg-yellow-400 px-6 py-3 text-sm font-black uppercase tracking-[0.12em] text-black transition hover:bg-white`}
+              >
+                Save the Date
+              </a>
+            </div>
+          </motion.div>
+        </div>
+      ) : null}
+
       <section className="relative min-h-screen overflow-hidden bg-black">
         <video
           className="absolute inset-0 h-full w-full object-cover"
@@ -281,38 +302,29 @@ export default function HomePage() {
 
         <div className="relative z-10 mx-auto flex min-h-screen max-w-7xl items-center px-6 py-24">
           <div>
-            <p className="font-['PolySans'] mb-5 text-sm font-bold uppercase tracking-[0.3em] text-yellow-400">
-              Developing Men of Color at VCU
-            </p>
-
-            <h1 className="font-['PolySans'] max-w-5xl text-6xl font-black uppercase leading-[0.88] md:text-8xl">
-              Excellence is our standard.
-            </h1>
-
-            <div className="font-['PolySans'] mt-10 flex flex-col gap-4 sm:flex-row">
-              <a
-                href="https://vcu.campusgroups.com/DMC/club_signup"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center justify-center bg-yellow-400 px-7 py-4 text-base font-black uppercase tracking-[0.12em] text-black transition hover:bg-white"
-              >
-                Join DMC
-              </a>
-              <a
-                href="/donate"
-                className="inline-flex items-center justify-center border border-white/25 bg-white/10 px-7 py-4 text-base font-black uppercase tracking-[0.12em] text-white backdrop-blur transition hover:border-yellow-400 hover:text-yellow-300"
-              >
-                Donate
-              </a>
-            </div>
-
-            <div className="mt-7 flex flex-col gap-4 border-l-4 border-yellow-400 pl-5 md:flex-row md:items-center md:gap-7">
-              <p className="font-['PolySans'] text-sm font-black uppercase tracking-[0.28em] text-yellow-400 md:text-base">
-                9th Annual DMC Mixer
-              </p>
-              <MixerCountdown />
-            </div>
+            <motion.div
+              className="max-w-6xl"
+              initial={{ opacity: 0, x: -120 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.9, ease: "easeOut" }}
+            >
+              <h1 className={`${ptSerifCaption.className} max-w-5xl text-6xl font-normal italic leading-[0.95] text-yellow-400 drop-shadow-[0_8px_22px_rgba(0,0,0,0.75)] md:text-8xl`}>
+                Developing Excellence is our Standard.
+              </h1>
+            </motion.div>
           </div>
+
+          <motion.a
+            href="https://vcu.campusgroups.com/DMC/club_signup"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={`${lora.className} absolute left-[60%] top-[53%] inline-flex items-center justify-center bg-yellow-400 px-16 py-4 text-base font-black uppercase tracking-[0.12em] text-black shadow-[0_8px_22px_rgba(0,0,0,0.45)] transition hover:bg-white max-md:left-6 max-md:top-[68%]`}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.45, delay: 0.75, ease: "easeOut" }}
+          >
+            Join DMC
+          </motion.a>
         </div>
       </section>
 
