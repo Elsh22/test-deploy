@@ -1,140 +1,78 @@
  "use client";
 
 import Link from "next/link";
+import { Bebas_Neue, Lora } from "next/font/google";
 import { useEffect, useState } from "react";
 
+const bebasNeue = Bebas_Neue({
+  subsets: ["latin"],
+  weight: "400",
+});
+
+const lora = Lora({
+  subsets: ["latin"],
+  weight: ["400", "500", "700"],
+});
+
 const navItems = [
-  { label: "Home", href: "/", hasDropdown: false },
-  { label: "Programs", href: "/programs", hasDropdown: true },
-  { label: "Resources", href: "/resources", hasDropdown: true },
-  { label: "Leadership", href: "/leadership", hasDropdown: false },
+  { label: "Home", href: "/" },
+  { label: "Programs", href: "/programs" },
+  { label: "Resources", href: "/resources" },
+  { label: "Leadership", href: "/leadership" },
 ];
 
-const programMenu = [
-  {
-    title: "Professional Academy",
-    href: "/programs#professional-academy",
-    items: ["Resume Support", "LinkedIn Help", "Headshots", "Mock Interviews"],
-  },
-  {
-    title: "Committees",
-    href: "/programs#committees",
-    items: [
-      "Information Technology",
-      "Health",
-      "Social",
-      "Community Service",
-      "Academic",
-      "Professional Development",
-    ],
-  },
-  {
-    title: "Wellness",
-    href: "/programs#mentorship-wellness",
-    items: ["Sports", "Brotherhood", "Health", "Balance"],
-  },
-  {
-    title: "Upcoming Events",
-    href: "/programs#upcoming-events",
-    items: ["GBMs", "Workshops", "Mixers", "Service Events"],
-  },
-];
+const mixerDate = new Date("2026-09-13T16:00:00-04:00").getTime();
 
-const resourcesMenu = [
-  {
-    title: "Highlights",
-    href: "/resources#highlights",
-    items: ["Featured Video", "DMC Story", "Member Moments", "Events"],
-  },
-  {
-    title: "Student Success",
-    href: "/resources#student-success",
-    items: ["Writing Center", "Tutoring", "Career Services", "Wellness"],
-  },
-  {
-    title: "Opportunities",
-    href: "/resources#opportunities",
-    items: ["Internships", "Scholarships", "Leadership", "Service"],
-  },
-  {
-    title: "Role Search",
-    href: "/resources#opportunities",
-    items: ["Business", "Tech", "Engineering", "Health"],
-  },
-];
+function getMixerCountdown() {
+  const distance = Math.max(0, mixerDate - Date.now());
+
+  return {
+    days: Math.floor(distance / (1000 * 60 * 60 * 24)),
+    hours: Math.floor((distance / (1000 * 60 * 60)) % 24),
+    minutes: Math.floor((distance / (1000 * 60)) % 60),
+    seconds: Math.floor((distance / 1000) % 60),
+  };
+}
 
 export default function Navbar() {
-  const [isPastHero, setIsPastHero] = useState(false);
-  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [showMixerBar, setShowMixerBar] = useState(true);
+  const [timeLeft, setTimeLeft] = useState(getMixerCountdown);
 
   useEffect(() => {
-    const handleScroll = () => {
-      setIsPastHero(window.scrollY > window.innerHeight * 0.85);
-    };
+    const interval = window.setInterval(() => {
+      setTimeLeft(getMixerCountdown());
+    }, 1000);
 
-    handleScroll();
-    window.addEventListener("scroll", handleScroll, { passive: true });
-
-    return () => window.removeEventListener("scroll", handleScroll);
+    return () => window.clearInterval(interval);
   }, []);
 
   return (
-    <header
-      className={`fixed left-0 right-0 top-0 z-50 px-4 pt-4 transition duration-500 md:px-8 ${
-        isPastHero
-          ? "pointer-events-none -translate-y-24 opacity-0"
-          : "translate-y-0 opacity-100"
-      }`}
-    >
-      <div
-        className={`fixed inset-0 -z-10 bg-black/25 backdrop-blur-sm transition duration-300 ${
-          activeDropdown
-            ? "opacity-100"
-            : "pointer-events-none opacity-0"
-        }`}
-      />
-
+    <header className="fixed left-0 right-0 top-0 z-50 bg-black shadow-[0_12px_36px_rgba(0,0,0,0.35)]">
       <nav
-        className={`relative mx-auto grid max-w-7xl overflow-hidden rounded-[2rem] border border-white/25 bg-white/[0.08] px-4 text-white shadow-[0_18px_60px_rgba(0,0,0,0.35),inset_0_1px_0_rgba(255,255,255,0.35),0_0_45px_rgba(250,204,21,0.12)] backdrop-blur-xl transition-all duration-300 md:px-6 ${
+        className={`relative grid w-full overflow-hidden bg-black px-4 text-white transition-all duration-300 md:px-6 ${
           mobileOpen
             ? "h-[31rem] py-3"
-            : activeDropdown
-              ? "h-80 py-4"
-              : "h-[68px] py-3"
+            : "h-20 py-3"
         }`}
-        onMouseLeave={() => setActiveDropdown(null)}
       >
-        <div className="pointer-events-none absolute inset-x-8 top-0 h-px bg-gradient-to-r from-transparent via-white/80 to-transparent" />
-        <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-white/12 via-transparent to-yellow-400/[0.03]" />
-
         <div className="relative z-10 flex items-center justify-between">
           <Link
             href="/"
             aria-label="DMC home"
-            className="flex h-11 w-11 items-center justify-center overflow-hidden rounded-full"
+            className={`${bebasNeue.className} flex items-center text-3xl leading-none text-yellow-400 md:text-5xl`}
           >
-            <img
-              src="/favicon.ico"
-              alt=""
-              className="h-full w-full object-cover"
-            />
+            Developing Men of Color
           </Link>
 
-          <div className="hidden items-center gap-5 md:gap-9 lg:flex">
+          <div className="absolute left-1/2 hidden -translate-x-1/2 items-center gap-5 md:gap-9 lg:flex">
             {navItems.map((item) => (
               <Link
                 key={item.label}
                 href={item.href}
-                onMouseEnter={() =>
-                  setActiveDropdown(item.hasDropdown ? item.label : null)
-                }
-                className="font-['PolySans'] inline-flex items-center gap-2 text-sm font-medium uppercase tracking-[0.14em] text-zinc-200 transition hover:text-yellow-400 md:text-base"
+                className={`${lora.className} inline-flex items-center gap-2 text-sm font-medium uppercase tracking-[0.14em] text-yellow-400 transition hover:text-white md:text-base`}
               >
                 <span>{item.label}</span>
-                {item.hasDropdown ? (
-                  <span className="text-xs leading-none">v</span>
-                ) : null}
               </Link>
             ))}
           </div>
@@ -142,7 +80,7 @@ export default function Navbar() {
           <div className="hidden items-center gap-3 lg:flex">
             <Link
               href="/donate"
-              className="font-['PolySans'] rounded-full bg-yellow-400 px-5 py-3 text-xs font-black uppercase tracking-[0.14em] text-black shadow-[inset_0_1px_0_rgba(255,255,255,0.55)] transition hover:scale-105 hover:bg-white md:px-6 md:text-sm"
+              className={`${lora.className} bg-yellow-400 px-5 py-3 text-xs font-black uppercase tracking-[0.14em] text-black shadow-[inset_0_1px_0_rgba(255,255,255,0.55)] transition hover:scale-105 hover:bg-white md:px-6 md:text-sm`}
             >
               Donate
             </Link>
@@ -154,7 +92,6 @@ export default function Navbar() {
             aria-expanded={mobileOpen}
             onClick={() => {
               setMobileOpen((isOpen) => !isOpen);
-              setActiveDropdown(null);
             }}
             className="grid h-11 w-11 place-items-center rounded-full border border-white/15 bg-white/10 lg:hidden"
           >
@@ -176,66 +113,6 @@ export default function Navbar() {
               />
             </span>
           </button>
-        </div>
-
-        <div
-          className={`relative z-10 hidden border-t border-white/10 transition duration-300 lg:block ${
-            activeDropdown
-              ? "mt-4 opacity-100"
-              : "pointer-events-none mt-0 opacity-0"
-          }`}
-        >
-          {activeDropdown === "Programs" ? (
-            <div className="grid gap-6 px-2 pt-5 md:grid-cols-4 md:px-6">
-              {programMenu.map((section) => (
-                <div key={section.title}>
-                  <Link
-                    href={section.href}
-                    className="font-['PolySans'] text-base font-black uppercase tracking-[0.12em] text-white transition hover:text-yellow-400"
-                  >
-                    {section.title}
-                  </Link>
-
-                  <div className="mt-4 grid gap-2">
-                    {section.items.map((item) => (
-                      <p
-                        key={item}
-                        className="font-['PolySans'] text-sm font-medium text-zinc-400"
-                      >
-                        {item}
-                      </p>
-                    ))}
-                  </div>
-                </div>
-              ))}
-            </div>
-          ) : null}
-
-          {activeDropdown === "Resources" ? (
-            <div className="grid gap-6 px-2 pt-5 md:grid-cols-5 md:px-6">
-              {resourcesMenu.map((section) => (
-                <div key={section.title}>
-                  <Link
-                    href={section.href}
-                    className="font-['PolySans'] text-base font-black uppercase tracking-[0.12em] text-white transition hover:text-yellow-400"
-                  >
-                    {section.title}
-                  </Link>
-
-                  <div className="mt-4 grid gap-2">
-                    {section.items.map((item) => (
-                      <p
-                        key={item}
-                        className="font-['PolySans'] text-sm font-medium text-zinc-400"
-                      >
-                        {item}
-                      </p>
-                    ))}
-                  </div>
-                </div>
-              ))}
-            </div>
-          ) : null}
         </div>
 
         <div
@@ -281,13 +158,36 @@ export default function Navbar() {
             <Link
               href="/donate"
               onClick={() => setMobileOpen(false)}
-              className="font-['PolySans'] mt-2 inline-flex items-center justify-center bg-yellow-400 px-5 py-4 text-sm font-black uppercase tracking-[0.14em] text-black"
+              className={`${lora.className} mt-2 inline-flex items-center justify-center bg-yellow-400 px-5 py-4 text-sm font-black uppercase tracking-[0.14em] text-black`}
             >
               Donate
             </Link>
           </div>
         </div>
       </nav>
+      {showMixerBar ? (
+        <div className="relative border-t border-yellow-400/30 bg-yellow-400 px-12 py-2 text-black md:px-14">
+          <div className="flex flex-col items-center justify-center gap-2 text-center lg:flex-row lg:gap-6">
+            <p className={`${lora.className} text-sm font-black uppercase tracking-[0.12em] md:text-base`}>
+              Developing Men of Color 9th Annual Mixer
+            </p>
+            <div className={`${lora.className} flex flex-wrap items-center justify-center gap-3 text-xs font-bold uppercase tracking-[0.08em] md:text-sm`}>
+              <span>{timeLeft.days} Days</span>
+              <span>{String(timeLeft.hours).padStart(2, "0")} Hours</span>
+              <span>{String(timeLeft.minutes).padStart(2, "0")} Minutes</span>
+              <span>{String(timeLeft.seconds).padStart(2, "0")} Seconds</span>
+            </div>
+          </div>
+          <button
+            type="button"
+            aria-label="Close mixer countdown"
+            onClick={() => setShowMixerBar(false)}
+            className="absolute right-3 top-1/2 grid h-8 w-8 -translate-y-1/2 place-items-center text-xl leading-none text-black transition hover:text-white"
+          >
+            x
+          </button>
+        </div>
+      ) : null}
     </header>
   );
 }
