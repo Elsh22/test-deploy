@@ -1,13 +1,18 @@
 "use client";
 
-import { motion } from "framer-motion";
-import { Lora, PT_Serif_Caption } from "next/font/google";
+import { AnimatePresence, motion } from "framer-motion";
+import { Bebas_Neue, Lora, PT_Serif_Caption } from "next/font/google";
 import { useEffect, useState } from "react";
 
 const ptSerifCaption = PT_Serif_Caption({
   subsets: ["latin"],
   weight: "400",
   style: ["normal", "italic"],
+});
+
+const bebasNeue = Bebas_Neue({
+  subsets: ["latin"],
+  weight: "400",
 });
 
 const lora = Lora({
@@ -133,58 +138,32 @@ const memberSpotlights = [
       "Built leadership skills through service, brotherhood, and campus involvement before stepping into a professional role.",
     photo: "/images/LinkedIn_Headshots/TC.jpg",
   },
-  {
-    name: "Kaleb Brown (Student)",
-    title: "Cybersecurity Intern",
-    company: "Estes Express Lines",
-    excerpt:
-      "Connected academic excellence with career preparation through DMC's network of alumni, mentors, and peers.",
-    photo: "/images/LinkedIn_Headshots/KB.jpg",
-  },
 ];
 
 const programPreviews = [
   {
     title: "Professional Academy",
     description:
-      "Career readiness through resumes, LinkedIn support, mock interviews, headshots, tie rentals, and professional development workshops.",
+      "Build your resume. Sharpen interviews. Grow your network.",
     image: "/images/home/program-academy.jpg",
   },
   {
     title: "Mentorship",
     description:
-      "A brotherhood-centered support system connecting students with peers, alumni, and leaders who help them grow on campus and beyond.",
+      "Find guidance. Build brotherhood. Move with support.",
     image: "/images/home/program-mentorship.jpg",
   },
   {
     title: "Sports & Wellness",
     description:
-      "Intramural sports, wellness events, and team-building experiences that help members stay active, connected, and balanced.",
+      "Stay active. Compete together. Protect your balance.",
     image: "/images/home/program-sports.jpg",
   },
   {
     title: "Committees",
     description:
-      "Hands-on leadership opportunities in service, events, media, membership, fundraising, technology, and campus engagement.",
+      "Lead projects. Serve campus. Build real experience.",
     image: "/images/home/program-committees.png",
-  },
-];
-
-const upcomingEvents = [
-  {
-    date: "Aug 2026",
-    title: "Fall Interest Meeting",
-    type: "General Body",
-  },
-  {
-    date: "Sep 2026",
-    title: "Professional Academy Kickoff",
-    type: "Career Development",
-  },
-  {
-    date: "Oct 2026",
-    title: "DMC Mixer",
-    type: "Signature Event",
   },
 ];
 
@@ -238,13 +217,21 @@ export default function HomePage() {
 
   return (
     <main className="bg-[#050505] text-white">
-      {showPopup ? (
-        <div className="fixed inset-0 z-[60] flex items-center justify-center bg-black/70 px-6 backdrop-blur-sm">
+      <AnimatePresence>
+        {showPopup ? (
+          <motion.div
+            className="fixed inset-0 z-[60] flex items-center justify-center bg-black/70 px-6 backdrop-blur-sm"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.25, ease: "easeOut" }}
+          >
           <motion.div
             className="relative w-full max-w-lg border border-yellow-400/60 bg-black p-6 text-center shadow-[0_24px_80px_rgba(0,0,0,0.65)]"
-            initial={{ opacity: 0, scale: 0.82, y: 24 }}
+            initial={{ opacity: 0, scale: 0.72, y: 34 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
-            transition={{ duration: 0.35, ease: "easeOut" }}
+            exit={{ opacity: 0, scale: 0.88, y: 18 }}
+            transition={{ type: "spring", stiffness: 360, damping: 24 }}
             role="dialog"
             aria-modal="true"
             aria-labelledby="homepage-popup-title"
@@ -282,8 +269,9 @@ export default function HomePage() {
               </a>
             </div>
           </motion.div>
-        </div>
-      ) : null}
+          </motion.div>
+        ) : null}
+      </AnimatePresence>
 
       <section className="relative min-h-screen overflow-hidden bg-black">
         <video
@@ -328,201 +316,183 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="bg-white px-6 py-24 text-black">
-        <div className="mx-auto grid max-w-7xl items-center gap-10 lg:grid-cols-[1fr_1.15fr_1fr]">
-          <div>
-            <p className=" font-['PolySans'] mb-4 text-sm font-bold uppercase tracking-[0.25em] text-yellow-600">
-              Our Mission
-            </p>
-            <h2 className=" font-['PolySans'] text-3xl font-black leading-tight md:text-4xl">
-              Developing Men of Color (DMC) empowers men of color through mentorship, academic support, professional development, leadership opportunities, and community service, fostering a strong brotherhood that helps students thrive in college and beyond.
-            </h2>
+      <section className="bg-white px-6 py-28 text-black">
+        <div className="mx-auto grid max-w-7xl justify-items-center gap-12 md:grid-cols-2 md:gap-16">
+          <div className="relative h-[380px] w-full max-w-[640px] overflow-hidden rounded-[2rem] shadow-[0_28px_90px_rgba(0,0,0,0.16)] md:h-[600px] md:max-w-[700px]">
+            <img
+              src="/images/home/mission-brotherhood.jpg"
+              alt="DMC members at a signature organization event"
+              className="h-full w-full object-cover"
+            />
+            <div className="absolute inset-0 bg-black/65" />
+            <div className="absolute inset-0 flex flex-col items-center justify-center px-8 text-center md:px-12">
+              <h2
+                className={`${bebasNeue.className} text-7xl leading-none text-yellow-400 md:text-9xl`}
+              >
+                Mission
+              </h2>
+              <p
+                className={`${lora.className} mt-6 max-w-xl text-sm font-medium uppercase leading-7 tracking-[0.14em] text-white md:text-base md:leading-8`}
+              >
+                Developing Men of Color (DMC) empowers men of color through
+                mentorship, academic support, professional development,
+                leadership opportunities, and community service, fostering a
+                strong brotherhood that helps students thrive in college and
+                beyond.
+              </p>
+            </div>
           </div>
-
-          <div className="relative h-[580px] w-full max-w-2xl">
-            <div className="absolute -left-6 top-10 h-24 w-24 bg-yellow-400" />
-            <div className="absolute -right-6 bottom-12 h-32 w-32 bg-yellow-400" />
-
-            <motion.div
-              className="absolute left-0 top-0 h-[360px] w-[72%] overflow-hidden rounded-2xl bg-zinc-100 shadow-2xl"
-              initial={{ opacity: 0, y: -80 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.35 }}
-              transition={{ duration: 0.8, ease: "easeOut" }}
-            >
-              <img
-                src="/images/home/mission-brotherhood.jpg"
-                alt="DMC members at a signature organization event"
-                className="relative h-full w-full object-cover"
-              />
-            </motion.div>
-
-            <motion.div
-              className="absolute -bottom-10 right-0 h-[360px] w-[72%] overflow-hidden rounded-2xl bg-zinc-100 shadow-2xl"
-              initial={{ opacity: 0, y: 80 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.35 }}
-              transition={{ duration: 0.8, ease: "easeOut", delay: 0.12 }}
-            >
-              <img
-                src="/images/home/mission-campus.jpg"
-                alt="DMC members connecting with students on campus"
-                className="relative h-full w-full object-cover"
-              />
-            </motion.div>
-          </div>
-
-          <div>
-            <p className="font-['PolySans'] mb-4 text-sm font-bold uppercase tracking-[0.25em] text-yellow-600">
-              Our Philosophy
-            </p>
-            <h2 className="font-['PolySans'] text-3xl font-black leading-tight md:text-4xl">
-              DMC empowers men of color at VCU through brotherhood, mentorship, leadership, academic excellence, professional development, and community service, inspiring members to challenge stereotypes and create lasting impact on campus and beyond.
-            </h2>
+          <div className="relative h-[380px] w-full max-w-[640px] overflow-hidden rounded-[2rem] shadow-[0_28px_90px_rgba(0,0,0,0.16)] md:h-[600px] md:max-w-[700px]">
+            <img
+              src="/images/home/mission-campus.jpg"
+              alt="DMC members connecting with students on campus"
+              className="h-full w-full object-cover"
+            />
+            <div className="absolute inset-0 bg-black/65" />
+            <div className="absolute inset-0 flex flex-col items-center justify-center px-8 text-center md:px-12">
+              <h2
+                className={`${bebasNeue.className} text-7xl leading-none text-yellow-400 md:text-9xl`}
+              >
+                Philosophy
+              </h2>
+              <p
+                className={`${lora.className} mt-6 max-w-xl text-sm font-medium uppercase leading-7 tracking-[0.14em] text-white md:text-base md:leading-8`}
+              >
+                DMC empowers men of color at VCU through brotherhood,
+                mentorship, leadership, academic excellence, professional
+                development, and community service, inspiring members to
+                challenge stereotypes and create lasting impact on campus and
+                beyond.
+              </p>
+            </div>
           </div>
         </div>
       </section>
 
       <section className="bg-[#050505] px-6 py-32 text-white">
-        <div className="mx-auto max-w-7xl">
-          <div className="text-center">
-            <p className="font-['PolySans'] mb-6 text-xl font-bold uppercase tracking-[0.18em] text-zinc-300 md:text-2xl">
-              DMC has impacted the lives of over
-            </p>
-            <h2 className="font-['PolySans'] text-6xl font-black uppercase leading-none text-yellow-400 md:text-9xl">
-              <CountUpNumber target={900} />+ Members
+        <div className="mx-auto grid max-w-7xl items-center gap-12 md:grid-cols-3">
+          <div>
+            <h2
+              className={`${bebasNeue.className} text-center text-[7rem] leading-none text-yellow-400 md:text-[11rem] lg:text-[13rem] xl:text-[15rem]`}
+            >
+              1000+
             </h2>
+            <p
+              className={`${bebasNeue.className} mt-3 text-center text-4xl leading-none text-zinc-300 md:text-6xl lg:text-7xl`}
+            >
+              Members
+            </p>
           </div>
-
-          <div className="mt-20 grid min-h-[55vh] items-center gap-10 lg:grid-cols-[0.9fr_0.8fr_0.9fr]">
-            <div className="overflow-hidden rounded-2xl bg-zinc-900 shadow-2xl">
-              <img
-                src="/images/home/impact-members.jpg"
-                alt="DMC members gathered at the annual mixer"
-                className="h-[520px] w-full object-cover"
-              />
-            </div>
-
-            <div className="text-center">
-              <div className="grid gap-12">
-                <div>
-                  <p className="font-['PolySans'] text-6xl font-black text-yellow-400 md:text-8xl">
-                    400+
-                  </p>
-                  <p className="mt-3 font-['PolySans'] text-sm font-bold uppercase tracking-[0.18em] text-zinc-300 md:text-base">
-                    Alumni
-                  </p>
-                </div>
-
-                <div>
-                  <p className="font-['PolySans'] text-6xl font-black text-yellow-400 md:text-8xl">
-                    8
-                  </p>
-                  <p className="mt-3 font-['PolySans'] text-sm font-bold uppercase tracking-[0.18em] text-zinc-300 md:text-base">
-                    Years of Excellence
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <div className="overflow-hidden rounded-2xl bg-zinc-900 shadow-2xl">
-              <img
-                src="/images/home/impact-sports.jpg"
-                alt="DMC members participating in sports and wellness"
-                className="h-[520px] w-full object-cover"
-              />
-            </div>
+          <div>
+            <h2
+              className={`${bebasNeue.className} text-center text-[7rem] leading-none text-yellow-400 md:text-[11rem] lg:text-[13rem] xl:text-[15rem]`}
+            >
+              500+
+            </h2>
+            <p
+              className={`${bebasNeue.className} mt-3 text-center text-4xl leading-none text-zinc-300 md:text-6xl lg:text-7xl`}
+            >
+              Alumni
+            </p>
           </div>
-
-          <p className="font-['PolySans'] mt-20 text-center text-lg font-bold uppercase tracking-[0.22em] text-zinc-300 md:text-2xl">
-            Companies our members have worked at
-          </p>
-
-          <div className="company-logo-marquee relative mt-12 overflow-hidden bg-white py-10 shadow-[0_30px_120px_rgba(0,0,0,0.35)]">
-            <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-28 bg-gradient-to-r from-white via-white to-transparent" />
-            <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-28 bg-gradient-to-l from-white via-white to-transparent" />
-
-            <div className="company-logo-marquee-track flex w-max items-center gap-14">
-              {[...companyLogos, ...companyLogos].map((company, index) => (
-                <a
-                  key={`${company.name}-${index}`}
-                  href={company.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label={`Visit ${company.name}`}
-                  title={company.name}
-                  className="group flex h-24 w-80 shrink-0 items-center justify-center text-center transition hover:-translate-y-1"
-                >
-                  <img
-                    src={company.wordmarkLogo}
-                    alt={`${company.name} logo`}
-                    className="max-h-16 max-w-72 object-contain opacity-80 transition duration-300 group-hover:scale-105 group-hover:opacity-100"
-                  />
-                </a>
-              ))}
-            </div>
+          <div>
+            <h2
+              className={`${bebasNeue.className} text-center text-[7rem] leading-none text-yellow-400 md:text-[11rem] lg:text-[13rem] xl:text-[15rem]`}
+            >
+              8
+            </h2>
+            <p
+              className={`${bebasNeue.className} mt-3 text-center text-4xl leading-none text-zinc-300 md:text-6xl lg:text-7xl`}
+            >
+              Years of Excellence
+            </p>
           </div>
+        </div>
 
-          <div className="mt-24">
-            <div className="mx-auto max-w-3xl text-center">
-              <h3 className="font-['PolySans'] mt-4 text-4xl font-black uppercase leading-none text-white md:text-6xl">
-                Our Student Successes
-              </h3>
-            </div>
+        <div className="mx-auto mt-16 grid max-w-7xl gap-10 lg:grid-cols-[420px_1fr] lg:items-center lg:gap-16">
+          <motion.div
+            className="relative h-[460px] w-full max-w-[420px] overflow-hidden rounded-[2rem] shadow-[0_28px_90px_rgba(0,0,0,0.45)] md:h-[620px]"
+            initial={{ opacity: 0, x: -90 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ duration: 0.75, ease: "easeOut" }}
+          >
+            <img
+              src="/images/home/dmc-member-suit.jpg"
+              alt="DMC member in a suit"
+              className="h-full w-full object-cover object-center"
+            />
+          </motion.div>
+          <motion.div
+            className="max-w-3xl"
+            initial={{ opacity: 0, x: 90 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ duration: 0.75, ease: "easeOut", delay: 0.08 }}
+          >
+            <h3 className={`${bebasNeue.className} text-5xl leading-none text-yellow-400 md:text-7xl lg:text-8xl`}>
+              Kaleb Brown
+            </h3>
+            <p className={`${lora.className} mt-3 text-xl font-bold text-zinc-300 md:text-2xl`}>
+              Cybersecurity Intern at Estes Express Lines
+            </p>
+            <blockquote className={`${lora.className} mt-8 border-l-4 border-yellow-400 pl-6 text-xl leading-9 text-zinc-200 md:text-2xl md:leading-10`}>
+              “I’m grateful for everyone at Estes who took the time to teach
+              me, answer my questions, and help me grow throughout the summer.
+              I’m leaving this experience with new skills, great connections,
+              and a better understanding of where I want to take my career.”
+            </blockquote>
+          </motion.div>
+        </div>
 
-            <div className="mt-12 grid gap-6 md:grid-cols-3">
-              {memberSpotlights.map((member, index) => (
-                <motion.article
-                  key={`${member.name}-${member.company}-${index}`}
-                  className="text-center transition hover:-translate-y-2"
-                  initial={{ opacity: 0, y: 40 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true, amount: 0.25 }}
-                  transition={{ duration: 0.55, delay: index * 0.08 }}
-                >
-                  <div className="mx-auto h-40 w-40 overflow-hidden rounded-full border-2 border-yellow-400 bg-zinc-900 md:h-52 md:w-52">
-                    <img
-                      src={member.photo}
-                      alt={`${member.name} profile photo`}
-                      className="h-full w-full object-cover grayscale"
-                    />
-                  </div>
-
-                  <div className="mt-6">
-                    <p className="font-['PolySans'] text-2xl font-black text-white md:text-3xl">
-                      {member.name}
-                    </p>
-                    <p className="font-['PolySans'] mt-3 text-base font-bold uppercase tracking-[0.14em] text-yellow-400">
-                      {member.title}
-                    </p>
-                    <p className="font-['PolySans'] mt-2 text-base text-zinc-400">
-                      {member.company}
-                    </p>
-                  </div>
-
-                  <p className="font-['PolySans'] mx-auto mt-6 max-w-sm text-lg leading-8 text-zinc-300">
-                    {member.excerpt}
-                  </p>
-                </motion.article>
-              ))}
-            </div>
-          </div>
+        <div className="mx-auto mt-20 grid max-w-7xl gap-10 lg:grid-cols-[1fr_420px] lg:items-center lg:gap-16">
+          <motion.div
+            className="max-w-3xl"
+            initial={{ opacity: 0, x: -90 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ duration: 0.75, ease: "easeOut" }}
+          >
+            <h3 className={`${bebasNeue.className} text-5xl leading-none text-yellow-400 md:text-7xl lg:text-8xl`}>
+              Clyde Clark III
+            </h3>
+            <p className={`${lora.className} mt-3 text-xl font-bold text-zinc-300 md:text-2xl`}>
+              Intern at Two Capitols Consulting
+            </p>
+            <blockquote className={`${lora.className} mt-8 border-l-4 border-yellow-400 pl-6 text-xl leading-9 text-zinc-200 md:text-2xl md:leading-10`}>
+              &quot;Through my work, I&apos;ve been able to contribute to
+              fundraising efforts, donor relations, campaign operations, and
+              strategic initiatives while strengthening my research, analytical,
+              communication, and relationship-building skills. Most
+              importantly, working directly with senior leadership has taught me
+              how to evaluate information, manage competing priorities, and
+              make decisions with real financial and organizational
+              impact.&quot;
+            </blockquote>
+          </motion.div>
+          <motion.div
+            className="relative h-[460px] w-full max-w-[420px] overflow-hidden rounded-[2rem] shadow-[0_28px_90px_rgba(0,0,0,0.45)] md:h-[620px]"
+            initial={{ opacity: 0, x: 90 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ duration: 0.75, ease: "easeOut", delay: 0.08 }}
+          >
+            <img
+              src="/images/home/clyde-clark-iii.jpg"
+              alt="Clyde Clark III"
+              className="h-full w-full object-cover object-center"
+            />
+          </motion.div>
         </div>
       </section>
 
       <section className="bg-white px-6 py-28 text-black">
         <div className="mx-auto max-w-7xl">
-          <div className="grid gap-10 lg:grid-cols-[0.85fr_1.15fr] lg:items-end">
-            <div>
-              <p className="font-['PolySans'] text-sm font-bold uppercase tracking-[0.25em] text-yellow-600">
-                Programs
-              </p>
-              <h2 className="font-['PolySans'] mt-4 max-w-3xl text-5xl font-black uppercase leading-none md:text-7xl">
-                Built for growth in every direction.
-              </h2>
-            </div>
-
-            <p className="font-['PolySans'] max-w-2xl text-xl leading-8 text-zinc-700">
+          <div className="mx-auto max-w-4xl text-center">
+            <h2 className={`${bebasNeue.className} text-7xl leading-none text-yellow-600 md:text-9xl`}>
+              Programs
+            </h2>
+            <p className={`${lora.className} mx-auto mt-6 max-w-2xl text-xl leading-8 text-zinc-700`}>
               DMC gives members multiple ways to develop: professionally,
               academically, socially, physically, and as campus leaders. Each
               pathway is designed to help students find their people and build
@@ -552,20 +522,17 @@ export default function HomePage() {
                   </>
                 ) : null}
 
-                <p className="font-['PolySans'] relative text-sm font-black uppercase tracking-[0.2em] text-yellow-600 group-hover:text-yellow-400">
-                  0{index + 1}
-                </p>
                 <h3
-                  className={`font-['PolySans'] relative mt-6 text-3xl font-black uppercase leading-tight md:text-4xl ${
+                  className={`${bebasNeue.className} relative text-5xl leading-none text-yellow-400 md:text-6xl ${
                     program.image
-                      ? "text-white"
-                      : "text-black group-hover:text-white"
+                      ? ""
+                      : "group-hover:text-yellow-400"
                   }`}
                 >
                   {program.title}
                 </h3>
                 <p
-                  className={`font-['PolySans'] relative mt-5 text-lg leading-8 ${
+                  className={`${lora.className} relative mt-5 text-lg leading-8 ${
                     program.image
                       ? "text-zinc-200"
                       : "text-zinc-600 group-hover:text-zinc-300"
@@ -580,7 +547,7 @@ export default function HomePage() {
           <div className="mt-12 text-center">
             <a
               href="/programs"
-              className="font-['PolySans'] inline-flex items-center justify-center bg-black px-8 py-4 text-sm font-black uppercase tracking-[0.16em] text-white transition hover:bg-yellow-400 hover:text-black"
+              className={`${bebasNeue.className} inline-flex items-center justify-center bg-black px-8 py-4 text-2xl leading-none text-white transition hover:bg-yellow-400 hover:text-black`}
             >
               Explore Programs
             </a>
@@ -591,16 +558,12 @@ export default function HomePage() {
       <section className="bg-[#050505] px-6 py-28 text-white">
         <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
           <div>
-            <p className="font-['PolySans'] text-sm font-bold uppercase tracking-[0.25em] text-yellow-400">
-              Calendar
-            </p>
-            <h2 className="font-['PolySans'] mt-4 text-5xl font-black uppercase leading-none md:text-7xl">
-              Know what is coming next.
+            <h2 className={`${bebasNeue.className} text-6xl leading-none text-yellow-400 md:text-8xl`}>
+              DMC Events
             </h2>
-            <p className="font-['PolySans'] mt-6 max-w-xl text-xl leading-8 text-zinc-300">
-              From general body meetings to workshops, mixers, service events,
-              and sports, the calendar keeps members connected to the full DMC
-              experience.
+            <p className={`${lora.className} mt-6 max-w-xl text-xl leading-8 text-zinc-300`}>
+              Stay connected with DMC mixers, workshops, service days, sports,
+              and general body meetings throughout the year.
             </p>
             <a
               href="/programs#upcoming-events"
@@ -610,58 +573,12 @@ export default function HomePage() {
             </a>
           </div>
 
-          <div className="border border-white/10 bg-white/[0.03] p-4 md:p-6">
-            <div className="grid grid-cols-7 border-b border-white/10 pb-4 text-center font-['PolySans'] text-xs font-bold uppercase tracking-[0.18em] text-zinc-500">
-              <span>Sun</span>
-              <span>Mon</span>
-              <span>Tue</span>
-              <span>Wed</span>
-              <span>Thu</span>
-              <span>Fri</span>
-              <span>Sat</span>
-            </div>
-
-            <div className="mt-4 grid grid-cols-7 gap-px bg-white/10">
-              {Array.from({ length: 35 }).map((_, index) => {
-                const day = index + 1;
-                const isEventDay = day === 8 || day === 15 || day === 24;
-
-                return (
-                  <div
-                    key={day}
-                    className="min-h-20 bg-[#050505] p-2 md:min-h-24"
-                  >
-                    <p className="font-['PolySans'] text-sm font-bold text-zinc-400">
-                      {day}
-                    </p>
-                    {isEventDay ? (
-                      <div className="mt-3 h-2 w-full bg-yellow-400" />
-                    ) : null}
-                  </div>
-                );
-              })}
-            </div>
-
-            <div className="mt-8 grid gap-4">
-              {upcomingEvents.map((event) => (
-                <div
-                  key={event.title}
-                  className="grid gap-3 border-t border-white/10 pt-4 md:grid-cols-[7rem_1fr]"
-                >
-                  <p className="font-['PolySans'] text-sm font-black uppercase tracking-[0.16em] text-yellow-400">
-                    {event.date}
-                  </p>
-                  <div>
-                    <p className="font-['PolySans'] text-xl font-black text-white">
-                      {event.title}
-                    </p>
-                    <p className="font-['PolySans'] mt-1 text-sm uppercase tracking-[0.14em] text-zinc-500">
-                      {event.type}
-                    </p>
-                  </div>
-                </div>
-              ))}
-            </div>
+          <div className="mx-auto w-full max-w-xl overflow-hidden bg-black shadow-[0_30px_90px_rgba(0,0,0,0.45)]">
+            <img
+              src="/images/event-posters/dmc-mixer-save-the-date-2026.jpg"
+              alt="9th Annual DMC Mixer flyer"
+              className="h-full w-full object-contain"
+            />
           </div>
         </div>
       </section>
