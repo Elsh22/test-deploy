@@ -216,6 +216,11 @@ const calendarEvents = [
     start: "2026-04-21T09:00:00",
     end: "2026-04-21T22:00:00",
   },
+  {
+    title: "DMC 9th Annual Mixer",
+    start: "2026-09-13T16:00:00",
+    end: "2026-09-13T20:00:00",
+  },
 ];
 
 const weekDays = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
