@@ -48,6 +48,12 @@ const resourceLinks = [
   { label: "Opportunities Board", href: "/resources#opportunities" },
 ];
 
+const appLinks = [
+  { label: "Support", href: "/support" },
+  { label: "Privacy Policy", href: "/privacy" },
+  { label: "Contact", href: "/contact" },
+];
+
 const socialLinks = [
   { label: "Instagram", href: "https://www.instagram.com/vcu.dmc/" },
   {
@@ -99,7 +105,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="grid gap-10 border-b border-white/10 py-12 md:grid-cols-3">
+        <div className="grid gap-10 border-b border-white/10 py-12 md:grid-cols-4">
           <section>
             <h3 className="font-['PolySans'] text-sm font-black uppercase tracking-[0.18em] text-yellow-400">
               Programs
@@ -123,6 +129,23 @@ export default function Footer() {
             </h3>
             <div className="mt-5 grid gap-3">
               {resourceLinks.map((link) => (
+                <Link
+                  key={link.label}
+                  href={link.href}
+                  className="text-sm font-semibold text-zinc-400 transition hover:text-yellow-400"
+                >
+                  {link.label}
+                </Link>
+              ))}
+            </div>
+          </section>
+
+          <section>
+            <h3 className="font-['PolySans'] text-sm font-black uppercase tracking-[0.18em] text-yellow-400">
+              Mobile App
+            </h3>
+            <div className="mt-5 grid gap-3">
+              {appLinks.map((link) => (
                 <Link
                   key={link.label}
                   href={link.href}
