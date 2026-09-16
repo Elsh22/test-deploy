@@ -37,7 +37,7 @@ export default function LeaderBiographyPage({ params }: LeaderPageProps) {
           <img
             src={leader.image}
             alt={leader.name}
-            className="aspect-square w-full object-cover object-top grayscale"
+            className="aspect-square w-full object-cover object-top"
           />
         </div>
 

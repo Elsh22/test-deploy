@@ -1,6 +1,6 @@
 "use client";
 
-import { AnimatePresence, motion } from "framer-motion";
+import { motion } from "framer-motion";
 import { Bebas_Neue, Lora, PT_Serif_Caption } from "next/font/google";
 import { useEffect, useState } from "react";
 
@@ -19,14 +19,6 @@ const lora = Lora({
   subsets: ["latin"],
   weight: ["400", "500", "700"],
 });
-
-const mixerCalendarUrl =
-  "https://calendar.google.com/calendar/render?action=TEMPLATE" +
-  "&text=Developing%20Men%20of%20Color%209th%20Annual%20Mixer" +
-  "&dates=20260913T160000/20260913T200000" +
-  "&ctz=America%2FNew_York" +
-  "&location=VCU%20Campus" +
-  "&details=Join%20us%20for%20the%209th%20Annual%20DMC%20Mixer%20on%20September%2013th%2C%202026%20from%204-8pm.%20Connect%20with%20the%20brotherhood%2C%20meet%20campus%20leaders%2C%20and%20build%20your%20network%20with%20other%20men%20of%20color.";
 
 const companyLogos = [
   {
@@ -168,13 +160,13 @@ const programPreviews = [
 ];
 
 const sundaySpotlight = {
-  name: "Noah Benyam",
-  highlight: "2026 Boeing Finance Intern",
+  name: "Marcus Johnson",
+  highlight: "PepsiCo Intern",
   reason:
-    "Today’s Sunday Spotlight is Noah Benyam, who recently excepted his offer as a 2026 Boeing Finance Intern. What an achievement of excellence! We celebrate this milestone in your career journey with you, Noah!",
+    "Today's Sunday Spotlight is Marcus Johnson, who recently received an internship offer from PepsiCo. His experience building relationships with corporate managers and sales representatives will help him continue growing as a business professional.",
   quote:
-    "The community I've had at DMC has pushed me to want to achieve more for myself and to make sure I was prepared for the opportunities that came my way. I am very thankful for all the tools I've been given by DMC to succeed and I'm very blessed to say I've accepted an offer from Boeing as a Finance Intern.",
-  flyer: "/images/spotlights/noah-benyam-boeing.jpg",
+    "I am extremely grateful to have received this nomination. This experience has given me confidence as I approach graduation and has shown me that the work I've put into developing myself professionally is paying off.",
+  flyer: "/images/spotlights/marcus-johnson-pepsico.jpg",
 };
 
 function CountUpNumber({ target }: { target: number }) {
@@ -213,66 +205,8 @@ function CountUpNumber({ target }: { target: number }) {
 }
 
 export default function HomePage() {
-  const [showPopup, setShowPopup] = useState(true);
-
   return (
     <main className="bg-[#050505] text-white">
-      <AnimatePresence>
-        {showPopup ? (
-          <motion.div
-            className="fixed inset-0 z-[60] flex items-center justify-center bg-black/70 px-6 backdrop-blur-sm"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.25, ease: "easeOut" }}
-          >
-          <motion.div
-            className="relative w-full max-w-lg border border-yellow-400/60 bg-black p-6 text-center shadow-[0_24px_80px_rgba(0,0,0,0.65)]"
-            initial={{ opacity: 0, scale: 0.72, y: 34 }}
-            animate={{ opacity: 1, scale: 1, y: 0 }}
-            exit={{ opacity: 0, scale: 0.88, y: 18 }}
-            transition={{ type: "spring", stiffness: 360, damping: 24 }}
-            role="dialog"
-            aria-modal="true"
-            aria-labelledby="homepage-popup-title"
-          >
-            <button
-              type="button"
-              aria-label="Close mixer popup"
-              onClick={() => setShowPopup(false)}
-              className="absolute right-3 top-3 grid h-10 w-10 place-items-center text-2xl leading-none text-white transition hover:text-yellow-400"
-            >
-              x
-            </button>
-            <p
-              id="homepage-popup-title"
-              className={`${ptSerifCaption.className} text-4xl font-normal italic leading-tight text-yellow-400`}
-            >
-              Developing Men of Color Mixer
-            </p>
-            <p className={`${lora.className} mt-4 text-base leading-7 text-zinc-200`}>
-              Join us for the 9th Annual DMC Mixer on September 13th, 2026 from 4-8pm. Connect with the brotherhood, meet campus leaders, and build your network with other men of color.
-            </p>
-            <img
-              src="/images/event-posters/dmc-mixer-save-the-date-2026.jpg"
-              alt="9th Annual DMC Mixer save the date flyer"
-              className="mt-5 max-h-[460px] w-full object-contain"
-            />
-            <div className="mt-7 flex flex-col gap-3 sm:flex-row sm:justify-center">
-              <a
-                href={mixerCalendarUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className={`${lora.className} inline-flex items-center justify-center bg-yellow-400 px-6 py-3 text-sm font-black uppercase tracking-[0.12em] text-black transition hover:bg-white`}
-              >
-                Save the Date
-              </a>
-            </div>
-          </motion.div>
-          </motion.div>
-        ) : null}
-      </AnimatePresence>
-
       <section className="relative min-h-screen overflow-hidden bg-black">
         <video
           className="absolute inset-0 h-full w-full object-cover"
@@ -575,8 +509,8 @@ export default function HomePage() {
 
           <div className="mx-auto w-full max-w-xl overflow-hidden bg-black shadow-[0_30px_90px_rgba(0,0,0,0.45)]">
             <img
-              src="/images/event-posters/dmc-mixer-save-the-date-2026.jpg"
-              alt="9th Annual DMC Mixer flyer"
+              src="/images/event-posters/first-general-body-meeting-2026.jpg"
+              alt="First General Body Meeting flyer"
               className="h-full w-full object-contain"
             />
           </div>

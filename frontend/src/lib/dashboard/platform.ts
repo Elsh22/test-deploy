@@ -75,6 +75,7 @@ export const memberEvents: DashboardEvent[] = [
   { title: "General Body Meeting", date: "April 15, 2026", status: "completed" },
   { title: "Jacob's Chance Kickball", date: "April 19, 2026", status: "completed" },
   { title: "9th Annual DMC Mixer", date: "September 13, 2026", status: "rsvp" },
+  { title: "First General Body Meeting", date: "September 23, 2026", status: "rsvp" },
   { title: "Professional Academy Workshop", date: "Coming soon", status: "rsvp" },
   { title: "Resume Review Night", date: "Coming soon", status: "rsvp" },
 ];

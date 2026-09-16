@@ -221,6 +221,11 @@ const calendarEvents = [
     start: "2026-09-13T16:00:00",
     end: "2026-09-13T20:00:00",
   },
+  {
+    title: "First General Body Meeting (Commons Ballroom)",
+    start: "2026-09-23T19:00:00",
+    end: "2026-09-23T21:00:00",
+  },
 ];
 
 const weekDays = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
@@ -325,6 +330,10 @@ const getEventPoster = (event: ParsedCalendarEvent) => {
   }
 
   if (event.title.includes("General Body") || event.title.includes("GBM")) {
+    if (event.title.includes("First General Body")) {
+      return "/images/event-posters/first-general-body-meeting-2026.jpg";
+    }
+
     return "/images/event-posters/gbm-april-15-2026.jpg";
   }
 

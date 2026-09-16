@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { Bebas_Neue, Lora } from "next/font/google";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 const bebasNeue = Bebas_Neue({
   subsets: ["latin"],
@@ -21,31 +21,8 @@ const navItems = [
   { label: "Leadership", href: "/leadership" },
 ];
 
-const mixerDate = new Date("2026-09-13T16:00:00-04:00").getTime();
-
-function getMixerCountdown() {
-  const distance = Math.max(0, mixerDate - Date.now());
-
-  return {
-    days: Math.floor(distance / (1000 * 60 * 60 * 24)),
-    hours: Math.floor((distance / (1000 * 60 * 60)) % 24),
-    minutes: Math.floor((distance / (1000 * 60)) % 60),
-    seconds: Math.floor((distance / 1000) % 60),
-  };
-}
-
 export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
-  const [showMixerBar, setShowMixerBar] = useState(true);
-  const [timeLeft, setTimeLeft] = useState(getMixerCountdown);
-
-  useEffect(() => {
-    const interval = window.setInterval(() => {
-      setTimeLeft(getMixerCountdown());
-    }, 1000);
-
-    return () => window.clearInterval(interval);
-  }, []);
 
   return (
     <header className="fixed left-0 right-0 top-0 z-50 bg-black shadow-[0_12px_36px_rgba(0,0,0,0.35)]">
@@ -165,29 +142,6 @@ export default function Navbar() {
           </div>
         </div>
       </nav>
-      {showMixerBar ? (
-        <div className="relative border-t border-yellow-400/30 bg-yellow-400 px-12 py-2 text-black md:px-14">
-          <div className="flex flex-col items-center justify-center gap-2 text-center lg:flex-row lg:gap-6">
-            <p className={`${lora.className} text-sm font-black uppercase tracking-[0.12em] md:text-base`}>
-              Developing Men of Color 9th Annual Mixer
-            </p>
-            <div className={`${lora.className} flex flex-wrap items-center justify-center gap-3 text-xs font-bold uppercase tracking-[0.08em] md:text-sm`}>
-              <span>{timeLeft.days} Days</span>
-              <span>{String(timeLeft.hours).padStart(2, "0")} Hours</span>
-              <span>{String(timeLeft.minutes).padStart(2, "0")} Minutes</span>
-              <span>{String(timeLeft.seconds).padStart(2, "0")} Seconds</span>
-            </div>
-          </div>
-          <button
-            type="button"
-            aria-label="Close mixer countdown"
-            onClick={() => setShowMixerBar(false)}
-            className="absolute right-3 top-1/2 grid h-8 w-8 -translate-y-1/2 place-items-center text-xl leading-none text-black transition hover:text-white"
-          >
-            x
-          </button>
-        </div>
-      ) : null}
     </header>
   );
 }
