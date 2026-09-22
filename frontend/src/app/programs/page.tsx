@@ -12,75 +12,6 @@ import {
   X,
 } from "lucide-react";
 
-const professionalAcademyGroups = [
-  {
-    group: "Health Track",
-    description: "Support for health-care, pre-health, and care-centered career guidance.",
-    links: [
-      {
-        title: "Xavier",
-        href: "https://calendly.com/lewisxm-vcu/new-meeting?month=2025-09",
-      },
-    ],
-  },
-  {
-    group: "Tech & Engineering",
-    description: "Career research, technical direction, and preparation for technical pathways.",
-    links: [
-      {
-        title: "Hussein",
-        href: "https://calendly.com/elshowayah2-vcu/career-research",
-      },
-      {
-        title: "Thurman",
-        href: "https://calendly.com/smithjrte-vcu/30min?month=2025-09",
-      },
-      {
-        title: "Naod",
-        href: "https://calendly.com/danielnt-vcu/30min",
-      },
-    ],
-  },
-  {
-    group: "Business Students",
-    description: "LinkedIn, resume, interview, and business-career preparation.",
-    links: [
-      {
-        title: "Hassan",
-        href: "https://calendly.com/elshowayah-vcu/lindkln-review",
-      },
-      {
-        title: "Kaleb",
-        href: "https://calendly.com/brownkj7-vcu/30min",
-      },
-      {
-        title: "Sameer",
-        href: "http://calendly.com/dwivedysk2-vcu/30min",
-      },
-    ],
-  },
-  {
-    group: "Headshots",
-    description: "Professional photos for LinkedIn, resumes, portfolios, and applications.",
-    links: [
-      {
-        title: "Jason",
-        href: "https://calendly.com/gallardogoj-vcu/30min",
-      },
-    ],
-  },
-  {
-    group: "Feedback",
-    description: "Help improve the Professional Academy experience for future members.",
-    links: [
-      {
-        title: "Feedback Form",
-        href: "https://docs.google.com/forms/d/e/1FAIpQLScEX4LpYlbbXUhmAqVvxy0SBDk_9m5pcrAdH7XgJxK4rwMl2A/viewform?usp=dialog",
-      },
-    ],
-  },
-];
-
 const committees = [
   {
     title: "Information Technology",
@@ -686,66 +617,24 @@ export default function ProgramsPage() {
             <p className="font-['PolySans'] mx-auto mt-6 max-w-3xl text-xl leading-8 text-zinc-700">
               The Professional Academy empowers men of color to achieve career success through personalized peer mentoring, resume and LinkedIn reviews, professional headshots, and career guidance from students and alumni who have already navigated similar paths. By providing practical resources, professional development, and a supportive community, we help participants build the confidence, skills, and network needed to secure internships, jobs, and long-term career success.
             </p>
-          </div>
-
-          <div className="mt-16 grid gap-5 md:grid-cols-2">
-            {professionalAcademyGroups.slice(0, 4).map((group) => (
-              <article
-                key={group.group}
-                className="border border-zinc-200 bg-white p-6 transition hover:border-black"
+            <a
+              href="https://vcu.joinhandshake.com/appointment_signups/g4f59q"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-['PolySans'] mt-8 inline-flex min-h-12 items-center justify-center bg-black px-6 py-3 text-sm font-black uppercase text-white transition hover:bg-yellow-500 hover:text-black"
+            >
+              Book a Professional Academy Appointment
+            </a>
+            <div className="mt-6">
+              <a
+                href="https://docs.google.com/forms/d/e/1FAIpQLScEX4LpYlbbXUhmAqVvxy0SBDk_9m5pcrAdH7XgJxK4rwMl2A/viewform?usp=dialog"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-['PolySans'] text-sm font-black uppercase text-yellow-700 underline underline-offset-4 transition hover:text-black"
               >
-                <h3 className="font-['PolySans'] text-2xl font-black uppercase leading-tight">
-                  {group.group}
-                </h3>
-                <div className="font-['PolySans'] mt-4 flex flex-wrap gap-x-3 gap-y-2 text-base font-black uppercase tracking-[0.1em] text-yellow-600">
-                  {group.links.map((link, index) => (
-                    <span key={link.title}>
-                      <a
-                        href={link.href}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="transition hover:text-black"
-                      >
-                        {link.title}
-                      </a>
-                      {index < group.links.length - 1 ? (
-                        <span className="ml-3 text-zinc-300">|</span>
-                      ) : null}
-                    </span>
-                  ))}
-                </div>
-              </article>
-            ))}
-          </div>
-
-          <div className="mx-auto mt-5 max-w-xl">
-            {professionalAcademyGroups.slice(4).map((group) => (
-              <article
-                key={group.group}
-                className="border border-zinc-200 bg-white p-6 text-center transition hover:border-black"
-              >
-                <h3 className="font-['PolySans'] text-2xl font-black uppercase leading-tight">
-                  {group.group}
-                </h3>
-                <div className="font-['PolySans'] mt-4 flex flex-wrap justify-center gap-x-3 gap-y-2 text-base font-black uppercase tracking-[0.1em] text-yellow-600">
-                  {group.links.map((link, index) => (
-                    <span key={link.title}>
-                      <a
-                        href={link.href}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="transition hover:text-black"
-                      >
-                        {link.title}
-                      </a>
-                      {index < group.links.length - 1 ? (
-                        <span className="ml-3 text-zinc-300">|</span>
-                      ) : null}
-                    </span>
-                  ))}
-                </div>
-              </article>
-            ))}
+                Feedback Form
+              </a>
+            </div>
           </div>
         </div>
       </section>
