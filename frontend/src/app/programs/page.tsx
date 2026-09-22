@@ -217,6 +217,11 @@ const calendarEvents = [
     end: "2026-04-21T22:00:00",
   },
   {
+    title: "Microsoft Day",
+    start: "2026-09-01T18:00:00",
+    end: "2026-09-01T20:00:00",
+  },
+  {
     title: "DMC 9th Annual Mixer",
     start: "2026-09-13T16:00:00",
     end: "2026-09-13T20:00:00",
@@ -225,6 +230,46 @@ const calendarEvents = [
     title: "First General Body Meeting (Commons Ballroom)",
     start: "2026-09-23T19:00:00",
     end: "2026-09-23T21:00:00",
+  },
+  {
+    title: "Internship Workshop",
+    start: "2026-10-01T18:00:00",
+    end: "2026-10-01T20:30:00",
+  },
+  {
+    title: "LinkedIn Workshop",
+    start: "2026-10-08T18:00:00",
+    end: "2026-10-08T20:00:00",
+  },
+  {
+    title: "2nd DMC General Body Meeting / Credit Union Tentative",
+    start: "2026-10-14T19:00:00",
+    end: "2026-10-14T21:00:00",
+  },
+  {
+    title: "Credit Union",
+    start: "2026-10-20T18:00:00",
+    end: "2026-10-20T20:00:00",
+  },
+  {
+    title: "Jacob's Chance (Tentative)",
+    start: "2026-11-01T14:30:00",
+    end: "2026-11-01T16:30:00",
+  },
+  {
+    title: "Last General Body Meeting",
+    start: "2026-11-11T19:00:00",
+    end: "2026-11-11T21:00:00",
+  },
+  {
+    title: "Basketball Tournament",
+    start: "2026-11-14T19:00:00",
+    end: "2026-11-14T21:00:00",
+  },
+  {
+    title: "Jacob's Chance (Tentative)",
+    start: "2026-11-15T14:30:00",
+    end: "2026-11-15T16:30:00",
   },
 ];
 
@@ -321,6 +366,18 @@ const createGoogleCalendarLink = (event: ParsedCalendarEvent) => {
 };
 
 const getEventPoster = (event: ParsedCalendarEvent) => {
+  if (event.title.includes("Mixer")) {
+    return "/images/event-posters/dmc-mixer-save-the-date-2026.jpg";
+  }
+
+  if (event.title.includes("Internship Workshop")) {
+    return "/images/highlights/internship-workshop.png";
+  }
+
+  if (event.title.includes("Basketball")) {
+    return "/images/highlights/basketball.jpg";
+  }
+
   if (event.title.includes("College Day")) {
     return "/images/event-posters/college-day-2026.jpg";
   }
@@ -334,7 +391,9 @@ const getEventPoster = (event: ParsedCalendarEvent) => {
       return "/images/event-posters/first-general-body-meeting-2026.jpg";
     }
 
-    return "/images/event-posters/gbm-april-15-2026.jpg";
+    if (event.start.startsWith("2026-04-15")) {
+      return "/images/event-posters/gbm-april-15-2026.jpg";
+    }
   }
 
   return "/images/home/program-fallback.jpg";
@@ -490,7 +549,9 @@ export default function ProgramsPage() {
     notes: "",
   });
   const today = getInitialCalendarDate();
-  const featuredEvents = parsedCalendarEvents.slice(-3).reverse();
+  const featuredEvents = parsedCalendarEvents
+    .filter((event) => event.endDate >= today)
+    .slice(0, 3);
   const calendarDays = createCalendarDays(calendarMonth);
   const visibleWeek = Array.from({ length: 7 }, (_, index) =>
     addDays(startOfWeek(focusedDate), index)
@@ -826,10 +887,10 @@ export default function ProgramsPage() {
                 Event Highlights
               </p>
               <h2 className="font-['PolySans'] mt-4 text-5xl font-black uppercase leading-none md:text-7xl">
-                Recent moments from DMC.
+                Upcoming DMC events.
               </h2>
               <p className="font-['PolySans'] mx-auto mt-6 max-w-2xl text-lg leading-8 text-zinc-400">
-                A quick look at the latest programs, service events, and
+                A quick look at the next programs, service events, and
                 brotherhood experiences before you explore the full calendar.
               </p>
             </div>
