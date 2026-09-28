@@ -173,12 +173,7 @@ const calendarEvents = [
     end: "2026-10-08T20:00:00",
   },
   {
-    title: "2nd DMC General Body Meeting / Credit Union Tentative",
-    start: "2026-10-14T19:00:00",
-    end: "2026-10-14T21:00:00",
-  },
-  {
-    title: "Credit Union",
+    title: "2nd DMC General Body Meeting x Credit Union x Mastercard",
     start: "2026-10-20T18:00:00",
     end: "2026-10-20T20:00:00",
   },
