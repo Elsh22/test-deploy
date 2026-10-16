@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import { Bebas_Neue, Lora, PT_Serif_Caption } from "next/font/google";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 const ptSerifCaption = PT_Serif_Caption({
   subsets: ["latin"],
@@ -205,18 +205,42 @@ function CountUpNumber({ target }: { target: number }) {
 }
 
 export default function HomePage() {
+  const [recapOpen, setRecapOpen] = useState(false);
+  const recapDialog = useRef<HTMLDialogElement>(null);
+  const heroVideo = useRef<HTMLVideoElement>(null);
+
+  useEffect(() => {
+    const dialog = recapDialog.current;
+    const backgroundVideo = heroVideo.current;
+    if (!recapOpen || !dialog) return;
+
+    dialog.showModal();
+    backgroundVideo?.pause();
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+
+    return () => {
+      dialog.close();
+      document.body.style.overflow = previousOverflow;
+      backgroundVideo?.play().catch(() => {});
+    };
+  }, [recapOpen]);
+
   return (
     <main className="bg-[#050505] text-white">
       <section className="relative min-h-screen overflow-hidden bg-black">
         <video
+          ref={heroVideo}
+          aria-hidden="true"
           className="absolute inset-0 h-full w-full object-cover"
           autoPlay
           muted
           loop
           playsInline
-          preload="auto"
+          preload="metadata"
+          poster="/videos/mixer-poster.jpg"
         >
-          <source src="/hero-mixer.webm" type="video/webm" />
+          <source src="/videos/mixer-hero.mp4" type="video/mp4" />
         </video>
 
         <div className="absolute inset-0 bg-black/60" />
@@ -248,7 +272,58 @@ export default function HomePage() {
             Join DMC
           </motion.a>
         </div>
+        <button
+          type="button"
+          onClick={() => setRecapOpen(true)}
+          aria-haspopup="dialog"
+          className="font-['PolySans'] absolute bottom-8 right-6 z-20 inline-flex items-center gap-3 border border-white/50 bg-black/40 px-5 py-3 text-sm font-bold text-white backdrop-blur-sm transition hover:border-yellow-400 hover:text-yellow-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-yellow-400 md:bottom-12 md:right-12"
+        >
+          <svg aria-hidden="true" viewBox="0 0 24 24" className="h-5 w-5 fill-current">
+            <path d="M8 5v14l11-7z" />
+          </svg>
+          Watch mixer recap
+        </button>
       </section>
+
+      <dialog
+        ref={recapDialog}
+        aria-labelledby="mixer-recap-title"
+        onCancel={() => setRecapOpen(false)}
+        onClose={() => setRecapOpen(false)}
+        onClick={(event) => {
+          if (event.target === event.currentTarget) setRecapOpen(false);
+        }}
+        className="m-auto max-h-[90dvh] w-[calc(100%-2rem)] max-w-5xl overflow-y-auto border border-white/20 bg-black p-0 text-white shadow-2xl backdrop:bg-black/85"
+      >
+        {recapOpen && (
+          <div>
+            <div className="flex items-center justify-between gap-4 border-b border-white/15 px-5 py-4">
+              <h2 id="mixer-recap-title" className={`${bebasNeue.className} text-3xl text-yellow-400`}>
+                DMC Mixer Recap
+              </h2>
+              <button
+                type="button"
+                autoFocus
+                onClick={() => setRecapOpen(false)}
+                aria-label="Close mixer recap"
+                className="inline-flex h-11 w-11 items-center justify-center text-3xl transition hover:text-yellow-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-yellow-400"
+              >
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <video
+              src="/videos/mixer-recap.mp4"
+              controls
+              autoPlay
+              playsInline
+              preload="metadata"
+              poster="/videos/mixer-poster.jpg"
+              aria-label="Full DMC mixer recap"
+              className="max-h-[72dvh] w-full bg-black"
+            />
+          </div>
+        )}
+      </dialog>
 
       <section className="bg-white px-6 py-28 text-black">
         <div className="mx-auto grid max-w-7xl justify-items-center gap-12 md:grid-cols-2 md:gap-16">
