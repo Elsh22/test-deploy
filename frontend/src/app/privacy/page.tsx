@@ -76,10 +76,7 @@ export default function PrivacyPage() {
     <main className="min-h-screen bg-[#050505] text-white">
       <section className="px-6 pb-20 pt-36 md:pt-44">
         <div className="mx-auto max-w-5xl">
-          <p className="font-['PolySans'] text-sm font-bold uppercase tracking-[0.25em] text-yellow-400">
-            Developing Men of Color
-          </p>
-          <h1 className="font-['PolySans'] mt-5 max-w-4xl text-5xl font-black uppercase leading-none md:text-7xl">
+          <h1 className="font-['PolySans'] max-w-4xl text-5xl font-black uppercase leading-none md:text-7xl">
             DMC Mobile App Privacy Policy
           </h1>
           <p className="mt-6 text-lg font-semibold uppercase tracking-[0.12em] text-zinc-400">
@@ -114,10 +111,7 @@ export default function PrivacyPage() {
           </div>
 
           <div className="mt-12 border border-zinc-200 bg-zinc-50 p-6 md:p-8">
-            <p className="font-['PolySans'] text-sm font-black uppercase tracking-[0.18em] text-yellow-700">
-              Contact
-            </p>
-            <h2 className="font-['PolySans'] mt-3 text-3xl font-black uppercase leading-tight">
+            <h2 className="font-['PolySans'] text-3xl font-black uppercase leading-tight">
               Questions about privacy?
             </h2>
             <p className="mt-4 max-w-3xl leading-7 text-zinc-700">

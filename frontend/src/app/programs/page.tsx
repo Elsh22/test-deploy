@@ -313,6 +313,10 @@ const getEventPoster = (event: ParsedCalendarEvent) => {
   }
 
   if (event.title.includes("General Body") || event.title.includes("GBM")) {
+    if (event.start.startsWith("2026-10-20")) {
+      return "/images/event-posters/second-general-body-meeting-2026.jpg";
+    }
+
     if (event.title.includes("First General Body")) {
       return "/images/event-posters/first-general-body-meeting-2026.jpg";
     }
@@ -583,10 +587,7 @@ export default function ProgramsPage() {
         <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-white to-transparent" />
 
         <div className="relative z-10 mx-auto max-w-7xl">
-          <p className="font-['PolySans'] text-sm font-bold uppercase tracking-[0.25em] text-yellow-400">
-            Programs
-          </p>
-          <h1 className="font-['PolySans'] mt-5 max-w-6xl text-6xl font-black uppercase leading-none md:text-8xl">
+          <h1 className="font-['PolySans'] max-w-6xl text-6xl font-black uppercase leading-none md:text-8xl">
             Pathways for growth, leadership, and brotherhood.
           </h1>
           <p className="font-['PolySans'] mt-8 max-w-3xl text-xl leading-8 text-zinc-300">
@@ -603,10 +604,7 @@ export default function ProgramsPage() {
       >
         <div className="mx-auto max-w-7xl">
           <div className="mx-auto max-w-4xl text-center">
-            <p className="font-['PolySans'] text-sm font-bold uppercase tracking-[0.25em] text-yellow-600">
-              Professional Academy
-            </p>
-            <h2 className="font-['PolySans'] mt-4 text-5xl font-black uppercase leading-none md:text-7xl">
+            <h2 className="font-['PolySans'] text-5xl font-black uppercase leading-none md:text-7xl">
               Career readiness with real tools.
             </h2>
             <p className="font-['PolySans'] mx-auto mt-6 max-w-3xl text-xl leading-8 text-zinc-700">
@@ -637,10 +635,7 @@ export default function ProgramsPage() {
       <section id="committees" className="bg-[#050505] px-6 py-28 text-white">
         <div className="mx-auto max-w-7xl">
           <div className="mx-auto max-w-5xl text-center">
-            <p className="font-['PolySans'] text-sm font-bold uppercase tracking-[0.25em] text-yellow-400">
-              Committees
-            </p>
-            <h2 className="font-['PolySans'] mt-4 text-5xl font-black uppercase leading-none md:text-7xl">
+            <h2 className="font-['PolySans'] text-5xl font-black uppercase leading-none md:text-7xl">
               How our students are involved in DMC.
             </h2>
 
@@ -700,10 +695,7 @@ export default function ProgramsPage() {
           <div className="absolute inset-0 bg-black/70 transition group-hover:bg-black/60" />
 
           <div className="relative z-10 mx-auto flex h-full max-w-2xl flex-col justify-end">
-            <p className="font-['PolySans'] text-sm font-bold uppercase tracking-[0.25em] text-yellow-400">
-              Mentorship
-            </p>
-            <h2 className="font-['PolySans'] mt-4 text-5xl font-black uppercase leading-none md:text-7xl">
+            <h2 className="font-['PolySans'] text-5xl font-black uppercase leading-none md:text-7xl">
               Mentoring the next generation.
             </h2>
             <p className="font-['PolySans'] mt-6 text-xl leading-8 text-zinc-300">
@@ -736,10 +728,7 @@ export default function ProgramsPage() {
           <div className="absolute inset-0 bg-black/70 transition group-hover:bg-black/60" />
 
           <div className="relative z-10 mx-auto flex h-full max-w-2xl flex-col justify-end">
-            <p className="font-['PolySans'] text-sm font-bold uppercase tracking-[0.25em] text-yellow-400">
-              Wellness & Sports
-            </p>
-            <h2 className="font-['PolySans'] mt-4 text-5xl font-black uppercase leading-none md:text-7xl">
+            <h2 className="font-['PolySans'] text-5xl font-black uppercase leading-none md:text-7xl">
               Strong men need strong support systems.
             </h2>
             <p className="font-['PolySans'] mt-6 text-xl leading-8 text-zinc-300">
@@ -767,10 +756,7 @@ export default function ProgramsPage() {
         <div className="mx-auto max-w-7xl">
           <div className="mb-16">
             <div className="mx-auto max-w-4xl text-center">
-              <p className="font-['PolySans'] text-sm font-black uppercase tracking-[0.25em] text-yellow-400">
-                Event Highlights
-              </p>
-              <h2 className="font-['PolySans'] mt-4 text-5xl font-black uppercase leading-none md:text-7xl">
+              <h2 className="font-['PolySans'] text-5xl font-black uppercase leading-none md:text-7xl">
                 Upcoming DMC events.
               </h2>
               <p className="font-['PolySans'] mx-auto mt-6 max-w-2xl text-lg leading-8 text-zinc-400">
@@ -848,10 +834,7 @@ export default function ProgramsPage() {
               <div className="p-5 md:p-8">
                 <div className="mb-8 flex flex-col justify-between gap-4 sm:flex-row sm:items-center">
                   <div>
-                    <p className="font-['PolySans'] text-xs font-black uppercase tracking-[0.18em] text-yellow-400">
-                      Programs / Calendar
-                    </p>
-                    <h3 className="font-['PolySans'] mt-4 text-3xl font-light text-white md:text-5xl">
+                    <h3 className="font-['PolySans'] text-3xl font-light text-white md:text-5xl">
                       {viewTitle}
                     </h3>
                   </div>
@@ -1145,10 +1128,7 @@ export default function ProgramsPage() {
           <div className="w-full max-w-xl border border-yellow-400/25 bg-zinc-950 p-6 text-white shadow-2xl shadow-black/40">
             <div className="flex items-start justify-between gap-4">
               <div>
-                <p className="font-['PolySans'] text-xs font-black uppercase tracking-[0.18em] text-yellow-400">
-                  Event RSVP
-                </p>
-                <h3 className="font-['PolySans'] mt-3 text-3xl font-black uppercase leading-tight">
+                <h3 className="font-['PolySans'] text-3xl font-black uppercase leading-tight">
                   {rsvpEvent.title}
                 </h3>
                 <p className="font-['PolySans'] mt-3 text-sm font-semibold text-zinc-400">

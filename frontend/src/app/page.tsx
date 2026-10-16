@@ -160,13 +160,13 @@ const programPreviews = [
 ];
 
 const sundaySpotlight = {
-  name: "Marcus Johnson",
-  highlight: "PepsiCo Intern",
+  name: "Samir Knight",
+  highlight: "AWS Ambassador | IT Support Intern",
   reason:
-    "Today's Sunday Spotlight is Marcus Johnson, who recently received an internship offer from PepsiCo. His experience building relationships with corporate managers and sales representatives will help him continue growing as a business professional.",
+    "Today's Sunday Spotlight is Samir Knight, who recently received an offer to serve as an IT Support Intern at Amazon Web Services. Samir is also an AWS Ambassador, a high-level technical professional highlighted by cloud proficiency and expertise. What an achievement of excellence! We celebrate this milestone in your career journey with you, Samir!",
   quote:
-    "I am extremely grateful to have received this nomination. This experience has given me confidence as I approach graduation and has shown me that the work I've put into developing myself professionally is paying off.",
-  flyer: "/images/spotlights/marcus-johnson-pepsico.jpg",
+    "Being part of DMC has encouraged me to step outside my comfort zone, connect with other driven students, and continue growing professionally. Through my experiences in IT support, undergraduate research, and as an AWS Student Builder Campus Leader, I’ve had opportunities to develop my technical, communication, and leadership skills. DMC has reinforced the importance of networking, and taking advantage of opportunities that push me toward my career goals.",
+  flyer: "/images/spotlights/samir-knight-aws.jpg",
 };
 
 function CountUpNumber({ target }: { target: number }) {
@@ -489,6 +489,52 @@ export default function HomePage() {
         </div>
       </section>
 
+      <section
+        aria-labelledby="academy-promotion-title"
+        className="relative isolate overflow-hidden bg-black px-6 py-20 text-white md:py-28"
+      >
+        <div
+          aria-hidden="true"
+          className="absolute inset-0 -z-20 bg-cover bg-center"
+          style={{ backgroundImage: "url('/images/home/academy-promotion.webp')" }}
+        />
+        <div aria-hidden="true" className="absolute inset-0 -z-10 bg-gradient-to-r from-black/85 via-black/65 to-black/45" />
+        <div className="mx-auto max-w-7xl">
+          <div>
+            <h2
+              id="academy-promotion-title"
+              className={`${bebasNeue.className} max-w-3xl text-6xl leading-none md:text-8xl`}
+            >
+              Join the Professional Academy.
+            </h2>
+            <p className={`${lora.className} mt-6 max-w-2xl text-xl leading-8`}>
+              Join the Professional Academy to build your confidence, strengthen
+              your professional presence, and prepare for internships and careers
+              with support from DMC students and alumni.
+            </p>
+            <div className="mt-8 flex flex-wrap items-center gap-5">
+              <a
+                href="https://vcu.joinhandshake.com/appointment_signups/g4f59q"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-['PolySans'] inline-flex min-h-12 items-center justify-center bg-yellow-400 px-7 py-4 text-sm font-black uppercase tracking-[0.12em] text-black transition hover:bg-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-yellow-400"
+              >
+                Book Your Academy Appointment
+              </a>
+              <a
+                href="/programs#professional-academy"
+                className="font-['PolySans'] py-3 text-sm font-black uppercase tracking-[0.12em] underline underline-offset-4 hover:decoration-2 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-yellow-400"
+              >
+                Explore the Academy
+              </a>
+            </div>
+            <p className="font-['PolySans'] mt-4 text-sm">
+              Take the first step: schedule an appointment through Handshake.
+            </p>
+          </div>
+        </div>
+      </section>
+
       <section className="bg-[#050505] px-6 py-28 text-white">
         <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
           <div>
@@ -509,8 +555,8 @@ export default function HomePage() {
 
           <div className="mx-auto w-full max-w-xl overflow-hidden bg-black shadow-[0_30px_90px_rgba(0,0,0,0.45)]">
             <img
-              src="/images/event-posters/first-general-body-meeting-2026.jpg"
-              alt="First General Body Meeting flyer"
+              src="/images/event-posters/second-general-body-meeting-2026.jpg"
+              alt="Second General Body Meeting flyer"
               className="h-full w-full object-contain"
             />
           </div>
@@ -521,11 +567,8 @@ export default function HomePage() {
         <div className="mx-auto max-w-7xl">
           <div className="grid gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-end">
             <div>
-              <p className="font-['PolySans'] text-sm font-bold uppercase tracking-[0.25em] text-yellow-600">
-                Sunday Spotlight
-              </p>
-              <h2 className="font-['PolySans'] mt-4 text-5xl font-black uppercase leading-none md:text-7xl">
-                {sundaySpotlight.name}
+              <h2 className="font-['PolySans'] text-5xl font-black uppercase leading-none md:text-7xl">
+                Sunday Spotlight: {sundaySpotlight.name}
               </h2>
               <p className="font-['PolySans'] mt-5 text-xl font-black uppercase tracking-[0.12em] text-yellow-700">
                 {sundaySpotlight.highlight}
@@ -553,9 +596,6 @@ export default function HomePage() {
             </div>
 
             <div className="border-l-4 border-yellow-500 pl-8">
-              <p className="font-['PolySans'] text-sm font-black uppercase tracking-[0.2em] text-zinc-500">
-                Quote
-              </p>
               <blockquote className="font-['PolySans'] mt-5 text-2xl font-light italic leading-tight text-black md:text-4xl">
                 “{sundaySpotlight.quote}”
               </blockquote>
@@ -570,10 +610,7 @@ export default function HomePage() {
       <section className="bg-[#050505] px-6 py-28 text-white">
         <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-[1fr_0.9fr] lg:items-center">
           <div>
-            <p className="font-['PolySans'] text-sm font-bold uppercase tracking-[0.25em] text-yellow-400">
-              Stay Connected
-            </p>
-            <h2 className="font-['PolySans'] mt-4 max-w-5xl text-6xl font-black uppercase leading-none md:text-8xl">
+            <h2 className="font-['PolySans'] max-w-5xl text-6xl font-black uppercase leading-none md:text-8xl">
               Ready to connect with DMC?
             </h2>
             <p className="font-['PolySans'] mt-8 max-w-2xl text-xl leading-8 text-zinc-300">

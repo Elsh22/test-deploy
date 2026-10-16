@@ -35,9 +35,6 @@ export default async function DashboardPage() {
     <section className="px-6 py-10">
       <div className="mx-auto max-w-7xl">
         <div className="flex flex-col gap-3">
-          <p className="text-sm font-normal uppercase tracking-[0.18em] text-yellow-400">
-            Mission Control
-          </p>
           <h1 className="text-4xl font-semibold tracking-tight text-white md:text-5xl">
             Welcome Back, {displayName}
           </h1>

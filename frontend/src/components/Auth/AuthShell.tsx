@@ -44,10 +44,7 @@ export default function AuthShell({
             </Link>
 
             <div className="max-w-2xl">
-              <p className="font-['PolySans'] text-xs font-black uppercase tracking-[0.28em] text-yellow-400">
-                {eyebrow}
-              </p>
-              <h1 className="font-['PolySans'] mt-5 text-5xl font-black uppercase leading-[0.92] md:text-7xl">
+              <h1 className="font-['PolySans'] text-5xl font-black uppercase leading-[0.92] md:text-7xl">
                 {title}
               </h1>
               <p className="mt-6 max-w-xl text-base leading-8 text-zinc-200 md:text-lg">
@@ -75,10 +72,7 @@ export default function AuthShell({
         <div className="flex items-center bg-zinc-950 px-6 py-10 md:px-10 lg:px-12">
           <div className="w-full">
             <div className="mb-8">
-              <p className="font-['PolySans'] text-xs font-black uppercase tracking-[0.22em] text-yellow-400">
-                Member Portal
-              </p>
-              <h2 className="font-['PolySans'] mt-3 text-3xl font-black uppercase text-white">
+              <h2 className="font-['PolySans'] text-3xl font-black uppercase text-white">
                 DMC Member Access
               </h2>
               <p className="mt-3 text-sm leading-6 text-zinc-400">

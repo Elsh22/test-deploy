@@ -27,10 +27,7 @@ export default function SupportPage() {
     <main className="min-h-screen bg-[#050505] text-white">
       <section className="px-6 pb-20 pt-36 md:pt-44">
         <div className="mx-auto max-w-5xl">
-          <p className="font-['PolySans'] text-sm font-bold uppercase tracking-[0.25em] text-yellow-400">
-            Mobile App Support
-          </p>
-          <h1 className="font-['PolySans'] mt-5 max-w-4xl text-5xl font-black uppercase leading-none md:text-7xl">
+          <h1 className="font-['PolySans'] max-w-4xl text-5xl font-black uppercase leading-none md:text-7xl">
             DMC Mobile App Support
           </h1>
           <p className="mt-8 max-w-3xl text-lg leading-8 text-zinc-300 md:text-xl">
@@ -43,10 +40,7 @@ export default function SupportPage() {
       <section className="bg-white px-6 py-20 text-black">
         <div className="mx-auto grid max-w-5xl gap-10 lg:grid-cols-[0.75fr_1.25fr]">
           <aside className="border-y border-zinc-200 py-8 lg:sticky lg:top-32 lg:self-start">
-            <p className="font-['PolySans'] text-sm font-black uppercase tracking-[0.18em] text-yellow-700">
-              Contact
-            </p>
-            <h2 className="font-['PolySans'] mt-3 text-3xl font-black uppercase leading-tight">
+            <h2 className="font-['PolySans'] text-3xl font-black uppercase leading-tight">
               Need direct help?
             </h2>
             <p className="mt-4 leading-7 text-zinc-700">

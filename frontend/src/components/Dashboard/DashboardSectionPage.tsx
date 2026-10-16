@@ -19,8 +19,7 @@ export default function DashboardSectionPage({
     <section className="px-6 py-10">
       <div className="mx-auto max-w-7xl">
         <div className="max-w-3xl">
-          <p className="text-sm font-normal uppercase tracking-[0.18em] text-yellow-400">{eyebrow}</p>
-          <h1 className="mt-3 text-4xl font-semibold tracking-tight text-white md:text-5xl">{title}</h1>
+          <h1 className="text-4xl font-semibold tracking-tight text-white md:text-5xl">{title}</h1>
           <p className="mt-4 text-base leading-7 text-zinc-500">{description}</p>
         </div>
 

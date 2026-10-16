@@ -29,59 +29,23 @@ function createMailtoUrl(form: typeof initialForm) {
 
 export default function ContactPage() {
   const [form, setForm] = useState(initialForm);
-  const [status, setStatus] = useState<"idle" | "sending" | "sent" | "fallback" | "error">("idle");
-  const [error, setError] = useState("");
+  const [draftOpened, setDraftOpened] = useState(false);
 
   const updateField = (field: keyof typeof initialForm, value: string) => {
     setForm((current) => ({ ...current, [field]: value }));
   };
 
-  const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
+  const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    setStatus("sending");
-    setError("");
-
-    try {
-      const response = await fetch("/api/contact", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(form),
-      });
-      const result = (await response.json()) as {
-        error?: string;
-        fallback?: "mailto";
-      };
-
-      if (response.ok) {
-        setStatus("sent");
-        setForm(initialForm);
-        return;
-      }
-
-      if (result.fallback === "mailto") {
-        window.location.href = createMailtoUrl(form);
-        setStatus("fallback");
-        return;
-      }
-
-      setError(result.error ?? "Something went wrong. Please try again.");
-      setStatus("error");
-    } catch {
-      window.location.href = createMailtoUrl(form);
-      setStatus("fallback");
-    }
+    window.location.href = createMailtoUrl(form);
+    setDraftOpened(true);
   };
 
   return (
     <main className="min-h-screen bg-[#050505] px-6 py-24 text-white">
       <section className="mx-auto max-w-5xl text-center">
         <div className="mx-auto">
-          <p className="font-['PolySans'] text-sm font-bold uppercase tracking-[0.25em] text-yellow-400">
-            Contact
-          </p>
-          <h1 className="font-['PolySans'] mx-auto mt-4 max-w-5xl text-6xl font-black uppercase leading-none md:text-8xl">
+          <h1 className="font-['PolySans'] mx-auto max-w-5xl text-6xl font-black uppercase leading-none md:text-8xl">
             Stay connected with DMC.
           </h1>
           <p className="font-['PolySans'] mx-auto mt-8 max-w-2xl text-xl leading-8 text-zinc-300">
@@ -177,30 +141,17 @@ export default function ContactPage() {
               />
             </label>
 
-            {status === "sent" ? (
-              <p className="font-['PolySans'] border border-emerald-400/30 bg-emerald-400/10 p-4 text-sm font-semibold text-emerald-200">
-                Message sent to {contactEmail}.
-              </p>
-            ) : null}
-
-            {status === "fallback" ? (
+            {draftOpened ? (
               <p className="font-['PolySans'] border border-yellow-400/30 bg-yellow-400/10 p-4 text-sm font-semibold text-yellow-100">
-                Your email app should open with the message addressed to {contactEmail}.
-              </p>
-            ) : null}
-
-            {status === "error" ? (
-              <p className="font-['PolySans'] border border-red-400/30 bg-red-400/10 p-4 text-sm font-semibold text-red-100">
-                {error}
+                Your email account should open with this message addressed to {contactEmail}. Choose the account you want to send from, then press send there.
               </p>
             ) : null}
 
             <button
               type="submit"
-              disabled={status === "sending"}
-              className="font-['PolySans'] mt-2 inline-flex w-full items-center justify-center bg-yellow-400 px-8 py-4 text-sm font-black uppercase tracking-[0.16em] text-black transition hover:bg-white disabled:cursor-not-allowed disabled:opacity-60"
+              className="font-['PolySans'] mt-2 inline-flex w-full items-center justify-center bg-yellow-400 px-8 py-4 text-sm font-black uppercase tracking-[0.16em] text-black transition hover:bg-white"
             >
-              {status === "sending" ? "Sending..." : "Send Message"}
+              Send Message
             </button>
           </form>
 

@@ -112,9 +112,6 @@ export default function Navbar() {
             ))}
 
             <div className="grid gap-3 border-t border-white/10 pt-4">
-              <p className="font-['PolySans'] text-xs font-black uppercase tracking-[0.2em] text-yellow-400">
-                Featured
-              </p>
               {[
                 ["Professional Academy", "/programs#professional-academy"],
                 ["Committees", "/programs#committees"],

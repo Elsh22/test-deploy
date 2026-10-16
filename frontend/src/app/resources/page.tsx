@@ -266,10 +266,7 @@ export default function ResourcesPage() {
 
         <div className="relative mx-auto grid max-w-7xl gap-12 lg:grid-cols-[1.1fr_0.9fr] lg:items-end">
           <div>
-            <p className="font-['PolySans'] text-sm font-black uppercase tracking-[0.24em] text-yellow-400">
-              DMC Resources
-            </p>
-            <h1 className="font-['PolySans'] mt-5 max-w-5xl text-6xl font-black uppercase leading-[0.9] md:text-8xl">
+            <h1 className="font-['PolySans'] max-w-5xl text-6xl font-black uppercase leading-[0.9] md:text-8xl">
               Member resources built for action.
             </h1>
             <p className="mt-7 max-w-2xl text-lg leading-8 text-zinc-300 md:text-xl">
@@ -304,10 +301,7 @@ export default function ResourcesPage() {
         <div className="mx-auto max-w-7xl">
           <div className="mb-12 border-b border-white/10 pb-10 text-center">
             <div className="mx-auto max-w-4xl">
-              <p className="font-['PolySans'] text-sm font-black uppercase tracking-[0.24em] text-yellow-400">
-                Highlights
-              </p>
-              <h2 className="font-['PolySans'] mt-4 text-5xl font-black uppercase leading-none md:text-7xl">
+              <h2 className="font-['PolySans'] text-5xl font-black uppercase leading-none md:text-7xl">
                 Watch DMC in motion.
               </h2>
             </div>
@@ -363,10 +357,7 @@ export default function ResourcesPage() {
           >
             <div className="mb-4 flex items-start justify-between gap-6">
               <div>
-                <p className="font-['PolySans'] text-xs font-black uppercase tracking-[0.18em] text-yellow-400">
-                  Video Highlight
-                </p>
-                <h3 className="font-['PolySans'] mt-2 text-2xl font-black uppercase leading-tight text-white md:text-4xl">
+                <h3 className="font-['PolySans'] text-2xl font-black uppercase leading-tight text-white md:text-4xl">
                   {activeVideo.title}
                 </h3>
               </div>
@@ -401,10 +392,7 @@ export default function ResourcesPage() {
         <div className="mx-auto max-w-7xl">
           <div className="grid gap-8 border-b border-zinc-200 pb-10 lg:grid-cols-[0.75fr_1.25fr] lg:items-end">
             <div>
-              <p className="font-['PolySans'] text-sm font-black uppercase tracking-[0.24em] text-yellow-700">
-                Student Success Toolkit
-              </p>
-              <h2 className="font-['PolySans'] mt-4 text-4xl font-black uppercase leading-none md:text-6xl">
+              <h2 className="font-['PolySans'] text-4xl font-black uppercase leading-none md:text-6xl">
                 The support system.
               </h2>
             </div>
@@ -445,10 +433,7 @@ export default function ResourcesPage() {
         <div className="mx-auto max-w-7xl">
           <div className="mb-12 grid gap-8 border-b border-white/10 pb-10 lg:grid-cols-[0.75fr_1.25fr] lg:items-end">
             <div>
-              <p className="font-['PolySans'] text-sm font-black uppercase tracking-[0.24em] text-yellow-400">
-                Opportunities Board
-              </p>
-              <h2 className="font-['PolySans'] mt-4 text-4xl font-black uppercase leading-none md:text-6xl">
+              <h2 className="font-['PolySans'] text-4xl font-black uppercase leading-none md:text-6xl">
                 Search 100 role pathways.
               </h2>
             </div>

@@ -58,10 +58,7 @@ export default function DonatePage() {
 
         <div className="relative mx-auto flex min-h-[calc(100vh-10.5rem)] max-w-7xl flex-col justify-between gap-16">
           <div className="max-w-4xl">
-            <p className="font-['PolySans'] text-xs font-black uppercase tracking-[0.32em] text-yellow-400">
-              DMC Donation Portal
-            </p>
-            <h1 className="font-['PolySans'] mt-6 max-w-5xl text-5xl font-black uppercase leading-[0.92] md:text-7xl">
+            <h1 className="font-['PolySans'] max-w-5xl text-5xl font-black uppercase leading-[0.92] md:text-7xl">
               Invest in the future of Developing Men of Color.
             </h1>
             <p className="mt-7 max-w-2xl text-lg leading-8 text-zinc-200">
@@ -111,10 +108,7 @@ export default function DonatePage() {
         <div className="mx-auto max-w-7xl">
           <div className="grid gap-8 border-b border-zinc-200 pb-10 lg:grid-cols-[0.8fr_1.2fr] lg:items-end">
             <div>
-              <p className="font-['PolySans'] text-sm font-black uppercase tracking-[0.24em] text-yellow-700">
-                Where Your Gift Goes
-              </p>
-              <h2 className="font-['PolySans'] mt-4 text-4xl font-black uppercase leading-none md:text-6xl">
+              <h2 className="font-['PolySans'] text-4xl font-black uppercase leading-none md:text-6xl">
                 Practical support members can feel.
               </h2>
             </div>
@@ -149,10 +143,7 @@ export default function DonatePage() {
         <div className="mx-auto max-w-7xl">
           <div className="grid gap-10 lg:grid-cols-[0.75fr_1.25fr]">
             <div>
-              <p className="font-['PolySans'] text-sm font-black uppercase tracking-[0.24em] text-yellow-700">
-                Donor FAQ
-              </p>
-              <h2 className="font-['PolySans'] mt-4 text-4xl font-black uppercase leading-none md:text-6xl">
+              <h2 className="font-['PolySans'] text-4xl font-black uppercase leading-none md:text-6xl">
                 Before you give.
               </h2>
             </div>

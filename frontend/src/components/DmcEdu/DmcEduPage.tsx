@@ -172,10 +172,7 @@ function ProgressBadge({ status }: { status: ProgressState }) {
 function EduHero() {
   return (
     <section className="mx-auto flex min-h-[70vh] max-w-7xl flex-col justify-end px-5 pb-16 pt-36 md:px-8 md:pt-44">
-      <p className="text-sm font-semibold uppercase tracking-[0.24em] text-yellow-400">
-        Developing Men of Color
-      </p>
-      <h1 className="font-['PolySans'] mt-5 max-w-4xl text-6xl font-semibold leading-none text-white md:text-8xl">
+      <h1 className="font-['PolySans'] max-w-4xl text-6xl font-semibold leading-none text-white md:text-8xl">
         DMC Edu
       </h1>
       <p className="mt-6 max-w-2xl text-xl leading-8 text-zinc-300 md:text-2xl">
@@ -266,10 +263,7 @@ function LearningPathCard({ academy }: { academy: Academy }) {
     <section className="border-y border-white/10 py-10">
       <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
         <div>
-          <p className="text-sm font-semibold uppercase tracking-[0.2em] text-yellow-400">
-            Learning Path
-          </p>
-          <h2 className="font-['PolySans'] mt-3 text-3xl font-semibold text-white">
+          <h2 className="font-['PolySans'] text-3xl font-semibold text-white">
             Sample {academy.shortTitle} Path
           </h2>
         </div>
@@ -287,8 +281,7 @@ function LearningPathCard({ academy }: { academy: Academy }) {
 function StudentProgressPreview() {
   return (
     <section>
-      <p className="text-sm font-semibold uppercase tracking-[0.2em] text-yellow-400">Student View</p>
-      <h2 className="font-['PolySans'] mt-3 text-3xl font-semibold text-white">Progress Preview</h2>
+      <h2 className="font-['PolySans'] text-3xl font-semibold text-white">Progress Preview</h2>
       <div className="mt-8 grid gap-8 lg:grid-cols-[0.8fr_1.2fr]">
         <div>
           <p className="font-['PolySans'] text-6xl font-semibold text-white">
@@ -325,8 +318,7 @@ function StudentProgressPreview() {
 function AdminAnalyticsPreview() {
   return (
     <section>
-      <p className="text-sm font-semibold uppercase tracking-[0.2em] text-yellow-400">Leader View</p>
-      <h2 className="font-['PolySans'] mt-3 text-3xl font-semibold text-white">Admin Analytics Preview</h2>
+      <h2 className="font-['PolySans'] text-3xl font-semibold text-white">Admin Analytics Preview</h2>
       <div className="mt-8 grid gap-6 md:grid-cols-4">
         <PreviewStat label="Members enrolled" value={adminPreview.totalMembersEnrolled.toString()} />
         <PreviewStat label="Completion rate" value={adminPreview.completionRate} />
@@ -380,10 +372,7 @@ export default function DmcEduPage() {
       <section className="mx-auto max-w-7xl px-5 py-12 md:px-8">
         <div className="flex flex-col gap-4 border-b border-white/10 pb-6 md:flex-row md:items-end md:justify-between">
           <div>
-            <p className="text-sm font-semibold uppercase tracking-[0.2em] text-yellow-400">
-              Explore Academy
-            </p>
-            <h2 className="font-['PolySans'] mt-3 text-4xl font-semibold text-white">
+            <h2 className="font-['PolySans'] text-4xl font-semibold text-white">
               {activeAcademy.title}
             </h2>
           </div>

@@ -72,10 +72,7 @@ export default function Footer() {
       <div className="mx-auto max-w-7xl">
         <div className="grid gap-12 border-y border-white/10 py-12 lg:grid-cols-[0.85fr_1.15fr]">
           <div>
-            <p className="font-['PolySans'] text-sm font-black uppercase tracking-[0.24em] text-yellow-400">
-              Developing Men of Color
-            </p>
-            <h2 className="font-['PolySans'] mt-4 max-w-xl text-5xl font-black uppercase leading-none md:text-7xl">
+            <h2 className="font-['PolySans'] max-w-xl text-5xl font-black uppercase leading-none md:text-7xl">
               Excellence is our standard.
             </h2>
             <p className="mt-6 max-w-xl text-lg leading-8 text-zinc-400">
