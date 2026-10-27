@@ -237,10 +237,9 @@ export default function HomePage() {
           muted
           loop
           playsInline
-          preload="metadata"
-          poster="/videos/mixer-poster.jpg"
+          preload="auto"
         >
-          <source src="/videos/mixer-hero.mp4" type="video/mp4" />
+          <source src="/hero-mixer.webm" type="video/webm" />
         </video>
 
         <div className="absolute inset-0 bg-black/60" />
