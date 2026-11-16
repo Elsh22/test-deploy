@@ -275,7 +275,7 @@ export default function HomePage() {
           type="button"
           onClick={() => setRecapOpen(true)}
           aria-haspopup="dialog"
-          className="font-['PolySans'] absolute bottom-8 right-6 z-20 inline-flex items-center gap-3 border border-white/50 bg-black/40 px-5 py-3 text-sm font-bold text-white backdrop-blur-sm transition hover:border-yellow-400 hover:text-yellow-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-yellow-400 md:bottom-12 md:right-12"
+          className="font-['PolySans'] absolute bottom-8 right-6 z-20 inline-flex items-center gap-3 px-5 py-3 text-sm font-bold text-white transition hover:text-yellow-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-yellow-400 md:bottom-12 md:right-12"
         >
           <svg aria-hidden="true" viewBox="0 0 24 24" className="h-5 w-5 fill-current">
             <path d="M8 5v14l11-7z" />

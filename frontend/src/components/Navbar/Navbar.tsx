@@ -15,10 +15,10 @@ const lora = Lora({
 });
 
 const navItems = [
-  { label: "Home", href: "/" },
   { label: "Programs", href: "/programs" },
   { label: "Resources", href: "/resources" },
   { label: "Leadership", href: "/leadership" },
+  { label: "Gallery", href: "/gallery" },
 ];
 
 export default function Navbar() {
@@ -29,20 +29,20 @@ export default function Navbar() {
       <nav
         className={`relative grid w-full overflow-hidden bg-black px-4 text-white transition-all duration-300 md:px-6 ${
           mobileOpen
-            ? "h-[31rem] py-3"
+            ? "max-h-[100dvh] overflow-y-auto py-3"
             : "h-20 py-3"
         }`}
       >
-        <div className="relative z-10 flex items-center justify-between">
+        <div className="relative z-10 flex items-center justify-between gap-4">
           <Link
             href="/"
             aria-label="DMC home"
-            className={`${bebasNeue.className} flex items-center text-3xl leading-none text-yellow-400 md:text-5xl`}
+            className={`${bebasNeue.className} flex items-center text-3xl leading-none text-yellow-400 md:text-4xl 2xl:text-5xl`}
           >
             Developing Men of Color
           </Link>
 
-          <div className="absolute left-1/2 hidden -translate-x-1/2 items-center gap-5 md:gap-9 lg:flex">
+          <div className="hidden items-center gap-5 xl:flex 2xl:gap-9">
             {navItems.map((item) => (
               <Link
                 key={item.label}
@@ -54,7 +54,7 @@ export default function Navbar() {
             ))}
           </div>
 
-          <div className="hidden items-center gap-3 lg:flex">
+          <div className="hidden items-center gap-3 xl:flex">
             <Link
               href="/donate"
               className={`${lora.className} bg-yellow-400 px-5 py-3 text-xs font-black uppercase tracking-[0.14em] text-black shadow-[inset_0_1px_0_rgba(255,255,255,0.55)] transition hover:scale-105 hover:bg-white md:px-6 md:text-sm`}
@@ -70,7 +70,7 @@ export default function Navbar() {
             onClick={() => {
               setMobileOpen((isOpen) => !isOpen);
             }}
-            className="grid h-11 w-11 place-items-center rounded-full border border-white/15 bg-white/10 lg:hidden"
+            className="grid h-11 w-11 shrink-0 place-items-center rounded-full border border-white/15 bg-white/10 xl:hidden"
           >
             <span className="grid gap-1.5">
               <span
@@ -93,10 +93,10 @@ export default function Navbar() {
         </div>
 
         <div
-          className={`relative z-10 border-t border-white/10 transition duration-300 lg:hidden ${
+          className={`relative z-10 border-t border-white/10 xl:hidden ${
             mobileOpen
               ? "mt-4 opacity-100"
-              : "pointer-events-none mt-0 opacity-0"
+              : "hidden"
           }`}
         >
           <div className="grid gap-4 px-2 pt-5">

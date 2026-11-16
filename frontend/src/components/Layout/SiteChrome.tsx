@@ -8,7 +8,7 @@ export default function SiteChrome({ children }: { children: React.ReactNode }) 
   const pathname = usePathname();
   const isDashboard = pathname?.startsWith("/dashboard");
 
-  if (isDashboard) {
+  if (isDashboard || pathname === '/gallery-admin' || pathname?.startsWith('/gallery-admin/')) {
     return <>{children}</>;
   }
 

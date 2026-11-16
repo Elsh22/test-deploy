@@ -1,0 +1,104 @@
+generator client {
+  provider = "prisma-client"
+  output   = "../src/generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+enum AdminRole {
+  ADMIN
+  SUPER_ADMIN
+}
+
+enum AlbumStatus {
+  DRAFT
+  PUBLISHED
+  ARCHIVED
+}
+
+enum PhotoStatus {
+  PENDING
+  UPLOADED
+  PROCESSED
+  FAILED
+}
+
+model AdminUser {
+  id           String    @id @default(uuid())
+  email        String    @unique
+  passwordHash String
+  role         AdminRole @default(ADMIN)
+  isActive     Boolean   @default(true)
+  createdAt    DateTime  @default(now())
+  updatedAt    DateTime  @updatedAt
+
+  albums Album[]
+}
+
+model Album {
+  id          String      @id @default(uuid())
+  title       String
+  slug        String      @unique
+  description String?
+  eventDate   DateTime?
+  status      AlbumStatus @default(DRAFT)
+  createdById String
+  createdBy   AdminUser   @relation(fields: [createdById], references: [id])
+  photos      Photo[]
+  createdAt   DateTime    @default(now())
+  updatedAt   DateTime    @updatedAt
+  publishedAt DateTime?
+}
+
+model Photo {
+  id        String      @id @default(uuid())
+  albumId   String
+  album     Album       @relation(fields: [albumId], references: [id], onDelete: Cascade)
+  s3Key     String      @unique
+  filename  String
+  mimeType  String
+  sizeBytes Int?
+  width     Int?
+  height    Int?
+  sortOrder Int         @default(0)
+  isCover   Boolean     @default(false)
+  status    PhotoStatus @default(PENDING)
+  processedKey       String?
+  thumbnailKey       String?
+  processedSizeBytes Int?
+  thumbnailSizeBytes Int?
+  processedAt        DateTime?
+  processingError    String?
+  publishedKey          String?
+  publishedThumbnailKey String?
+  uploadRequestId       String? @unique
+  createdAt DateTime    @default(now())
+  updatedAt DateTime    @updatedAt
+
+  @@index([albumId, sortOrder])
+}
+
+model RefreshSession {
+  id        String    @id @default(uuid())
+  adminId   String
+  tokenHash String    @unique
+  expiresAt DateTime
+  revokedAt DateTime?
+  createdAt DateTime  @default(now())
+}
+
+// Access-token denylist only; this does not introduce refresh tokens.
+model RevokedAccessToken {
+  tokenHash String @id
+  expiresAt DateTime
+  createdAt DateTime @default(now())
+  @@index([expiresAt])
+}
+
+model SecurityRateBucket {
+  id String @id
+  windowStart DateTime
+  count Int
+}
