@@ -1,0 +1,16 @@
+services:
+  postgres:
+    image: public.ecr.aws/docker/library/postgres:17
+    container_name: dmc-gallery-postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: gallery
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+      POSTGRES_DB: dmc_gallery
+    ports:
+      - "127.0.0.1:5432:5432"
+    volumes:
+      - gallery_postgres_data:/var/lib/postgresql/data
+
+volumes:
+  gallery_postgres_data:

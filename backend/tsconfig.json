@@ -27,6 +27,8 @@
   ],
 
   "exclude": [
+    // The nested NestJS app has its own TypeScript build.
+    "gallery-api/**",
     "node_modules/",
     "build/",
     "dist/",
