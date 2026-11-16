@@ -17,7 +17,7 @@ export async function createCheckoutSession(
     "uiMode",
   ) as Stripe.Checkout.SessionCreateParams.UiMode;
   const donationAmount = Number(data.get("customDonation"));
-  const origin = headers().get("origin") as string;
+  const origin = (await headers()).get("origin") as string;
 
   if (
     !Number.isFinite(donationAmount) ||

@@ -9,11 +9,13 @@ export default function GalleryImage({
   priority = false,
   contain = false,
   lightbox = false,
+  sizes,
 }: {
   photo: GalleryPhoto;
   priority?: boolean;
   contain?: boolean;
   lightbox?: boolean;
+  sizes?: string;
 }) {
   const [loaded, setLoaded] = useState(false);
   const [failed, setFailed] = useState(false);
@@ -38,7 +40,7 @@ export default function GalleryImage({
             unoptimized
             priority={priority}
             loading={priority ? "eager" : "lazy"}
-            sizes={lightbox ? "100vw" : "(max-width: 639px) 100vw, (max-width: 1023px) 50vw, 33vw"}
+            sizes={sizes ?? (lightbox ? "100vw" : "(max-width: 639px) 100vw, (max-width: 1023px) 50vw, 33vw")}
             className={`${contain ? "object-contain" : "object-cover"} ${loaded ? "opacity-100" : "opacity-0"}`}
             onLoad={() => setLoaded(true)}
             onError={() => setFailed(true)}

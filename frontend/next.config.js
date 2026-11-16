@@ -1,9 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   distDir: process.env.NEXT_DIST_DIR || ".next",
-  eslint: {
-    ignoreDuringBuilds: true,
-  },
+  outputFileTracingRoot: __dirname,
   async headers() {
     return [{ source: '/gallery-admin/:path*', headers: [
       { key: 'X-Frame-Options', value: 'DENY' },

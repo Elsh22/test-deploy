@@ -13,12 +13,11 @@ export default function LoginForm({ expired }: { expired: boolean }) {
     } catch (failure) { setError(failure instanceof Error ? failure.message : 'Sign-in is temporarily unavailable.'); }
     finally { setBusy(false); }
   }
-  return <form className="ga-panel ga-form" onSubmit={submit}>
+  return <form className="ga-form" onSubmit={submit} aria-labelledby="gallery-login-title">
     {expired && <p role="status" className="ga-notice">Your session ended. Sign in again to continue.</p>}
     <label>Email<input name="email" type="email" autoComplete="username" required maxLength={254} /></label>
     <label>Password<input name="password" type="password" autoComplete="current-password" required maxLength={128} /></label>
     {error && <p role="alert" className="ga-error">{error}</p>}
-    <button className="ga-button ga-primary" disabled={busy}>{busy ? 'Signing in…' : 'Sign in'}</button>
-    <a className="ga-muted" href="/gallery">Return to the public gallery</a>
+    <button className="ga-button ga-primary" disabled={busy}>{busy ? 'Signing in…' : 'Sign in'}<span aria-hidden="true">→</span></button>
   </form>;
 }

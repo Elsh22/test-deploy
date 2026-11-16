@@ -27,7 +27,7 @@ export async function backendFetch(path: string, token?: string, init: RequestIn
       ...(token ? { Authorization: `Bearer ${token}` } : {}) } });
 }
 export async function requireGalleryAdmin(): Promise<Admin> {
-  const token = cookies().get(sessionCookie())?.value;
+  const token = (await cookies()).get(sessionCookie())?.value;
   if (!token) redirect('/gallery-admin/login');
   if (tokenLifetime(token) < 1) redirect('/gallery-admin/login?expired=1');
   const response = await backendFetch('admin/me', token);
@@ -39,7 +39,7 @@ export async function requireGalleryAdmin(): Promise<Admin> {
 }
 export async function galleryServerData<T>(path: string): Promise<T> {
   await requireGalleryAdmin();
-  const response = await backendFetch(`admin/${path}`, cookies().get(sessionCookie())?.value);
+  const response = await backendFetch(`admin/${path}`, (await cookies()).get(sessionCookie())?.value);
   if (response.status === 401) redirect('/gallery-admin/login?expired=1');
   if (response.status === 403 || response.status === 404) notFound();
   if (!response.ok) throw new Error('Gallery data is temporarily unavailable.');

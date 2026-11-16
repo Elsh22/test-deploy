@@ -3,7 +3,7 @@ import { createSupabaseServerClient } from "../supabase/server";
 import { fallbackProfile, type MemberProfile } from "./platform";
 
 export async function getMemberDashboardContext() {
-  const supabase = createSupabaseServerClient();
+  const supabase = await createSupabaseServerClient();
 
   if (!supabase) {
     return {

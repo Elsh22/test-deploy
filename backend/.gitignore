@@ -129,3 +129,5 @@ dist
 build
 .strapi-updater.json
 .strapi-cloud.json
+# Gallery migrations are application source; keep SQL dumps ignored.
+!gallery-api/prisma/migrations/**/migration.sql
