@@ -1,91 +1,97 @@
-name: Deploy Application
+name: Verify production builds
 
 on:
   push:
-    branches:
-      - main  
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+
+env:
+  NODE_OPTIONS: --max-old-space-size=4096
+  NEXT_TELEMETRY_DISABLED: '1'
+  STRAPI_TELEMETRY_DISABLED: 'true'
 
 jobs:
-  build-and-deploy:
+  frontend:
     runs-on: ubuntu-latest
-
+    defaults:
+      run:
+        working-directory: frontend
     steps:
-    # 1. Check out the repository
-    - uses: actions/checkout@v2
+      - uses: actions/checkout@v6
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v6
+        with:
+          node-version-file: .nvmrc
+          cache: npm
+          cache-dependency-path: frontend/package-lock.json
+      - run: npm ci
+      - run: npm run typecheck
+      - run: npm run lint
+      - run: npm test
+      - run: npm run build
+      - run: npm audit --omit=dev --audit-level=critical
 
-    # 2. Clean up runner disk before anything else
-    - name: Pre-build cleanup
-      run: |
-        echo "Cleaning up temporary files..."
-        sudo rm -rf /tmp/*
-        sudo rm -rf backend/node_modules
-        sudo rm -rf frontend/node_modules
-        docker system prune -af || true
-        echo "Disk usage after cleanup:"
-        df -h
+  strapi:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: backend
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v6
+        with:
+          node-version-file: .nvmrc
+          cache: npm
+          cache-dependency-path: backend/package-lock.json
+      - run: npm ci
+      - run: npm run typecheck
+      - run: npm run build
+      - run: npm audit --omit=dev --audit-level=critical
 
-    # 3. Set up Node.js
-    - name: Set up Node.js
-      uses: actions/setup-node@v2
-      with:
-        node-version: '20'
-
-    # 4. Increase Node memory for Next.js
-    - name: Set Node memory limit
-      run: |
-        export NODE_OPTIONS="--max-old-space-size=4096"
-        echo "Node memory limit set to 4GB"
-
-    # 5. Debug Backend Directory (Optional)
-    - name: Debug Backend Folder
-      run: |
-        echo "Checking backend folder contents..."
-        cd backend
-        ls -la
-
-    # 6. Install Backend Dependencies (Strapi)
-    - name: Install Backend Dependencies
-      run: |
-        cd backend
-        if [ -f package-lock.json ]; then
-          npm ci
-        else
-          npm install
-        fi
-
-    # 7. Build Backend (Strapi)
-    - name: Build Backend
-      run: |
-        cd backend
-        npm run build
-
-    # 8. Debug Frontend Directory (Optional)
-    - name: Debug Frontend Folder
-      run: |
-        echo "Checking frontend folder contents..."
-        cd frontend
-        ls -la
-
-    # 9. Install Frontend Dependencies (Next.js)
-    - name: Install Frontend Dependencies
-      run: |
-        cd frontend
-        if [ -f package-lock.json ]; then
-          npm ci
-        else
-          npm install
-        fi
-
-    # 10. Build Frontend (Next.js) with debug
-    - name: Build Frontend
-      run: |
-        cd frontend
-        npx next build --debug
-      env:
-        MONGODB_URI: ${{ secrets.MONGODB_URI }}
-        MONGODB_Signin_URI: ${{ secrets.MONGODB_Signin_URI }}
-        RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
-        NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY: ${{ secrets.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY }}
-        STRIPE_SECRET_KEY: ${{ secrets.STRIPE_SECRET_KEY }}
-        STRIPE_PAYMENT_DESCRIPTION: ${{ secrets.STRIPE_PAYMENT_DESCRIPTION }}
-        STRIPE_WEBHOOK_SECRET: ${{ secrets.STRIPE_WEBHOOK_SECRET }}
+  gallery-api:
+    runs-on: ubuntu-latest
+    services:
+      postgres:
+        image: postgres:17-alpine
+        env:
+          POSTGRES_USER: build_only
+          POSTGRES_PASSWORD: isolated-test-only
+          POSTGRES_DB: dmc_build_test
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd "pg_isready -U build_only -d dmc_build_test"
+          --health-interval 5s
+          --health-timeout 5s
+          --health-retries 12
+    defaults:
+      run:
+        working-directory: backend/gallery-api
+    env:
+      # Disposable runner service only; never a repository or production secret.
+      DATABASE_URL: postgresql://build_only:isolated-test-only@127.0.0.1:5432/dmc_build_test
+      GALLERY_SECURITY_DB_TEST: '1'
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v6
+        with:
+          node-version-file: .nvmrc
+          cache: npm
+          cache-dependency-path: backend/gallery-api/package-lock.json
+      - run: npm ci
+      - run: npm run prisma:generate
+      - run: npx --no-install prisma migrate deploy --config prisma7.config.ts
+      - run: npx --no-install prisma migrate diff --from-config-datasource --to-schema prisma/schema.prisma --config prisma7.config.ts --exit-code
+      - run: npm run typecheck
+      - run: npm test -- --runInBand
+      - run: npm run build
+      - run: npm audit --omit=dev --audit-level=critical

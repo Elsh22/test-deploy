@@ -1,5 +1,11 @@
 # DMC Gallery security audit and integration testing
 
+Update, November 16, 2026: the subsequent [production build and dependency review](docs/PRODUCTION_BUILD_REVIEW.md)
+supersedes the framework-version and dependency-audit results below. Next.js is
+now patched to 15.5.29, and all three production dependency audits have zero
+critical findings. The original operational and infrastructure readiness gates
+remain open; this update does not authorize deployment.
+
 Audit date: November 15, 2026, America/New_York (November 16 UTC).
 Scope: `frontend/` gallery administration and `backend/gallery-api/`.
 Recommendation: **NO-GO for public production deployment.** Local development can continue.

@@ -2,7 +2,7 @@
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 import { NextRequest } from 'next/server';
 const mocks=vi.hoisted(()=>({getCookie:vi.fn(),redirect:vi.fn()}));
-vi.mock('next/headers',()=>({cookies:()=>({get:mocks.getCookie})}));
+vi.mock('next/headers',()=>({cookies:async()=>({get:mocks.getCookie})}));
 vi.mock('next/navigation',()=>({redirect:mocks.redirect,notFound:()=>{throw new Error('NOT_FOUND')}}));
 import { galleryProxy, allowedRoute } from '../../src/lib/gallery-admin/proxy';
 import { apiBaseUrl, requireGalleryAdmin, tokenLifetime } from '../../src/lib/gallery-admin/server';

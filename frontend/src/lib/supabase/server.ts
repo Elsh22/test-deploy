@@ -2,14 +2,14 @@ import { createServerClient } from "@supabase/ssr";
 import { cookies } from "next/headers";
 import { getSupabaseConfig } from "./config";
 
-export function createSupabaseServerClient() {
+export async function createSupabaseServerClient() {
   const config = getSupabaseConfig();
 
   if (!config) {
     return null;
   }
 
-  const cookieStore = cookies();
+  const cookieStore = await cookies();
 
   // Server components use this client to read the current session and query
   // SQL tables. RLS still applies here because we use the anon key plus the

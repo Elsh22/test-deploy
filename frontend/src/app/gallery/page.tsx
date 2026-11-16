@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import Gallery from "@/components/Gallery/Gallery";
 import { eventAlbums } from "@/data/gallery";
+import { galleryFonts } from '@/components/Gallery/gallery-fonts';
+import styles from '@/components/Gallery/gallery.module.css';
 
 export const metadata: Metadata = {
   title: "Event Gallery | Developing Men of Color at VCU",
@@ -9,12 +11,16 @@ export const metadata: Metadata = {
 
 export default function GalleryPage() {
   return (
-    <main className="min-h-screen bg-black px-6 pb-24 pt-36 font-['PolySans'] text-white">
-      <div className="mx-auto max-w-7xl">
-        <h1 className="text-5xl font-black leading-tight md:text-7xl">Event Gallery</h1>
-        <p className="mb-12 mt-6 max-w-2xl text-lg leading-8 text-zinc-300">
+    <main className={`${styles.page} ${galleryFonts}`}>
+      <div className={styles.inner}>
+        <p className={styles.eyebrow}>Developing Men of Color / VCU</p>
+        <div className={styles.intro}>
+        <h1 className={styles.title}>Event Gallery</h1>
+        <p className={styles.description}>
           Moments of brotherhood, connection, and growth. Explore photographs from our DMC events.
         </p>
+        </div>
+        <div className={styles.sectionHeading}><h2>Our moments, together</h2><span>{eventAlbums.length} {eventAlbums.length === 1 ? 'album' : 'albums'}</span></div>
         <Gallery albums={eventAlbums} />
       </div>
     </main>
