@@ -1,18 +1,8 @@
  "use client";
 
 import Link from "next/link";
-import { Bebas_Neue, Lora } from "next/font/google";
+import { bebasNeue, lora } from "@/fonts/site-fonts";
 import { useState } from "react";
-
-const bebasNeue = Bebas_Neue({
-  subsets: ["latin"],
-  weight: "400",
-});
-
-const lora = Lora({
-  subsets: ["latin"],
-  weight: ["400", "500", "700"],
-});
 
 const navItems = [
   { label: "Programs", href: "/programs" },
