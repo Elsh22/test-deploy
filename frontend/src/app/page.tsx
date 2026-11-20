@@ -160,13 +160,13 @@ const programPreviews = [
 ];
 
 const sundaySpotlight = {
-  name: "Samir Knight",
-  highlight: "AWS Ambassador | IT Support Intern",
+  name: "Kyree Currie",
+  highlight: "VCU da Vinci Pitch Competition Winner",
   reason:
-    "Today's Sunday Spotlight is Samir Knight, who recently received an offer to serve as an IT Support Intern at Amazon Web Services. Samir is also an AWS Ambassador, a high-level technical professional highlighted by cloud proficiency and expertise. What an achievement of excellence! We celebrate this milestone in your career journey with you, Samir!",
+    "Today’s Sunday Spotlight celebrates Kyree Currie for winning the Entrepreneur Active Ventures District at the VCU da Vinci Pitch Competition. Congratulations, Kyree!",
   quote:
-    "Being part of DMC has encouraged me to step outside my comfort zone, connect with other driven students, and continue growing professionally. Through my experiences in IT support, undergraduate research, and as an AWS Student Builder Campus Leader, I’ve had opportunities to develop my technical, communication, and leadership skills. DMC has reinforced the importance of networking, and taking advantage of opportunities that push me toward my career goals.",
-  flyer: "/images/spotlights/samir-knight-aws.jpg",
+    "DMC has played a crucial role in my professional development… Being able to understand and utilize the important skills of networking and having a clean image have carried me a long way in my entrepreneurial career.",
+  flyer: "/images/spotlights/kyree-currie.jpg",
 };
 
 function CountUpNumber({ target }: { target: number }) {
@@ -665,7 +665,9 @@ export default function HomePage() {
               <img
                 src={sundaySpotlight.flyer}
                 alt={`${sundaySpotlight.name} Sunday Spotlight flyer`}
-                className="aspect-[4/5] w-full object-cover"
+                width={1088}
+                height={1344}
+                className="h-auto w-full"
               />
             </div>
 
