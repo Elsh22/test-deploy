@@ -3,10 +3,7 @@ import { render, screen } from '@testing-library/react';
 import { NextRequest } from 'next/server';
 
 const mocks = vi.hoisted(() => ({ proxy: vi.fn() }));
-vi.mock('next/font/google', () => {
-  const font = () => ({ variable: '', className: '' });
-  return { Bebas_Neue: font, Lora: font, PT_Serif_Caption: font };
-});
+vi.mock('next/font/local', () => ({ default: () => ({ variable: '', className: '' }) }));
 vi.mock('next/navigation', () => ({ notFound: () => { throw new Error('NOT_FOUND'); } }));
 vi.mock('@/lib/gallery-admin/proxy', () => ({ galleryProxy: mocks.proxy }));
 vi.mock('@/components/Gallery/AlbumGallery', () => ({ default: () => <div>Album photographs</div> }));

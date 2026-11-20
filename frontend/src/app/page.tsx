@@ -1,24 +1,8 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Bebas_Neue, Lora, PT_Serif_Caption } from "next/font/google";
+import { bebasNeue, lora, ptSerifCaption } from "@/fonts/site-fonts";
 import { useEffect, useRef, useState } from "react";
-
-const ptSerifCaption = PT_Serif_Caption({
-  subsets: ["latin"],
-  weight: "400",
-  style: ["normal", "italic"],
-});
-
-const bebasNeue = Bebas_Neue({
-  subsets: ["latin"],
-  weight: "400",
-});
-
-const lora = Lora({
-  subsets: ["latin"],
-  weight: ["400", "500", "700"],
-});
 
 const companyLogos = [
   {
